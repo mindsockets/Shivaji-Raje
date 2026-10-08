@@ -1,0 +1,609 @@
+<meta charset="utf-8">
+<title>The Land That Waited</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tiro+Devanagari+Marathi:ital@0;1&family=Karla:wght@400;600;700&display=swap">
+
+<link rel="stylesheet" href="day.css">
+
+<nav class="daynav">
+  <a href="index.html">‹ All nights</a>
+  <span class="mid"><a href="trip-companion.html">📍 Map</a> · <a href="sayings-sheet.html">📜 Sayings</a></span>
+  <a href="day-02.html">Day 2 ›</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">
+      <span class="daynum">Day 1</span>
+      <span class="act-tag">Act I · The Dream is Born</span>
+      <span class="act-tag">Scene-setter · no battle tonight</span>
+    </div>
+    <h1>The Land That Waited</h1>
+    <p class="dek">Before we meet our hero, we meet his <b>world</b> — the mountains he grew up in,
+      and why the land was quietly waiting for a boy like him to be born.</p>
+  </div>
+  <svg class="ridge" viewBox="0 0 880 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,90 L0,54 L70,30 L130,50 L200,20 L270,46 L340,14 L410,44 L480,24 L560,50 L620,28 L700,52 L770,26 L830,48 L880,32 L880,90 Z"
+      fill="var(--map-ridge)" opacity=".55"/>
+    <path d="M0,90 L0,66 L90,48 L170,66 L250,40 L340,64 L430,44 L520,66 L610,48 L700,68 L790,50 L880,66 L880,90 Z"
+      fill="var(--map-ridge)"/>
+  </svg>
+</header>
+
+<main class="wrap">
+
+  <!-- ===================== MAP ===================== -->
+  <section aria-labelledby="map-h">
+    <div class="sec-head">
+      <span class="num">01</span>
+      <h2 id="map-h">The stage — the Deccan</h2>
+      <span class="rule"></span>
+    </div>
+    <figure class="map">
+      <svg viewBox="0 0 700 660" role="img"
+        aria-label="A relief map of the western Deccan: the Arabian Sea to the west with a realistic Konkan coastline, the Sahyadri escarpment running north to south with the Konkan coastal plain to its west and the Deccan plateau (Desh) to its east, the eastward-flowing rivers Godavari, Bhima and Krishna, the Mughal Empire pressing from the north and the Adil Shahi Sultanate of Bijapur from the south-east, and the fort of Shivneri near Junnar marked where the story begins.">
+        <defs>
+          <linearGradient id="seaGrad" x1="0" y1="0" x2="1" y2="0.25">
+            <stop offset="0" style="stop-color:color-mix(in srgb,var(--sea) 62%,var(--sea-line))"/>
+            <stop offset="1" style="stop-color:var(--sea)"/>
+          </linearGradient>
+          <path id="landshape" d="M700,0 L212,0
+            C198,52 222,92 196,150 C176,196 214,224 190,272 C170,316 206,346 188,394
+            C172,438 202,470 186,518 C176,558 198,586 188,634 C185,648 190,655 190,660
+            L700,660 Z"/>
+          <clipPath id="land2"><use href="#landshape"/></clipPath>
+        </defs>
+
+        <!-- sea -->
+        <rect x="0" y="0" width="700" height="660" fill="url(#seaGrad)"/>
+        <text class="m-sea-label" x="86" y="330" text-anchor="middle" transform="rotate(-90 86 330)">Arabian Sea</text>
+        <!-- offshore ripples -->
+        <path class="m2-coastline soft" d="M120,120 C138,150 118,180 132,210"/>
+        <path class="m2-coastline soft" d="M96,360 C114,392 94,424 108,456"/>
+
+        <!-- land + relief (clipped to coastline) -->
+        <use href="#landshape" class="m2-land"/>
+        <g clip-path="url(#land2)">
+          <!-- Deccan plateau tint (east of the ghats) -->
+          <rect class="m2-plateau" x="316" y="0" width="384" height="660"/>
+          <!-- Konkan coastal plain band -->
+          <path class="m2-plain" d="M212,0 C198,52 222,92 196,150 C176,196 214,224 190,272
+            C170,316 206,346 188,394 C172,438 202,470 186,518 C176,558 198,586 188,634 C185,648 190,655 190,660"/>
+          <!-- empire washes -->
+          <path class="m2-wash-n" d="M300,0 L700,0 L700,196 C560,158 430,128 300,150 Z"/>
+          <path class="m2-wash-s" d="M300,660 L700,660 L700,474 C560,520 430,556 300,540 Z"/>
+          <!-- Sahyadri escarpment -->
+          <path class="m2-ghat" d="M326,-6 C338,54 306,96 320,158 C334,214 304,256 318,312
+            C330,360 306,398 318,452 C330,500 308,540 320,596 C324,624 322,640 322,660"/>
+          <path class="m2-ghat-core" d="M326,-6 C338,54 306,96 320,158 C334,214 304,256 318,312
+            C330,360 306,398 318,452 C330,500 308,540 320,596 C324,624 322,640 322,660"/>
+          <!-- rivers, rising in the ghats, flowing east -->
+          <path class="m2-river" d="M332,66 C420,92 540,118 700,166"/>
+          <path class="m2-river" d="M322,180 C430,230 560,316 700,402"/>
+          <path class="m2-river" d="M322,452 C430,494 556,566 672,660"/>
+        </g>
+
+        <!-- crisp coastline over the fill -->
+        <path class="m2-coastline" d="M212,0 C198,52 222,92 196,150 C176,196 214,224 190,272
+          C170,316 206,346 188,394 C172,438 202,470 186,518 C176,558 198,586 188,634 C185,648 190,655 190,660"/>
+
+        <!-- mountain hachures along the crest -->
+        <g class="m2-hatch">
+          <path d="M315,42 L322,32 L329,42"/><path d="M309,86 L316,76 L323,86"/>
+          <path d="M313,130 L320,120 L327,130"/><path d="M305,174 L312,164 L319,174"/>
+          <path d="M311,218 L318,208 L325,218"/><path d="M303,262 L310,252 L317,262"/>
+          <path d="M309,306 L316,296 L323,306"/><path d="M305,350 L312,340 L319,350"/>
+          <path d="M309,394 L316,384 L323,394"/><path d="M303,438 L310,428 L317,438"/>
+          <path d="M309,482 L316,472 L323,482"/><path d="M305,526 L312,516 L319,526"/>
+          <path d="M311,570 L318,560 L325,570"/><path d="M313,614 L320,604 L327,614"/>
+        </g>
+        <text x="300" y="252" transform="rotate(90 300 252)" text-anchor="middle"
+          style="font-family:'Karla',sans-serif;font-weight:700;letter-spacing:.26em;font-size:12px;fill:var(--map-land);opacity:.9">SAHYADRI</text>
+
+        <!-- region labels -->
+        <text class="m2-region" x="236" y="470" transform="rotate(90 236 470)" text-anchor="middle">KONKAN</text>
+        <text class="m2-region-s" x="222" y="470" transform="rotate(90 222 470)" text-anchor="middle">coastal plain</text>
+        <text class="m2-region" x="560" y="300">DESH</text>
+        <text class="m2-region-s" x="560" y="318">the Deccan plateau</text>
+
+        <!-- rivers labels -->
+        <text class="m2-river-l" x="556" y="146">Godavari</text>
+        <text class="m2-river-l" x="612" y="356">Bhima</text>
+        <text class="m2-river-l" x="470" y="560">Krishna</text>
+
+        <!-- empire pressure -->
+        <text class="m-label" x="512" y="48" style="fill:var(--ink-soft)">MUGHAL EMPIRE</text>
+        <path class="m-press" d="M498,120 C458,180 428,240 408,290"/>
+        <path d="M404,300 l0,-14 l10,7 Z" fill="var(--ink-faint)"/>
+
+        <text class="m-label" x="512" y="606" style="fill:var(--ink-soft)">ADIL SHAHI</text>
+        <text class="m-sub" x="512" y="624">Sultanate of Bijapur</text>
+        <path class="m-press" d="M556,548 C500,476 452,404 428,356"/>
+        <path d="M424,346 l10,7 l-13,3 Z" fill="var(--ink-faint)"/>
+
+        <!-- Portuguese on the coast -->
+        <path class="m-fort" d="M150,300 l5,9 l5,-9 Z" opacity=".7"/>
+        <path class="m-fort" d="M132,430 l5,9 l5,-9 Z" opacity=".7"/>
+        <text class="m-sub" x="118" y="560" text-anchor="middle">Portuguese</text>
+        <text class="m-sub" x="118" y="576" text-anchor="middle">coastal ports</text>
+
+        <!-- Shivneri marker -->
+        <circle class="m-star-ring" cx="320" cy="150" r="15"/>
+        <path class="m-star" d="M320,136 l3.6,7.4 l8.1,1 l-6,5.6 l1.6,8 l-7.3,-3.9 l-7.3,3.9 l1.6,-8 l-6,-5.6 l8.1,-1 Z"/>
+        <text class="m-shiv" x="342" y="146">Shivneri</text>
+        <text class="m-shiv-sub" x="342" y="164">near Junnar · the story begins here</text>
+
+        <!-- Pune -->
+        <circle cx="404" cy="300" r="4.5" fill="var(--ink)"/>
+        <text class="m-shiv" x="416" y="298" style="font-size:15px">Pune</text>
+
+        <!-- the Maval + forts still to come -->
+        <path d="M340,352 l6,12 l6,-12 Z" fill="none" stroke="var(--saffron)" stroke-width="1.5"/>
+        <path d="M356,352 l6,12 l6,-12 Z" fill="none" stroke="var(--saffron)" stroke-width="1.5"/>
+        <text class="m-shiv-sub" x="374" y="364">Torna · Rajgad</text>
+        <text x="340" y="392" style="fill:var(--green-soft);font-family:'Spectral',serif;font-style:italic;font-size:12.5px">the Maval — his homeland valleys</text>
+
+        <!-- compass -->
+        <g transform="translate(650,80)">
+          <circle r="24" fill="var(--paper)" stroke="var(--line)" stroke-width="1.5"/>
+          <path d="M0,-20 L5,0 L0,4 L-5,0 Z" fill="var(--saffron)"/>
+          <path d="M0,20 L5,0 L0,-4 L-5,0 Z" fill="var(--ink-faint)"/>
+          <text x="0" y="-28" text-anchor="middle" class="m-sub" style="fill:var(--ink-soft)">N</text>
+        </g>
+
+        <!-- scale bar -->
+        <g transform="translate(40,628)">
+          <path class="m2-scale" d="M0,0 L86,0 M0,-4 L0,4 M43,-3 L43,3 M86,-4 L86,4"/>
+          <text class="m2-scale-l" x="0" y="16">0</text>
+          <text class="m2-scale-l" x="86" y="16" text-anchor="end">≈150 km</text>
+        </g>
+
+        <!-- India locator inset -->
+        <g transform="translate(40,74)">
+          <rect class="m2-inset" x="0" y="0" width="88" height="104" rx="6"/>
+          <path d="M50,14 C58,16 64,20 63,28 C67,36 59,42 63,50 C68,60 58,66 54,76
+            C50,86 44,92 40,84 C35,74 26,70 28,60 C20,54 22,42 30,36 C32,26 40,16 50,14 Z"
+            fill="var(--green)" fill-opacity=".4" stroke="var(--green)" stroke-width="1" opacity=".85"/>
+          <rect x="28" y="40" width="12" height="14" fill="none" stroke="var(--saffron)" stroke-width="1.5"/>
+          <text x="44" y="98" text-anchor="middle" class="m2-scale-l" style="fill:var(--ink-soft)">India — our corner</text>
+        </g>
+      </svg>
+      <figcaption><b>The squeeze.</b> A beautiful land that belonged to no one who lived on it —
+        pressed by the Mughals from the north, Bijapur from the south-east, and sea-traders on the
+        coast. Between them, on the Sahyadri spine, sat hundreds of stone forts… and one small fort,
+        <span style="color:var(--saffron)">Shivneri</span>, about to change everything.</figcaption>
+    </figure>
+    <p class="map-cta"><a href="trip-companion.html">📍 See these places on a real map — plan a visit →</a></p>
+  </section>
+
+  <!-- ===================== STORY ===================== -->
+  <section aria-labelledby="story-h">
+    <div class="sec-head">
+      <span class="num">02</span>
+      <h2 id="story-h">Tonight's telling</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="read-cue">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.4"/><path d="M8 4.4V8l2.6 1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      About 10 minutes, read aloud slowly · choose your language
+    </div>
+
+    <div class="lang-bar" role="tablist" aria-label="Choose language">
+      <button role="tab" id="tab-en" aria-controls="story-en" aria-selected="true">English</button>
+      <button role="tab" id="tab-mr" class="mr" aria-controls="story-mr" aria-selected="false">मराठी</button>
+    </div>
+
+    <div class="telling" id="story-en" role="tabpanel" aria-labelledby="tab-en">
+      <p>Long, long ago — nearly four hundred years back — in the west of India there lay a land of
+        mountains and monsoons called the <span class="term">Deccan</span>. Tonight, before we meet
+        our hero, we must walk through his whole world: its mountains, its people, and the trouble
+        that filled its skies. Because a hero only makes sense once you know the world that needed
+        one.</p>
+      <p>Picture the mountains first. Running down the western edge of the Deccan, close to the sea,
+        stood a long wall of hills called the <span class="term">Sahyadri</span> — the range some
+        people call the Western Ghats. Imagine steep green ridges, one behind another as far as the
+        eye can see, with deep valleys folded between them. When the great rains arrive each June —
+        the <em>monsoon</em> — the clouds come down and sit right on the hilltops, waterfalls pour
+        off every cliff, and the whole world turns emerald green. On the narrow, steamy strip between
+        these mountains and the Arabian Sea lay the coastland called the <span class="term">Konkan</span>.
+        And on the higher, drier tableland to the east lay the plateau people called the
+        <span class="term">Desh</span>.</p>
+      <p>Now, these mountains held a secret that matters for our whole story. They are made of hard
+        black volcanic rock, and over millions of years the wind and rain carved them into hills with
+        sheer cliffs and flat tops — as if nature herself had built <em>castles of stone</em>. On
+        hundreds of these hilltops, people had raised <em>forts</em>: high walls, deep water-tanks,
+        and gates you could reach only by climbing narrow, twisting paths. A small band of brave
+        people inside such a fort could hold off an army many times their size. Remember that — it
+        becomes the beating heart of everything that follows.</p>
+      <p>Down in the valleys and across the plains lived the ordinary people — the
+        <span class="term">raiyat</span>, the farming folk. Most were <em>kunbis</em>, farmers who
+        rose before dawn, ploughed the earth behind slow bullocks, and planted millet (jowar and
+        bajra) on the dry plateau and rice in the wet Konkan. They kept cows and goats and buffaloes;
+        they prayed at little village shrines — for Hindus and Muslims lived side by side in these
+        lands. All they truly wanted was simple: enough rain, a safe harvest, and to raise their
+        children in peace.</p>
+      <p>But peace, my dear, was the one thing they could not keep.</p>
+      <p>Here is the hard truth of those times: this beautiful land did not belong to the people who
+        farmed it. It was carved up and fought over by great rulers, most of whom had never once
+        walked its fields. Far to the north sat the mightiest of them all — the
+        <span class="term">Mughal Emperor</span>, whose empire spread across most of India. In 1628 a
+        new Mughal emperor, <span class="term">Shah Jahan</span>, had taken the throne — yes, the very
+        one who would later build the Taj Mahal — and he was pushing his huge armies southward into
+        the Deccan.</p>
+      <p>The Deccan itself was split among sultans who were forever at war. In the north lay the
+        crumbling kingdom of <span class="term">Ahmadnagar</span> — its brilliant minister, a man
+        named Malik Ambar, had died only a few years before, and without him it was falling apart
+        under Mughal blows. To the south lay the rich sultanate of <span class="term">Bijapur</span>,
+        ruled by the Adil Shah. Away to the east lay <span class="term">Golconda</span>, famous for
+        its diamonds. And along the coast were newcomers from across the sea: the
+        <span class="term">Portuguese</span>, with their ships and cannon, and the <em>Siddis</em>,
+        fierce sailors who held an island fort no one could crack.</p>
+      <p>Can you imagine so many powerful rulers, crowded together, every one of them hungry for more?
+        They made war on each other almost every year. Armies marched back and forth across the
+        Deccan like storms — and every storm broke hardest on the ordinary people.</p>
+      <p>Between the great sultans and the farmers stood one more group we should meet, because our
+        hero's own family belonged to it: the <span class="term">Maratha nobles</span>. These were
+        warrior-landholders, with proud old titles like <em>deshmukh</em> and <em>patil</em>, who
+        held hereditary rights — a <em>watan</em> — over their home districts. They gathered the
+        taxes, kept the peace, and led bands of horsemen. But here was their sorrow: they had no
+        kingdom of their own. To survive, they had to serve whichever sultan would pay them — this
+        year Ahmadnagar, next year Bijapur, the year after the Mughals — spending their courage and
+        their lives building <em>other</em> men's empires. Shivaji's own father was exactly such a
+        noble, a famous and gifted warrior who served the sultans with his sword.</p>
+      <p>So think what daily life was like for a village family. Soldiers might ride in at any hour
+        and simply take what they liked — the grain from the store, the cow from the shed, sometimes
+        far worse. The taxes were crushing. And if a farmer cried, <em>"This is not fair!"</em> — who
+        was there to hear him? The sultan was far away in his marble palace and did not care. There
+        was no one whose <em>job</em> it was to protect an ordinary person. A family could work from
+        sunrise to sunset, all year long, and still watch strangers carry their harvest away.</p>
+      <p>And so, night after night, in a thousand little villages, the same quiet question hung in the
+        air: <em>must it always be like this?</em> Would their children, and their children's
+        children, live forever under masters who did not love the land — who saw the Deccan only as a
+        prize to be squeezed?</p>
+      <p>Now, my dear, let me give you a special word. Keep it safe, like a bright coin in your
+        pocket, because our whole story is a chase after it. The word is <span class="term">Swarajya</span>.</p>
+      <p><em>Swa</em> means "one's own." <em>Rajya</em> means "kingdom," or "rule." Put them together —
+        <span class="term">Swarajya: our own rule.</span> A land where the people who lived on it, who
+        farmed its soil and prayed in its temples and mosques, would at last govern <em>themselves</em>
+        — not as a gift handed down by a faraway emperor, but as a home built with their own hands. A
+        kingdom whose very first duty was to protect the farmer, not to rob him.</p>
+      <p>It sounds so simple, doesn't it? And yet, in all those years, no one had dared to build such
+        a thing. The empires were too vast, their armies too strong, their war-elephants and cannon
+        too many. For a Maratha family even to <em>dream</em> of Swarajya seemed as impossible as a
+        child reaching up to pluck the moon out of the sky.</p>
+      <p>And yet — high in those Sahyadri mountains, among the stone forts and the sure-footed
+        hill-people, the land was quietly waiting. Waiting for someone brave enough, and stubborn
+        enough, and kind enough, to look at the whole unfair world and say four small words:
+        <em>"It need not be so."</em></p>
+      <p>The times were turning. An old order was crumbling, the Mughals were pressing down, the
+        sultans were quarrelling. And into exactly this world — this dangerous, exciting,
+        turning-point of a world — a baby was about to be born, on a hill-fort called
+        <span class="term">Shivneri</span>, on a winter's day in the year 1630.</p>
+      <p>Tomorrow night, we will be there for his very first cry.</p>
+      <p class="goodnight">Goodnight — and hold tight to our shiny coin: <b>Swarajya, "our own rule."</b></p>
+    </div>
+
+    <div class="telling mr" id="story-mr" role="tabpanel" aria-labelledby="tab-mr" hidden>
+      <p><span class="dropcap">फा</span>र फार वर्षांपूर्वीची — जवळजवळ चारशे वर्षांमागची — गोष्ट. भारताच्या
+        पश्चिमेला डोंगर आणि पावसाचा एक प्रदेश होता — <span class="term">दख्खन.</span> आज, आपल्या नायकाला
+        भेटण्याआधी, आपण त्याचं अख्खं जग फिरून बघूया: त्याचे डोंगर, त्याची माणसं, आणि आकाश भरून राहिलेलं
+        संकट. कारण नायक कळतो तो त्याला ज्या जगाची गरज होती, ते जग समजल्यावरच.</p>
+      <p>आधी डोंगर बघ. दख्खनच्या पश्चिम कडेने, समुद्राजवळून, डोंगरांची एक लांबलचक भिंत खाली जात होती —
+        <span class="term">सह्याद्री,</span> ज्याला काहीजण पश्चिम घाट म्हणतात. डोळ्यांसमोर आण — उंच हिरवे
+        कडे, एकामागोमाग एक, नजर पोहोचेल तिथवर; मध्ये खोल दऱ्या दडलेल्या. दरवर्षी जूनमध्ये मोठा पाऊस येतो —
+        <em>पावसाळा</em> — तेव्हा ढग खाली उतरून माथ्यांवरच बसतात, प्रत्येक कड्यावरून धबधबे कोसळतात, आणि
+        अख्खं जग पाचूसारखं हिरवं होतं. या डोंगरांच्या आणि अरबी समुद्राच्या मधल्या अरुंद, दमट पट्टीला
+        म्हणत <span class="term">कोकण.</span> आणि पूर्वेकडच्या उंच, कोरड्या पठाराला म्हणत
+        <span class="term">देश.</span></p>
+      <p>या डोंगरांत एक गुपित दडलं होतं, जे आपल्या अख्ख्या गोष्टीत महत्त्वाचं ठरतं. ते बनलेत कठीण काळ्या
+        ज्वालामुखी-खडकाचे, आणि लाखो वर्षांच्या ऊन-पावसाने त्यांना तासून असे घडवलं की सरळ कडे नि सपाट माथे
+        — जणू निसर्गानेच <em>दगडी किल्ले</em> उभारले. यांतल्या शेकडो माथ्यांवर लोकांनी <em>किल्ले</em>
+        बांधले: उंच तटबंदी, खोल पाण्याची टाकी, आणि फक्त अरुंद वळणवाटेनेच पोहोचता येणारे दरवाजे. अशा
+        किल्ल्यात मूठभर शूर माणसंसुद्धा कितीतरी पट मोठ्या सैन्याला रोखून धरू शकत. हे लक्षात ठेव — पुढे
+        साऱ्या गोष्टीचं हृदयच ते बनतं.</p>
+      <p>खाली दऱ्यांत आणि मैदानांत राहायची सामान्य माणसं — <span class="term">रयत,</span> म्हणजे शेतकरी
+        लोक. बहुतेक <em>कुणबी</em> — पहाटेच्या आधी उठून बैलांमागे नांगर धरणारे, कोरड्या पठारावर ज्वारी-बाजरी
+        आणि ओल्या कोकणात भात पेरणारे. गाई, बकऱ्या, म्हशी पाळणारे; गावातल्या छोट्या देवळांत प्रार्थना
+        करणारे — कारण इथे हिंदू आणि मुसलमान शेजारी शेजारी नांदत होते. त्यांना खरं तर एकच हवं होतं — पुरेसा
+        पाऊस, सुखरूप पीक, आणि मुलांना शांततेत वाढवणं.</p>
+      <p>पण बाळा, शांती हीच एक गोष्ट त्यांना टिकवता येत नव्हती.</p>
+      <p>त्या काळातलं कटू सत्य हे: ही सुंदर भूमी, जे तिला राबवत त्यांची नव्हतीच. मोठमोठे राजे तिचे तुकडे
+        पाडत, तिच्यासाठी भांडत — आणि त्यांतले बहुतेक इथल्या शेतात कधी पाऊलही ठेवत नसत. उत्तरेला दूर होता
+        सर्वांत बलाढ्य — <span class="term">मुघल बादशहा,</span> ज्याचं साम्राज्य जवळजवळ अख्ख्या भारतभर
+        पसरलेलं. इ.स. १६२८ मध्ये नवा मुघल बादशहा <span class="term">शाहजहान</span> गादीवर आला — होय, तोच
+        जो पुढे ताजमहाल बांधणार होता — आणि तो आपली अवाढव्य सैन्यं दख्खनकडे रेटत होता.</p>
+      <p>आणि दख्खन तर सुलतानांमध्ये वाटलेलं, सतत आपसात लढणारं. उत्तरेला होतं ढासळणारं
+        <span class="term">अहमदनगर</span> — त्याचा तेजस्वी वजीर मलिक अंबर काही वर्षांपूर्वीच वारला होता,
+        आणि त्याच्याविना ते मुघलांच्या तडाख्यात कोसळत होतं. दक्षिणेला होतं श्रीमंत
+        <span class="term">विजापूर,</span> आदिलशहाचं. पूर्वेला होतं हिऱ्यांसाठी प्रसिद्ध
+        <span class="term">गोवळकोंडा.</span> आणि किनाऱ्यावर समुद्रापलीकडून आलेले नवे लोक: तोफा नि जहाजं
+        घेऊन आलेले <span class="term">पोर्तुगीज,</span> आणि <em>सिद्दी</em> — कुणालाही न जिंकता आलेला एक
+        बेटावरचा किल्ला बाळगणारे कडवे दर्यावर्दी.</p>
+      <p>एवढे सारे बलाढ्य राजे, दाटीवाटीने, आणि प्रत्येकाला आणखी हवं — कल्पना कर! ते जवळजवळ दरवर्षी
+        एकमेकांशी युद्ध करत. सैन्यं वादळांसारखी दख्खनभर इकडून तिकडे कूच करत — आणि प्रत्येक वादळ सर्वांत
+        जोरात कोसळायचं सामान्य माणसावरच.</p>
+      <p>मोठे सुलतान आणि शेतकरी यांच्यामध्ये आणखी एक वर्ग होता, ज्याला भेटायला हवं — कारण आपल्या नायकाचं
+        घराणंच त्यातलं होतं: <span class="term">मराठा सरदार.</span> हे योद्धे-जमीनदार, <em>देशमुख</em> आणि
+        <em>पाटील</em> अशा जुन्या अभिमानी पदव्यांचे, आपापल्या मुलखावर वंशपरंपरागत हक्क — <em>वतन</em> —
+        बाळगणारे. ते कर गोळा करत, बंदोबस्त राखत, घोडेस्वारांच्या टोळ्या चालवत. पण त्यांचं दुःख हे: त्यांचं
+        स्वतःचं राज्य नव्हतं. जगायचं तर जो सुलतान पगार देईल त्याची चाकरी करायची — या वर्षी अहमदनगर, पुढच्या
+        वर्षी विजापूर, त्यापुढे मुघल — आपलं शौर्य आणि आयुष्य <em>दुसऱ्यांची</em> साम्राज्यं उभारण्यात
+        खर्ची घालायची. शिवाजीचे वडीलसुद्धा असेच एक सरदार — नामवंत, कुशल योद्धा, तलवारीने सुलतानांची चाकरी
+        करणारे.</p>
+      <p>तर एका गावातल्या कुटुंबाचं रोजचं आयुष्य कसं असेल, विचार कर. शिपाई कोणत्याही क्षणी घोडे घालून यायचे
+        आणि हवं ते उचलून न्यायचे — कोठारातलं धान्य, गोठ्यातली गाय, कधी त्याहूनही वाईट. कर पिळवटून टाकणारे.
+        आणि शेतकऱ्याने ओरडून सांगितलं, <em>"हे बरोबर नाही!"</em> — तर ऐकणार कोण? सुलतान दूर आपल्या
+        संगमरवरी महालात, त्याला पर्वा नव्हती. सामान्य माणसाचं रक्षण करणं हे ज्याचं <em>कामच</em> आहे असा
+        कुणी नव्हताच. कुटुंब सूर्योदयापासून सूर्यास्तापर्यंत, वर्षभर राबायचं — आणि शेवटी परका माणूस त्यांचं
+        पीक उचलून नेताना नुसतं बघत राहायचं.</p>
+      <p>म्हणून रोज रात्री, हजारो छोट्या गावांत, तोच शांत प्रश्न हवेत तरंगायचा: <em>हे असंच राहणार का
+        कायम?</em> आपली मुलं, आणि मुलांची मुलं, या भूमीवर प्रेम नसलेल्या धन्यांखाली कायमचीच राहणार का —
+        ज्यांना दख्खन म्हणजे फक्त पिळून घ्यायचं एक बक्षीस वाटायचं?</p>
+      <p>आता, बाळा, एक खास शब्द देतो. चकचकीत नाण्यासारखा खिशात जपून ठेव, कारण आपली अख्खी गोष्ट म्हणजे
+        त्याचाच पाठलाग. तो शब्द — <span class="term">स्वराज्य.</span></p>
+      <p><em>स्व</em> म्हणजे "आपलं स्वतःचं." <em>राज्य</em> म्हणजे "राज्य" किंवा "अंमल." दोन्ही जोडलं की —
+        <span class="term">स्वराज्य: आपलं स्वतःचं राज्य.</span> असा प्रदेश, जिथे इथेच राहणारे, इथली माती
+        राबवणारे, इथल्या देवळांत-मशिदींत प्रार्थना करणारे लोकच शेवटी <em>स्वतःवर</em> राज्य करतील — दूरच्या
+        बादशहाने दिलेली भेट म्हणून नव्हे, तर स्वतःच्या हातांनी उभारलेलं घर म्हणून. असं राज्य, ज्याचं पहिलं
+        कामच शेतकऱ्याला लुटणं नव्हे, तर त्याचं रक्षण करणं.</p>
+      <p>किती सोपं वाटतं ना? आणि तरीही, इतक्या वर्षांत असं काही उभारायचं धाडस कुणीच केलं नव्हतं. साम्राज्यं
+        फार अवाढव्य, सैन्यं फार बलवान, त्यांचे युद्ध-हत्ती नि तोफा फार जास्त. एका मराठा घराण्याने स्वराज्याचं
+        नुसतं <em>स्वप्न</em> पाहणंसुद्धा, हात उंच करून आकाशातून चंद्र तोडून आणण्याइतकं अशक्य वाटायचं.</p>
+      <p>आणि तरीही — त्या उंच सह्याद्रीत, त्या दगडी किल्ल्यांत, त्या पावलं पक्की असणाऱ्या डोंगरी
+        माणसांमध्ये — ही भूमी शांतपणे वाट पाहत होती. एवढ्या धाडसी, एवढ्या हट्टी, आणि एवढ्या दयाळू कुणाची,
+        की जो या साऱ्या अन्यायी जगाकडे बघून तीनच शब्द म्हणेल: <em>"असं असायला नको."</em></p>
+      <p>काळ बदलत होता. जुनी घडी ढासळत होती, मुघल दाबत होते, सुलतान आपसात भांडत होते. आणि नेमक्या याच
+        जगात — या धोकादायक, रोमांचक, वळणावर उभ्या जगात — एक बाळ जन्म घेणार होतं, <span class="term">शिवनेरी</span>
+        नावाच्या एका किल्ल्यावर, इ.स. १६३० सालच्या एका थंडीच्या दिवशी.</p>
+      <p>उद्या रात्री, त्याच्या पहिल्यावहिल्या रडण्याच्या वेळी आपण तिथे असू.</p>
+      <p class="goodnight">शुभ रात्री — आणि आपलं चकचकीत नाणं घट्ट धरून ठेव: <b>स्वराज्य, "आपलं स्वतःचं राज्य."</b></p>
+    </div>
+
+    <div class="moon-note">
+      <svg class="moon" width="56" height="56" viewBox="0 0 56 56" aria-hidden="true">
+        <path d="M36 5 a23 23 0 1 0 0 46 a17.5 17.5 0 1 1 0 -46 Z" fill="var(--gold)" opacity=".92"/>
+      </svg>
+      <p>Like the thin first-day crescent moon, <b>swarajya</b> begins small — and slowly grows.
+        <span class="fwd">Keep this moon in mind: on Day&nbsp;6 it appears again — as the very emblem of Shivaji's royal seal, the Rajmudra.</span></p>
+    </div>
+
+    <h3 class="subhead">Say it out loud</h3>
+    <div class="say-grid">
+      <div class="say"><div class="head"><span class="dev">दख्खन</span><span class="rom">Deccan</span></div>
+        <div class="phon">DEK-un</div><div class="gloss">the great plateau of the south</div></div>
+      <div class="say"><div class="head"><span class="dev">सह्याद्री</span><span class="rom">Sahyadri</span></div>
+        <div class="phon">sah-HYAA-dree</div><div class="gloss">the long mountain wall</div></div>
+      <div class="say"><div class="head"><span class="dev">रयत</span><span class="rom">raiyat</span></div>
+        <div class="phon">RUH-yut</div><div class="gloss">the ordinary farming people</div></div>
+      <div class="say"><div class="head"><span class="dev">स्वराज्य</span><span class="rom">Swarajya</span></div>
+        <div class="phon">swuh-RAAJ-yuh</div><div class="gloss">"our own rule"</div></div>
+      <div class="say"><div class="head"><span class="dev">शिवनेरी</span><span class="rom">Shivneri</span></div>
+        <div class="phon">shiv-NEH-ree</div><div class="gloss">tomorrow's little fort</div></div>
+      <div class="say"><div class="head"><span class="dev">बिजापूर</span><span class="rom">Bijapur</span></div>
+        <div class="phon">bee-JAA-poor</div><div class="gloss">the southern sultan's city</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== COIN ===================== -->
+  <section aria-labelledby="coin-h">
+    <div class="sec-head">
+      <span class="num">03</span>
+      <h2 id="coin-h">Tonight's collectible</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="coin-wrap">
+      <button class="coin" id="coin" aria-label="Swarajya coin — flip to read its meaning">
+        <span class="coin-inner">
+          <span class="face front">
+            <span class="big">स्वराज्य</span>
+            <span class="rom">Swarajya</span>
+            <span class="dots">Badge · Day 1</span>
+          </span>
+          <span class="face back">
+            <span class="mean">“our own rule”</span>
+            <span class="dots">the whole story's dream</span>
+          </span>
+        </span>
+      </button>
+      <div class="coin-copy">
+        <h3>The first badge</h3>
+        <p>Every night the child collects one word or line. This is the very first — the idea the
+          whole thirty-night journey is chasing. Later it becomes a real coin: Shivaji minted his
+          own copper <em>Shivrai</em> and gold <em>Hon</em>.</p>
+        <p class="hint">↻ Hover or tap the coin to turn it over.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HISTORY CARDS ===================== -->
+  <section aria-labelledby="hist-h">
+    <div class="sec-head">
+      <span class="num">04</span>
+      <h2 id="hist-h">For the grown-up reading aloud</h2>
+      <span class="rule"></span>
+    </div>
+    <p class="grown-note">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 7v4M8 4.6v.4" stroke-linecap="round"/></svg>
+      The story keeps it simple. These cards hold the real history behind it — for when a curious
+      child asks “did that really happen?”
+    </p>
+
+    <details class="card">
+      <summary>
+        <span class="tag hist">History</span>
+        <h4>The three giants of 1630</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="body">
+        <p>When our story opens, the Deccan really was carved up between three Muslim-ruled powers
+          and a European trading presence. To the north, the <b>Mughal Empire</b> under Shah Jahan
+          was pushing south. To the south sat the <b>Adil Shahi Sultanate of Bijapur</b>. Between
+          and around them, the older <b>Nizam Shahi of Ahmadnagar</b> was collapsing — and the
+          <b>Portuguese</b> held ports along the Konkan coast.</p>
+        <p>Shivaji's own father, Shahaji, served these sultans as a warrior-noble. The idea of a
+          kingdom <em>of the land's own people</em> genuinely had no home yet — which is exactly
+          what makes the coming story remarkable.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary>
+        <span class="tag hist">History</span>
+        <h4>Who were the “raiyat”?</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="body">
+        <p><b>Raiyat</b> (रयत) simply means the common farming people — the peasants who worked the
+          soil. Under the sultanates, land revenue was often farmed out to collectors and roaming
+          armies who lived off the countryside, so ordinary villagers bore the weight of every war.</p>
+        <p>Protecting the raiyat — fair taxes, no plunder of farms, punishing soldiers who harmed
+          them — later became a defining mark of Shivaji's rule. That's why we plant the word now,
+          on Night 1: the people he would one day protect.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary>
+        <span class="tag word">The word</span>
+        <h4>“Swarajya” — say it honestly</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="body">
+        <p><b>Swa</b> (“one's own”) + <b>rajya</b> (“rule/kingdom”) = <b>self-rule</b>. The fuller
+          phrase <b>Hindavi Swarajya</b> — the term tied to Shivaji's project — we meet properly on
+          <b>Day 20</b>.</p>
+        <p>One honesty note for later: the famous line <em>“Swarajya is my birthright”</em> belongs
+          to <b>Lokmanya Tilak</b> around 1900 — <em>not</em> to Shivaji. We'll keep that line where
+          it belongs and never put it in his mouth.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary>
+        <span class="tag hist">History</span>
+        <h4>Why the Sahyadri made forts</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="body">
+        <p>The Sahyadri (Western Ghats) are built of hard volcanic <b>Deccan-trap basalt</b>, which
+          weathers into sheer-sided, flat-topped hills — natural fortresses. Popular memory speaks of
+          <b>300+ forts</b>; a careful early count (the Sabhasad Bakhar) lists around 240, of which
+          roughly 111 were built by Shivaji himself.</p>
+        <p>Modern, real, and visitable: in <b>July 2025</b>, twelve of these — including Raigad,
+          Rajgad, Pratapgad, Shivneri, Panhala and Sindhudurg — were inscribed as
+          <b>UNESCO World Heritage</b> (“Maratha Military Landscapes of India”).</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===================== JOURNEY ===================== -->
+  <section aria-labelledby="journey-h">
+    <div class="sec-head">
+      <span class="num">05</span>
+      <h2 id="journey-h">The thirty-night journey</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="ribbon">
+      <div class="acts">
+        <div class="act-col">
+          <div class="name">I · Dream is Born</div>
+          <div class="dots-row">
+            <span class="d now" title="Day 1 — tonight"></span>
+            <span class="d" title="Day 2"></span><span class="d" title="Day 3"></span>
+            <span class="d" title="Day 4"></span><span class="d" title="Day 5"></span>
+            <span class="d" title="Day 6"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">II · Lion Rises</div>
+          <div class="dots-row">
+            <span class="d" title="Day 7"></span><span class="d" title="Day 8"></span>
+            <span class="d" title="Day 9"></span><span class="d" title="Day 10"></span>
+            <span class="d" title="Day 11"></span><span class="d" title="Day 12"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">III · Shaking Empires</div>
+          <div class="dots-row">
+            <span class="d" title="Day 13"></span><span class="d" title="Day 14"></span>
+            <span class="d" title="Day 15"></span><span class="d" title="Day 16"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">IV · The Crown</div>
+          <div class="dots-row">
+            <span class="d" title="Day 17"></span><span class="d" title="Day 18"></span>
+            <span class="d" title="Day 19"></span><span class="d" title="Day 20"></span>
+            <span class="d" title="Day 21"></span><span class="d" title="Day 22"></span>
+            <span class="d" title="Day 23"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">V · King & Legacy</div>
+          <div class="dots-row">
+            <span class="d" title="Day 24"></span><span class="d" title="Day 25"></span>
+            <span class="d" title="Day 26"></span><span class="d" title="Day 27"></span>
+            <span class="d" title="Day 28"></span><span class="d" title="Day 29"></span>
+            <span class="d" title="Day 30"></span>
+          </div>
+        </div>
+      </div>
+      <div class="legend">
+        <span><span class="d now"></span> Tonight</span>
+        <span><span class="d"></span> Nights to come</span>
+        <span><span class="d done"></span> Nights told</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LEDGER ===================== -->
+  <section aria-labelledby="ledger-h">
+    <div class="ledger">
+      <h2 id="ledger-h">Fact &amp; legend, kept honest</h2>
+      <dl>
+        <div class="row">
+          <dt class="h">History</dt>
+          <dd>The Deccan of 1630 divided between the <b>Mughals</b>, <b>Bijapur</b> and the fading
+            <b>Ahmadnagar</b> sultanate, with <b>Portuguese</b> on the coast; heavy taxation and
+            armies living off the <b>raiyat</b>; the basalt hill-forts of the Sahyadri.</dd>
+        </div>
+        <div class="row">
+          <dt class="c">Framing</dt>
+          <dd>The “night after night the people wondered” scene is a storyteller's bridge to set the
+            stage — a way in, not a quoted event. <b>Swarajya</b> as the story's guiding idea is real.</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="foot">
+      <span><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Trip map</a></span>
+      <span class="next">Next → <a href="day-02.html">Day 2 · Birth at Shivneri</a> (19 Feb 1630)</span>
+    </div>
+  </section>
+</main>
+
+<script>
+  // Language toggle
+  (function(){
+    var tabs={en:document.getElementById('tab-en'),mr:document.getElementById('tab-mr')};
+    var panes={en:document.getElementById('story-en'),mr:document.getElementById('story-mr')};
+    function show(l){
+      for(var k in tabs){
+        var on=(k===l);
+        tabs[k].setAttribute('aria-selected',on?'true':'false');
+        panes[k].hidden=!on;
+      }
+    }
+    tabs.en.addEventListener('click',function(){show('en')});
+    tabs.mr.addEventListener('click',function(){show('mr')});
+  })();
+
+  // Coin flip on tap (hover handled by CSS)
+  (function(){
+    var coin=document.getElementById('coin');
+    coin.addEventListener('click',function(){coin.classList.toggle('flipped')});
+  })();
+</script>

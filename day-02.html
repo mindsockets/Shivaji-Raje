@@ -1,0 +1,507 @@
+<meta charset="utf-8">
+<title>Birth at Shivneri</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tiro+Devanagari+Marathi:ital@0;1&family=Karla:wght@400;600;700&display=swap">
+
+<link rel="stylesheet" href="day.css">
+
+<nav class="daynav">
+  <a href="day-01.html">‹ Day 1</a>
+  <span class="mid"><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Map</a> · <a href="sayings-sheet.html">📜 Sayings</a></span>
+  <a href="day-03.html">Day 3 ›</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">
+      <span class="daynum">Day 2</span>
+      <span class="act-tag">Act I · The Dream is Born</span>
+      <span class="act-tag">19 February 1630</span>
+    </div>
+    <h1>Birth at Shivneri</h1>
+    <p class="dek">The boy who will chase last night's shiny coin — <b>Swarajya</b> — is born high
+      on a hill-fort, and given a name that will one day make emperors sit up straight.</p>
+  </div>
+  <svg class="ridge" viewBox="0 0 880 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,90 L0,54 L70,30 L130,50 L200,20 L270,46 L340,14 L410,44 L480,24 L560,50 L620,28 L700,52 L770,26 L830,48 L880,32 L880,90 Z"
+      fill="var(--map-ridge)" opacity=".55"/>
+    <path d="M0,90 L0,66 L90,48 L170,66 L250,40 L340,64 L430,44 L520,66 L610,48 L700,68 L790,50 L880,66 L880,90 Z"
+      fill="var(--map-ridge)"/>
+  </svg>
+</header>
+
+<main class="wrap">
+
+  <!-- ===================== PLACE ===================== -->
+  <section aria-labelledby="place-h">
+    <div class="sec-head">
+      <span class="num">01</span>
+      <h2 id="place-h">The place — Shivneri</h2>
+      <span class="rule"></span>
+    </div>
+    <figure class="map">
+      <svg viewBox="0 0 700 460" role="img"
+        aria-label="An illustration of Shivneri, a flat-topped basalt hill-fort above the town of Junnar: strong walls and battlements ring the summit, a path with seven gates climbs the slope, the birthplace building flies a saffron flag, and a crescent moon hangs in the sky. The town of Junnar sits at the base.">
+        <defs>
+          <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" style="stop-color:color-mix(in srgb,var(--saffron) 13%,var(--paper))"/>
+            <stop offset="1" style="stop-color:var(--paper)"/>
+          </linearGradient>
+          <path id="hill2" d="M150,424 L255,150 L455,150 L560,424 Z"/>
+          <clipPath id="hillclip"><use href="#hill2"/></clipPath>
+        </defs>
+
+        <!-- sky -->
+        <rect x="0" y="0" width="700" height="460" fill="url(#skyGrad)"/>
+        <!-- crescent moon (callback to Day 1) -->
+        <path d="M604,42 a26 26 0 1 0 0 52 a20 20 0 1 1 0 -52 Z" fill="var(--gold)" opacity=".9"/>
+        <!-- stars -->
+        <g fill="var(--ink-faint)" opacity=".55">
+          <circle cx="120" cy="70" r="2"/><circle cx="200" cy="48" r="1.6"/><circle cx="500" cy="60" r="1.6"/>
+          <circle cx="90" cy="150" r="1.6"/><circle cx="650" cy="150" r="2"/><circle cx="560" cy="96" r="1.4"/>
+        </g>
+
+        <!-- distant Sahyadri -->
+        <path d="M0,300 L80,240 L150,290 L230,235 L300,285 L360,250 L430,290 L520,240 L600,288 L700,250 L700,320 L0,320 Z"
+          fill="var(--map-ridge)" opacity=".35"/>
+
+        <!-- valley floor -->
+        <rect x="0" y="418" width="700" height="42" fill="var(--green)" opacity=".16"/>
+
+        <!-- the mesa -->
+        <use href="#hill2" fill="var(--map-ridge)"/>
+        <!-- basalt strata -->
+        <g clip-path="url(#hillclip)" stroke="var(--ink-soft)" stroke-width="1.4" opacity=".35" fill="none">
+          <path d="M150,220 L560,220"/><path d="M150,270 L560,270"/>
+          <path d="M150,320 L560,320"/><path d="M150,370 L560,370"/>
+        </g>
+        <!-- green cap -->
+        <path d="M255,150 L455,150 L448,164 L262,164 Z" fill="var(--green)" opacity=".85"/>
+
+        <!-- climbing path + the seven gates -->
+        <path d="M348,420 C300,382 392,342 336,300 C300,272 372,228 336,188"
+          fill="none" stroke="var(--ink-faint)"
+          stroke-width="5" stroke-linecap="round" stroke-dasharray="1 6" opacity=".8"/>
+        <text class="m-sub" x="300" y="356" style="fill:var(--paper)">seven gates ↑</text>
+
+        <!-- summit wall + battlements -->
+        <g fill="var(--ink-soft)">
+          <rect x="258" y="138" width="196" height="13"/>
+          <rect x="260" y="130" width="9" height="9"/><rect x="279" y="130" width="9" height="9"/>
+          <rect x="298" y="130" width="9" height="9"/><rect x="317" y="130" width="9" height="9"/>
+          <rect x="386" y="130" width="9" height="9"/><rect x="405" y="130" width="9" height="9"/>
+          <rect x="424" y="130" width="9" height="9"/><rect x="443" y="130" width="9" height="9"/>
+        </g>
+
+        <!-- birthplace building + bhagwa flag -->
+        <rect x="333" y="106" width="34" height="32" fill="var(--paper)" stroke="var(--line)" stroke-width="1.5"/>
+        <path d="M330,106 L350,88 L370,106 Z" fill="var(--map-ridge)"/>
+        <rect x="345" y="120" width="10" height="18" fill="var(--ink-soft)"/>
+        <line x1="350" y1="88" x2="350" y2="64" stroke="var(--ink-soft)" stroke-width="2"/>
+        <path d="M350,66 L374,72 L350,79 Z" fill="var(--saffron)"/>
+
+        <!-- born-here marker -->
+        <circle class="m-star-ring" cx="392" cy="150" r="13"/>
+        <path class="m-star" d="M392,138 l3.1,6.3 l7,.9 l-5.1,4.8 l1.3,6.9 l-6.3,-3.3 l-6.3,3.3 l1.3,-6.9 l-5.1,-4.8 l7,-.9 Z"/>
+        <text class="m-shiv" x="414" y="146">Shivneri</text>
+        <text class="m-shiv-sub" x="414" y="164">born here · 19 Feb 1630</text>
+
+        <!-- Junnar town -->
+        <g fill="var(--ink-faint)" opacity=".85">
+          <path d="M176,418 v-12 h16 v12 Z M176,406 l8,-7 l8,7 Z"/>
+          <path d="M198,418 v-9 h12 v9 Z M198,409 l6,-5 l6,5 Z"/>
+          <path d="M498,418 v-10 h14 v10 Z M498,408 l7,-6 l7,6 Z"/>
+          <path d="M518,418 v-8 h11 v8 Z M518,410 l5.5,-5 l5.5,5 Z"/>
+        </g>
+        <text class="m-sub" x="196" y="438" text-anchor="middle" style="fill:var(--ink-soft)">Junnar</text>
+      </svg>
+      <figcaption><b>A cradle of stone.</b> Shivneri is a flat-topped basalt fort above the town of
+        Junnar — walls, battlements and seven gates guarding a summit so high the clouds rest on it.
+        Shahaji sent Jijabai here for safety, and here, on
+        <span style="color:var(--saffron)">19 February 1630</span>, Shivaji was born.</figcaption>
+    </figure>
+    <p class="map-cta"><a href="trip-companion.html">📍 Find Shivneri on the real map — plan a visit →</a></p>
+  </section>
+
+  <!-- ===================== STORY ===================== -->
+  <section aria-labelledby="story-h">
+    <div class="sec-head">
+      <span class="num">02</span>
+      <h2 id="story-h">Tonight's telling</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="read-cue">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.4"/><path d="M8 4.4V8l2.6 1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      About 10 minutes, read aloud slowly · choose your language
+    </div>
+
+    <div class="lang-bar" role="tablist" aria-label="Choose language">
+      <button role="tab" id="tab-en" aria-controls="story-en" aria-selected="true">English</button>
+      <button role="tab" id="tab-mr" class="mr" aria-controls="story-mr" aria-selected="false">मराठी</button>
+    </div>
+
+    <div class="telling" id="story-en" role="tabpanel" aria-labelledby="tab-en">
+      <p>Last night we slipped a shiny word into our pocket like a coin — <span class="term">Swarajya</span>,
+        "our own rule." Tonight the little boy who will spend his <em>whole life</em> chasing that
+        dream is finally going to be born — on a hill-fort, on a cold winter's night, in the year
+        1630.</p>
+      <p>Near an old, old town called <span class="term">Junnar</span> — one of the most ancient
+        market-towns in all the Deccan, where traders had come and gone for two thousand years — rose
+        a great hill, and on its summit stood the fort of <span class="term">Shivneri</span>. Picture
+        a mountain with its top sliced perfectly flat, like a giant's table of black stone. Around
+        that summit ran strong stone walls, and to reach the top you had to climb a steep path
+        guarded by <em>seven great gates</em>, one after another — so that an enemy who broke through
+        the first still had six more to face. Up there were cool rock-cut water tanks (people fondly
+        called two of them Ganga and Yamuna, after the holy rivers), grain stores, and a little
+        temple. Clouds drifted past the towers; eagles nested in the cliffs. It was one of the safest
+        places in the whole land — and that is exactly why our story begins here.</p>
+      <p>For the times were dangerous, just as we heard last night. The old kingdom of Ahmadnagar was
+        crumbling, the Mughal armies were pressing down from the north, and war could sweep across
+        the plains at any moment. A baby needed high, strong walls around it.</p>
+      <p>Shivaji's father was a famous warrior-noble named <span class="term">Shahaji</span>, of the
+        Bhosale family. He was one of the finest soldiers in the Deccan — but, like all Maratha
+        nobles, he had to serve the sultans to survive, and his sword and his armies carried him far,
+        far away, often down into the distant south. So, to keep his family safe while he was on
+        campaign, Shahaji sent his wife up behind the high walls of Shivneri.</p>
+      <p>His wife's name was <span class="term">Jijabai</span>, and she came from a proud and powerful
+        Maratha house — she was the daughter of a great noble named Lakhuji Jadhav. And here is
+        something that will help you understand her heart: only about a year before, her own father
+        and brothers had been killed by treachery at a sultan's court. So Jijabai knew, from her own
+        life and her own tears, exactly how cruel these times could be — and exactly why the land so
+        badly needed rulers who would <em>protect</em> their people instead of betraying them.</p>
+      <p>She was no ordinary mother. She was brave and wise and strong, and she loved the old, old
+        stories — the <em>Ramayana</em> and the <em>Mahabharata</em>: of Ram who always kept his
+        word, of the mighty Pandavas, of kings who defended the weak and never bowed to bullies. She
+        carried those tales in her heart like treasure, ready to pour them, evening after evening,
+        into the child she was waiting for. And as she waited, she prayed to the goddess of the
+        fort — <span class="term">Shivai Devi</span>.</p>
+      <p>Then, on a cold winter's day — the <em>nineteenth of February, in the year 1630</em> — high
+        on Shivneri, under the wide Sahyadri sky, a baby boy was born. Somewhere far to the south his
+        father was at war; here on the quiet hilltop his mother held him for the very first time.</p>
+      <p>What would they call him? Jijabai remembered the goddess she had prayed to through all those
+        long months — Shivai. And so she gave her son the name that belonged to the goddess of the
+        fort: <span class="term">Shivaji</span>. <em>The one of Shivai.</em> (He had an elder brother
+        too, named Sambhaji — but it is little Shivaji whose story we will follow.)</p>
+      <p>It was only a name, whispered on a hilltop, over a baby wrapped against the cold. But hold it
+        gently in your mind — because within one lifetime, sultans and emperors across the whole of
+        India would hear that very name, "Shivaji," and sit bolt upright on their thrones.</p>
+      <p>That night there was no battle and no danger. Just a mother, a new baby, and a hill-fort
+        under a sky full of stars. Jijabai held him close and looked out over the dark ranges, at the
+        hundreds of forts sleeping on their far-off peaks, and she made a wish — a wish as thin and
+        bright as the crescent moon hanging over the Sahyadri: that one day, somehow, this land would
+        belong to its own people again, and her son might be the one to make it so.</p>
+      <p>And do you remember our shiny coin from last night? <span class="term">Swarajya.</span> The
+        tiny one asleep in Jijabai's arms is the very person who will grow up to chase it — up cliffs,
+        into battles, across a whole lifetime — with all his heart.</p>
+      <p>But all of that is still to come. Tonight he is simply a newborn on a mountain, loved by a
+        mother who carries both a great grief and a greater hope.</p>
+      <p class="goodnight">Goodnight. Tonight's name to keep: <b>Shivaji — "the one named for the
+        goddess Shivai."</b></p>
+    </div>
+
+    <div class="telling mr" id="story-mr" role="tabpanel" aria-labelledby="tab-mr" hidden>
+      <p><span class="dropcap">का</span>ल आपण एक चकचकीत शब्द नाण्यासारखा खिशात ठेवला — <span class="term">स्वराज्य,</span>
+        "आपलं स्वतःचं राज्य." आज रात्री, तेच स्वप्न आयुष्यभर पाठलाग करत राहणारा तो छोटा मुलगा शेवटी जन्म
+        घेणार आहे — एका उंच किल्ल्यावर, एका गारठलेल्या हिवाळी रात्री, इ.स. १६३० साली. डोळे मीट, आणि आपण
+        त्या रात्री तिथे जाऊया.</p>
+      <p><span class="term">जुन्नर</span> नावाच्या एका फार जुन्या गावाजवळ — दख्खनेतल्या सर्वांत प्राचीन
+        बाजारगावांपैकी एक, जिथे दोन हजार वर्षं व्यापारी येत-जात होते, उंट-बैलांचे तांडे थांबायचे — एक मोठा
+        डोंगर उभा होता, आणि त्याच्या माथ्यावर <span class="term">शिवनेरी</span> किल्ला. डोळ्यांसमोर आण —
+        माथा अगदी सपाट कापल्यासारखा, जणू एखाद्या राक्षसाचं काळ्या दगडाचं भलंमोठं टेबल. त्या माथ्याभोवती
+        भक्कम दगडी तटबंदी, आणि वर पोहोचायला एकामागोमाग एक असे <em>सात मोठे दरवाजे</em> — म्हणजे शत्रूने
+        पहिला फोडला, तरी पुढे आणखी सहा त्याची वाट अडवायला! वर होती दगडात कोरलेली थंडगार पाण्याची मोठी टाकी
+        (त्यांतल्या दोघींना लोक लाडाने गंगा-यमुना म्हणत), धान्याची भरलेली कोठारं, आणि एक छोटंसं देऊळ. दिवसा
+        बुरुजांवरून ढग तरंगत जायचे; कड्यांच्या कपारींत गरुड घरटी बांधायचे; आणि रात्री वारा तटांवरून
+        घोंघावायचा. साऱ्या मुलखातली सर्वांत सुरक्षित जागांपैकी ती एक होती — आणि म्हणूनच आपली गोष्ट नेमकी
+        इथून सुरू होते.</p>
+      <p>कारण काळ धोक्याचा होता, अगदी कालच्या रात्री सांगितला तसाच. अहमदनगरचं जुनं राज्य ढासळत होतं,
+        उत्तरेकडून बादशहा शाहजहानची मुघल सैन्यं दख्खनवर दाबत येत होती, आणि केव्हाही, कुठेही मैदानांवर युद्ध
+        वणव्यासारखं पसरू शकत होतं. अशा काळात नवजात बाळाभोवती उंच, भक्कम दगडी भिंतीच हव्या होत्या —
+        शिवनेरीसारख्या.</p>
+      <p>शिवाजीचे वडील म्हणजे भोसले घराण्यातले नामवंत योद्धा <span class="term">शहाजी.</span> दख्खनेतल्या
+        सर्वांत उत्तम सेनानींपैकी एक — पण इतर सगळ्या मराठा सरदारांसारखं, पोट भरायला त्यांनाही सुलतानांची चाकरी
+        करावी लागे. त्यांची तलवार आणि सैन्यं त्यांना घरापासून दूरदूर, बहुतेकदा थेट दक्षिणेकडे — आजच्या
+        कर्नाटकाकडे — घेऊन जात, आणि वर्षानुवर्षं ते मोहिमांवरच असत. म्हणून लढाईवर असताना आपलं कुटुंब सुरक्षित
+        राहावं, यासाठी शहाजींनी आपल्या पत्नीला शिवनेरीच्या उंच तटबंदीआड पाठवून दिलं.</p>
+      <p>आणि शहाजी हे काही साधे सरदार नव्हते, बरं का. अहमदनगरचं निजामशाही राज्य कोसळत असताना, त्यांनी मोठ्या
+        हिमतीने एका लहान मुलाला गादीवर बसवून ते बुडतं राज्य काही काळ तरंगतं ठेवलं — मुघलांच्या अफाट सैन्यांना
+        त्यांनी एकहाती तोंड दिलं. पण शेवटी मुघल आणि विजापूर या दोन्ही बलाढ्य सत्तांपुढे एकट्याचा निभाव लागणं
+        अशक्यच होतं; निजामशाही संपली, आणि नाइलाजाने शहाजींना विजापूरच्या सुलतानाची चाकरी पत्करावी लागली.
+        जरा विचार कर — केवढा शूर, केवढा कर्तबगार माणूस; तरीही स्वतःचं राज्य नाही, आणि आपलं सगळं शौर्य
+        दुसऱ्याच्याच सुलतानासाठी खर्ची घालावं लागतं. नेमकी हीच खंत, हीच जखम, पुढे त्यांच्या मुलाला स्वराज्याचं
+        स्वप्न पाहायला भाग पाडणार होती.</p>
+      <p>त्यांच्या पत्नीचं नाव <span class="term">जिजाबाई.</span> त्या एका अभिमानी, बलाढ्य मराठा घराण्यातल्या
+        — सिंदखेडराजाच्या थोर सरदार लखुजी जाधव यांची कन्या. आणि त्यांचं मन समजून घ्यायला एक गोष्ट सांगतो, जी
+        ऐकून तुला त्यांचं दुःख कळेल: अवघ्या वर्ष-दोन वर्षांपूर्वीच त्यांचे स्वतःचे वडील आणि भाऊ एका सुलतानाच्या
+        दरबारात, फितुरीने, दगा देऊन मारले गेले होते. म्हणून हा काळ किती क्रूर, किती विश्वासघातकी असू शकतो, हे
+        जिजाबाईंना पुस्तकातून नव्हे, तर स्वतःच्या आयुष्यातून आणि स्वतःच्या अश्रूंतून ठाऊक होतं — आणि म्हणूनच
+        या भूमीला फसवणारे-लुटणारे धनी नकोत, तर तिचं खरं <em>रक्षण</em> करणारे राजे किती नितांत गरजेचे आहेत,
+        हेही त्यांना मनोमन पटलं होतं.</p>
+      <p>त्या काही साध्यासुध्या आई नव्हत्या. धाडसी, शहाण्या आणि खंबीर; आणि त्यांना जुन्या-जुन्या कथा फार
+        फार आवडत — महान महाकाव्यं, <em>रामायण</em> आणि <em>महाभारत</em>: दिलेलं वचन कोणत्याही किमतीत पाळणाऱ्या
+        रामाच्या, न्यायासाठी लढणाऱ्या बलाढ्य पांडवांच्या, दुर्बलांचं रक्षण करणाऱ्या आणि कोणत्याही गुंडापुढे
+        कधीही मान न झुकवणाऱ्या राजांच्या कथा. त्या कथा त्यांनी हृदयात खजिन्यासारख्या जपून ठेवल्या होत्या —
+        येणाऱ्या बाळात रोज संध्याकाळी ओतून त्याला घडवायला. आणि बाळाची वाट पाहताना त्या रोज त्या किल्ल्याच्या
+        देवीची — <span class="term">शिवाई देवीची</span> — मनोभावे प्रार्थना करायच्या.</p>
+      <p>आणि मग, एका थंडीच्या दिवशी — <em>१९ फेब्रुवारी, इ.स. १६३०</em> रोजी — शिवनेरीवर, विशाल सह्याद्रीच्या
+        अफाट आकाशाखाली, एक गोंडस मुलगा जन्माला आला. त्याच वेळी कुठेतरी दूर दक्षिणेत त्याचे वडील युद्धाच्या
+        धुमश्चक्रीत होते; आणि इथे, शांत डोंगरमाथ्यावर, त्याची आई त्याला पहिल्यांदा कुशीत घेत होती — दोन्ही
+        हातांनी, अलगद.</p>
+      <p>आता याचं नाव काय ठेवायचं? कितीतरी महिने ज्या देवीची त्या मनापासून प्रार्थना करत होत्या, ती शिवाई
+        जिजाबाईंना आठवली. म्हणून त्यांनी आपल्या मुलाला त्या किल्ल्याच्या देवीचंच नाव दिलं —
+        <span class="term">शिवाजी.</span> <em>शिवाईचा.</em> (त्याला संभाजी नावाचा एक मोठा भाऊही होता — पण
+        या साऱ्या गोष्टीत आपण छोट्या शिवाजीच्या मागोमाग जाणार आहोत.)</p>
+      <p>तेव्हा ते फक्त एक छोटंसं नाव होतं — थंडीत गुंडाळलेल्या बाळावर, डोंगरमाथ्यावर हळूच उच्चारलेलं. पण ते
+        मनात घट्ट जपून ठेव — कारण त्याच एका आयुष्यात, साऱ्या भारतातले सुलतान आणि बादशहा "शिवाजी" हे नाव
+        ऐकताच आपल्या सिंहासनावर ताठ होऊन बसणार होते.</p>
+      <p>त्या रात्री ना युद्ध होतं, ना धोका. फक्त एक आई, एक नवं बाळ, आणि ताऱ्यांनी लखलखलेल्या आकाशाखालचा एक
+        किल्ला. जिजाबाईंनी त्याला उराशी धरलं, अंधाऱ्या डोंगररांगांकडे नि दूरवर माथ्यांवर झोपी गेलेल्या शेकडो
+        किल्ल्यांकडे पाहिलं, आणि मनोमन एक इच्छा केली — सह्याद्रीवर लटकलेल्या चंद्रकोरीसारखी बारीक, पण लख्ख
+        इच्छा: की एक दिवस ही भूमी पुन्हा इथल्या लोकांची होईल — आणि कदाचित तिला मुक्त करणारा हाच, माझ्या कुशीत
+        झोपलेला माझा मुलगा असेल.</p>
+      <p>आणि कालचं आपलं चकचकीत नाणं आठवतं ना? <span class="term">स्वराज्य.</span> जिजाबाईंच्या कुशीत शांत
+        झोपलेलं तेच चिमुकलं बाळ, मोठं होऊन त्याच स्वप्नाचा पाठलाग करणार आहे — कडे चढून, युद्धांत उतरून,
+        अख्ख्या आयुष्यभर — जिवाच्या आकांताने, अगदी शेवटच्या श्वासापर्यंत.</p>
+      <p>पण ते सगळं अजून खूप पुढचं. आज रात्री तो फक्त एका डोंगरावरचं एक नवजात बाळ आहे — मोठं दुःख आणि
+        त्याहूनही मोठी आशा हृदयात एकत्र बाळगणाऱ्या एका आईचं लाडकं लेकरू.</p>
+      <p class="goodnight">शुभ रात्री. आजचं जपायचं नाव: <b>शिवाजी — "शिवाई देवीचा."</b></p>
+    </div>
+
+    <div class="moon-note">
+      <svg class="moon" width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">
+        <circle cx="26" cy="26" r="22" fill="none" stroke="var(--gold)" stroke-width="2.4" opacity=".55"/>
+        <circle cx="26" cy="26" r="15" fill="var(--gold)" opacity=".9"/>
+        <text x="26" y="31" text-anchor="middle" style="font-family:'Marcellus',serif;font-size:15px;fill:var(--paper)">₹</text>
+      </svg>
+      <p>Remember <b>last night's coin — Swarajya?</b> Tonight the person who will chase it is born.
+        <span class="fwd">Two nights, one thread: first the dream, then the dreamer.</span></p>
+    </div>
+
+    <h3 class="subhead">Say it out loud</h3>
+    <div class="say-grid">
+      <div class="say"><div class="head"><span class="dev">शिवनेरी</span><span class="rom">Shivneri</span></div>
+        <div class="phon">shiv-NEH-ree</div><div class="gloss">the hill-fort of his birth</div></div>
+      <div class="say"><div class="head"><span class="dev">जुन्नर</span><span class="rom">Junnar</span></div>
+        <div class="phon">JOON-ar</div><div class="gloss">the old town below the fort</div></div>
+      <div class="say"><div class="head"><span class="dev">जिजाबाई</span><span class="rom">Jijabai</span></div>
+        <div class="phon">jee-JAA-baï</div><div class="gloss">his mother</div></div>
+      <div class="say"><div class="head"><span class="dev">शिवाई</span><span class="rom">Shivai</span></div>
+        <div class="phon">shi-VAA-ee</div><div class="gloss">the goddess of the fort</div></div>
+      <div class="say"><div class="head"><span class="dev">शहाजी</span><span class="rom">Shahaji</span></div>
+        <div class="phon">sha-HAA-jee</div><div class="gloss">his father</div></div>
+      <div class="say"><div class="head"><span class="dev">शिवाजी</span><span class="rom">Shivaji</span></div>
+        <div class="phon">shi-VAA-jee</div><div class="gloss">"the one named for Shivai"</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== COIN ===================== -->
+  <section aria-labelledby="coin-h">
+    <div class="sec-head">
+      <span class="num">03</span>
+      <h2 id="coin-h">Tonight's collectible</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="coin-wrap">
+      <button class="coin" id="coin" aria-label="Shivaji name-coin — flip to read its meaning">
+        <span class="coin-inner">
+          <span class="face front">
+            <span class="big">शिवाजी</span>
+            <span class="rom">Shivaji</span>
+            <span class="dots">Badge · Day 2</span>
+          </span>
+          <span class="face back">
+            <span class="mean">“named for the goddess Shivai”</span>
+            <span class="dots">Shivneri · 19 Feb 1630</span>
+          </span>
+        </span>
+      </button>
+      <div class="coin-copy">
+        <h3>The second badge</h3>
+        <p>Last night's badge was the <em>dream</em> (Swarajya). Tonight's is the <em>name</em> of the
+          one who will carry it — given for Shivai, the goddess of the fort where he was born.</p>
+        <p class="hint">↻ Hover or tap the coin to turn it over.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HISTORY CARDS ===================== -->
+  <section aria-labelledby="hist-h">
+    <div class="sec-head">
+      <span class="num">04</span>
+      <h2 id="hist-h">For the grown-up reading aloud</h2>
+      <span class="rule"></span>
+    </div>
+    <p class="grown-note">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 7v4M8 4.6v.4" stroke-linecap="round"/></svg>
+      The real history behind tonight's gentle scene — for the curious.
+    </p>
+
+    <details class="card">
+      <summary>
+        <span class="tag word">The date</span>
+        <h4>When was he actually born?</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="body">
+        <p>The widely accepted and officially observed birth date is <b>19 February 1630</b>. But be
+          honest with a curious child: for a long time historians <b>disagreed</b> — some older
+          sources give <b>1627</b>. Records from that century were incomplete, so a little uncertainty
+          is part of the truth.</p>
+        <p>Maharashtra marks <b>Shiv Jayanti</b> on this date; some communities also observe it by the
+          traditional lunar calendar (Falgun), so you'll see two "birthdays" celebrated.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary>
+        <span class="tag hist">History</span>
+        <h4>Why the name “Shivaji”?</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="body">
+        <p>He was named after <b>Shivai Devi</b>, the goddess whose temple stands on Shivneri — the
+          fort's own deity, whom Jijabai worshipped. So the name honours the <em>place and its
+          goddess</em>, not simply the god Shiva.</p>
+        <p>Naming a child for the local or family deity was common; his elder brother was
+          <b>Sambhaji</b> (after Shambhu/Shiva). Both names run in the family for generations after.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary>
+        <span class="tag hist">History</span>
+        <h4>Shahaji's world — and why Jijabai raised him</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="body">
+        <p><b>Shahaji Bhosale</b> was a powerful Maratha warrior-noble who served the Deccan sultans
+          (the Nizam Shahi of Ahmadnagar, then Bijapur) — a skilled general constantly on campaign,
+          and later based far south around Bengaluru.</p>
+        <p>Because he was so often away, <b>Jijabai</b> became the decisive presence in Shivaji's
+          childhood — his first teacher and the keeper of the dream. That's the heart of
+          <b>tomorrow's story (Day 3)</b>.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary>
+        <span class="tag hist">History</span>
+        <h4>Shivneri, the fort itself</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </summary>
+      <div class="body">
+        <p>A classic flat-topped <b>Deccan-trap basalt</b> hill-fort above Junnar, famous for its
+          chain of <b>seven gates</b> climbing the approach, its rock-cut water cisterns (the
+          "Ganga–Jamuna" tanks), the small <b>Shivai temple</b>, and the building remembered as his
+          birthplace.</p>
+        <p>Real and visitable — and in <b>July 2025</b> Shivneri became one of the twelve
+          <b>UNESCO World Heritage</b> Maratha forts. Find it on the
+          <a href="trip-companion.html">trip map</a>.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===================== JOURNEY ===================== -->
+  <section aria-labelledby="journey-h">
+    <div class="sec-head">
+      <span class="num">05</span>
+      <h2 id="journey-h">The thirty-night journey</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="ribbon">
+      <div class="acts">
+        <div class="act-col">
+          <div class="name">I · Dream is Born</div>
+          <div class="dots-row">
+            <span class="d done" title="Day 1 — told"></span>
+            <span class="d now" title="Day 2 — tonight"></span>
+            <span class="d" title="Day 3"></span><span class="d" title="Day 4"></span>
+            <span class="d" title="Day 5"></span><span class="d" title="Day 6"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">II · Lion Rises</div>
+          <div class="dots-row">
+            <span class="d" title="Day 7"></span><span class="d" title="Day 8"></span>
+            <span class="d" title="Day 9"></span><span class="d" title="Day 10"></span>
+            <span class="d" title="Day 11"></span><span class="d" title="Day 12"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">III · Shaking Empires</div>
+          <div class="dots-row">
+            <span class="d" title="Day 13"></span><span class="d" title="Day 14"></span>
+            <span class="d" title="Day 15"></span><span class="d" title="Day 16"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">IV · The Crown</div>
+          <div class="dots-row">
+            <span class="d" title="Day 17"></span><span class="d" title="Day 18"></span>
+            <span class="d" title="Day 19"></span><span class="d" title="Day 20"></span>
+            <span class="d" title="Day 21"></span><span class="d" title="Day 22"></span>
+            <span class="d" title="Day 23"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">V · King &amp; Legacy</div>
+          <div class="dots-row">
+            <span class="d" title="Day 24"></span><span class="d" title="Day 25"></span>
+            <span class="d" title="Day 26"></span><span class="d" title="Day 27"></span>
+            <span class="d" title="Day 28"></span><span class="d" title="Day 29"></span>
+            <span class="d" title="Day 30"></span>
+          </div>
+        </div>
+      </div>
+      <div class="legend">
+        <span><span class="d now"></span> Tonight</span>
+        <span><span class="d"></span> Nights to come</span>
+        <span><span class="d done"></span> Nights told</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LEDGER ===================== -->
+  <section aria-labelledby="ledger-h">
+    <div class="ledger">
+      <h2 id="ledger-h">Fact &amp; legend, kept honest</h2>
+      <dl>
+        <div class="row">
+          <dt class="h">History</dt>
+          <dd>Shivaji was born at <b>Shivneri</b> fort near <b>Junnar</b> and named for the goddess
+            <b>Shivai</b>. Father <b>Shahaji</b>, a warrior-noble serving the Deccan sultans, was
+            often away; mother <b>Jijabai</b> raised him.</dd>
+        </div>
+        <div class="row">
+          <dt class="c">Debated</dt>
+          <dd>The exact <b>date</b>: the accepted date is <b>19 Feb 1630</b>, but some older sources
+            say <b>1627</b> — historians genuinely disagreed for a long time.</dd>
+        </div>
+        <div class="row">
+          <dt class="c">Framing</dt>
+          <dd>Jijabai's exact prayers and thoughts that night are a warm storyteller's imagining; her
+            love of the epics and her role as his first teacher are well remembered.</dd>
+        </div>
+      </dl>
+    </div>
+
+    <div class="foot">
+      <span><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Trip map</a></span>
+      <span class="next">Next → <a href="day-03.html">Day 3 · Jijabai's Lap</a></span>
+    </div>
+  </section>
+</main>
+
+<script>
+  (function(){
+    var tabs={en:document.getElementById('tab-en'),mr:document.getElementById('tab-mr')};
+    var panes={en:document.getElementById('story-en'),mr:document.getElementById('story-mr')};
+    function show(l){for(var k in tabs){var on=(k===l);tabs[k].setAttribute('aria-selected',on?'true':'false');panes[k].hidden=!on;}}
+    tabs.en.addEventListener('click',function(){show('en')});
+    tabs.mr.addEventListener('click',function(){show('mr')});
+  })();
+  (function(){var coin=document.getElementById('coin');coin.addEventListener('click',function(){coin.classList.toggle('flipped')});})();
+</script>

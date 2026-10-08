@@ -1,0 +1,455 @@
+<meta charset="utf-8">
+<title>Jijabai's Lap</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tiro+Devanagari+Marathi:ital@0;1&family=Karla:wght@400;600;700&display=swap">
+
+<link rel="stylesheet" href="day.css">
+
+<nav class="daynav">
+  <a href="day-02.html">‹ Day 2</a>
+  <span class="mid"><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Map</a> · <a href="sayings-sheet.html">📜 Sayings</a></span>
+  <a href="day-04.html">Day 4 ›</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">
+      <span class="daynum">Day 3</span>
+      <span class="act-tag">Act I · The Dream is Born</span>
+      <span class="act-tag">His first teacher</span>
+    </div>
+    <h1>Jijabai's Lap</h1>
+    <p class="dek">A dream needs someone to plant it. Tonight we meet <b>Jijabai</b> — the mother
+      who healed a town, told a boy the old hero-tales, and turned a dream into a promise.</p>
+  </div>
+  <svg class="ridge" viewBox="0 0 880 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,90 L0,54 L70,30 L130,50 L200,20 L270,46 L340,14 L410,44 L480,24 L560,50 L620,28 L700,52 L770,26 L830,48 L880,32 L880,90 Z"
+      fill="var(--map-ridge)" opacity=".55"/>
+    <path d="M0,90 L0,66 L90,48 L170,66 L250,40 L340,64 L430,44 L520,66 L610,48 L700,68 L790,50 L880,66 L880,90 Z"
+      fill="var(--map-ridge)"/>
+  </svg>
+</header>
+
+<main class="wrap">
+
+  <!-- ===================== PLACE ===================== -->
+  <section aria-labelledby="place-h">
+    <div class="sec-head">
+      <span class="num">01</span>
+      <h2 id="place-h">The place — the Lal Mahal, Pune</h2>
+      <span class="rule"></span>
+    </div>
+    <figure class="map">
+      <svg viewBox="0 0 700 460" role="img"
+        aria-label="An illustration of the Lal Mahal, the red-walled family mansion in Pune, with the Sahyadri hills behind. In the field before it stands a golden ploughshare and fresh green furrows, showing the town of Pune coming back to life.">
+        <defs>
+          <linearGradient id="skyGrad3" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" style="stop-color:color-mix(in srgb,var(--saffron) 16%,var(--paper))"/>
+            <stop offset="1" style="stop-color:var(--paper)"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="700" height="460" fill="url(#skyGrad3)"/>
+        <!-- sun -->
+        <circle cx="590" cy="96" r="30" fill="var(--gold)" opacity=".85"/>
+        <!-- distant Sahyadri -->
+        <path d="M0,250 L90,196 L170,244 L250,190 L330,242 L410,198 L500,246 L590,200 L700,244 L700,300 L0,300 Z"
+          fill="var(--map-ridge)" opacity=".4"/>
+        <!-- ground -->
+        <rect x="0" y="300" width="700" height="160" fill="var(--green)" opacity=".16"/>
+
+        <!-- the Lal Mahal (red mansion / wada) -->
+        <g>
+          <!-- main block -->
+          <rect x="250" y="196" width="200" height="120" fill="#C08457" stroke="#7A3B24" stroke-width="2"/>
+          <!-- roof -->
+          <path d="M240,196 L350,158 L460,196 Z" fill="#7A3B24"/>
+          <!-- side wings -->
+          <rect x="214" y="236" width="44" height="80" fill="#B0774B" stroke="#7A3B24" stroke-width="1.6"/>
+          <rect x="442" y="236" width="44" height="80" fill="#B0774B" stroke="#7A3B24" stroke-width="1.6"/>
+          <path d="M208,236 L236,214 L264,236 Z" fill="#7A3B24"/>
+          <path d="M436,236 L464,214 L492,236 Z" fill="#7A3B24"/>
+          <!-- central gateway (nagarkhana) -->
+          <path d="M330,316 L330,250 a20 20 0 0 1 40 0 L370,316 Z" fill="#3A281E"/>
+          <!-- windows -->
+          <g fill="#4A3324">
+            <rect x="276" y="232" width="18" height="26" rx="2"/><rect x="306" y="232" width="18" height="26" rx="2"/>
+            <rect x="376" y="232" width="18" height="26" rx="2"/><rect x="406" y="232" width="18" height="26" rx="2"/>
+          </g>
+          <!-- flag -->
+          <line x1="350" y1="158" x2="350" y2="132" stroke="var(--ink-soft)" stroke-width="2"/>
+          <path d="M350,134 L374,140 L350,147 Z" fill="var(--saffron)"/>
+        </g>
+
+        <!-- the golden ploughshare + fresh furrows (Pune revived) -->
+        <g>
+          <!-- furrows -->
+          <g stroke="var(--green)" stroke-width="2" opacity=".5" fill="none">
+            <path d="M120,360 q60,-14 150,0"/><path d="M120,378 q60,-14 150,0"/><path d="M120,396 q60,-14 150,0"/>
+          </g>
+          <!-- sprouts -->
+          <g stroke="var(--green)" stroke-width="2" fill="none" stroke-linecap="round">
+            <path d="M150,360 q-4,-10 -10,-13 M150,360 q4,-10 10,-13"/>
+            <path d="M200,372 q-4,-10 -10,-13 M200,372 q4,-10 10,-13"/>
+            <path d="M240,360 q-4,-10 -10,-13 M240,360 q4,-10 10,-13"/>
+          </g>
+          <!-- plough with golden share -->
+          <g stroke="var(--ink-soft)" stroke-width="3" fill="none" stroke-linecap="round">
+            <path d="M150,336 L110,352"/><path d="M150,336 L150,352"/>
+          </g>
+          <path d="M104,352 l14,-4 l2,10 l-14,2 Z" fill="var(--gold)" stroke="var(--gold)"/>
+        </g>
+
+        <!-- marker -->
+        <circle class="m-star-ring" cx="350" cy="188" r="13"/>
+        <path class="m-star" d="M350,176 l3.1,6.3 l7,.9 l-5.1,4.8 l1.3,6.9 l-6.3,-3.3 l-6.3,3.3 l1.3,-6.9 l-5.1,-4.8 l7,-.9 Z"/>
+        <text class="m-shiv" x="250" y="352" style="fill:var(--ink)">Lal Mahal</text>
+        <text class="m-shiv-sub" x="250" y="370" style="fill:var(--rust)">Pune — where he grew up</text>
+      </svg>
+      <figcaption><b>A town brought back to life.</b> At the red-walled <span style="color:var(--rust)">Lal
+        Mahal</span> in Pune, Jijabai raised Shivaji — and, the story goes, re-ploughed the
+        war-ruined land with a <span style="color:var(--gold)">golden ploughshare</span> to call the
+        people home. He grew up watching his mother heal a town.</figcaption>
+    </figure>
+    <p class="map-cta"><a href="trip-companion.html">📍 Find Pune &amp; the Lal Mahal on the real map →</a></p>
+  </section>
+
+  <!-- ===================== STORY ===================== -->
+  <section aria-labelledby="story-h">
+    <div class="sec-head">
+      <span class="num">02</span>
+      <h2 id="story-h">Tonight's telling</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="read-cue">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.4"/><path d="M8 4.4V8l2.6 1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      About 10 minutes, read aloud slowly · choose your language
+    </div>
+
+    <div class="lang-bar" role="tablist" aria-label="Choose language">
+      <button role="tab" id="tab-en" aria-controls="story-en" aria-selected="true">English</button>
+      <button role="tab" id="tab-mr" class="mr" aria-controls="story-mr" aria-selected="false">मराठी</button>
+    </div>
+
+    <div class="telling" id="story-en" role="tabpanel" aria-labelledby="tab-en">
+      <p>Two nights ago we found the dream — <span class="term">Swarajya</span>. Last night the
+        little dreamer was born and named <span class="term">Shivaji</span>. But a dream cannot grow
+        by itself; someone has to plant it, and water it, in a child's heart. Tonight, meet the
+        person who did: his mother, <span class="term">Jijabai</span>.</p>
+      <p>When Shivaji was still small, Jijabai brought him down from the safe heights of Shivneri to
+        a town called <span class="term">Pune</span> — the district that was the family's own
+        <em>jagir</em> (the lands they were meant to look after) — and to a home called the
+        <span class="term">Lal Mahal</span>, the "Red Palace." His father Shahaji was away for years
+        at a time, serving the sultans far in the south, so it fell to Jijabai to raise the boy and
+        run the estate.</p>
+      <p>But Pune, when they came to it, was not a happy place at all. War after war had rolled
+        through it; fields lay broken and thorny, houses stood burned and empty, and the frightened
+        people had scattered. A town that armies had trampled looked less like a home and more like
+        a wound.</p>
+      <p>So Jijabai, with her wise steward, set about something wonderful: healing a whole town. To
+        show everyone that life could truly begin again, the old tale says she had the tired, cursed
+        earth ploughed once more with a shining <em>golden ploughshare</em>, and the first new seeds
+        planted by hand. Bit by bit, Pune woke up. Broken walls were rebuilt; the scattered farmers
+        were coaxed back and promised fair treatment; gardens greened, markets filled, and children
+        laughed in the lanes again. And little Shivaji watched his mother turn a ruin back into a
+        living town — and learned, without a single lecture, exactly what a good ruler is <em>for</em>:
+        not to grab, but to <em>protect and rebuild</em>.</p>
+      <p>And oh, the stories she told him! Every evening, curled in her lap, he drank in the old, old
+        tales — the great epics, the <em>Ramayana</em> and the <em>Mahabharata</em>: of
+        <span class="term">Ram</span>, who kept his promise no matter the cost; of the brave
+        <span class="term">Pandavas</span>, who fought for what was right; of kings who guarded the
+        weak and never, ever bowed to bullies. Shivaji did not just want to <em>hear</em> about such
+        heroes. Something lit up in him, and he wanted to <em>be</em> one.</p>
+      <p>Jijabai made sure he learned by doing, too. A capable man named <span class="term">Dadoji
+        Konddev</span> managed the Pune lands and helped shape the boy's training — how a country is
+        actually governed: how to keep honest accounts, how to weigh a quarrel fairly, and how to sit
+        down and truly <em>listen</em> to a farmer's troubles. And Shivaji learned the harder skills
+        as well: to ride a horse across rough country, to handle a sword and a spear, to swim and
+        climb, and to read the folds of the mountains as easily as you read a page. He grew strong,
+        and quick, and — most importantly — kind.</p>
+      <p>Now here is something remarkable for those days. Most highborn boys were taught to look down
+        on ordinary folk. But in Pune, Shivaji grew up <em>among</em> his people — walking the
+        fields, learning their names, hearing what frightened them and what they hoped for. That is
+        why, all his life, he would think first of the farmer and the foot-soldier. The seed of a
+        <em>people's</em> kingdom was planted right here, in a rebuilt little town.</p>
+      <p>But the deepest lessons of all were the ones whispered from his mother's lap: <em>Be just.
+        Be brave. Protect the weak. Bow to no bully. This land is your own, and it is worth
+        everything.</em> Little by little, evening by evening, those words were quietly turning a
+        faraway dream into a solid promise inside him.</p>
+      <p>By now Jijabai was far more than a mother. She was his first teacher, his first
+        <span class="term">guru</span>, his wisest counsellor — and one day she would be honoured as
+        <em>Rajmata</em>, the king's mother. The people loved her so dearly that they gave her a
+        fond, warm name that Maharashtra still says with affection today: <span class="term">Jijau</span>.</p>
+      <p>So tonight there is no battle and no fort to storm — only a boy, his remarkable mother, a
+        healed town, and a lapful of stories, quietly shaping the king he was going to become.</p>
+      <p class="goodnight">Goodnight — tonight's badge: <b>Jijau, "the first teacher."</b></p>
+    </div>
+
+    <div class="telling mr" id="story-mr" role="tabpanel" aria-labelledby="tab-mr" hidden>
+      <p><span class="dropcap">दो</span>न रात्रींपूर्वी आपल्याला स्वप्न सापडलं — <span class="term">स्वराज्य.</span>
+        काल तो चिमुकला स्वप्नाळू जन्माला आला आणि त्याचं नाव ठेवलं <span class="term">शिवाजी.</span> पण स्वप्न
+        आपोआप वाढत नाही; ते कुणीतरी रुजवावं, रोज त्याला पाणी घालावं लागतं — लहानग्याच्या मनाच्या मातीत. आज
+        भेटूया त्याच व्यक्तीला, जिने हे केलं: त्याची आई, <span class="term">जिजाबाई.</span></p>
+      <p>शिवाजी अजून लहानच असताना, जिजाबाईंनी त्याला शिवनेरीच्या सुरक्षित उंचीवरून खाली <span class="term">पुणे</span>
+        इथे आणलं — हा भाग म्हणजे त्यांच्या घराण्याची स्वतःची <em>जहागीर</em>, म्हणजे सांभाळायची, राखायची जमीन —
+        आणि राहायला <span class="term">लाल महाल</span> नावाच्या घरी. वडील शहाजी वर्षानुवर्षं दूर दक्षिणेत
+        सुलतानांची चाकरी करत असल्याने, मुलाला वाढवणं आणि अख्ख्या मुलखाचा कारभार चालवणं — हे दोन्ही जिजाबाईंच्याच
+        खांद्यांवर आलं. आणि त्या ते लीलया पेलत होत्या.</p>
+      <p>पण त्या वेळचं पुणे मुळीच सुखी नव्हतं. एकामागोमाग एक युद्धं तिथून वादळांसारखी जाऊन गेली होती; शेतं
+        उद्ध्वस्त आणि काटेरी झालेली, घरं जळून ओस पडलेली, आणि भ्यायलेली माणसं गाव सोडून पांगलेली. सैन्यांनी
+        तुडवलेलं ते गाव घरासारखं नव्हे, तर एखाद्या भळभळणाऱ्या जखमेसारखं दिसत होतं.</p>
+      <p>म्हणून जिजाबाईंनी, आपल्या शहाण्या कारभाऱ्यासह, एक फार मोठं काम हाती घेतलं: अख्खं गाव पुन्हा जिवंत
+        करणं. आयुष्य खरोखर नव्याने सुरू होऊ शकतं हे साऱ्यांना दाखवायला — जुनी गोष्ट सांगते — त्यांनी त्या
+        थकल्या, जणू शापित झालेल्या भूमीवर पुन्हा एकदा चकाकणाऱ्या <em>सोन्याच्या नांगराने</em> नांगर धरला आणि
+        पहिलं नवं बी स्वतःच्या हाताने पेरलं. आणि हळूहळू पुणे जागं होऊ लागलं. मोडकी तटं पुन्हा उभी राहिली;
+        पांगलेल्या शेतकऱ्यांना परत बोलावून त्यांना न्याय्य वागणुकीचं वचन दिलं गेलं; बागा हिरव्या झाल्या,
+        बाजार पुन्हा भरू लागले, आणि गल्ल्यागल्ल्यांतून पुन्हा मुलांचं हसू घुमू लागलं. आणि छोटा शिवाजी आपल्या
+        आईला एका उद्ध्वस्त गावाचं पुन्हा जिवंत, हसतं गाव करताना डोळे भरून बघत होता — आणि एकही उपदेश न ऐकता
+        नेमकं तेच शिकत होता, की चांगला राजा <em>कशासाठी</em> असतो: ओरबाडायला नव्हे, तर <em>रक्षण करून पुन्हा
+        उभं करायला.</em></p>
+      <p>आणि त्या किती गोष्टी सांगायच्या! रोज संध्याकाळी, त्यांच्या मऊ कुशीत डोकं टेकून, तो त्या जुन्या-जुन्या
+        कथा अधाशासारखा ऐकायचा — महान महाकाव्यं, <em>रामायण</em> आणि <em>महाभारत</em>: दिलेलं वचन कोणत्याही
+        किमतीत पाळणाऱ्या <span class="term">रामाच्या</span>, न्यायासाठी छातीठोकपणे लढणाऱ्या शूर
+        <span class="term">पांडवांच्या</span>, दुर्बलांचं रक्षण करणाऱ्या आणि कोणत्याही गुंडापुढे कधीही मान न
+        झुकवणाऱ्या राजांच्या. शिवाजीला अशा वीरांबद्दल नुसतं <em>ऐकून</em> थांबायचं नव्हतं — त्याच्या आत काहीतरी
+        पेटलं, आणि त्याला स्वतः तसा वीर <em>व्हायचं</em> होतं.</p>
+      <p>कधी त्या प्रभू रामचंद्रांची गोष्ट सांगत — जे राजपुत्र असूनही, दिलेल्या वचनासाठी हसतमुखाने चौदा वर्षं
+        वनवासात गेले; कधी अन्यायाविरुद्ध उभ्या राहिलेल्या पांडवांची, तर कधी धाकट्या अभिमन्यूची, जो लहान वयातच
+        निधड्या छातीने कोंडीत घुसला. या गोष्टींत खरे राजे कसे असावेत हे लपलेलं होतं — शूर, पण दयाळू; बलवान,
+        पण न्यायी; आणि दुबळ्यांचे रक्षणकर्ते. रोज रात्री या कथा ऐकता ऐकता, छोट्या शिवाजीच्या मनात एक वेगळाच
+        राजा हळूहळू आकार घेत होता — कागदावर नव्हे, तर त्याच्या स्वप्नांत.</p>
+      <p>जिजाबाईंनी त्याला नुसतं ऐकवलं नाही, तर करून बघत शिकवलंही. <span class="term">दादोजी कोंडदेव</span>
+        नावाच्या कुशल माणसाने पुण्याचा कारभार सांभाळला आणि मुलाचं शिक्षण घडवायला मदत केली — राज्य खरोखर कसं
+        चालवायचं: प्रामाणिक हिशोब कसे ठेवायचे, दोन माणसांतला तंटा न्यायाने कसा तोलायचा, आणि शेतकऱ्याचं गाऱ्हाणं
+        खाली बसून, शांतपणे, खरंखुरं कसं <em>ऐकायचं.</em> आणि शिवाजी अवघड, अंगमेहनतीच्या गोष्टीही शिकला: खडबडीत
+        डोंगरी मुलखातून घोडा बेभान दौडवणं, तलवार आणि भाला चालवणं, नदीत पोहणं, कडे चढणं, आणि पुस्तक वाचावं तितक्या
+        सहज डोंगराचे कंगोरे नि आडवाटा वाचणं. तो बलवान, चपळ आणि — सर्वांत महत्त्वाचं — दयाळू होत गेला.</p>
+      <p>आणि एक गोष्ट त्याच्या मनात कायमची कोरली गेली: कारभार <em>न्यायाने</em> चालवायचा. जिजाऊ आणि दादोजी
+        यांनी पुण्यात असा दंडक घातला, की शेतकऱ्याच्या पिकाला हात लावायचा नाही, कर योग्य तेवढाच घ्यायचा, आणि
+        कुणाही गरिबाला परका शिपाई त्रास देणार नाही याची खात्री करायची. जर कुणी सैनिक शेतकऱ्याला लुटला, तर
+        त्याला कडक शिक्षा. लहानग्या शिवाजीने हे सारं डोळ्यांनी पाहिलं, आणि त्याच्या मनात एक विचार पक्का झाला
+        — राजा म्हणजे रयतेला ओरबाडणारा धनी नव्हे, तर तिचं रक्षण करणारा पालक. हाच विचार पुढे त्याच्या अख्ख्या
+        राज्याचा पाया बनणार होता.</p>
+      <p>आणि त्या काळासाठी एक फार वेगळी, दुर्मिळ गोष्ट: बहुतेक उच्च घराण्यातल्या मुलांना सामान्य माणसांना
+        तुच्छ लेखायला शिकवलं जाई. पण पुण्यात शिवाजी आपल्या माणसांच्या <em>मध्ये</em>, त्यांच्यातलाच एक होऊन
+        वाढला — शेताच्या बांधावरून हिंडत, प्रत्येकाचं नाव लक्षात ठेवत, कशाची भीती आणि कशाची आशा त्यांच्या
+        मनात आहे हे ऐकत. म्हणूनच पुढे आयुष्यभर तो सर्वांत आधी शेतकऱ्याचा आणि पायदळातल्या साध्या शिपायाचा
+        विचार करणार होता. <em>रयतेच्या</em> राज्याचं बीज इथेच, या पुन्हा उभ्या राहिलेल्या छोट्या गावात खोलवर
+        रुजलं.</p>
+      <p>पण सर्वांत खोल शिकवण मात्र आईच्या कुशीतून, हळुवारपणे आलेली: <em>न्यायी हो. धाडसी हो. दुर्बलांचं
+        रक्षण कर. कोणत्याही गुंडापुढे झुकू नकोस. ही भूमी तुझी स्वतःची आहे, आणि ती सर्वस्व पणाला लावण्यासारखी
+        आहे.</em> हळूहळू, संध्याकाळामागून संध्याकाळ, ते शब्द ते दूरचं स्वप्न त्याच्या आत एका ठाम, न ढळणाऱ्या
+        वचनात बदलत होते.</p>
+      <p>आतापर्यंत जिजाबाई नुसत्या आई राहिल्या नव्हत्या. त्या त्याच्या पहिल्या <span class="term">गुरु</span>,
+        त्याच्या पहिल्या शहाण्या सल्लागार — आणि एक दिवस <em>राजमाता</em>, राजाची माता म्हणून गौरवल्या जाणार
+        होत्या. लोकांचं त्यांच्यावर इतकं प्रेम, की त्यांनी दिलेलं एक लाडकं नाव अख्खा महाराष्ट्र आजही मायेने
+        घेतो — <span class="term">जिजाऊ.</span></p>
+      <p>तर आज रात्री युद्ध नाही, सर करायला किल्लाही नाही — फक्त एक मुलगा, त्याची असामान्य आई, नव्याने बरं
+        झालेलं एक गाव, आणि कुशीभर गोष्टी; पुढे जो थोर राजा होणार, त्याला या साऱ्यांनी हळूहळू, प्रेमाने घडवत
+        नेलं.</p>
+      <p class="goodnight">शुभ रात्री — आजचं जपायचं नाणं: <b>जिजाऊ, "पहिली गुरु."</b></p>
+    </div>
+
+    <div class="moon-note">
+      <svg class="moon" width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">
+        <circle cx="26" cy="26" r="22" fill="none" stroke="var(--gold)" stroke-width="2.4" opacity=".5"/>
+        <path d="M26 12 a14 14 0 1 0 0 28 a10 10 0 1 1 0 -28 Z" fill="var(--gold)" opacity=".9"/>
+      </svg>
+      <p>Night 1 the <b>dream</b> (Swarajya). Night 2 the <b>dreamer</b> (Shivaji). Tonight, the one
+        who <b>planted</b> the dream in him.
+        <span class="fwd">Three nights, one growing story — like the moon.</span></p>
+    </div>
+
+    <h3 class="subhead">Say it out loud</h3>
+    <div class="say-grid">
+      <div class="say"><div class="head"><span class="dev">जिजाऊ</span><span class="rom">Jijau</span></div>
+        <div class="phon">jee-JAU</div><div class="gloss">the fond name for Jijabai</div></div>
+      <div class="say"><div class="head"><span class="dev">दादोजी कोंडदेव</span><span class="rom">Dadoji Konddev</span></div>
+        <div class="phon">DAA-do-jee KOND-dev</div><div class="gloss">his boyhood teacher</div></div>
+      <div class="say"><div class="head"><span class="dev">लाल महाल</span><span class="rom">Lal Mahal</span></div>
+        <div class="phon">laal ma-HAAL</div><div class="gloss">the "Red Palace" in Pune</div></div>
+      <div class="say"><div class="head"><span class="dev">पुणे</span><span class="rom">Pune</span></div>
+        <div class="phon">POO-ṇe</div><div class="gloss">the town he grew up in</div></div>
+      <div class="say"><div class="head"><span class="dev">रामायण</span><span class="rom">Ramayan</span></div>
+        <div class="phon">raa-MAA-yaṇ</div><div class="gloss">the epic of Ram</div></div>
+      <div class="say"><div class="head"><span class="dev">धर्म</span><span class="rom">dharma</span></div>
+        <div class="phon">DHUR-m</div><div class="gloss">duty · justice · doing right</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== COIN ===================== -->
+  <section aria-labelledby="coin-h">
+    <div class="sec-head">
+      <span class="num">03</span>
+      <h2 id="coin-h">Tonight's collectible</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="coin-wrap">
+      <button class="coin" id="coin" aria-label="Jijau badge — flip to read its meaning">
+        <span class="coin-inner">
+          <span class="face front">
+            <span class="big">जिजाऊ</span>
+            <span class="rom">Jijau</span>
+            <span class="dots">Badge · Day 3</span>
+          </span>
+          <span class="face back">
+            <span class="mean">“the first teacher”</span>
+            <span class="dots">who planted the dream</span>
+          </span>
+        </span>
+      </button>
+      <div class="coin-copy">
+        <h3>The third badge</h3>
+        <p>The dream, the dreamer — and now the <em>teacher</em>. Jijabai (lovingly, <em>Jijau</em>)
+          gave Shivaji the stories, the values, and the courage that everything else grew from.</p>
+        <p class="hint">↻ Hover or tap the coin to turn it over.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HISTORY CARDS ===================== -->
+  <section aria-labelledby="hist-h">
+    <div class="sec-head">
+      <span class="num">04</span>
+      <h2 id="hist-h">For the grown-up reading aloud</h2>
+      <span class="rule"></span>
+    </div>
+    <p class="grown-note">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 7v4M8 4.6v.4" stroke-linecap="round"/></svg>
+      The real history behind tonight's gentle scene — for the curious.
+    </p>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>Jijabai — the maker of a king</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p><b>Jijabai</b> (born into the powerful Jadhav family) was the constant, decisive presence
+          of Shivaji's upbringing while Shahaji served far away. She is remembered as his moral and
+          political teacher — the source of his sense of justice, devotion, and the very idea of a
+          kingdom of his own. She lived to see him crowned, and died soon after (Day 23).</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>Dadoji Konddev &amp; the Pune jagir</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p><b>Dadoji Konddev</b> administered the family's <b>Pune jagir</b> (estate) and took part in
+          the young Shivaji's practical education — revenue, administration, and arms. <span class="tag debated" style="margin-left:0">Debated</span>
+          Historians differ on exactly how large his role was, and whether he counts as a formal
+          "guru." The estate's competent management is well attested.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag l">Legend</span><h4>The golden ploughshare</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>Pune had been damaged in the region's wars and was <b>resettled and revived</b> under the
+          family's administration — that much is historical. The beloved detail of a
+          <b>gold (or gold-tipped) ploughshare</b> ceremonially breaking the ground to call people
+          back is the <b>ballad/symbolic layer</b> — a lovely image of rebirth, told as such.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag c">Context</span><h4>Epics as schoolbooks</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>The specific bedtime scenes are a warm reconstruction, but the influence is real: the
+          <b>Ramayana</b> and <b>Mahabharata</b>, and ideals of <b>dharma</b> (just, protective
+          kingship), were the moral vocabulary of the age and clearly shaped Shivaji's vision of
+          rule — fair taxes, protection of the weak, respect for all faiths (Day 26).</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===================== JOURNEY ===================== -->
+  <section aria-labelledby="journey-h">
+    <div class="sec-head">
+      <span class="num">05</span>
+      <h2 id="journey-h">The thirty-night journey</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="ribbon">
+      <div class="acts">
+        <div class="act-col">
+          <div class="name">I · Dream is Born</div>
+          <div class="dots-row">
+            <span class="d done" title="Day 1 — told"></span>
+            <span class="d done" title="Day 2 — told"></span>
+            <span class="d now" title="Day 3 — tonight"></span>
+            <span class="d" title="Day 4"></span><span class="d" title="Day 5"></span><span class="d" title="Day 6"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">II · Lion Rises</div>
+          <div class="dots-row">
+            <span class="d" title="Day 7"></span><span class="d" title="Day 8"></span><span class="d" title="Day 9"></span>
+            <span class="d" title="Day 10"></span><span class="d" title="Day 11"></span><span class="d" title="Day 12"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">III · Shaking Empires</div>
+          <div class="dots-row">
+            <span class="d" title="Day 13"></span><span class="d" title="Day 14"></span><span class="d" title="Day 15"></span><span class="d" title="Day 16"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">IV · The Crown</div>
+          <div class="dots-row">
+            <span class="d" title="Day 17"></span><span class="d" title="Day 18"></span><span class="d" title="Day 19"></span><span class="d" title="Day 20"></span>
+            <span class="d" title="Day 21"></span><span class="d" title="Day 22"></span><span class="d" title="Day 23"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">V · King &amp; Legacy</div>
+          <div class="dots-row">
+            <span class="d" title="Day 24"></span><span class="d" title="Day 25"></span><span class="d" title="Day 26"></span><span class="d" title="Day 27"></span>
+            <span class="d" title="Day 28"></span><span class="d" title="Day 29"></span><span class="d" title="Day 30"></span>
+          </div>
+        </div>
+      </div>
+      <div class="legend">
+        <span><span class="d now"></span> Tonight</span>
+        <span><span class="d"></span> Nights to come</span>
+        <span><span class="d done"></span> Nights told</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LEDGER ===================== -->
+  <section aria-labelledby="ledger-h">
+    <div class="ledger">
+      <h2 id="ledger-h">Fact &amp; legend, kept honest</h2>
+      <dl>
+        <div class="row"><dt class="h">History</dt>
+          <dd><b>Jijabai</b> raised and taught Shivaji at the <b>Lal Mahal</b> in Pune (the family
+            jagir); <b>Dadoji Konddev</b> managed the estate and aided his early education.</dd></div>
+        <div class="row"><dt class="c">Legend</dt>
+          <dd>The <b>golden ploughshare</b> reviving Pune is the ballad/symbolic layer; Pune's real
+            resettlement under the family is historical.</dd></div>
+        <div class="row"><dt class="c">Debated</dt>
+          <dd>The precise extent of <b>Dadoji Konddev's</b> role, and whether he was a formal guru.</dd></div>
+      </dl>
+    </div>
+
+    <div class="foot">
+      <span><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Trip map</a></span>
+      <span class="next">Next → <a href="day-04.html">Day 4 · The Mavla Brotherhood</a></span>
+    </div>
+  </section>
+</main>
+
+<script>
+  (function(){
+    var tabs={en:document.getElementById('tab-en'),mr:document.getElementById('tab-mr')};
+    var panes={en:document.getElementById('story-en'),mr:document.getElementById('story-mr')};
+    function show(l){for(var k in tabs){var on=(k===l);tabs[k].setAttribute('aria-selected',on?'true':'false');panes[k].hidden=!on;}}
+    tabs.en.addEventListener('click',function(){show('en')});
+    tabs.mr.addEventListener('click',function(){show('mr')});
+  })();
+  (function(){var coin=document.getElementById('coin');coin.addEventListener('click',function(){coin.classList.toggle('flipped')});})();
+</script>

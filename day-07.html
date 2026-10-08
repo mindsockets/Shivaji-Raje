@@ -1,0 +1,435 @@
+<meta charset="utf-8">
+<title>Freeing Father Shahaji</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tiro+Devanagari+Marathi:ital@0;1&family=Karla:wght@400;600;700&display=swap">
+
+<link rel="stylesheet" href="day.css">
+
+<nav class="daynav">
+  <a href="day-06.html">‹ Day 6</a>
+  <span class="mid"><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Map</a> · <a href="sayings-sheet.html">📜 Sayings</a></span>
+  <a href="day-08.html">Day 8 ›</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">
+      <span class="daynum">Day 7</span>
+      <span class="act-tag">Act II · The Lion Rises</span>
+      <span class="act-tag">Diplomacy over force</span>
+    </div>
+    <h1>Freeing Father Shahaji</h1>
+    <p class="dek">A new act opens — not with a battle, but with a boy <b>outsmarting an empire</b>
+      to free his imprisoned father. The bravest move is sometimes to <em>think</em>.</p>
+  </div>
+  <svg class="ridge" viewBox="0 0 880 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,90 L0,54 L70,30 L130,50 L200,20 L270,46 L340,14 L410,44 L480,24 L560,50 L620,28 L700,52 L770,26 L830,48 L880,32 L880,90 Z"
+      fill="var(--map-ridge)" opacity=".55"/>
+    <path d="M0,90 L0,66 L90,48 L170,66 L250,40 L340,64 L430,44 L520,66 L610,48 L700,68 L790,50 L880,66 L880,90 Z"
+      fill="var(--map-ridge)"/>
+  </svg>
+</header>
+
+<main class="wrap">
+
+  <!-- ===================== THE MOVE (diagram) ===================== -->
+  <section aria-labelledby="place-h">
+    <div class="sec-head">
+      <span class="num">01</span>
+      <h2 id="place-h">The clever move</h2>
+      <span class="rule"></span>
+    </div>
+    <figure class="map">
+      <svg viewBox="0 0 700 480" role="img"
+        aria-label="A diagram of how Shivaji freed his father by diplomacy. Bijapur has jailed Shahaji (1648). Step 1: Shivaji sends a friendly letter to the Mughal prince. Step 2: the Mughals quietly pressure Bijapur. Step 3: Bijapur frees Shahaji in 1649, who returns to Shivaji — with no battle fought.">
+        <defs>
+          <linearGradient id="skyGrad7" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" style="stop-color:color-mix(in srgb,var(--saffron) 8%,var(--paper))"/>
+            <stop offset="1" style="stop-color:var(--paper)"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="700" height="480" fill="url(#skyGrad7)"/>
+
+        <!-- nodes -->
+        <g>
+          <rect x="248" y="44" width="214" height="62" rx="12" fill="var(--paper)" stroke="var(--line)" stroke-width="1.5"/>
+          <text class="m-shiv" x="355" y="72" text-anchor="middle">Mughal prince</text>
+          <text class="m-sub" x="355" y="90" text-anchor="middle" style="fill:var(--ink-faint)">Shah Jahan's son, in the Deccan</text>
+
+          <rect x="44" y="344" width="184" height="62" rx="12" fill="var(--paper)" stroke="var(--line)" stroke-width="1.5"/>
+          <text class="m-shiv" x="136" y="372" text-anchor="middle">Shivaji</text>
+          <text class="m-sub" x="136" y="390" text-anchor="middle" style="fill:var(--ink-faint)">stays calm · plans</text>
+
+          <rect x="472" y="344" width="184" height="62" rx="12" fill="var(--paper)"
+            stroke="var(--rust)" stroke-opacity=".55" stroke-width="1.5"/>
+          <text class="m-shiv" x="564" y="372" text-anchor="middle">Bijapur</text>
+          <text class="m-sub" x="564" y="390" text-anchor="middle" style="fill:var(--ink-faint)">the Adil Shah</text>
+
+          <!-- Shahaji held (chained pill) -->
+          <rect x="500" y="424" width="128" height="34" rx="17" fill="var(--rust)" fill-opacity=".13" stroke="var(--rust)" stroke-opacity=".5" stroke-width="1.3"/>
+          <circle cx="520" cy="441" r="5" fill="none" stroke="var(--rust)" stroke-width="1.6"/>
+          <circle cx="528" cy="441" r="5" fill="none" stroke="var(--rust)" stroke-width="1.6"/>
+          <text class="m-sub" x="566" y="445" text-anchor="middle" style="fill:var(--rust)">Shahaji — held</text>
+        </g>
+
+        <!-- background: Bijapur jails Shahaji (1648) -->
+        <path d="M564,406 L564,420" fill="none" stroke="var(--rust)" stroke-width="2"/>
+        <path d="M564,424 l-4,-9 l8,0 Z" fill="var(--rust)"/>
+        <text x="646" y="418" text-anchor="middle" style="font-family:'Karla',sans-serif;font-size:12px;fill:var(--rust)">jailed · 1648</text>
+
+        <!-- 1: Shivaji -> Mughal (a letter) -->
+        <path d="M150,344 C170,250 230,150 296,112" fill="none" stroke="var(--saffron)" stroke-width="2.6"/>
+        <path d="M296,112 l3,13 l-13,-4 Z" fill="var(--saffron)"/>
+        <!-- letter icon on the arrow -->
+        <g transform="translate(196,214)">
+          <rect x="-13" y="-9" width="26" height="18" rx="2" fill="var(--paper)" stroke="var(--saffron)" stroke-width="1.6"/>
+          <path d="M-13,-9 L0,2 L13,-9" fill="none" stroke="var(--saffron)" stroke-width="1.6"/>
+        </g>
+        <text x="120" y="250" style="font-family:'Karla',sans-serif;font-weight:700;font-size:12.5px;fill:var(--saffron)">1 · a friendly letter</text>
+
+        <!-- 2: Mughal -> Bijapur (pressure) -->
+        <path d="M456,104 C560,150 585,250 566,338" fill="none" stroke="var(--ink-soft)" stroke-width="2.2" stroke-dasharray="2 6"/>
+        <path d="M566,340 l5,-12 l-11,3 Z" fill="var(--ink-soft)"/>
+        <text x="600" y="212" style="font-family:'Karla',sans-serif;font-weight:700;font-size:12.5px;fill:var(--ink-soft)">2 · quiet</text>
+        <text x="600" y="228" style="font-family:'Karla',sans-serif;font-weight:700;font-size:12.5px;fill:var(--ink-soft)">pressure</text>
+
+        <!-- 3: Shahaji freed -> returns to Shivaji (1649) -->
+        <path d="M500,442 C380,452 300,440 232,410" fill="none" stroke="var(--green)" stroke-width="2.6"/>
+        <path d="M232,410 l13,-2 l-6,12 Z" fill="var(--green)"/>
+        <text x="360" y="470" text-anchor="middle" style="font-family:'Karla',sans-serif;font-weight:700;font-size:12.5px;fill:var(--green)">3 · Shahaji freed · 1649</text>
+      </svg>
+      <figcaption><b>Won with wits, not war.</b> Bijapur jailed Shahaji (1648) to trap Shivaji.
+        Instead of attacking, Shivaji <span style="color:var(--saffron)">wrote to the Mughal prince</span>,
+        so the Mughals <span style="color:var(--ink-soft)">leaned on Bijapur</span> — which
+        <span style="color:var(--green)">freed his father in 1649</span>. No battle was fought.</figcaption>
+    </figure>
+    <p class="map-cta"><a href="trip-companion.html">📍 See Bijapur &amp; the Deccan on the real map →</a></p>
+  </section>
+
+  <!-- ===================== STORY ===================== -->
+  <section aria-labelledby="story-h">
+    <div class="sec-head">
+      <span class="num">02</span>
+      <h2 id="story-h">Tonight's telling</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="read-cue">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.4"/><path d="M8 4.4V8l2.6 1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      About 10 minutes, read aloud slowly · choose your language
+    </div>
+
+    <div class="lang-bar" role="tablist" aria-label="Choose language">
+      <button role="tab" id="tab-en" aria-controls="story-en" aria-selected="true">English</button>
+      <button role="tab" id="tab-mr" class="mr" aria-controls="story-mr" aria-selected="false">मराठी</button>
+    </div>
+
+    <div class="telling" id="story-en" role="tabpanel" aria-labelledby="tab-en">
+      <p>Sometimes the sharpest sword is not a sword at all — it is a <span class="term">letter</span>.
+        A new act begins tonight, and it opens not with a battle, but with a boy outsmarting a whole
+        empire to save the person he loved most.</p>
+      <p>By now, Shivaji's forts and daring had begun to frighten the mighty Sultan of Bijapur. A
+        teenager, taking forts, talking of self-rule? He had to be stopped. But the Sultan was
+        cunning. Instead of marching against Shivaji — who could vanish into his mountains — he
+        reached for something far crueller. In <span class="term">1648</span> he had Shivaji's father,
+        the great warrior <span class="term">Shahaji</span>, suddenly seized and thrown in chains.
+        And the man who trapped him was not even an enemy stranger — it was a <em>fellow Maratha</em>,
+        a chief named Baji Ghorpade, who had taken the Sultan's side. The message could not have been
+        plainer: <em>"Call off your son — or the father pays."</em></p>
+      <p>Now imagine young Shivaji's heart when the news came. His father — the finest soldier he
+        knew — locked in a Bijapur prison, perhaps to be killed! Every hot feeling in him must have
+        screamed to gather the Mavlas and storm Bijapur that very night, swords out, banners flying.
+        But Bijapur was one of the greatest powers in the Deccan, with vast armies. A wild, angry
+        attack could not free Shahaji — it would only get him executed at once. So Shivaji did
+        something far, far braver than charging in. He <em>stopped. And he thought.</em></p>
+      <p>He unrolled, in his mind, the great map of powers all around him — and he found the clever
+        move. To the north loomed the <span class="term">Mughals</span>, the one power even mightier
+        than Bijapur, and Bijapur's great rivals. So Shivaji wrote a careful, polite letter to the
+        <span class="term">Mughal prince</span> — none other than a son of the emperor Shah Jahan, who
+        governed the Deccan for his father — offering his friendship and service. It was like a small
+        animal, cornered by a big dog, quietly making friends with an even bigger tiger.</p>
+      <p>Suddenly the Sultan of Bijapur had a headache. If he harmed Shahaji now, he might push this
+        troublesome, gifted young Bhosale — and his father's soldiers — straight into the arms of the
+        Mughals, the very enemy Bijapur feared most. Hurting the father had become far too dangerous.</p>
+      <p>And Shivaji, wise beyond his years, sweetened the deal. To show he meant no immediate war, he
+        quietly gave back a fort or two he had taken — among them a hill-fort named
+        <span class="term">Kondhana</span>. <em>(Tuck that name away in your memory. Kondhana comes
+        roaring back one unforgettable night, many years from now.)</em> Giving up a fort today to
+        save his father — and to fight again another day — was a price he was willing to pay.</p>
+      <p>Squeezed on every side, and with nothing to gain by cruelty, Bijapur let Shahaji go, in
+        <span class="term">1649</span>. No great battle had been fought. No thousands had died. Just a
+        father, walking free — freed not by an army, but by a son's patience and cleverness.</p>
+      <p>Then Shivaji did something wiser still — and harder. For several quiet years he did
+        <em>not</em> rush out to grab more forts. While his father lived, he kept his head down,
+        strengthened what he had, trained his men, and waited. He was growing in the dark, slowly and
+        steadily — exactly like the thin crescent moon on his seal, filling out night by night toward
+        the full.</p>
+      <p>Tonight's lesson is one worth keeping your whole life long: courage is not <em>only</em>
+        charging in. Sometimes the bravest, cleverest, strongest thing a person can do is to hold
+        back the anger, look at the whole board, and <b>wait, and think, and win with their wits.</b></p>
+      <p class="goodnight">Goodnight — tonight's badge: <b>mutsaddegiri</b>, "winning with wits,
+        not war."</p>
+    </div>
+
+    <div class="telling mr" id="story-mr" role="tabpanel" aria-labelledby="tab-mr" hidden>
+      <p><span class="dropcap">क</span>धीकधी सर्वांत धारदार तलवार म्हणजे तलवार नसतेच — ती असते एक
+        <span class="term">पत्र.</span> आज एक नवा अंक सुरू होतो, आणि तो सुरू होतो युद्धाने नव्हे, तर एका
+        मुलाने अख्ख्या साम्राज्याला बुद्धीने मात देऊन — आपल्या सर्वांत प्रिय माणसाला वाचवण्यासाठी.</p>
+      <p>आतापर्यंत शिवाजीच्या किल्ल्यांनी आणि धाडसाने बलाढ्य विजापूरच्या सुलतानाला घाबरवायला सुरुवात केली
+        होती. एक पोरगा एकामागोमाग किल्ले घेतो, उघडपणे स्वराज्याची भाषा करतो? त्याला रोखायलाच हवं. पण सुलतान
+        धूर्त होता. डोंगरांत क्षणात नाहीसा होणाऱ्या शिवाजीवर सरळ चालून जाण्याऐवजी त्याने त्याहून कितीतरी क्रूर
+        डाव खेळला. <span class="term">इ.स. १६४८</span> मध्ये त्याने शिवाजीचे वडील, थोर योद्धा
+        <span class="term">शहाजी</span> यांना अचानक पकडून बेड्या घातल्या. आणि सापळ्यात अडकवणारा कुणी परका
+        शत्रू नव्हे — तर सुलतानाच्या बाजूने गेलेला बाजी घोरपडे नावाचा <em>एक मराठा सरदारच</em> होता. संदेश
+        अगदी स्पष्ट होता: <em>"आपल्या मुलाला आवर घाल — नाहीतर बापाला त्याची किंमत मोजावी लागेल."</em></p>
+      <p>ती बातमी आली तेव्हा तरुण शिवाजीचं मन जरा कल्पून बघ. वडील — त्याला ठाऊक असलेला सर्वांत उत्तम सैनिक —
+        विजापूरच्या अंधाऱ्या तुरुंगात, कदाचित जिवावरच बेतलेलं! मनातली प्रत्येक तापलेली भावना ओरडून सांगत
+        असेल की आत्ताच मावळ्यांना घेऊन, तलवारी उपसून, भगवे झेंडे फडकवत विजापुरावर चालून जावं. पण विजापूर
+        दख्खनेतल्या सर्वांत मोठ्या सत्तांपैकी एक, अफाट सैन्याचं. रागाच्या भरात केलेला अविचारी हल्ला शहाजींना
+        सोडवू शकला नसता — उलट त्याने त्यांचा तात्काळ जीव घेतला असता. म्हणून शिवाजीने तुटून पडण्यापेक्षा
+        कितीतरी, कितीतरी धाडसी गोष्ट केली. तो <em>थांबला. आणि शांतपणे विचार केला.</em></p>
+      <p>त्याने मनातल्या मनात भोवतीच्या साऱ्या सत्तांचा अख्खा नकाशा उलगडला — आणि त्यातून चतुर चाल शोधून
+        काढली. उत्तरेला होते <span class="term">मुघल</span> — विजापूरहूनही बलाढ्य, आणि विजापूरचे कट्टर
+        प्रतिस्पर्धी. म्हणून शिवाजीने <span class="term">मुघल राजपुत्राला</span> — बादशहा शाहजहानच्या,
+        दख्खनेचा कारभार पाहणाऱ्या मुलालाच — एक जपून लिहिलेलं, नम्र पत्र पाठवलं, मैत्रीचा आणि सेवेचा हात पुढे
+        करत. जणू मोठ्या कुत्र्याने कोंडीत पकडलेल्या एका छोट्या प्राण्याने, हळूच त्याहूनही मोठ्या वाघाशी
+        दोस्ती करून टाकावी.</p>
+      <p>आणि एकदम विजापूरच्या सुलतानापुढे मोठा पेच उभा राहिला. आता शहाजींना त्रास दिला, तर हा त्रासदायक,
+        हुशार तरुण भोसले — आणि त्याच्या वडिलांचे शिपाई — थेट मुघलांच्या, म्हणजे विजापूरला सर्वांत भीती
+        वाटणाऱ्या शत्रूच्या गोटात निघून जातील. बापाला इजा करणं आता विजापूरलाच फारच महाग नि धोक्याचं झालं.</p>
+      <p>हा डाव इतका सुंदर का, ते नीट समजून घे. दख्खनेत तीन मोठ्या ताकदी होत्या — मुघल, विजापूर, आणि
+        (काहीशी दुबळी होत चाललेली) इतर सुलतानशाही. या तिघांचं एकमेकांशी सतत वैर. शिवाजीने ओळखलं की या
+        तिघांना एकमेकांविरुद्ध वापरता येईल: विजापूरला शह द्यायला मुघलांची मैत्री, आणि पुढे मुघलांना शह द्यायला
+        दुसरं कुणीतरी. एकाच वेळी सगळ्यांशी न भांडता, चतुराईने एकाचा तराजू दुसऱ्याविरुद्ध झुकवायचा — हे मोठ्या
+        मुत्सद्द्याचं काम आहे. आणि हे शिवाजी अवघ्या अठराव्या वर्षी करत होता.</p>
+      <p>आणि वयाहून कितीतरी शहाण्या शिवाजीने ही तडजोड आणखी गोड केली. लगेच युद्ध नको, हा हेतू दाखवायला त्याने
+        आपण घेतलेले एक-दोन किल्ले गुपचूप परत दिले — त्यांत <span class="term">कोंढाणा</span> नावाचा एक डोंगरी
+        किल्लाही होता. <em>(हे नाव स्मरणात घट्ट जपून ठेव. कितीतरी वर्षांनी, एका अविस्मरणीय रात्री, कोंढाणा
+        गर्जत परत येतो.)</em> आज एक किल्ला देऊन वडिलांना वाचवणं — आणि पुन्हा एकदा लढायला स्वतः जिवंत राहणं —
+        ही किंमत मोजायला तो आनंदाने तयार होता.</p>
+      <p>चहूबाजूंनी कोंडीत सापडलेल्या, आणि आता क्रूरपणातून काहीच मिळणार नसलेल्या विजापूरने शेवटी
+        <span class="term">१६४९</span> मध्ये शहाजींना सोडून दिलं. मोठं युद्ध झालं नाही. हजारोंचा बळी गेला
+        नाही. फक्त एक बाप मोकळा होऊन चालत बाहेर आला — सैन्याच्या बळाने नव्हे, तर एका मुलाच्या संयमाने आणि
+        चतुराईने सुटलेला.</p>
+      <p>मग शिवाजीने त्याहूनही शहाणी — आणि खरं तर अवघड — गोष्ट केली. पुढची काही वर्षं त्याने आणखी किल्ले
+        घ्यायची अजिबात घाई केली नाही. वडील हयात असेपर्यंत त्याने डोकं खाली ठेवलं, जे हाती होतं ते अधिक बळकट
+        केलं, माणसं तयार केली, आणि शांतपणे वाट पाहिली. तो अंधारात वाढत होता — हळूहळू आणि स्थिरपणे, अगदी
+        त्याच्या मुद्रेवरच्या बारीक चंद्रकोरीसारखा, रात्रीमागून रात्र भरत, पूर्णत्वाकडे जाणारा.</p>
+      <p>ही "शांत वर्षं" म्हणजे आळसाची नव्हेत, हे लक्षात ठेव. या काळात शिवाजी आपले किल्ले दुरुस्त करत होता,
+        मावळ्यांना कवायती देत होता, खजिना जमवत होता, आणि मुलखाचा कारभार नीट लावत होता. वादळापूर्वीची ती शांतता
+        होती — बाहेरून काहीच घडत नसल्यासारखं, पण आतून प्रचंड तयारी. जो माणूस योग्य वेळेची वाट पाहू शकतो, आणि
+        ती वेळ येताच पूर्ण ताकदीनिशी झेप घेतो, तोच खरा जिंकतो. आणि योग्य वेळ आता फार दूर नव्हती.</p>
+      <p>आणि वडील शहाजी सुटून परत आले, तो क्षण जरा कल्पून बघ. बेड्या गळून पडल्या; बाप-लेकाची पुन्हा भेट झाली.
+        शहाजींना कळून चुकलं असेल की आपला मुलगा आता नुसता धाडसी राहिला नाही — तो शहाणा, संयमी आणि मुत्सद्दीही
+        झाला आहे. रागाच्या भरात तलवार उपसणं सोपं; पण प्रिय माणसाच्या जिवासाठी स्वतःचा राग गिळून, बुद्धीने डाव
+        खेळणं — हे कितीतरी अवघड. या एका प्रसंगात शिवाजीने दाखवून दिलं की स्वराज्य नुसत्या शौर्याने नव्हे, तर
+        शहाणपणानेही उभं राहणार आहे.</p>
+      <p>आजची शिकवण आयुष्यभर जपण्यासारखी आहे: शौर्य म्हणजे <em>फक्त</em> तुटून पडणं नव्हे. कधीकधी माणूस करू
+        शकेल अशी सर्वांत धाडसी, चतुर आणि खंबीर गोष्ट म्हणजे मनातला राग आवरणं, समोरचा अख्खा पट शांतपणे बघणं,
+        आणि <b>थांबणं, विचार करणं, आणि बुद्धीने जिंकणं.</b></p>
+      <p class="goodnight">शुभ रात्री — आजचं जपायचं नाणं: <b>मुत्सद्देगिरी,</b> "युद्धाने नव्हे, बुद्धीने
+        जिंकणं."</p>
+    </div>
+
+    <div class="moon-note">
+      <svg class="moon" width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">
+        <circle cx="26" cy="26" r="22" fill="none" stroke="var(--gold)" stroke-width="2.4" opacity=".5"/>
+        <path d="M31 9 a17 17 0 1 0 0 34 a12.5 12.5 0 1 1 0 -34 Z" fill="var(--gold)" opacity=".9"/>
+      </svg>
+      <p>The <b>Rajmudra</b> promised swarajya would grow "like the waxing moon." Tonight Shivaji
+        lives it — no reckless war, a father freed by a letter, and strength gathered
+        <b>quietly, patiently.</b></p>
+    </div>
+
+    <h3 class="subhead">Say it out loud</h3>
+    <div class="say-grid">
+      <div class="say"><div class="head"><span class="dev">शहाजी</span><span class="rom">Shahaji</span></div>
+        <div class="phon">sha-HAA-jee</div><div class="gloss">his father</div></div>
+      <div class="say"><div class="head"><span class="dev">बिजापूर</span><span class="rom">Bijapur</span></div>
+        <div class="phon">bee-JAA-poor</div><div class="gloss">the sultanate that jailed him</div></div>
+      <div class="say"><div class="head"><span class="dev">आदिलशहा</span><span class="rom">Adil Shah</span></div>
+        <div class="phon">AA-dil-shaah</div><div class="gloss">the Sultan of Bijapur</div></div>
+      <div class="say"><div class="head"><span class="dev">मुत्सद्देगिरी</span><span class="rom">mutsaddegiri</span></div>
+        <div class="phon">mut-sad-de-GEE-ree</div><div class="gloss">diplomacy · statecraft</div></div>
+      <div class="say"><div class="head"><span class="dev">मुघल</span><span class="rom">Mughal</span></div>
+        <div class="phon">moo-GHAL</div><div class="gloss">the great empire to the north</div></div>
+      <div class="say"><div class="head"><span class="dev">कोंढाणा</span><span class="rom">Kondhana</span></div>
+        <div class="phon">kon-DHAA-ṇaa</div><div class="gloss">a fort he gave up (later Sinhagad)</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== COIN ===================== -->
+  <section aria-labelledby="coin-h">
+    <div class="sec-head">
+      <span class="num">03</span>
+      <h2 id="coin-h">Tonight's collectible</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="coin-wrap">
+      <button class="coin" id="coin" aria-label="Diplomacy badge — flip to read its meaning">
+        <span class="coin-inner">
+          <span class="face front">
+            <span class="big">मुत्सद्देगिरी</span>
+            <span class="rom">Diplomacy</span>
+            <span class="dots">Badge · Day 7</span>
+          </span>
+          <span class="face back">
+            <span class="mean">“win with wits, not war”</span>
+            <span class="dots">a father freed · 1649</span>
+          </span>
+        </span>
+      </button>
+      <div class="coin-copy">
+        <h3>The seventh badge</h3>
+        <p>Not every victory is a battle. <em>Mutsaddegiri</em> — statecraft — freed Shahaji without
+          a single charge: patience, a clever letter, and playing two empires against each other.</p>
+        <p class="hint">↻ Hover or tap the coin to turn it over.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HISTORY CARDS ===================== -->
+  <section aria-labelledby="hist-h">
+    <div class="sec-head">
+      <span class="num">04</span>
+      <h2 id="hist-h">For the grown-up reading aloud</h2>
+      <span class="rule"></span>
+    </div>
+    <p class="grown-note">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 7v4M8 4.6v.4" stroke-linecap="round"/></svg>
+      The real history behind tonight's scene — for the curious.
+    </p>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>The arrest (1648)</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>Alarmed by Shivaji's growing power, Bijapur had <b>Shahaji seized on 25 July 1648</b> —
+          taken by the Maratha sardar <b>Baji Ghorpade</b> — explicitly to <b>contain the son by
+          holding the father</b>. Shahaji was also deeply involved in Bijapur's Karnataka campaigns,
+          which is part of the wider backdrop.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>The diplomacy</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>Rather than fight, Shivaji <b>petitioned the Mughal prince Murad Bakhsh</b> (Shah Jahan's
+          son, then in the Deccan), pledging loyalty — so the Mughals, Bijapur's rivals, had reason
+          to protect him. Shivaji also <b>surrendered forts</b> as part of the settlement (accounts
+          name <b>Kondhana</b>, Bangalore, Kandarpi). It's a textbook use of playing greater powers
+          against each other.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>The release — and what's debated</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>Shahaji was released in <b>1649</b> (some sources give 16 May 1649, after ~10 months).
+          <span class="tag debated" style="margin-left:0">Debated</span> The <b>exact terms and date</b>
+          differ across accounts — which forts, and whether the detention ran longer. The core is
+          firm: <b>arrest 1648, diplomatic release ~1649.</b></p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag c">The lesson</span><h4>Then he lay low (1649–1655)</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>Crucially, Shivaji then <b>paused his conquests for several years</b> (~1649–1655),
+          quietly consolidating rather than provoking Bijapur again while his father lived. That
+          restraint — power held back on purpose — is the real lesson of the night, and it sets up
+          the storms to come (Javali, then Afzal Khan).</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===================== JOURNEY ===================== -->
+  <section aria-labelledby="journey-h">
+    <div class="sec-head">
+      <span class="num">05</span>
+      <h2 id="journey-h">The thirty-night journey</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="ribbon">
+      <div class="acts">
+        <div class="act-col">
+          <div class="name">I · Dream is Born ✓</div>
+          <div class="dots-row">
+            <span class="d done"></span><span class="d done"></span><span class="d done"></span>
+            <span class="d done"></span><span class="d done"></span><span class="d done"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">II · Lion Rises</div>
+          <div class="dots-row">
+            <span class="d now" title="Day 7 — tonight"></span>
+            <span class="d" title="Day 8"></span><span class="d" title="Day 9"></span>
+            <span class="d" title="Day 10"></span><span class="d" title="Day 11"></span><span class="d" title="Day 12"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">III · Shaking Empires</div>
+          <div class="dots-row">
+            <span class="d" title="Day 13"></span><span class="d" title="Day 14"></span><span class="d" title="Day 15"></span><span class="d" title="Day 16"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">IV · The Crown</div>
+          <div class="dots-row">
+            <span class="d" title="Day 17"></span><span class="d" title="Day 18"></span><span class="d" title="Day 19"></span><span class="d" title="Day 20"></span>
+            <span class="d" title="Day 21"></span><span class="d" title="Day 22"></span><span class="d" title="Day 23"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">V · King &amp; Legacy</div>
+          <div class="dots-row">
+            <span class="d" title="Day 24"></span><span class="d" title="Day 25"></span><span class="d" title="Day 26"></span><span class="d" title="Day 27"></span>
+            <span class="d" title="Day 28"></span><span class="d" title="Day 29"></span><span class="d" title="Day 30"></span>
+          </div>
+        </div>
+      </div>
+      <div class="legend">
+        <span><span class="d now"></span> Tonight</span>
+        <span><span class="d"></span> Nights to come</span>
+        <span><span class="d done"></span> Nights told</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LEDGER ===================== -->
+  <section aria-labelledby="ledger-h">
+    <div class="ledger">
+      <h2 id="ledger-h">Fact &amp; legend, kept honest</h2>
+      <dl>
+        <div class="row"><dt class="h">History</dt>
+          <dd>Bijapur jailed <b>Shahaji (25 July 1648)</b> to contain Shivaji; Shivaji avoided war,
+            <b>pledged loyalty to the Mughal prince</b> and <b>gave up forts (incl. Kondhana)</b>;
+            Shahaji was <b>freed in 1649</b>, after which Shivaji lay low (~1649–1655).</dd></div>
+        <div class="row"><dt class="c">Debated</dt>
+          <dd>The <b>exact release terms and date</b> vary by source (some: 16 May 1649; some a longer
+            detention). The arrest-1648 / release-~1649 core is solid.</dd></div>
+      </dl>
+    </div>
+
+    <div class="foot">
+      <span><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Trip map</a></span>
+      <span class="next">Next → <a href="day-08.html">Day 8 · Javali</a></span>
+    </div>
+  </section>
+</main>
+
+<script>
+  (function(){
+    var tabs={en:document.getElementById('tab-en'),mr:document.getElementById('tab-mr')};
+    var panes={en:document.getElementById('story-en'),mr:document.getElementById('story-mr')};
+    function show(l){for(var k in tabs){var on=(k===l);tabs[k].setAttribute('aria-selected',on?'true':'false');panes[k].hidden=!on;}}
+    tabs.en.addEventListener('click',function(){show('en')});
+    tabs.mr.addEventListener('click',function(){show('mr')});
+  })();
+  (function(){var coin=document.getElementById('coin');coin.addEventListener('click',function(){coin.classList.toggle('flipped')});})();
+</script>

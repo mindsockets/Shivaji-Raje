@@ -1,0 +1,444 @@
+<meta charset="utf-8">
+<title>The Mavla Brotherhood</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tiro+Devanagari+Marathi:ital@0;1&family=Karla:wght@400;600;700&display=swap">
+
+<link rel="stylesheet" href="day.css">
+
+<nav class="daynav">
+  <a href="day-03.html">‹ Day 3</a>
+  <span class="mid"><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Map</a> · <a href="sayings-sheet.html">📜 Sayings</a></span>
+  <a href="day-05.html">Day 5 ›</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">
+      <span class="daynum">Day 4</span>
+      <span class="act-tag">Act I · The Dream is Born</span>
+      <span class="act-tag">The friends who became an army</span>
+    </div>
+    <h1>The Mavla Brotherhood</h1>
+    <p class="dek">A dream needs hands to build it. Tonight Shivaji finds his — the <b>Mavlas</b>,
+      the hardy hill-friends who would climb any cliff, and any danger, beside him.</p>
+  </div>
+  <svg class="ridge" viewBox="0 0 880 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,90 L0,54 L70,30 L130,50 L200,20 L270,46 L340,14 L410,44 L480,24 L560,50 L620,28 L700,52 L770,26 L830,48 L880,32 L880,90 Z"
+      fill="var(--map-ridge)" opacity=".55"/>
+    <path d="M0,90 L0,66 L90,48 L170,66 L250,40 L340,64 L430,44 L520,66 L610,48 L700,68 L790,50 L880,66 L880,90 Z"
+      fill="var(--map-ridge)"/>
+  </svg>
+</header>
+
+<main class="wrap">
+
+  <!-- ===================== PLACE ===================== -->
+  <section aria-labelledby="place-h">
+    <div class="sec-head">
+      <span class="num">01</span>
+      <h2 id="place-h">The place — the Maval valleys</h2>
+      <span class="rule"></span>
+    </div>
+    <figure class="map">
+      <svg viewBox="0 0 700 460" role="img"
+        aria-label="An illustration of the Maval, the green Sahyadri valleys west of Pune: layered rolling hills with terraced fields, two distant hill-forts flying flags on their peaks, and a small band of Mavla companions standing together on a ridge in the foreground.">
+        <defs>
+          <linearGradient id="skyGrad4" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" style="stop-color:color-mix(in srgb,var(--green) 14%,var(--paper))"/>
+            <stop offset="1" style="stop-color:var(--paper)"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="700" height="460" fill="url(#skyGrad4)"/>
+        <!-- sun -->
+        <circle cx="560" cy="92" r="26" fill="var(--gold)" opacity=".8"/>
+
+        <!-- layered valleys (far to near) -->
+        <path d="M0,180 C120,140 200,170 300,150 C420,126 520,168 700,150 L700,230 L0,230 Z"
+          fill="var(--map-ridge)" opacity=".35"/>
+        <path d="M0,240 C130,200 240,236 360,210 C500,182 600,230 700,214 L700,300 L0,300 Z"
+          fill="var(--green)" opacity=".5"/>
+        <path d="M0,320 C150,280 260,318 400,296 C540,276 630,314 700,300 L700,460 L0,460 Z"
+          fill="var(--green)" opacity=".3"/>
+
+        <!-- two distant hill-forts on peaks -->
+        <g>
+          <!-- fort A (Torna) -->
+          <path d="M150,160 l24,-30 l24,30 Z" fill="var(--map-ridge)"/>
+          <rect x="166" y="150" width="16" height="6" fill="var(--ink-soft)"/>
+          <line x1="174" y1="150" x2="174" y2="136" stroke="var(--ink-soft)" stroke-width="1.6"/>
+          <path d="M174,137 l12,3 l-12,4 Z" fill="var(--saffron)"/>
+          <text class="m-sub" x="174" y="178" text-anchor="middle" style="fill:var(--ink-soft)">Torna</text>
+          <!-- fort B (Rajgad) -->
+          <path d="M470,150 l28,-34 l28,34 Z" fill="var(--map-ridge)"/>
+          <rect x="488" y="140" width="18" height="6" fill="var(--ink-soft)"/>
+          <line x1="497" y1="140" x2="497" y2="124" stroke="var(--ink-soft)" stroke-width="1.6"/>
+          <path d="M497,125 l12,3 l-12,4 Z" fill="var(--saffron)"/>
+          <text class="m-sub" x="497" y="170" text-anchor="middle" style="fill:var(--ink-soft)">Rajgad</text>
+        </g>
+
+        <!-- terraced fields (curved contour lines) -->
+        <g stroke="var(--green)" stroke-width="1.6" fill="none" opacity=".55">
+          <path d="M40,330 C160,300 260,332 380,314"/>
+          <path d="M60,352 C180,322 280,354 420,334"/>
+          <path d="M90,376 C210,346 320,378 470,356"/>
+        </g>
+
+        <!-- the brotherhood: a band of companions on the near ridge -->
+        <g fill="var(--ink)">
+          <!-- each: head circle + body -->
+          <g transform="translate(250,392)"><circle cx="0" cy="-26" r="7"/><path d="M-8,-18 q8,-6 16,0 L7,8 L-7,8 Z"/></g>
+          <g transform="translate(286,398)"><circle cx="0" cy="-28" r="7.5"/><path d="M-9,-19 q9,-6 18,0 L8,10 L-8,10 Z"/></g>
+          <g transform="translate(324,392)"><circle cx="0" cy="-30" r="8"/><path d="M-10,-21 q10,-7 20,0 L9,10 L-9,10 Z"/>
+            <!-- little flag for the leader (Shivaji) -->
+            <line x1="14" y1="-40" x2="14" y2="-18" stroke="var(--saffron)" stroke-width="2"/>
+            <path d="M14,-40 l14,4 l-14,5 Z" fill="var(--saffron)"/></g>
+          <g transform="translate(362,398)"><circle cx="0" cy="-28" r="7.5"/><path d="M-9,-19 q9,-6 18,0 L8,10 L-8,10 Z"/></g>
+          <g transform="translate(398,392)"><circle cx="0" cy="-26" r="7"/><path d="M-8,-18 q8,-6 16,0 L7,8 L-7,8 Z"/></g>
+        </g>
+
+        <!-- marker -->
+        <text class="m-shiv" x="250" y="438" style="fill:var(--ink)">The Maval</text>
+        <text class="m-shiv-sub" x="250" y="456" style="fill:var(--green)">the homeland valleys · his brotherhood</text>
+      </svg>
+      <figcaption><b>Brothers of the hills.</b> The <span style="color:var(--green)">Maval</span> —
+        the green Sahyadri valleys west of Pune, watched over by forts like Torna and Rajgad. Here
+        Shivaji found the <b>Mavlas</b>: friends chosen for their courage, who would one day become
+        an unstoppable army.</figcaption>
+    </figure>
+    <p class="map-cta"><a href="trip-companion.html">📍 See the Maval forts on the real map →</a></p>
+  </section>
+
+  <!-- ===================== STORY ===================== -->
+  <section aria-labelledby="story-h">
+    <div class="sec-head">
+      <span class="num">02</span>
+      <h2 id="story-h">Tonight's telling</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="read-cue">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.4"/><path d="M8 4.4V8l2.6 1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      About 10 minutes, read aloud slowly · choose your language
+    </div>
+
+    <div class="lang-bar" role="tablist" aria-label="Choose language">
+      <button role="tab" id="tab-en" aria-controls="story-en" aria-selected="true">English</button>
+      <button role="tab" id="tab-mr" class="mr" aria-controls="story-mr" aria-selected="false">मराठी</button>
+    </div>
+
+    <div class="telling" id="story-en" role="tabpanel" aria-labelledby="tab-en">
+      <p>You've met the dream, the dreamer, and the mother who taught him. But no one builds a
+        kingdom alone. Tonight, meet the friends who would turn one boy's dream into an army —
+        friends so loyal that four hundred years later we still say their names with a shiver of
+        pride.</p>
+      <p>As Shivaji grew, he loved to roam the <span class="term">Maval</span> — the deep, green
+        valleys folded into the western side of the Sahyadri mountains, near Pune, where the monsoon
+        pours hardest and the forests grow thick. There were about twelve of these valleys, and
+        people spoke of them together as the <em>Bara Maval</em>, the "Twelve Mavals." And the people
+        who lived there were called the <span class="term">Mavlas</span>.</p>
+      <p>Now, the Mavlas were not soft city folk. They were hardy hill-people — farmers, shepherds,
+        and woodsmen — lean and tough and sure-footed. A Mavla could run up a steep cliff like a
+        mountain goat, slip through thick jungle without a sound, march all night on a handful of
+        roasted grain, and knew every rock, every stream, and every secret goat-path in his valley.
+        For fighting in these mountains, there were no better soldiers on earth. They just had never
+        had a leader worth following with their whole hearts.</p>
+      <p>Then along came Shivaji — and he was different from any highborn boy they had ever seen. Most
+        nobles would never so much as sit beside a poor hill-farmer. But Shivaji climbed the ridges
+        <em>with</em> the Mavlas. He ate their simple food from the same leaf-plates. He laughed at
+        their jokes, slept under the same stars, learned their hidden trails and their clever tricks,
+        and remembered every man's name and family. He treated them not as servants to be ordered
+        about, but as <em>equals</em> — as brothers. That was a rare and powerful thing, and the
+        Mavlas felt it. A man will march a long way for a paymaster; he will follow to the death
+        someone who respects him.</p>
+      <p>One by one, the bravest hearts joined him. There was <span class="term">Tanaji Malusare</span>,
+        fearless as a lion — remember him especially, for he has an unforgettable night waiting far
+        ahead. There was <span class="term">Kanhoji Jedhe</span>, a powerful <em>deshmukh</em> whose
+        word could bring whole clans of warriors over to the cause — and win him the other Maratha
+        chiefs was one of Shivaji's cleverest early victories, fought with friendship instead of
+        swords. There was <span class="term">Baji Pasalkar</span>, strong and wise; and Yesaji Kank,
+        and Tanaji's own brother Suryaji, and many more. They were not a hired army marching for
+        coins. They were <em>friends</em> who would follow Shivaji anywhere: up any wall, through any
+        darkness, into any danger.</p>
+      <p>Without ever quite saying the words aloud, they made one another a promise: <em>We are one.
+        Your fight is our fight. Whatever comes, we climb it together.</em> A poor farmer's son and a
+        noble's son now stood shoulder to shoulder, because the dream of swarajya belonged to them
+        both.</p>
+      <p>This band of mountain brothers would, in the years to come, storm forts in the black of
+        night, hold narrow passes to their very last breath, and wrest a whole kingdom from the
+        greatest empires in the land. Kings with a hundred thousand hired soldiers would be beaten by
+        a few thousand Mavlas who were fighting for their own homes and their own leader. But it all
+        began so simply, on green hillsides — with a boy who chose his friends by their courage and
+        their kindness, and never once by how they were born.</p>
+      <p>And knowing every hidden fold of these hills, every shortcut and ambush-spot? That knowledge
+        would one day grow into a secret weapon with a name of its own — <span class="term">ganimi
+        kava</span>, the art of the lightning raid — but that is a story for a later night.</p>
+      <p>So tonight there is no battle. Just boys on a green hillside, sharing food and laughter and a
+        great unspoken promise — becoming brothers. And tomorrow night, in a hidden temple in these
+        very hills, that promise will be spoken out loud at last.</p>
+      <p class="goodnight">Goodnight — tonight's badge: <b>Mavle, "the brotherhood."</b></p>
+    </div>
+
+    <div class="telling mr" id="story-mr" role="tabpanel" aria-labelledby="tab-mr" hidden>
+      <p><span class="dropcap">तू</span> स्वप्न भेटलास, स्वप्न पाहणारा भेटलास, आणि त्याला घडवणारी आईही भेटली. पण
+        राज्य कुणी एकट्याने उभारत नाही — त्यासाठी माणसं लागतात, आणि तीही जिवाला जीव देणारी. आज भेटूया त्या
+        मित्रांना, जे एका मुलाच्या स्वप्नाचं सैन्यात रूपांतर करणार होते — इतके एकनिष्ठ, की चारशे वर्षांनंतर
+        आजही त्यांची नावं आपण अभिमानाच्या रोमांचाने घेतो.</p>
+      <p>शिवाजी मोठा होत गेला, तसा त्याला <span class="term">मावळ</span> भटकायला फार फार आवडायचं — पुण्याजवळ,
+        सह्याद्रीच्या पश्चिम अंगाला घडीत लपलेल्या त्या खोल हिरव्यागार दऱ्या, जिथे पाऊस सर्वांत जोरात कोसळतो
+        आणि जंगलं दाट, गूढ वाढतात. अशा जवळजवळ बारा दऱ्या होत्या, आणि लोक त्यांना एकत्र म्हणत <em>बारा मावळ.</em>
+        आणि तिथे राहणाऱ्या काटक माणसांना म्हणत <span class="term">मावळे.</span></p>
+      <p>हे मावळे काही शहरातली नाजूक, ऐतखाऊ माणसं नव्हती. ती होती काटक डोंगरी माणसं — शेतकरी, धनगर,
+        लाकूडतोडे — बारीक, राकट आणि पावलं दगडासारखी पक्की असलेली. मावळा डोंगरी बकऱ्यासारखा सरळ कडा चढून
+        जाई, दाट जंगलातून पानाचाही आवाज न करता सटकून जाई, मूठभर हुरड्यावर रात्रभर चालत राही, आणि आपल्या
+        दरीतला प्रत्येक दगड, प्रत्येक ओढा, प्रत्येक लपलेली बकरवाट त्याला तोंडपाठ असे. या डोंगरांत लढायला
+        जगात याहून चांगले सैनिक नव्हते. फक्त एकच उणीव होती — मन:पूर्वक ज्याच्यामागे जावं, असा खराखुरा नेता
+        त्यांना अजून मिळाला नव्हता.</p>
+      <p>या बारा मावळांना गोड गोड नावं होती — गुंजण मावळ, कानद मावळ, मुठे मावळ, वेळवंड मावळ, आणि अशीच आणखी.
+        प्रत्येक दरीला आपापला ओढा, आपापले धबधबे, आपापली माणसं आणि आपापला बाणेदार स्वभाव. पावसाळ्यात इथले रस्ते
+        चिखलाचे होत, नद्या फुगत, आणि परक्या सैन्याला या भुलभुलैयात शिरणं म्हणजे स्वतःच्या पायावर धोंडा पाडून
+        घेणं. पण मावळ्यांना मात्र हा अख्खा मुलूख आपल्या तळहातासारखा ठाऊक होता — आणि जो हा मुलूख आणि ही माणसं
+        जिंकेल, त्याच्या हाती एक अजिंक्य ताकद येणार होती.</p>
+      <p>मग आला शिवाजी — आणि तो त्यांनी पाहिलेल्या कोणत्याही उच्चकुलीन मुलासारखा मुळीच नव्हता. बहुतेक सरदार
+        गरीब डोंगरी शेतकऱ्याच्या शेजारी नुसतं बसणंही कमीपणाचं मानत. पण शिवाजी मावळ्यांसोबत कडे चढायचा.
+        त्यांच्याच पानावर त्यांचं साधं जेवण आवडीने जेवायचा. त्यांच्या विनोदांना मनापासून हसायचा, त्याच
+        ताऱ्यांखाली त्यांच्यासोबत झोपायचा, त्यांच्या लपलेल्या वाटा नि हुशार युक्त्या शिकायचा, आणि प्रत्येकाचं
+        नाव नि घरदार लक्षात ठेवायचा. तो त्यांना हुकूम सोडायचे नोकर म्हणून नव्हे, तर <em>बरोबरीचे</em> — भाऊ
+        म्हणून वागवायचा. ही त्या काळात फार दुर्मिळ आणि फार मोठी गोष्ट होती, आणि मावळ्यांच्या हृदयाला ती नेमकी
+        जाऊन भिडली. पैसा देणाऱ्यामागे माणूस बरंच अंतर चालतो हे खरं; पण आदराने वागवणाऱ्यामागे तो अख्खा जीव
+        ओवाळून टाकतो.</p>
+      <p>आणि मग एकेक करत शूर मनं त्याच्याभोवती जमू लागली. <span class="term">तानाजी मालुसरे</span> —
+        सिंहासारखा निर्भय; त्याला विशेष लक्षात ठेव, कारण पुढे त्याची एक अविस्मरणीय रात्र वाट पाहत आहे.
+        <span class="term">कान्होजी जेधे</span> — एक बलाढ्य <em>देशमुख</em>, ज्याच्या एका शब्दासरशी अख्खी
+        योद्ध्यांची घराणी स्वराज्याच्या बाजूने आली. इतर मराठा सरदारांना तलवारीने नव्हे, तर मैत्रीने आणि
+        विश्वासाने आपलंसं करणं — ही शिवाजीच्या सुरुवातीच्या सर्वांत चतुर विजयांपैकी एक होती.
+        <span class="term">बाजी पासलकर</span> — बलवान आणि शहाणा; आणि येसाजी कंक, आणि तानाजीचा भाऊ सूर्याजी,
+        आणि आणखी कितीतरी शूर सवंगडी. हे पैशासाठी कूच करणारं भाडोत्री सैन्य नव्हतं. हे <em>मित्र</em> होते —
+        जे शिवाजीमागे कुठेही जातील: कोणत्याही तटावर, कोणत्याही अंधारातून, कोणत्याही मृत्यूच्या दारातून.</p>
+      <p>एक दृश्य डोळ्यांसमोर आण: दिवसभर डोंगर तुडवून झाल्यावर, रात्री एका शेकोटीभोवती हे सगळे गोळा होतात.
+        भाकरी आणि ठेचा एकाच पानात वाटून खातात, कुणीतरी जुनं गाणं गुणगुणतं, कुणी शिकारीची गोष्ट रंगवून सांगतं,
+        आणि त्यांच्यामध्ये बसलेला शिवाजी — सरदाराचा मुलगा असूनही — त्यांच्यातलाच एक होऊन हसतो. दुसऱ्या
+        दिवशी पहाटे मात्र तोच शिवाजी त्यांना नवं स्वप्न दाखवतो: "आपण फक्त कुणाची तरी चाकरी करणारे शिपाई
+        नाही. आपण आपल्या स्वतःच्या भूमीचे रक्षणकर्ते होऊ शकतो." आणि ते ऐकून त्या काटक डोंगरी माणसांच्या
+        डोळ्यांत एक वेगळीच चमक उभी राही.</p>
+      <p>शब्दांत कधी स्पष्ट न बोलताच त्यांनी एकमेकांना एक वचन दिलं: <em>आपण एक आहोत. तुझी लढाई ती आमची
+        लढाई. काहीही येवो, आपण ती मिळूनच चढून जाऊ.</em> गरीब शेतकऱ्याचा मुलगा आणि सरदाराचा मुलगा आता एका
+        रांगेत, खांद्याला खांदा लावून उभे राहिले — कारण स्वराज्याचं स्वप्न आता दोघांचंही सारखंच होतं.</p>
+      <p>हे डोंगरी भावांचं टोळकं पुढच्या वर्षांत काळोख्या रात्री किल्ले सर करणार होतं, अरुंद खिंडी शेवटच्या
+        श्वासापर्यंत लढवणार होतं, आणि साऱ्या बलाढ्य साम्राज्यांकडून अख्खं राज्य हिसकावून घेणार होतं. लाखभर
+        भाडोत्री शिपायांचे बलाढ्य राजे मूठभर मावळ्यांकडून हरणार होते — कारण मावळे लढत होते भाड्यासाठी नव्हे,
+        तर स्वतःच्या घरासाठी आणि स्वतःच्या लाडक्या नेत्यासाठी. पण या साऱ्याची सुरुवात इतकी साधी होती, त्या
+        हिरव्या डोंगरउतारांवर — एक मुलगा, जो मित्र निवडायचा त्यांच्या धाडसाने आणि मनाने, कधीच त्यांच्या
+        जन्माने किंवा जातीने नाही.</p>
+      <p>आणि या डोंगरांची प्रत्येक लपलेली घडी, प्रत्येक आडवाट, दबा धरायची प्रत्येक जागा तोंडपाठ असणं? ते
+        ज्ञान एक दिवस स्वतःच्या नावाच्या एका गुप्त शस्त्रात बदलणार होतं — <span class="term">गनिमी कावा</span>,
+        विजेसारखा तडाखा देऊन क्षणात नाहीसं होण्याची कला — पण ती गोष्ट पुढच्या एका रात्रीची.</p>
+      <p>तर आज रात्री युद्ध नाही. फक्त हिरव्या डोंगरउतारावरची काही मुलं — जेवण, हसू आणि एक मोठं न बोललेलं
+        वचन एकमेकांत वाटून घेत, हळूहळू भाऊ होत चाललेली. आणि उद्या रात्री, याच डोंगरांतल्या एका लपलेल्या
+        देवळात, ते वचन शेवटी मोठ्याने, देवासमोर बोललं जाणार आहे.</p>
+      <p class="goodnight">शुभ रात्री — आजचं जपायचं नाणं: <b>मावळे, "भावांचं टोळकं."</b></p>
+    </div>
+
+    <div class="moon-note">
+      <svg class="moon" width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">
+        <circle cx="26" cy="26" r="22" fill="none" stroke="var(--gold)" stroke-width="2.4" opacity=".5"/>
+        <path d="M26 10 a16 16 0 1 0 0 32 a11 11 0 1 1 0 -32 Z" fill="var(--gold)" opacity=".9"/>
+      </svg>
+      <p>The dream, the dreamer, the teacher — and now the <b>brotherhood.</b>
+        <span class="fwd">The moon keeps waxing: four nights, and the promise grows.</span></p>
+    </div>
+
+    <h3 class="subhead">Say it out loud</h3>
+    <div class="say-grid">
+      <div class="say"><div class="head"><span class="dev">मावळे</span><span class="rom">Mavle</span></div>
+        <div class="phon">MAAV-ḷe</div><div class="gloss">the hill-warriors (plural of Mavla)</div></div>
+      <div class="say"><div class="head"><span class="dev">मावळ</span><span class="rom">Maval</span></div>
+        <div class="phon">MAAV-aḷ</div><div class="gloss">the western valley country</div></div>
+      <div class="say"><div class="head"><span class="dev">तानाजी</span><span class="rom">Tanaji</span></div>
+        <div class="phon">taa-NAA-jee</div><div class="gloss">his lion-hearted friend</div></div>
+      <div class="say"><div class="head"><span class="dev">कान्होजी जेधे</span><span class="rom">Kanhoji Jedhe</span></div>
+        <div class="phon">kaan-HO-jee JE-dhe</div><div class="gloss">brought many clans</div></div>
+      <div class="say"><div class="head"><span class="dev">बाजी पासलकर</span><span class="rom">Baji Pasalkar</span></div>
+        <div class="phon">BAA-jee PAA-sal-kar</div><div class="gloss">an early companion</div></div>
+      <div class="say"><div class="head"><span class="dev">मैत्री</span><span class="rom">maitri</span></div>
+        <div class="phon">MAI-tree</div><div class="gloss">friendship</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== COIN ===================== -->
+  <section aria-labelledby="coin-h">
+    <div class="sec-head">
+      <span class="num">03</span>
+      <h2 id="coin-h">Tonight's collectible</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="coin-wrap">
+      <button class="coin" id="coin" aria-label="Mavle badge — flip to read its meaning">
+        <span class="coin-inner">
+          <span class="face front">
+            <span class="big">मावळे</span>
+            <span class="rom">Mavle</span>
+            <span class="dots">Badge · Day 4</span>
+          </span>
+          <span class="face back">
+            <span class="mean">“the brotherhood”</span>
+            <span class="dots">friends who became an army</span>
+          </span>
+        </span>
+      </button>
+      <div class="coin-copy">
+        <h3>The fourth badge</h3>
+        <p>Every great dream needs people. The <em>Mavlas</em> — Tanaji, Kanhoji, Baji and the rest —
+          were friends first and soldiers second, chosen for courage, not for birth.</p>
+        <p class="hint">↻ Hover or tap the coin to turn it over.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HISTORY CARDS ===================== -->
+  <section aria-labelledby="hist-h">
+    <div class="sec-head">
+      <span class="num">04</span>
+      <h2 id="hist-h">For the grown-up reading aloud</h2>
+      <span class="rule"></span>
+    </div>
+    <p class="grown-note">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 7v4M8 4.6v.4" stroke-linecap="round"/></svg>
+      The real history behind tonight's gentle scene — for the curious.
+    </p>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>Who were the Mavlas?</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>The <b>Mavlas</b> were the people of the <b>Maval</b> — the valley country on the western,
+          rainy side of the Sahyadri crest near Pune. Farmers and herders by life, they became
+          Shivaji's <b>light infantry</b>: fast, tough, and possessing intimate knowledge of the
+          hills. That local knowledge, more than numbers, is what made his campaigns possible.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>The first companions</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p><b>Tanaji Malusare</b> (Sinhagad, Day 17), <b>Kanhoji Jedhe</b> — a Deshmukh whose
+          influence brought many Maval clans to the cause — and <b>Baji Pasalkar</b> are among the
+          earliest named companions. Others (Yesaji Kank, Suryaji Malusare, Baji Prabhu) join the
+          story on later nights. Their loyalty, tested repeatedly, was the true foundation of
+          swarajya.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>Leadership by loyalty, not birth</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>Shivaji's willingness to bind common hill-folk to him as trusted commanders — and to
+          reward merit — was genuinely notable for his time and place, and a real source of his
+          strength. The exact boyhood vignettes are a warm reconstruction; the pattern of loyalty
+          they illustrate is well attested across his career.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag c">Bridge</span><h4>The seed of ganimi kava</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>Loyal local men who knew every pass and hiding place are exactly what turned
+          <b>ganimi kava</b> — hit-and-vanish guerrilla warfare — from an idea into a war-winning
+          method. We tell that story in full on <b>Day 20</b> (Bahirji Naik and the spies).</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===================== JOURNEY ===================== -->
+  <section aria-labelledby="journey-h">
+    <div class="sec-head">
+      <span class="num">05</span>
+      <h2 id="journey-h">The thirty-night journey</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="ribbon">
+      <div class="acts">
+        <div class="act-col">
+          <div class="name">I · Dream is Born</div>
+          <div class="dots-row">
+            <span class="d done" title="Day 1 — told"></span>
+            <span class="d done" title="Day 2 — told"></span>
+            <span class="d done" title="Day 3 — told"></span>
+            <span class="d now" title="Day 4 — tonight"></span>
+            <span class="d" title="Day 5"></span><span class="d" title="Day 6"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">II · Lion Rises</div>
+          <div class="dots-row">
+            <span class="d" title="Day 7"></span><span class="d" title="Day 8"></span><span class="d" title="Day 9"></span>
+            <span class="d" title="Day 10"></span><span class="d" title="Day 11"></span><span class="d" title="Day 12"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">III · Shaking Empires</div>
+          <div class="dots-row">
+            <span class="d" title="Day 13"></span><span class="d" title="Day 14"></span><span class="d" title="Day 15"></span><span class="d" title="Day 16"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">IV · The Crown</div>
+          <div class="dots-row">
+            <span class="d" title="Day 17"></span><span class="d" title="Day 18"></span><span class="d" title="Day 19"></span><span class="d" title="Day 20"></span>
+            <span class="d" title="Day 21"></span><span class="d" title="Day 22"></span><span class="d" title="Day 23"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">V · King &amp; Legacy</div>
+          <div class="dots-row">
+            <span class="d" title="Day 24"></span><span class="d" title="Day 25"></span><span class="d" title="Day 26"></span><span class="d" title="Day 27"></span>
+            <span class="d" title="Day 28"></span><span class="d" title="Day 29"></span><span class="d" title="Day 30"></span>
+          </div>
+        </div>
+      </div>
+      <div class="legend">
+        <span><span class="d now"></span> Tonight</span>
+        <span><span class="d"></span> Nights to come</span>
+        <span><span class="d done"></span> Nights told</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LEDGER ===================== -->
+  <section aria-labelledby="ledger-h">
+    <div class="ledger">
+      <h2 id="ledger-h">Fact &amp; legend, kept honest</h2>
+      <dl>
+        <div class="row"><dt class="h">History</dt>
+          <dd>The <b>Mavlas</b> of the Maval valleys were the backbone of Shivaji's early forces;
+            <b>Tanaji Malusare</b>, <b>Kanhoji Jedhe</b> and <b>Baji Pasalkar</b> were real early
+            companions whose loyalty was central to his rise.</dd></div>
+        <div class="row"><dt class="c">Framing</dt>
+          <dd>The specific boyhood scenes are a warm reconstruction; the unusual bond with common
+            hill-folk, and leadership by loyalty over birth, are well remembered.</dd></div>
+        <div class="row"><dt class="c">Bridge</dt>
+          <dd>Their terrain mastery seeds <b>ganimi kava</b> (guerrilla warfare), told on Day 20.</dd></div>
+      </dl>
+    </div>
+
+    <div class="foot">
+      <span><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Trip map</a></span>
+      <span class="next">Next → <a href="day-05.html">Day 5 · The Oath at Raireshwar</a></span>
+    </div>
+  </section>
+</main>
+
+<script>
+  (function(){
+    var tabs={en:document.getElementById('tab-en'),mr:document.getElementById('tab-mr')};
+    var panes={en:document.getElementById('story-en'),mr:document.getElementById('story-mr')};
+    function show(l){for(var k in tabs){var on=(k===l);tabs[k].setAttribute('aria-selected',on?'true':'false');panes[k].hidden=!on;}}
+    tabs.en.addEventListener('click',function(){show('en')});
+    tabs.mr.addEventListener('click',function(){show('mr')});
+  })();
+  (function(){var coin=document.getElementById('coin');coin.addEventListener('click',function(){coin.classList.toggle('flipped')});})();
+</script>

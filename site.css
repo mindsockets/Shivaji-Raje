@@ -1,0 +1,124 @@
+/* ============================================================
+   Shivaji — A Story a Night · shared styles for reference pages
+   ============================================================ */
+:root{
+  --bg:#E7E1D3;--paper:#F4F0E6;--paper-2:#EFE9DB;--ink:#2B2620;--ink-soft:#6C6353;
+  --ink-faint:#9A907C;--line:#D4CBB6;--saffron:#BE5A11;--saffron-bright:#E0842C;
+  --green:#3C5A40;--green-soft:#6E8A6A;--gold:#9A7A1E;--rust:#9E4A2E;
+  --shadow:rgba(43,38,32,.15);
+}
+:root:not([data-theme="light"]){@media (prefers-color-scheme:dark){
+  --bg:#131110;--paper:#1E1A15;--paper-2:#231E18;--ink:#ECE3D3;--ink-soft:#AA9E89;
+  --ink-faint:#786E5C;--line:#332C22;--saffron:#E8934A;--saffron-bright:#F4B06A;
+  --green:#84A47E;--green-soft:#6E8A6A;--gold:#D6B45A;--rust:#D98A6A;
+  --shadow:rgba(0,0,0,.5);
+}}
+:root[data-theme="dark"]{
+  --bg:#131110;--paper:#1E1A15;--paper-2:#231E18;--ink:#ECE3D3;--ink-soft:#AA9E89;
+  --ink-faint:#786E5C;--line:#332C22;--saffron:#E8934A;--saffron-bright:#F4B06A;
+  --green:#84A47E;--green-soft:#6E8A6A;--gold:#D6B45A;--rust:#D98A6A;--shadow:rgba(0,0,0,.5);
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Spectral",Georgia,serif;font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased}
+.wrap{max-width:960px;margin:0 auto;padding:0 22px 80px}
+a{color:var(--saffron)}
+::selection{background:var(--saffron);color:#fff}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--saffron);outline-offset:3px;border-radius:4px}
+.entry,.ref-card,.place,.chip{transition:transform .15s ease,box-shadow .15s ease,background .15s ease}
+.mr{font-family:"Tiro Devanagari Marathi",serif;font-weight:400;letter-spacing:normal}
+
+/* top nav */
+.topnav{max-width:960px;margin:0 auto;padding:14px 22px;font-family:"Karla",sans-serif;
+  font-size:.82rem;color:var(--ink-soft);display:flex;flex-wrap:wrap;gap:4px 14px;align-items:center}
+.topnav a{color:var(--ink-soft);text-decoration:none}
+.topnav a:hover{color:var(--saffron)}
+.topnav a.here{color:var(--saffron);font-weight:700}
+.topnav .sep{color:var(--ink-faint)}
+
+/* hero-lite */
+header.hero{border-bottom:1px solid var(--line);background:
+  radial-gradient(120% 90% at 82% -20%, color-mix(in srgb,var(--saffron) 12%,transparent), transparent 58%)}
+.hero-in{max-width:960px;margin:0 auto;padding:44px 22px 40px}
+.eyebrow{font-family:"Karla",sans-serif;text-transform:uppercase;letter-spacing:.2em;
+  font-size:.72rem;font-weight:700;color:var(--saffron);margin-bottom:14px}
+h1{font-family:"Marcellus",serif;font-weight:400;font-size:clamp(2.2rem,6vw,3.6rem);
+  line-height:1.04;margin:0 0 .3em;text-wrap:balance}
+.hero-in .dek{font-size:1.12rem;color:var(--ink-soft);max-width:60ch;margin:0;font-style:italic}
+
+/* section headers */
+section{margin-top:48px}
+.sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:8px}
+.sec-head h2{font-family:"Marcellus",serif;font-weight:400;font-size:1.55rem;margin:0}
+.sec-head .rule{height:1px;background:var(--line);flex:1}
+.lead{color:var(--ink-soft);margin:6px 0 22px;max-width:66ch}
+
+/* group (category block) */
+.group{margin-top:30px}
+.group h3{font-family:"Karla",sans-serif;font-weight:700;letter-spacing:.12em;text-transform:uppercase;
+  font-size:.78rem;color:var(--saffron);margin:0 0 6px}
+.group .note{font-size:.92rem;color:var(--ink-soft);margin:0 0 14px;max-width:64ch}
+
+/* roster grid + entries */
+.roster{display:grid;grid-template-columns:repeat(auto-fill,minmax(248px,1fr));gap:11px}
+.entry{border:1px solid var(--line);border-radius:12px;background:var(--paper);padding:14px 16px;
+  box-shadow:0 10px 30px -28px var(--shadow)}
+.entry .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.entry .nm{font-family:"Marcellus",serif;font-size:1.12rem;line-height:1.15}
+.entry .nm .mr{color:var(--ink-soft);font-size:.92rem;margin-left:6px}
+.entry .role{color:var(--ink-soft);font-size:.92rem;margin-top:5px;line-height:1.5}
+.entry .role b{color:var(--ink);font-weight:600}
+
+/* day chip */
+.daychip{font-family:"Karla",sans-serif;font-weight:700;font-size:.62rem;letter-spacing:.05em;
+  color:#fff;background:var(--saffron);border-radius:6px;padding:3px 7px;white-space:nowrap;flex:0 0 auto}
+.daychip.soft{background:var(--ink-faint)}
+
+/* fact / legend tags */
+.tag{font-family:"Karla",sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;padding:3px 8px;border-radius:100px;display:inline-block}
+.tag.h{background:color-mix(in srgb,var(--green) 16%,transparent);color:var(--green)}
+.tag.l{background:color-mix(in srgb,var(--saffron) 15%,transparent);color:var(--saffron)}
+.tag.c{background:color-mix(in srgb,var(--gold) 18%,transparent);color:var(--gold)}
+.tag.debated{background:color-mix(in srgb,var(--rust) 16%,transparent);color:var(--rust)}
+
+/* reference tables */
+.ref-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--paper)}
+table.ref{width:100%;border-collapse:collapse;font-size:.96rem;min-width:520px}
+table.ref th,table.ref td{text-align:left;padding:11px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+table.ref th{font-family:"Karla",sans-serif;font-size:.7rem;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink-soft);background:var(--paper-2)}
+table.ref tr:last-child td{border-bottom:0}
+table.ref .q{font-family:"Tiro Devanagari Marathi",serif;font-weight:500}
+table.ref .q .rom{display:block;font-family:"Spectral",serif;font-style:italic;color:var(--ink-soft);
+  font-size:.86rem;margin-top:2px}
+
+/* callout / warning */
+.callout{border:1px solid color-mix(in srgb,var(--rust) 45%,var(--line));border-radius:12px;
+  background:color-mix(in srgb,var(--rust) 7%,var(--paper));padding:18px 20px;margin-top:16px}
+.callout h4{font-family:"Karla",sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--rust);margin:0 0 8px}
+.callout p{margin:0 0 .6em;color:var(--ink-soft);font-size:.96rem}
+.callout p:last-child{margin-bottom:0}
+.callout b{color:var(--ink)}
+
+/* legend key */
+.key{display:flex;flex-wrap:wrap;gap:8px 16px;margin:14px 0 4px;font-family:"Karla",sans-serif;
+  font-size:.8rem;color:var(--ink-soft);align-items:center}
+.key span{display:inline-flex;align-items:center;gap:7px}
+
+/* footer */
+footer{margin-top:54px;padding-top:22px;border-top:1px solid var(--line);
+  font-family:"Karla",sans-serif;font-size:.84rem;color:var(--ink-soft);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer a{color:var(--saffron);text-decoration:none}
+
+/* count strip (forts) */
+.counts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:6px 0 8px}
+.count{border:1px solid var(--line);border-radius:12px;background:var(--paper-2);padding:16px 18px}
+.count .n{font-family:"Marcellus",serif;font-size:2rem;color:var(--saffron);line-height:1}
+.count .l{font-family:"Karla",sans-serif;font-size:.78rem;color:var(--ink-soft);margin-top:6px;line-height:1.4}
+
+@media (max-width:560px){ body{font-size:17px} }

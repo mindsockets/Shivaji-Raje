@@ -1,0 +1,422 @@
+<meta charset="utf-8">
+<title>Javali — Gateway to the Konkan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tiro+Devanagari+Marathi:ital@0;1&family=Karla:wght@400;600;700&display=swap">
+
+<link rel="stylesheet" href="day.css">
+
+<nav class="daynav">
+  <a href="day-07.html">‹ Day 7</a>
+  <span class="mid"><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Map</a> · <a href="sayings-sheet.html">📜 Sayings</a></span>
+  <a href="day-09.html">Day 9 ›</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">
+      <span class="daynum">Day 8</span>
+      <span class="act-tag">Act II · The Lion Rises</span>
+      <span class="act-tag">1656 · a harder, honest night</span>
+    </div>
+    <h1>Javali — the Gateway to the Konkan</h1>
+    <p class="dek">Shivaji opens the <b>door to the sea</b> — but this is a grimmer chapter, and we
+      tell it honestly: <em>history is true, not perfect.</em></p>
+  </div>
+  <svg class="ridge" viewBox="0 0 880 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,90 L0,54 L70,30 L130,50 L200,20 L270,46 L340,14 L410,44 L480,24 L560,50 L620,28 L700,52 L770,26 L830,48 L880,32 L880,90 Z"
+      fill="var(--map-ridge)" opacity=".55"/>
+    <path d="M0,90 L0,66 L90,48 L170,66 L250,40 L340,64 L430,44 L520,66 L610,48 L700,68 L790,50 L880,66 L880,90 Z"
+      fill="var(--map-ridge)"/>
+  </svg>
+</header>
+
+<main class="wrap">
+
+  <!-- ===================== PLACE ===================== -->
+  <section aria-labelledby="place-h">
+    <div class="sec-head">
+      <span class="num">01</span>
+      <h2 id="place-h">The place — Javali, the door to the sea</h2>
+      <span class="rule"></span>
+    </div>
+    <figure class="map">
+      <svg viewBox="0 0 700 460" role="img"
+        aria-label="An illustration of Javali: two dark forested hills frame a mountain pass, through which the Arabian Sea and a setting sun are visible in the distance. A path winds up toward the gap, and the new fort Pratapgad rises with a saffron flag on the left height.">
+        <defs>
+          <linearGradient id="skyGrad8" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" style="stop-color:color-mix(in srgb,var(--saffron) 16%,var(--paper))"/>
+            <stop offset="1" style="stop-color:var(--paper)"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="700" height="460" fill="url(#skyGrad8)"/>
+
+        <!-- distant view through the pass: sun + sea -->
+        <circle cx="350" cy="196" r="22" fill="var(--gold)" opacity=".9"/>
+        <rect x="238" y="228" width="224" height="30" fill="var(--sea)" opacity=".85"/>
+        <path d="M250,242 q14,-6 28,0 M292,242 q14,-6 28,0 M334,242 q14,-6 28,0 M376,242 q14,-6 28,0 M418,242 q14,-6 28,0"
+          fill="none" stroke="var(--sea-line)" stroke-width="1.2" opacity=".7"/>
+        <text class="m-shiv-sub" x="350" y="222" text-anchor="middle" style="fill:var(--sea-line);font-style:italic">the Konkan · the sea</text>
+
+        <!-- faint far ridge behind the gap -->
+        <path d="M238,258 L300,236 L360,256 L420,236 L462,258 Z" fill="var(--green)" opacity=".3"/>
+
+        <!-- two forested hills framing the pass -->
+        <path d="M0,460 L0,150 C120,182 210,250 258,346 L258,460 Z" fill="var(--green)" opacity=".9"/>
+        <path d="M700,460 L700,150 C580,182 490,250 442,346 L442,460 Z" fill="var(--green)" opacity=".9"/>
+        <!-- darker depth layer -->
+        <path d="M0,460 L0,300 C90,320 170,370 210,420 L210,460 Z" fill="var(--ink)" opacity=".16"/>
+        <path d="M700,460 L700,300 C610,320 530,370 490,420 L490,460 Z" fill="var(--ink)" opacity=".16"/>
+
+        <!-- forest texture: little trees along the ridges -->
+        <g fill="var(--green)">
+          <path d="M70,196 l7,16 l7,-16 Z"/><path d="M110,220 l6,14 l6,-14 Z"/><path d="M150,252 l7,15 l7,-15 Z"/>
+          <path d="M196,290 l6,14 l6,-14 Z"/><path d="M620,196 l7,16 l7,-16 Z"/><path d="M580,220 l6,14 l6,-14 Z"/>
+          <path d="M540,252 l7,15 l7,-15 Z"/><path d="M494,290 l6,14 l6,-14 Z"/>
+        </g>
+
+        <!-- winding path up toward the pass -->
+        <path d="M350,458 C332,424 372,398 350,364 C334,340 360,326 350,310"
+          fill="none" stroke="var(--ink-faint)" stroke-width="4" stroke-linecap="round" stroke-dasharray="1 6" opacity=".8"/>
+
+        <!-- Pratapgad rising on the left height -->
+        <path d="M92,196 l22,-30 l22,30 Z" fill="var(--map-ridge)"/>
+        <rect x="106" y="188" width="16" height="8" fill="var(--ink-soft)"/>
+        <line x1="114" y1="188" x2="114" y2="172" stroke="var(--ink-soft)" stroke-width="1.6"/>
+        <path d="M114,173 l13,3 l-13,4 Z" fill="var(--saffron)"/>
+        <text class="m-shiv-sub" x="132" y="200" style="fill:var(--ink-soft)">Pratapgad rises →</text>
+
+        <!-- labels -->
+        <text class="m-shiv" x="40" y="410" style="fill:var(--ink)">Javali</text>
+        <text class="m-shiv-sub" x="40" y="428">→ the door to the Konkan</text>
+      </svg>
+      <figcaption><b>The door to the sea.</b> The forests and passes of
+        <span style="color:var(--green)">Javali</span> guarded the roads to the
+        <span style="color:var(--sea-line)">Konkan coast</span>. Winning it (1656) opened swarajya
+        toward the water — and Shivaji raised <b>Pratapgad</b> here to hold it.</figcaption>
+    </figure>
+    <p class="map-cta"><a href="trip-companion.html">📍 See Javali &amp; Pratapgad on the real map →</a></p>
+  </section>
+
+  <!-- ===================== STORY ===================== -->
+  <section aria-labelledby="story-h">
+    <div class="sec-head">
+      <span class="num">02</span>
+      <h2 id="story-h">Tonight's telling</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="read-cue">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.4"/><path d="M8 4.4V8l2.6 1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      About 10 minutes, read aloud slowly · choose your language
+    </div>
+
+    <div class="lang-bar" role="tablist" aria-label="Choose language">
+      <button role="tab" id="tab-en" aria-controls="story-en" aria-selected="true">English</button>
+      <button role="tab" id="tab-mr" class="mr" aria-controls="story-mr" aria-selected="false">मराठी</button>
+    </div>
+
+    <div class="telling" id="story-en" role="tabpanel" aria-labelledby="tab-en">
+      <p>Every kingdom that hopes to reach the sea needs a <span class="term">door</span> to get
+        there. Tonight Shivaji opens his — but I must warn you: this is a harder, darker night than
+        the ones before, and we are going to tell it <em>honestly</em>, the good and the grim
+        together.</p>
+      <p>Between Shivaji's hills and the Arabian Sea lay a wild, forested land called
+        <span class="term">Javali</span> (you may also hear it as Jaoli). Picture a maze of deep,
+        dripping jungle and narrow, twisting mountain passes, so tangled and shadowy that whole
+        armies could march in and simply lose their way. And here was the thing: whoever held Javali
+        held the secret roads that ran down to the <span class="term">Konkan</span>, the rich strip
+        of coastland by the sea. Without those roads, swarajya could never grow toward the water.
+        With them, a whole new world of harbours and trade — and one day, ships — opened up.</p>
+      <p>But Javali was ruled by a proud old family, led by a chief called <span class="term">Chandrarao
+        More</span>. He was a Maratha, just like Shivaji — and you might think two Maratha chiefs
+        would happily join hands. But he would not. Chandrarao chose to stand with the Sultan of
+        Bijapur instead, and he planted himself squarely in the doorway to the sea, blocking
+        Shivaji's path and refusing every offer to join the dream.</p>
+      <p>So in <span class="term">1656</span>, Shivaji went into that jungle to take Javali. And here,
+        my dear, we must be honest, because a good story does not hide the hard parts. This was
+        <em>not</em> a gentle tale like the oath on the peaceful hilltop. It was a real, grim war,
+        won with <em>force and with cunning</em> — and in it, Chandrarao More and members of his
+        family were killed. Even great heroes, when they are fighting for something huge, sometimes
+        make hard and harsh choices, and use trickery as well as bravery. Grown-ups and historians
+        still argue to this day about whether everything done at Javali was fair. We will not pretend
+        it was simple, or spotless. It was not.</p>
+      <p>When the fighting was over, Javali was won, and the door to the Konkan swung wide open.
+        Swarajya could finally stretch its hand toward the sea — and many, many years later, that
+        would blossom into something no Indian kingdom had built in a long time: a real
+        <em>navy</em>, with warships to guard the coast. (But that is a wonderful story for far, far
+        down the road.)</p>
+      <p>And there was one more prize. On a commanding peak rising above the Javali forests, Shivaji
+        built a brand-new fort to guard everything he had won. He named it <span class="term">Pratapgad</span>
+        — "the fort of valour." Hold that name close in your heart. In just a few more nights, on
+        that very fort, Shivaji will come face to face with the most terrifying giant of his whole
+        life — and everything he learned in these hills will be put to the ultimate test.</p>
+      <p>Tonight's lesson is a grown-up one, but it is worth keeping forever: history is <b>true, not
+        perfect</b>. The people we most admire did brave and brilliant and generous things — and,
+        being human, sometimes hard and troubling ones too. Pretending otherwise would turn a real
+        person into a cardboard hero. To <em>truly</em> love a story — and truly respect a great
+        person — is to be brave enough to tell <em>all</em> of it.</p>
+      <p class="goodnight">Goodnight — tonight's badge: the <b>door to the Konkan</b>, the road to
+        the sea.</p>
+    </div>
+
+    <div class="telling mr" id="story-mr" role="tabpanel" aria-labelledby="tab-mr" hidden>
+      <p><span class="dropcap">सा</span>गरापर्यंत पोहोचू पाहणाऱ्या प्रत्येक राज्याला तिथवर जायला एक
+        <span class="term">दार</span> लागतं. आज शिवाजी आपलं दार उघडतो — पण आधीच सांगून ठेवतो: ही रात्र
+        आधीच्या रात्रींपेक्षा कठीण आणि गडद आहे, आणि आपण ती चांगल्या-वाईटासह, प्रामाणिकपणे सांगणार आहोत.</p>
+      <p>शिवाजीचे डोंगर आणि अरबी समुद्र यांच्यामध्ये एक रानटी, घनदाट जंगलाचा प्रदेश होता — <span class="term">जावळी</span>
+        (काहीजण जाओलीही म्हणतात). डोळ्यांसमोर आण — खोल, ओलसर, अंधारं जंगल आणि अरुंद, वळणावळणाचे घाट यांचा
+        असा गूढ चक्रव्यूह, की अख्खी सैन्यंही आत शिरली, तर सरळ वाट चुकून हरवून जावीत. आणि खरा मुद्दा हा:
+        जावळी ज्याच्या हातात, त्याच्या हातात <span class="term">कोकणा</span>कडे — समुद्राकाठच्या त्या सुपीक
+        किनारपट्टीकडे — उतरणाऱ्या गुप्त वाटा. त्या वाटांशिवाय स्वराज्य कधीच समुद्राच्या दिशेने वाढू शकलं
+        नसतं. आणि त्या मिळाल्या, तर बंदरं, व्यापार — आणि एक दिवस चक्क जहाजं — यांचं एक अख्खं नवं जग उघडत
+        होतं.</p>
+      <p>पण जावळीवर राज्य होतं एका जुन्या, गर्विष्ठ घराण्याचं, ज्याचा प्रमुख होता <span class="term">चंद्रराव
+        मोरे.</span> तोही शिवाजीसारखाच मराठा — दोन मराठा सरदार तर आनंदाने हातमिळवणी करतील, असं तुला वाटेल.
+        पण तो तयार नव्हता. चंद्रराव उलट विजापूरच्या सुलतानाच्या बाजूने उभा राहिला, आणि समुद्राच्या दारातच ठाण
+        मांडून बसला — शिवाजीची वाट अडवत, आणि स्वप्नात सामील व्हायचा प्रत्येक प्रस्ताव तुच्छतेने नाकारत.</p>
+      <p>मोरे घराणं हे काही सामान्य नव्हतं — पिढ्यान् पिढ्या ते जावळीच्या त्या घनदाट खोऱ्यांचे धनी होते, आणि
+        त्या अवघड मुलखामुळे ते स्वतःला अजिंक्य समजत. "आमच्या जंगलात कोण घुसणार?" असा त्यांचा ताठा होता. आणि
+        खरं सांगायचं तर तो अगदीच पोकळ नव्हता — त्या दऱ्याखोऱ्यांत, त्या घनदाट झाडीत, बाहेरच्या सैन्याचा टिकाव
+        लागणं फारच कठीण होतं. पण शिवाजीजवळ एक गोष्ट होती जी त्यांच्याजवळ नव्हती: मावळे — म्हणजे अशी माणसं,
+        ज्यांना जंगलातलं युद्ध रक्तातच ठाऊक होतं.</p>
+      <p>तरीही, नुसत्या बळावर जावळी जिंकणं अशक्यच होतं. म्हणून इथे बळासोबत डावपेचही वापरले गेले — आणि इथेच
+        गोष्ट गडद होते.</p>
+      <p>म्हणून <span class="term">इ.स. १६५६</span> मध्ये शिवाजी जावळी घ्यायला त्या जंगलात शिरला. आणि इथे,
+        बाळा, आपण प्रामाणिक राहायला हवं, कारण चांगली गोष्ट कठीण भाग लपवत नाही. ही डोंगरमाथ्यावरच्या त्या शांत
+        शपथेसारखी हळुवार गोष्ट <em>नव्हती.</em> हे खरंखुरं, निष्ठुर युद्ध होतं — <em>बळाने आणि डावपेचाने</em>
+        जिंकलेलं — आणि त्यात चंद्रराव मोरे आणि त्यांच्या घरातली माणसं मारली गेली. मोठे वीरही, एखाद्या फार
+        मोठ्या ध्येयासाठी लढताना, कधीकधी कठीण नि कठोर निर्णय घेतात, आणि धाडसासोबत कपटाचाही वापर करतात.
+        जावळीला जे घडलं ते सगळंच्या सगळं योग्य होतं का, यावर मोठी माणसं आणि इतिहासकार आजही वाद घालतात. ही
+        गोष्ट सोपी किंवा पूर्णपणे निष्कलंक होती, असं आपण मुळीच भासवणार नाही. ती तशी नव्हती.</p>
+      <p>आता तुला वाटेल — मग अशी गोष्ट मुलांना कशाला सांगायची? पण उलट, नेमकी हीच गोष्ट सांगायला हवी. कारण
+        खरा इतिहास म्हणजे परीकथा नव्हे, जिथे नायक कधीच चुकत नाही. खरे थोर लोकही माणसंच असतात — बहुतेक वेळा
+        अद्भुत, न्यायी, उदार; पण कधीकधी कठोर, आणि वादग्रस्तही. हे जर आपण लपवलं, तर शिवाजी एक खराखुरा,
+        रक्तामांसाचा माणूस न राहता नुसता पुठ्ठ्याचा पुतळा होईल. आणि पुतळ्याकडून आपण काही शिकत नाही — माणसाकडून
+        शिकतो. म्हणून आपण चांगलं तेवढंच नव्हे, तर अवघड तेही प्रामाणिकपणे बघणार आहोत.</p>
+      <p>लढाई संपली तेव्हा जावळी जिंकली गेली, आणि कोकणाचं दार सताड उघडलं. आता स्वराज्य शेवटी समुद्राकडे हात
+        पुढे करू शकत होतं — आणि कितीतरी वर्षांनी त्यातून असं काहीतरी बहरणार होतं, जे बऱ्याच काळात कोणत्याही
+        भारतीय राज्याने उभारलं नव्हतं: एक खरंखुरं <em>आरमार</em>, किनारा राखायला युद्धनौकांसह. (पण ती फार
+        फार पुढची, आणि फार सुरेख गोष्ट.)</p>
+      <p>जावळी हातात आल्यावर शिवाजीच्या राज्याला एक नवा आकार आला. आता डोंगरी मुलूख आणि समुद्रकिनारा यांना
+        जोडणारे घाट त्याच्या ताब्यात होते; व्यापाराच्या वाटा, मिठागरं, बंदरं — सगळं आता आवाक्यात येऊ लागलं.
+        एका अडेलतट्टू शेजाऱ्याने अडवलेलं दार आता सताड उघडं झालं होतं, आणि स्वराज्य आता नुसतं डोंगरांपुरतं
+        मर्यादित राहिलं नव्हतं.</p>
+      <p>आणि जावळीच्या त्या शिखरावर उभा राहिलेला प्रतापगड — तो नुसता पहारेकरी किल्ला नव्हता. तो पार घाटावर
+        नजर ठेवून होता, आणि नव्या मुलखाचं रक्षण करत होता. पण त्याहून मोठं म्हणजे, अवघ्या तीनच वर्षांत त्याच
+        प्रतापगडाच्या पायथ्याशी शिवाजीच्या आयुष्यातला सर्वांत थरारक प्रसंग घडणार होता — एका महाकाय, भयंकर
+        शत्रूशी समोरासमोर गाठ. आजची जावळीची कठीण गोष्ट, खरं तर, त्या वादळाची नांदी आहे.</p>
+      <p>आणि आणखी एक मोठी कमाई. जावळीच्या जंगलांवर उंच चढणाऱ्या एका शिखरावर शिवाजीने, जे जिंकलं ते राखायला,
+        एक नवाकोरा किल्ला उभारला. त्याचं नाव ठेवलं <span class="term">प्रतापगड</span> — "पराक्रमाचा किल्ला."
+        हे नाव हृदयात जपून ठेव. अवघ्या काही रात्रींत, त्याच किल्ल्यावर, शिवाजी आयुष्यातल्या सर्वांत भयंकर
+        राक्षसाला समोरासमोर भेटणार आहे — आणि या डोंगरांत तो जे जे शिकला, ते सगळं पणाला लागणार आहे.</p>
+      <p>आजची शिकवण थोडी मोठ्यांची आहे, पण कायम जपण्यासारखी: इतिहास <b>खरा असतो, परिपूर्ण नाही.</b> आपण
+        ज्यांचं सर्वांत कौतुक करतो त्यांनी शूर, तेजस्वी आणि उदार गोष्टी केल्या — आणि माणूस असल्याने कधीकधी
+        कठीण, अस्वस्थ करणाऱ्या गोष्टीही. उलट भासवलं, तर खऱ्याखुऱ्या माणसाचं नुसतं पुठ्ठ्याचं बाहुलं होऊन जाईल.
+        गोष्ट <em>खऱ्या</em> अर्थाने आवडणं — आणि एखाद्या थोर माणसाचा खराखुरा आदर करणं — म्हणजे ती <em>पूर्ण</em>
+        सांगण्याचं धाडस दाखवणं.</p>
+      <p class="goodnight">शुभ रात्री — आजचं जपायचं नाणं: <b>कोकणाचं दार,</b> समुद्राकडे जाणारी वाट.</p>
+    </div>
+
+    <div class="moon-note">
+      <svg class="moon" width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">
+        <circle cx="26" cy="26" r="22" fill="none" stroke="var(--gold)" stroke-width="2.4" opacity=".5"/>
+        <path d="M31 9 a17 17 0 1 0 0 34 a12.5 12.5 0 1 1 0 -34 Z" fill="var(--gold)" opacity=".9"/>
+      </svg>
+      <p>Day 7 was won with <b>patience</b>; tonight with <b>force and hard choices.</b> Same dream —
+        but the road to swarajya was not always gentle, <span class="fwd">and we don't pretend it was.</span></p>
+    </div>
+
+    <h3 class="subhead">Say it out loud</h3>
+    <div class="say-grid">
+      <div class="say"><div class="head"><span class="dev">जावळी</span><span class="rom">Javali</span></div>
+        <div class="phon">JAAV-ḷee</div><div class="gloss">the forest land guarding the sea-road</div></div>
+      <div class="say"><div class="head"><span class="dev">कोकण</span><span class="rom">Konkan</span></div>
+        <div class="phon">KO-kaṇ</div><div class="gloss">the coastal strip by the Arabian Sea</div></div>
+      <div class="say"><div class="head"><span class="dev">चंद्रराव मोरे</span><span class="rom">Chandrarao More</span></div>
+        <div class="phon">CHUN-dra-rao MO-re</div><div class="gloss">the chief of Javali</div></div>
+      <div class="say"><div class="head"><span class="dev">प्रतापगड</span><span class="rom">Pratapgad</span></div>
+        <div class="phon">pra-TAAP-ga-ḍ</div><div class="gloss">"fort of valour," built to hold Javali</div></div>
+      <div class="say"><div class="head"><span class="dev">घाट</span><span class="rom">ghat</span></div>
+        <div class="phon">ghaaṭ</div><div class="gloss">a steep mountain pass</div></div>
+      <div class="say"><div class="head"><span class="dev">सागर</span><span class="rom">sagar</span></div>
+        <div class="phon">SAA-gar</div><div class="gloss">the sea</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== COIN ===================== -->
+  <section aria-labelledby="coin-h">
+    <div class="sec-head">
+      <span class="num">03</span>
+      <h2 id="coin-h">Tonight's collectible</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="coin-wrap">
+      <button class="coin" id="coin" aria-label="Konkan gate badge — flip to read its meaning">
+        <span class="coin-inner">
+          <span class="face front">
+            <span class="big">कोकण</span>
+            <span class="rom">The Sea-Road</span>
+            <span class="dots">Badge · Day 8</span>
+          </span>
+          <span class="face back">
+            <span class="mean">the door to the Konkan opens</span>
+            <span class="dots">Javali won · 1656</span>
+          </span>
+        </span>
+      </button>
+      <div class="coin-copy">
+        <h3>The eighth badge</h3>
+        <p>Winning Javali swung open the <em>door to the sea</em> — the first step toward a coast, and
+          one day, a navy. A big gain, won by a hard, debated fight.</p>
+        <p class="hint">↻ Hover or tap the coin to turn it over.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HISTORY CARDS ===================== -->
+  <section aria-labelledby="hist-h">
+    <div class="sec-head">
+      <span class="num">04</span>
+      <h2 id="hist-h">For the grown-up reading aloud</h2>
+      <span class="rule"></span>
+    </div>
+    <p class="grown-note">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 7v4M8 4.6v.4" stroke-linecap="round"/></svg>
+      The real history behind tonight's scene — told straight, including the hard parts.
+    </p>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>Why Javali mattered</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p><b>Javali</b> (Jaoli), in the dense Sahyadri forests of today's Satara district, sat astride
+          the passes leading down into the <b>Konkan</b>. Controlling it was essential for extending
+          swarajya toward the coast — which is exactly why Shivaji targeted it in <b>1656</b>.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>The hard truth about how it was won</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>The Javali campaign was <b>ruthless</b>. Chandrarao More — a fellow Maratha — refused to
+          join and backed Bijapur. Shivaji used <b>treachery as well as force</b>: Chandrarao and his
+          son Krishnaji were <b>executed</b>, and the envoy <b>Sambhaji Kavji</b> killed Hanmantrao
+          More. <span class="tag debated" style="margin-left:0">Debated</span> Historians count Javali
+          among the most <b>morally questioned</b> episodes of Shivaji's rise. We don't gloss over it
+          — telling children history honestly means including the parts that don't flatter.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>Pratapgad — built to hold the prize</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>To secure the newly won valley and command the <b>Par pass</b>, Shivaji built
+          <b>Pratapgad</b> ("fort of valour") in the Javali region (c. 1656). Within three years it
+          would host the most famous encounter of his life — <b>Afzal Khan</b>, on <b>Day 10</b>.
+          Javali is the setup for that storm.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag c">The lesson</span><h4>Telling hard history to a child</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>You can keep the telling age-appropriate (no gore) while still being <b>truthful</b>: a
+          rival would not join, a war was fought, lives were lost, and people still debate the ethics.
+          That honesty is a gift — it teaches that admiring someone doesn't mean pretending they were
+          flawless, and that real history is more interesting than a fairy tale.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===================== JOURNEY ===================== -->
+  <section aria-labelledby="journey-h">
+    <div class="sec-head">
+      <span class="num">05</span>
+      <h2 id="journey-h">The thirty-night journey</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="ribbon">
+      <div class="acts">
+        <div class="act-col">
+          <div class="name">I · Dream is Born ✓</div>
+          <div class="dots-row">
+            <span class="d done"></span><span class="d done"></span><span class="d done"></span>
+            <span class="d done"></span><span class="d done"></span><span class="d done"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">II · Lion Rises</div>
+          <div class="dots-row">
+            <span class="d done" title="Day 7 — told"></span>
+            <span class="d now" title="Day 8 — tonight"></span>
+            <span class="d" title="Day 9"></span>
+            <span class="d" title="Day 10"></span><span class="d" title="Day 11"></span><span class="d" title="Day 12"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">III · Shaking Empires</div>
+          <div class="dots-row">
+            <span class="d" title="Day 13"></span><span class="d" title="Day 14"></span><span class="d" title="Day 15"></span><span class="d" title="Day 16"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">IV · The Crown</div>
+          <div class="dots-row">
+            <span class="d" title="Day 17"></span><span class="d" title="Day 18"></span><span class="d" title="Day 19"></span><span class="d" title="Day 20"></span>
+            <span class="d" title="Day 21"></span><span class="d" title="Day 22"></span><span class="d" title="Day 23"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">V · King &amp; Legacy</div>
+          <div class="dots-row">
+            <span class="d" title="Day 24"></span><span class="d" title="Day 25"></span><span class="d" title="Day 26"></span><span class="d" title="Day 27"></span>
+            <span class="d" title="Day 28"></span><span class="d" title="Day 29"></span><span class="d" title="Day 30"></span>
+          </div>
+        </div>
+      </div>
+      <div class="legend">
+        <span><span class="d now"></span> Tonight</span>
+        <span><span class="d"></span> Nights to come</span>
+        <span><span class="d done"></span> Nights told</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LEDGER ===================== -->
+  <section aria-labelledby="ledger-h">
+    <div class="ledger">
+      <h2 id="ledger-h">Fact &amp; legend, kept honest</h2>
+      <dl>
+        <div class="row"><dt class="h">History</dt>
+          <dd>Shivaji conquered <b>Javali</b> from <b>Chandrarao More</b> in <b>1656</b> to control the
+            passes into the <b>Konkan</b>, then built <b>Pratapgad</b> to hold it.</dd></div>
+        <div class="row"><dt class="c">The hard part</dt>
+          <dd>Won by <b>force and treachery</b>; Chandrarao More and kin were killed. Historians count
+            it among the <b>morally debated</b> episodes — stated plainly, not hidden.</dd></div>
+        <div class="row"><dt class="c">Varies</dt>
+          <dd>Exact dates within <b>1656</b> differ across sources (roughly Jan–May).</dd></div>
+      </dl>
+    </div>
+
+    <div class="foot">
+      <span><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Trip map</a></span>
+      <span class="next">Next → <a href="day-09.html">Day 9 · The Giant Approaches</a></span>
+    </div>
+  </section>
+</main>
+
+<script>
+  (function(){
+    var tabs={en:document.getElementById('tab-en'),mr:document.getElementById('tab-mr')};
+    var panes={en:document.getElementById('story-en'),mr:document.getElementById('story-mr')};
+    function show(l){for(var k in tabs){var on=(k===l);tabs[k].setAttribute('aria-selected',on?'true':'false');panes[k].hidden=!on;}}
+    tabs.en.addEventListener('click',function(){show('en')});
+    tabs.mr.addEventListener('click',function(){show('mr')});
+  })();
+  (function(){var coin=document.getElementById('coin');coin.addEventListener('click',function(){coin.classList.toggle('flipped')});})();
+</script>

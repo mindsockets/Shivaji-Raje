@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Shivaji's Maharashtra — Trip Companion</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Marathi:ital@0;1&family=Karla:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<style>
+  :root{
+    --bg:#E7E1D3;--paper:#F4F0E6;--paper-2:#EFE9DB;--ink:#2B2620;--ink-soft:#6C6353;
+    --ink-faint:#9A907C;--line:#D4CBB6;--saffron:#BE5A11;--saffron-bright:#E0842C;
+    --green:#3C5A40;--gold:#A8842A;--slate:#5A6B76;--shadow:rgba(43,38,32,.16);
+  }
+  :root:not([data-theme="light"]){@media (prefers-color-scheme:dark){
+    --bg:#131110;--paper:#1E1A15;--paper-2:#231E18;--ink:#ECE3D3;--ink-soft:#AA9E89;
+    --ink-faint:#786E5C;--line:#332C22;--saffron:#E8934A;--saffron-bright:#F4B06A;
+    --green:#84A47E;--gold:#D6B45A;--slate:#8CA0AC;--shadow:rgba(0,0,0,.55);
+  }}
+  :root[data-theme="dark"]{
+    --bg:#131110;--paper:#1E1A15;--paper-2:#231E18;--ink:#ECE3D3;--ink-soft:#AA9E89;
+    --ink-faint:#786E5C;--line:#332C22;--saffron:#E8934A;--saffron-bright:#F4B06A;
+    --green:#84A47E;--gold:#D6B45A;--slate:#8CA0AC;--shadow:rgba(0,0,0,.55);
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:"Spectral",Georgia,serif;display:flex;flex-direction:column;height:100vh;overflow:hidden}
+
+  header{flex:0 0 auto;padding:14px 20px;border-bottom:1px solid var(--line);
+    display:flex;align-items:center;gap:18px;flex-wrap:wrap;background:var(--paper)}
+  header .brand{display:flex;flex-direction:column;gap:2px}
+  header .eyebrow{font-family:"Karla",sans-serif;text-transform:uppercase;letter-spacing:.18em;
+    font-size:.66rem;font-weight:700;color:var(--saffron)}
+  header h1{font-family:"Marcellus",serif;font-weight:400;font-size:1.5rem;margin:0;line-height:1}
+  header .note{margin-left:auto;font-family:"Karla",sans-serif;font-size:.76rem;color:var(--ink-soft);
+    display:flex;align-items:center;gap:8px;max-width:340px;line-height:1.4}
+  header .note svg{flex:0 0 auto;color:var(--saffron)}
+
+  .layout{flex:1 1 auto;display:flex;min-height:0}
+  aside{flex:0 0 340px;max-width:44%;border-right:1px solid var(--line);background:var(--paper-2);
+    display:flex;flex-direction:column;min-height:0}
+  .filters{padding:14px 16px;border-bottom:1px solid var(--line);display:flex;flex-wrap:wrap;gap:7px}
+  .chip{font-family:"Karla",sans-serif;font-size:.74rem;font-weight:600;letter-spacing:.02em;
+    border:1px solid var(--line);background:var(--paper);color:var(--ink-soft);padding:6px 12px;
+    border-radius:100px;cursor:pointer;transition:.15s}
+  .chip[aria-pressed="true"]{background:var(--saffron);color:#fff;border-color:var(--saffron)}
+  .chip .sw{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;vertical-align:1px}
+
+  .list{overflow-y:auto;padding:8px 10px 24px;flex:1 1 auto}
+  .place{display:flex;gap:12px;padding:11px 12px;border-radius:11px;cursor:pointer;align-items:flex-start;
+    border:1px solid transparent}
+  .place:hover{background:var(--paper)}
+  .place.active{background:var(--paper);border-color:var(--line)}
+  .place .pin{flex:0 0 auto;width:14px;height:14px;border-radius:50%;margin-top:4px;
+    box-shadow:0 0 0 3px color-mix(in srgb,currentColor 22%,transparent)}
+  .place .txt{min-width:0}
+  .place .nm{font-family:"Marcellus",serif;font-size:1.06rem;line-height:1.15}
+  .place .nm .mr{font-family:"Tiro Devanagari Marathi",serif;color:var(--ink-soft);font-size:.92rem;margin-left:6px}
+  .place .meta{font-family:"Karla",sans-serif;font-size:.72rem;color:var(--saffron);letter-spacing:.03em;margin-top:2px}
+  .place .desc{font-size:.86rem;color:var(--ink-soft);margin-top:3px;line-height:1.45}
+  .place .uw{font-family:"Karla",sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--gold);margin-top:4px}
+
+  #map{flex:1 1 auto;min-width:0;background:var(--bg)}
+  .leaflet-container{font-family:"Karla",sans-serif}
+  .leaflet-popup-content-wrapper{background:var(--paper);color:var(--ink);border-radius:12px;
+    box-shadow:0 12px 34px -20px var(--shadow)}
+  .leaflet-popup-tip{background:var(--paper)}
+  .pop .nm{font-family:"Marcellus",serif;font-size:1.15rem}
+  .pop .mr{font-family:"Tiro Devanagari Marathi",serif;color:var(--ink-soft);font-size:.95rem}
+  .pop .meta{font-family:"Karla",sans-serif;font-size:.72rem;color:var(--saffron);letter-spacing:.03em;
+    text-transform:uppercase;font-weight:700;margin:4px 0}
+  .pop .desc{font-size:.92rem;color:var(--ink-soft);line-height:1.5;margin:6px 0 8px}
+  .pop .links{display:flex;gap:14px}
+  .pop .links a{font-family:"Karla",sans-serif;font-size:.78rem;color:var(--saffron);text-decoration:none;font-weight:600}
+  .pop .links a:hover{text-decoration:underline}
+
+  .offline{position:absolute;left:50%;top:16px;transform:translateX(-50%);z-index:1000;
+    background:var(--paper);border:1px solid var(--line);border-radius:100px;padding:8px 18px;
+    font-family:"Karla",sans-serif;font-size:.8rem;color:var(--ink-soft);box-shadow:0 8px 24px -16px var(--shadow);
+    display:none}
+
+  @media (max-width:760px){
+    .layout{flex-direction:column}
+    aside{flex:0 0 auto;max-width:100%;max-height:42%;border-right:0;border-bottom:1px solid var(--line)}
+    header .note{max-width:100%;order:3;margin-left:0}
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <span class="eyebrow"><a href="index.html" style="color:inherit;text-decoration:none">🏠 A Story a Night</a> · Trip Companion</span>
+    <h1>Shivaji's Maharashtra — a Trip Companion</h1>
+  </div>
+  <div class="note">
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.4"/><path d="M2 8h12M8 2c2 2 2 10 0 12M8 2c-2 2-2 10 0 12" stroke-linecap="round"/></svg>
+    Live map by <b>OpenStreetMap</b> · needs internet. Tap a place to fly there; open it in Maps to plan a real visit.
+  </div>
+</header>
+
+<div class="layout">
+  <aside>
+    <div class="filters" id="filters"></div>
+    <div class="list" id="list"></div>
+  </aside>
+  <div id="map">
+    <div class="offline" id="offline">Map tiles couldn’t load — check your internet connection.</div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+<script>
+(function(){
+  var CAT = {
+    unesco:{label:"UNESCO-12 forts", color:"#C25E12"},
+    fort:  {label:"Other forts",      color:"#E0842C"},
+    temple:{label:"Temples",          color:"#3C7A4A"},
+    relic: {label:"Relics & museums", color:"#A8842A"},
+    city:  {label:"Raids & escape",   color:"#5A6B76"}
+  };
+
+  // Every real, visitable site across the 30-night story.
+  var PLACES = [
+    {n:"Shivneri", mr:"शिवनेरी", c:"unesco", u:1, lat:19.1990, lon:73.8560, day:"Day 2", d:"His birthplace (1630), above Junnar. A UNESCO Maratha fort."},
+    {n:"Raireshwar", mr:"रायरेश्वर", c:"temple", lat:18.1570, lon:73.7440, day:"Day 5", d:"Plateau temple where the boyhood oath for swarajya is remembered."},
+    {n:"Torna (Prachandagad)", mr:"तोरणा", c:"fort", lat:18.2760, lon:73.6160, day:"Day 6", d:"His very first fort, taken around 1646."},
+    {n:"Rajgad", mr:"राजगड", c:"unesco", u:1, lat:18.2460, lon:73.6820, day:"Day 6", d:"His capital for ~26 years. UNESCO-listed."},
+    {n:"Pratapgad", mr:"प्रतापगड", c:"unesco", u:1, lat:17.9360, lon:73.5790, day:"Day 10", d:"The Afzal Khan encounter (1659); Bhavani temple within."},
+    {n:"Panhala", mr:"पन्हाळा", c:"unesco", u:1, lat:16.8130, lon:74.1070, day:"Day 11", d:"The great siege and the night escape to Vishalgad. UNESCO."},
+    {n:"Vishalgad", mr:"विशाळगड", c:"fort", lat:16.9520, lon:73.6820, day:"Day 12", d:"The refuge Baji Prabhu died to reach; Pavan Khind is nearby."},
+    {n:"Purandar", mr:"पुरंदर", c:"fort", lat:18.2830, lon:73.9840, day:"Day 15", d:"Murarbaji's last stand (1665) and the treaty with Jai Singh."},
+    {n:"Sinhagad (Kondhana)", mr:"सिंहगड", c:"fort", lat:18.3660, lon:73.7550, day:"Day 17", d:"Tanaji's night climb (1670). ‘The fort is won, but the lion is gone.’"},
+    {n:"Lohagad", mr:"लोहगड", c:"unesco", u:1, lat:18.7100, lon:73.4830, day:"Act IV", d:"An ‘iron fort’ of the Maval, UNESCO-listed."},
+    {n:"Salher", mr:"साल्हेर", c:"unesco", u:1, lat:20.7270, lon:73.9430, day:"Day 18", d:"A decisive open-field win over the Mughals (1672). UNESCO."},
+    {n:"Raigad", mr:"रायगड", c:"unesco", u:1, lat:18.2340, lon:73.4400, day:"Day 22 · 28", d:"The coronation capital (1674); his samadhi. UNESCO."},
+    {n:"Sindhudurg", mr:"सिंधुदुर्ग", c:"unesco", u:1, lat:16.0410, lon:73.4620, day:"Day 24", d:"Island sea-fort off Malvan — the Maratha navy. UNESCO."},
+    {n:"Vijaydurg", mr:"विजयदुर्ग", c:"unesco", u:1, lat:16.5630, lon:73.3340, day:"Day 24", d:"‘Victory fort’ — a great naval stronghold. UNESCO."},
+    {n:"Suvarnadurg", mr:"सुवर्णदुर्ग", c:"unesco", u:1, lat:17.8160, lon:73.0880, day:"Day 24", d:"‘Golden fort’ island near Harnai — navy base. UNESCO."},
+    {n:"Khanderi", mr:"खांदेरी", c:"unesco", u:1, lat:18.6650, lon:72.8150, day:"Day 24", d:"Island fort guarding the coast near Alibag. UNESCO."},
+    {n:"Sajjangad", mr:"सज्जनगड", c:"temple", lat:17.6120, lon:73.9510, day:"Day 27", d:"Home of the saint-poet Samarth Ramdas, near Satara."},
+    {n:"Gingee (Senji)", mr:"जिंजी", c:"unesco", u:1, lat:12.2530, lon:79.4100, day:"Day 25", d:"The southern campaign (1677), Tamil Nadu. UNESCO-listed."},
+    {n:"Surat", mr:"सुरत", c:"city", lat:21.1700, lon:72.8310, day:"Day 14", d:"The 1664 raid on the Mughal trading city (Gujarat)."},
+    {n:"Agra", mr:"आग्रा", c:"city", lat:27.1790, lon:78.0210, day:"Day 16", d:"The 1666 captivity and the famous escape (Uttar Pradesh)."},
+    {n:"Tuljapur (Bhavani)", mr:"तुळजापूर", c:"temple", lat:18.0120, lon:76.0740, day:"Day 9", d:"Temple of the family goddess Tulja Bhavani."},
+    {n:"Satara museum", mr:"सातारा", c:"relic", lat:17.6860, lon:74.0000, day:"Relics", d:"Where the wagh-nakh (tiger claws) went on display for the 350th year."},
+    {n:"CSMVS, Mumbai", mr:"मुंबई", c:"relic", lat:18.9270, lon:72.8330, day:"Relics", d:"Chhatrapati Shivaji Maharaj Vastu Sangrahalaya — a major museum."}
+  ];
+
+  var map = L.map('map', {zoomControl:true, scrollWheelZoom:true}).setView([18.2, 74.0], 7);
+  var tiles = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom:18, attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+  tiles.on('tileerror', function(){ document.getElementById('offline').style.display='block'; });
+
+  var markers = {}, listEls = {}, activeFilter = 'all';
+
+  function gmaps(p){ return 'https://www.google.com/maps/search/?api=1&query='+p.lat+','+p.lon; }
+  function osm(p){ return 'https://www.openstreetmap.org/?mlat='+p.lat+'&mlon='+p.lon+'#map=14/'+p.lat+'/'+p.lon; }
+
+  function popupHTML(p){
+    return '<div class="pop"><div><span class="nm">'+p.n+'</span> <span class="mr">'+p.mr+'</span></div>'+
+      '<div class="meta">'+p.day+(p.u?' · UNESCO':'')+'</div>'+
+      '<div class="desc">'+p.d+'</div>'+
+      '<div class="links"><a href="'+gmaps(p)+'" target="_blank" rel="noopener">Google Maps ↗</a>'+
+      '<a href="'+osm(p)+'" target="_blank" rel="noopener">OpenStreetMap ↗</a></div></div>';
+  }
+
+  PLACES.forEach(function(p, i){
+    p.id = i;
+    var col = CAT[p.c].color;
+    var m = L.circleMarker([p.lat, p.lon], {
+      radius: p.c==='unesco'?8:6.5, color:'#fff', weight:1.5,
+      fillColor:col, fillOpacity:0.95
+    }).addTo(map).bindPopup(popupHTML(p), {maxWidth:260});
+    m.on('click', function(){ select(p.id); });
+    markers[i] = m;
+  });
+
+  // sidebar list
+  var listEl = document.getElementById('list');
+  PLACES.forEach(function(p){
+    var el = document.createElement('div');
+    el.className = 'place'; el.dataset.cat = p.c; el.dataset.id = p.id;
+    el.innerHTML = '<span class="pin" style="background:'+CAT[p.c].color+';color:'+CAT[p.c].color+'"></span>'+
+      '<span class="txt"><span class="nm">'+p.n+'<span class="mr">'+p.mr+'</span></span>'+
+      '<span class="meta">'+p.day+'</span><span class="desc">'+p.d+'</span>'+
+      (p.u?'<span class="uw">◆ UNESCO World Heritage</span>':'')+'</span>';
+    el.addEventListener('click', function(){ select(p.id, true); });
+    listEl.appendChild(el);
+    listEls[p.id] = el;
+  });
+
+  function select(id, fromList){
+    Object.values(listEls).forEach(function(e){ e.classList.remove('active'); });
+    listEls[id].classList.add('active');
+    var p = PLACES[id];
+    map.flyTo([p.lat, p.lon], Math.max(map.getZoom(), 11), {duration:0.7});
+    markers[id].openPopup();
+    if(fromList) listEls[id].scrollIntoView({block:'nearest'});
+  }
+
+  // filters
+  var filterEl = document.getElementById('filters');
+  var order = [['all','All places',null]].concat(Object.keys(CAT).map(function(k){return [k,CAT[k].label,CAT[k].color];}));
+  order.push(['u','UNESCO-12',CAT.unesco.color]);
+  order.forEach(function(f){
+    var b = document.createElement('button');
+    b.className='chip'; b.dataset.f=f[0];
+    b.setAttribute('aria-pressed', f[0]==='all'?'true':'false');
+    b.innerHTML = (f[2]?'<span class="sw" style="background:'+f[2]+'"></span>':'')+f[1];
+    b.addEventListener('click', function(){ setFilter(f[0]); });
+    filterEl.appendChild(b);
+  });
+
+  function setFilter(f){
+    activeFilter = f;
+    document.querySelectorAll('.chip').forEach(function(c){ c.setAttribute('aria-pressed', c.dataset.f===f?'true':'false'); });
+    PLACES.forEach(function(p){
+      var show = (f==='all') || (f==='u'? !!p.u : p.c===f);
+      listEls[p.id].style.display = show?'flex':'none';
+      if(show){ markers[p.id].addTo(map); } else { map.removeLayer(markers[p.id]); }
+    });
+  }
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Shivaji — A Story a Night</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Marathi:ital@0;1&family=Karla:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+  /* ---- home-specific (tokens, base, nav, cards live in site.css) ---- */
+  header.hero{position:relative;overflow:hidden}
+  .hero-in{position:relative;z-index:1;padding:64px 22px 56px}
+  h1{font-size:clamp(2.7rem,7.5vw,4.6rem);line-height:1.02}
+  header.hero::after{content:"";position:absolute;top:-110px;right:-70px;width:340px;height:340px;
+    border-radius:50%;border:2px solid color-mix(in srgb,var(--saffron) 30%,transparent);
+    box-shadow:inset 0 0 0 22px color-mix(in srgb,var(--saffron) 7%,transparent),
+               inset 0 0 0 24px color-mix(in srgb,var(--saffron) 20%,transparent);
+    opacity:.55;pointer-events:none;z-index:0}
+
+  .herocta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:28px}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-family:"Karla",sans-serif;font-weight:700;
+    font-size:.92rem;letter-spacing:.02em;background:var(--saffron);color:#fff;text-decoration:none;
+    padding:12px 22px;border-radius:100px;transition:transform .15s ease}
+  .btn:hover{transform:translateY(-1px)}
+  .btn.ghost{background:transparent;color:var(--saffron);border:1px solid color-mix(in srgb,var(--saffron) 45%,var(--line))}
+  .herocta .count{font-family:"Karla",sans-serif;font-size:.8rem;color:var(--ink-soft)}
+
+  .intro{color:var(--ink-soft);margin:2px 0 22px;max-width:64ch}
+
+  /* trip card */
+  .trip{display:flex;gap:24px;align-items:center;flex-wrap:wrap;background:var(--paper);
+    border:1px solid var(--line);border-radius:18px;padding:26px 28px;box-shadow:0 16px 44px -30px var(--shadow)}
+  .trip .globe{flex:0 0 auto}
+  .trip .body{flex:1 1 260px}
+  .trip h3{font-family:"Marcellus",serif;font-weight:400;font-size:1.5rem;margin:0 0 .3em}
+  .trip p{margin:0 0 1em;color:var(--ink-soft)}
+  .trip .cta{display:inline-flex;align-items:center;gap:9px;font-family:"Karla",sans-serif;font-weight:700;
+    font-size:.9rem;letter-spacing:.02em;background:var(--saffron);color:#fff;text-decoration:none;
+    padding:11px 20px;border-radius:100px}
+  .trip .hint{font-family:"Karla",sans-serif;font-size:.76rem;color:var(--ink-faint);margin-top:.9em}
+
+  /* reference shelf */
+  .shelf{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:12px}
+  .ref-card{display:block;text-decoration:none;color:inherit;border:1px solid var(--line);
+    border-radius:14px;background:var(--paper-2);padding:18px 18px 16px;transition:.15s}
+  .ref-card:hover{background:var(--paper);border-color:color-mix(in srgb,var(--saffron) 40%,var(--line));transform:translateY(-1px)}
+  .ref-card .ic{font-size:1.5rem;line-height:1}
+  .ref-card .t{font-family:"Marcellus",serif;font-size:1.2rem;margin:8px 0 3px}
+  .ref-card .s{font-family:"Karla",sans-serif;font-size:.8rem;color:var(--ink-soft);line-height:1.45}
+
+  /* acts + nights */
+  .act{margin-bottom:30px}
+  .act .act-name{font-family:"Karla",sans-serif;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    font-size:.76rem;color:var(--saffron);margin-bottom:12px}
+  .nights{display:grid;grid-template-columns:repeat(auto-fill,minmax(232px,1fr));gap:10px}
+  .night{display:flex;gap:12px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;
+    padding:12px 14px;background:var(--paper-2);text-decoration:none;color:inherit;transition:transform .15s ease,background .15s ease}
+  .night.live:hover{transform:translateY(-1px);background:var(--paper)}
+  .night.live{background:var(--paper);border-color:color-mix(in srgb,var(--saffron) 40%,var(--line))}
+  .night.soon{opacity:.62;cursor:default}
+  .night .d{font-family:"Karla",sans-serif;font-weight:700;font-size:.72rem;letter-spacing:.06em;
+    color:#fff;background:var(--ink-faint);border-radius:7px;padding:3px 7px;flex:0 0 auto;margin-top:2px}
+  .night.live .d{background:var(--saffron)}
+  .night .t{display:block;font-family:"Marcellus",serif;font-size:1.04rem;line-height:1.2}
+  .night .s{display:block;font-family:"Karla",sans-serif;font-size:.72rem;color:var(--ink-faint);margin-top:3px;
+    text-transform:uppercase;letter-spacing:.05em}
+  .night.live .s{color:var(--green-soft)}
+
+  footer{margin-top:54px;padding-top:22px;border-top:1px solid var(--line);
+    font-family:"Karla",sans-serif;font-size:.85rem;color:var(--ink-soft)}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-in">
+    <div class="eyebrow">Chhatrapati Shivaji Maharaj · <span class="mr" style="letter-spacing:normal;text-transform:none">छत्रपती शिवाजी महाराज</span></div>
+    <h1>A Story a Night</h1>
+    <p class="dek">The whole life of Shivaji Maharaj, told to a child one episode per night — thirty
+      nights, five acts, in English and <span class="mr">मराठी</span>. Fact first, legend always
+      labelled.</p>
+    <div class="herocta">
+      <a class="btn" href="day-01.html">▶ Begin — Night 1</a>
+      <a class="btn ghost" href="day-09.html">Latest — Night 9 →</a>
+      <span class="count">9 of 30 nights ready</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- the nights (lead) -->
+  <section>
+    <div class="sec-head"><h2>The thirty nights</h2><span class="rule"></span></div>
+    <p class="intro">Five acts, climbing to the coronation and gently closing. Read one a night —
+      each with a full telling in English and <span class="mr">मराठी</span>, a map or illustration,
+      a collectible badge, and the true history behind the tale.</p>
+
+    <div class="act">
+      <div class="act-name">Act I · The Dream is Born ✓</div>
+      <div class="nights">
+        <a class="night live" href="day-01.html">
+          <span class="d">1</span><span><span class="t">The Land That Waited</span><span class="s">Ready to read</span></span></a>
+        <a class="night live" href="day-02.html">
+          <span class="d">2</span><span><span class="t">Birth at Shivneri</span><span class="s">Ready to read</span></span></a>
+        <a class="night live" href="day-03.html">
+          <span class="d">3</span><span><span class="t">Jijabai's Lap</span><span class="s">Ready to read</span></span></a>
+        <a class="night live" href="day-04.html">
+          <span class="d">4</span><span><span class="t">The Mavla Brotherhood</span><span class="s">Ready to read</span></span></a>
+        <a class="night live" href="day-05.html">
+          <span class="d">5</span><span><span class="t">The Oath at Raireshwar</span><span class="s">Ready to read</span></span></a>
+        <a class="night live" href="day-06.html">
+          <span class="d">6</span><span><span class="t">The First Fort — Torna</span><span class="s">Ready to read</span></span></a>
+      </div>
+    </div>
+
+    <div class="act">
+      <div class="act-name">Act II · The Lion Rises</div>
+      <div class="nights">
+        <a class="night live" href="day-07.html">
+          <span class="d">7</span><span><span class="t">Freeing Father Shahaji</span><span class="s">Ready to read</span></span></a>
+        <a class="night live" href="day-08.html">
+          <span class="d">8</span><span><span class="t">Javali</span><span class="s">Ready to read</span></span></a>
+        <a class="night live" href="day-09.html"><span class="d">9</span><span><span class="t">The Giant Approaches</span><span class="s">Ready to read</span></span></a>
+        <div class="night soon"><span class="d">10</span><span><span class="t">Pratapgad &amp; Afzal Khan</span><span class="s">Coming soon</span></span></div>
+        <div class="night soon"><span class="d">11</span><span><span class="t">Panhala &amp; Shiva Kashid</span><span class="s">Coming soon</span></span></div>
+        <div class="night soon"><span class="d">12</span><span><span class="t">Pavan Khind &amp; Baji Prabhu</span><span class="s">Coming soon</span></span></div>
+      </div>
+    </div>
+
+    <div class="act">
+      <div class="act-name">Act III · Shaking the Empires</div>
+      <div class="nights">
+        <div class="night soon"><span class="d">13</span><span><span class="t">Night Raid on the Lal Mahal</span><span class="s">Coming soon</span></span></div>
+        <div class="night soon"><span class="d">14</span><span><span class="t">The Surat Raid</span><span class="s">Coming soon</span></span></div>
+        <div class="night soon"><span class="d">15</span><span><span class="t">Purandar &amp; Murarbaji</span><span class="s">Coming soon</span></span></div>
+        <div class="night soon"><span class="d">16</span><span><span class="t">Agra — The Cage &amp; the Escape</span><span class="s">Coming soon</span></span></div>
+      </div>
+    </div>
+
+    <div class="act">
+      <div class="act-name">Act IV · The Crown</div>
+      <div class="nights">
+        <div class="night soon"><span class="d">17</span><span><span class="t">Sinhagad &amp; Tanaji</span><span class="s">Coming soon</span></span></div>
+        <div class="night soon"><span class="d">18</span><span><span class="t">Salher</span><span class="s">Coming soon</span></span></div>
+        <div class="night soon"><span class="d">19</span><span><span class="t">Nesari &amp; Prataprao</span><span class="s">Coming soon</span></span></div>
+        <div class="night soon"><span class="d">20</span><span><span class="t">Bahirji Naik &amp; Ganimi Kava</span><span class="s">Coming soon</span></span></div>
+        <div class="night soon"><span class="d">21</span><span><span class="t">Raigad &amp; Hirkani</span><span class="s">Coming soon</span></span></div>
+        <div class="night soon"><span class="d">22</span><span><span class="t">The Coronation</span><span class="s">Coming soon</span></span></div>
+        <div class="night soon"><span class="d">23</span><span><span class="t">Rajmata Jijabai Departs</span><span class="s">Coming soon</span></span></div>
+      </div>
+    </div>
+
+    <div class="act">
+      <div class="act-name">Act V · The King &amp; the Legacy</div>
+      <div class="nights">
+        <div class="night soon"><span class="d">24</span><span><span class="t">Master of the Sea</span><span class="s">Coming soon</span></span></div>
+        <div class="night soon"><span class="d">25</span><span><span class="t">The Southern Campaign</span><span class="s">Coming soon</span></span></div>
+        <div class="night soon"><span class="d">26</span><span><span class="t">The Just King</span><span class="s">Coming soon</span></span></div>
+        <div class="night soon"><span class="d">27</span><span><span class="t">The Saints</span><span class="s">Coming soon</span></span></div>
+        <div class="night soon"><span class="d">28</span><span><span class="t">The Last Days</span><span class="s">Coming soon</span></span></div>
+        <div class="night soon"><span class="d">29</span><span><span class="t">The Dream That Didn't Die</span><span class="s">Coming soon</span></span></div>
+        <div class="night soon"><span class="d">30</span><span><span class="t">The Memory Garland</span><span class="s">Coming soon</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- reference shelf -->
+  <section>
+    <div class="sec-head"><h2>The reference shelf</h2><span class="rule"></span></div>
+    <div class="shelf">
+      <a class="ref-card" href="cast.html"><div class="ic">👥</div><div class="t">The Cast</div><div class="s">Everyone in the story — family, Mavlas, ministers, adversaries — each with a home day.</div></a>
+      <a class="ref-card" href="forts.html"><div class="ic">🏰</div><div class="t">The Forts</div><div class="s">The three tiers, the honest count, and the twelve UNESCO forts.</div></a>
+      <a class="ref-card" href="map.html"><div class="ic">🗺️</div><div class="t">The Map</div><div class="s">The whole story laid out by region — geography as memory.</div></a>
+      <a class="ref-card" href="sayings-sheet.html"><div class="ic">📜</div><div class="t">The Sayings</div><div class="s">Every collectible line in three layers, with meanings and fact-or-legend tags.</div></a>
+      <a class="ref-card" href="relics.html"><div class="ic">🗡️</div><div class="t">The Relics</div><div class="s">Weapons, regalia, and what you can still go and see today.</div></a>
+    </div>
+  </section>
+
+  <!-- trip companion -->
+  <section>
+    <div class="sec-head"><h2>Walk the map for real</h2><span class="rule"></span></div>
+    <div class="trip">
+      <svg class="globe" width="72" height="72" viewBox="0 0 72 72" fill="none" stroke="var(--saffron)" stroke-width="2.2" aria-hidden="true">
+        <path d="M36 66c12-14 20-24 20-36a20 20 0 1 0-40 0c0 12 8 22 20 36Z"/>
+        <circle cx="36" cy="30" r="7"/>
+      </svg>
+      <div class="body">
+        <h3>The Trip Companion</h3>
+        <p>Every real, visitable place in the story on one live map — the twelve UNESCO forts,
+          the temples, the museums where his relics rest, and the far cities of the raids. Filter,
+          fly to any site, and open it in Maps to plan a real visit.</p>
+        <a class="cta" href="trip-companion.html">Open the trip map →</a>
+        <div class="hint">Live OpenStreetMap · opens in your browser · needs internet</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>Chhatrapati Shivaji Maharaj · a story a night · 9 of 30 nights ready</footer>
+</main>
+</body>
+</html>

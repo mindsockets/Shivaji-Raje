@@ -1,0 +1,478 @@
+<meta charset="utf-8">
+<title>The Giant Approaches</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tiro+Devanagari+Marathi:ital@0;1&family=Karla:wght@400;600;700&display=swap">
+
+<link rel="stylesheet" href="day.css">
+
+<nav class="daynav">
+  <a href="day-08.html">‹ Day 8</a>
+  <span class="mid"><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Map</a> · <a href="sayings-sheet.html">📜 Sayings</a></span>
+  <a href="day-10.html">Day 10 ›</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">
+      <span class="daynum">Day 9</span>
+      <span class="act-tag">Act II · The Lion Rises</span>
+      <span class="act-tag">1659 · the storm gathers</span>
+    </div>
+    <h1>The Giant Approaches</h1>
+    <p class="dek">A shadow falls across the land: Bijapur sends its most terrifying general to crush
+      Shivaji. Tonight, the fear — and the <b>quiet, clever plan</b> to meet it.</p>
+  </div>
+  <svg class="ridge" viewBox="0 0 880 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,90 L0,54 L70,30 L130,50 L200,20 L270,46 L340,14 L410,44 L480,24 L560,50 L620,28 L700,52 L770,26 L830,48 L880,32 L880,90 Z"
+      fill="var(--map-ridge)" opacity=".55"/>
+    <path d="M0,90 L0,66 L90,48 L170,66 L250,40 L340,64 L430,44 L520,66 L610,48 L700,68 L790,50 L880,66 L880,90 Z"
+      fill="var(--map-ridge)"/>
+  </svg>
+</header>
+
+<main class="wrap">
+
+  <!-- ===================== PLACE / SCALE ===================== -->
+  <section aria-labelledby="place-h">
+    <div class="sec-head">
+      <span class="num">01</span>
+      <h2 id="place-h">The odds — a giant, and a plan</h2>
+      <span class="rule"></span>
+    </div>
+    <figure class="map">
+      <svg viewBox="0 0 700 460" role="img"
+        aria-label="An illustration of the odds Shivaji faced: on the open plain to the left, a vast army of Afzal Khan with a forest of spears, a great banner, a towering figure, and a cage meant for Shivaji. To the right rise dark forested hills with the small fort Pratapgad and its saffron flag. A dotted path curves from the plain up into the hills — Shivaji's plan to lure the giant off the flat ground where his huge army is useless.">
+        <defs>
+          <linearGradient id="skyGrad9" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" style="stop-color:color-mix(in srgb,var(--saffron) 18%,var(--paper))"/>
+            <stop offset="1" style="stop-color:var(--paper)"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="700" height="460" fill="url(#skyGrad9)"/>
+
+        <!-- open plain (left) -->
+        <rect x="0" y="356" width="700" height="104" fill="var(--green)" opacity=".12"/>
+
+        <!-- forested hills (right) -->
+        <path d="M700,460 L700,150 C600,168 540,240 470,356 L700,356 Z" fill="var(--green)" opacity=".9"/>
+        <path d="M700,460 L700,300 C640,318 600,344 560,410 L700,410 Z" fill="var(--ink)" opacity=".14"/>
+        <!-- little trees on the hills -->
+        <g fill="var(--green)">
+          <path d="M628,196 l6,14 l6,-14 Z"/><path d="M600,240 l6,14 l6,-14 Z"/><path d="M566,296 l6,14 l6,-14 Z"/>
+          <path d="M660,214 l6,14 l6,-14 Z"/><path d="M636,272 l6,14 l6,-14 Z"/>
+        </g>
+
+        <!-- Pratapgad, tiny, on a hill peak -->
+        <path d="M604,168 l18,-24 l18,24 Z" fill="var(--map-ridge)"/>
+        <rect x="616" y="160" width="12" height="8" fill="var(--ink-soft)"/>
+        <line x1="622" y1="160" x2="622" y2="146" stroke="var(--ink-soft)" stroke-width="1.5"/>
+        <path d="M622,147 l11,3 l-11,4 Z" fill="var(--saffron)"/>
+        <text class="m-shiv-sub" x="622" y="196" text-anchor="middle" style="fill:var(--ink-soft)">Pratapgad</text>
+
+        <!-- Afzal Khan's great army (left): a sea of spears + mass -->
+        <rect x="34" y="344" width="330" height="112" rx="6" fill="var(--ink)" opacity=".76"/>
+        <!-- spear tips along the top -->
+        <g stroke="var(--ink)" stroke-width="2" stroke-linecap="round">
+          <path d="M48,344 L48,326"/><path d="M64,344 L64,320"/><path d="M80,344 L80,328"/><path d="M96,344 L96,318"/>
+          <path d="M112,344 L112,326"/><path d="M128,344 L128,322"/><path d="M144,344 L144,314"/><path d="M160,344 L160,324"/>
+          <path d="M176,344 L176,320"/><path d="M192,344 L192,328"/><path d="M208,344 L208,316"/><path d="M224,344 L224,324"/>
+          <path d="M240,344 L240,320"/><path d="M256,344 L256,326"/><path d="M272,344 L272,318"/><path d="M288,344 L288,324"/>
+          <path d="M304,344 L304,322"/><path d="M320,344 L320,328"/><path d="M336,344 L336,320"/><path d="M352,344 L352,326"/>
+        </g>
+        <!-- big banner -->
+        <line x1="150" y1="344" x2="150" y2="276" stroke="var(--ink)" stroke-width="3"/>
+        <path d="M150,278 l40,8 l-40,14 Z" fill="var(--green)"/>
+        <!-- Afzal Khan — a towering figure at the front -->
+        <g fill="var(--ink)">
+          <circle cx="360" cy="316" r="11"/>
+          <path d="M347,328 q13,-9 26,0 L370,392 L350,392 Z"/>
+          <!-- raised sword -->
+          <line x1="381" y1="330" x2="398" y2="300" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
+        </g>
+        <text class="m-shiv" x="40" y="420" style="fill:var(--paper)">Afzal Khan's</text>
+        <text class="m-shiv" x="40" y="440" style="fill:var(--paper)">great army</text>
+
+        <!-- the cage meant for Shivaji -->
+        <g stroke="var(--saffron)" stroke-width="1.6" fill="none">
+          <rect x="250" y="404" width="34" height="28" rx="2"/>
+          <path d="M259,404 L259,432 M267,404 L267,432 M275,404 L275,432"/>
+        </g>
+        <text class="m-sub" x="267" y="448" text-anchor="middle" style="fill:var(--saffron)">a cage for Shivaji</text>
+
+        <!-- the plan: dotted lure-path from plain into the hills -->
+        <path d="M380,352 C440,340 470,300 520,250 C560,212 590,196 606,182"
+          fill="none" stroke="var(--saffron)" stroke-width="2.4" stroke-dasharray="2 7" stroke-linecap="round"/>
+        <path d="M606,182 l3,13 l-12,-5 Z" fill="var(--saffron)"/>
+        <text x="404" y="300" style="font-family:'Karla',sans-serif;font-weight:700;font-size:12.5px;fill:var(--saffron)">the plan:</text>
+        <text x="404" y="316" style="font-family:'Karla',sans-serif;font-weight:700;font-size:12.5px;fill:var(--saffron)">lure him into the hills →</text>
+      </svg>
+      <figcaption><b>Strength on the plain, cleverness in the hills.</b> Afzal Khan came with a
+        <span style="color:var(--ink-soft)">vast army</span> and a cage for Shivaji, hoping to fight
+        on the flat ground where numbers win. Shivaji's answer: draw the giant up into the forested
+        Sahyadri, to little <span style="color:var(--saffron)">Pratapgad</span> — where a huge army
+        is helpless.</figcaption>
+    </figure>
+    <p class="map-cta"><a href="trip-companion.html">📍 See Tuljapur, Pandharpur &amp; Pratapgad on the real map →</a></p>
+  </section>
+
+  <!-- ===================== STORY ===================== -->
+  <section aria-labelledby="story-h">
+    <div class="sec-head">
+      <span class="num">02</span>
+      <h2 id="story-h">Tonight's telling</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="read-cue">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.4"/><path d="M8 4.4V8l2.6 1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      About 10 minutes, read aloud slowly · choose your language
+    </div>
+
+    <div class="lang-bar" role="tablist" aria-label="Choose language">
+      <button role="tab" id="tab-en" aria-controls="story-en" aria-selected="true">English</button>
+      <button role="tab" id="tab-mr" class="mr" aria-controls="story-mr" aria-selected="false">मराठी</button>
+    </div>
+
+    <div class="telling" id="story-en" role="tabpanel" aria-labelledby="tab-en">
+      <p>For a few years now, Shivaji had been growing quietly — taking forts, winning friends,
+        opening the door to the sea. But you cannot grow a kingdom under the noses of great sultans
+        without them noticing. Tonight, a long shadow falls across the land: the biggest, most
+        frightening enemy Shivaji has ever faced is marching straight toward him.</p>
+      <p>Far away in the city of Bijapur, the court had run out of patience. "This Bhosale boy keeps
+        taking our forts and our land," they grumbled. "He must be crushed — once and for all, before
+        he grows any stronger." The story goes that the queen-mother who ruled for her young sultan
+        looked around her great hall and asked: <em>who will go and bring me this troublesome
+        mountain-boy?</em> And it was their most feared warrior of all who rose and swore he would
+        fetch Shivaji back in chains.</p>
+      <p>His name was <span class="term">Afzal Khan</span>. Picture the most enormous, powerful man
+        you can imagine — a giant of a general, tall and broad and immensely strong, famous across
+        the whole Deccan. And he did not come alone: with him marched a <em>huge</em> army. The old
+        counts speak of something like ten thousand horsemen alone, and behind them elephants swaying
+        like grey hills, camels, cannon groaning on creaking carts, and foot-soldiers beyond counting.
+        When that host moved, the dust rose for miles, and the very ground seemed to tremble under it,
+        like a slow, dark storm rolling across the land.</p>
+      <p>And this was not just any enemy. It was <em>personal</em>. Years before, this same Afzal
+        Khan had, by <em>treachery</em>, brought about the death of Shivaji's own elder brother in a
+        far-off battle. So the giant marching toward Shivaji was an old, bitter enemy of his family —
+        and a man everyone knew to be as cunning and cruel as he was strong.</p>
+      <p>Now Afzal Khan wanted something particular. He wanted Shivaji to lose his temper and come
+        <em>down</em> — down out of his mountains onto the flat, open plains, where a huge army with
+        cannon and cavalry could simply crush a smaller one. So, to enrage Shivaji, he did terrible,
+        insulting things along his march. The old accounts tell us he smashed the temple of
+        <span class="term">Tulja Bhavani</span> at Tuljapur — the family goddess Shivaji's own mother
+        had prayed to! — and the great temple of Vithoba at <span class="term">Pandharpur</span>.
+        And, boasting, he had a huge iron <em>cage</em> built, swearing he would catch Shivaji like
+        an animal and drag him back to Bijapur inside it.</p>
+      <p>Across the whole land, fear spread like a cold wind. In every village, people whispered the
+        same worried question: <em>who on earth could stop such a giant?</em> Even brave, seasoned
+        soldiers looked at that vast army and quietly lost heart.</p>
+      <p>But Shivaji — and this is the whole point of tonight — did <em>not</em> panic. He did not
+        take the bait. He was angry, yes; the smashing of his mother's goddess must have burned in
+        his heart. But he was far too wise to let anger throw away everything. He knew, as surely as
+        he knew his own name, that the open plain was a trap. On flat ground, the giant would win.</p>
+      <p>His strength was not the plain. His strength was the <em>mountains</em> — the deep forests,
+        the twisting paths, the high stone forts, and the sure-footed Mavlas who knew every rock. So
+        Shivaji sat down and thought, cool and clear, and he made a plan so clever that people still
+        marvel at it four hundred years later.</p>
+      <p>The plan was this: he would not go <em>down</em> to the giant. He would draw the giant
+        <em>up</em> — deep into the tangled, dripping forests of Javali, right to the foot of his
+        brand-new fort, <span class="term">Pratapgad</span>. In those hills, a giant army becomes
+        helpless: the cannon cannot be dragged through the jungle, the horses cannot charge up the
+        slopes, the thousands of soldiers get lost and hungry among the trees. There, a small, clever
+        force that knows the land can defeat a mighty one that does not.</p>
+      <p>So Shivaji pulled his people back into the safety of the hills, and he did something very
+        sly: he sent polite messengers to Afzal Khan, hinting that he was frightened and only wanted
+        to make peace — <em>please, great Khan, come up to Pratapgad, and let us talk.</em> Back and forth went the
+        careful, honey-sweet words — the accounts even name the go-betweens who carried them, clever
+        Pantaji Gopinath speaking for Shivaji, and Krishnaji Bhaskar for the Khan — each side smiling
+        and bowing, and each secretly measuring the other for a trap. The snare
+        was set, and it was beautifully turned around. The giant believed <em>he</em> was luring
+        Shivaji into a corner. In truth, Shivaji was luring the giant into <em>his</em>.</p>
+      <p>And then Shivaji did one more thing. He went to his goddess — <span class="term">Bhavani</span>
+        herself, the very goddess whose temple the giant had smashed — and he prayed, with all his
+        heart, for courage and for strength. (The loveliest legends even say the goddess blessed his
+        sword; that is the beautiful, faith-filled layer of the story, and we tell it as such.) Then,
+        quietly, he hid his best Mavlas in the forests all around Pratapgad, ready and waiting.</p>
+      <p>So tonight, the two are moving slowly toward each other across the darkening hills: the
+        giant, confident and grand, climbing up with his enormous army and his empty cage; and the
+        young lion, calm on his fort, armed with nothing but a clever plan, a hidden band of
+        brothers, and a prayer.</p>
+      <p>There is no battle tonight — only the long, thrilling, breath-held <em>wait</em>. But hold
+        on tight, my dear, because tomorrow night the giant and the lion will finally meet, face to
+        face, and the single most famous moment of Shivaji's whole life will unfold before us.</p>
+      <p class="goodnight">Goodnight — tonight's badge: <b>yukti</b>, "the plan" — when you cannot win
+        by strength, win by your wits and by knowing your own ground.</p>
+    </div>
+
+    <div class="telling mr" id="story-mr" role="tabpanel" aria-labelledby="tab-mr" hidden>
+      <p><span class="dropcap">आ</span>तापर्यंत काही वर्षं शिवाजी शांतपणे वाढत होता — किल्ले घेत, मित्र जोडत,
+        समुद्राचं दार उघडत. पण मोठमोठ्या सुलतानांच्या नाकाखाली राज्य वाढवलं, की त्यांच्या ते लक्षात आल्याशिवाय
+        राहत नाही. आज रात्री साऱ्या मुलखावर एक लांब सावली पसरते: शिवाजीने आजवर पाहिला नसेल असा सर्वांत मोठा,
+        सर्वांत भीषण शत्रू थेट त्याच्या दिशेने कूच करत येतोय.</p>
+      <p>दूर विजापूर शहरात, दरबाराचा धीर संपला होता. "हा भोसल्याचा पोरगा आमचे किल्ले, आमची जमीन घेतच चाललाय,"
+        ते चिडून म्हणत. "याला चिरडायलाच हवं — तो आणखी मोठा होण्याआधीच, कायमचं." गोष्ट अशी सांगतात की आपल्या
+        लहान सुलतानाच्या वतीने राज्य चालवणाऱ्या राजमातेने भरल्या दरबारात विचारलं: <em>हा त्रासदायक डोंगरातला
+        पोरगा माझ्यापुढे बांधून आणणार तरी कोण?</em> आणि त्यांचा सर्वांत भीतीदायक योद्धाच उठला आणि त्याने
+        शपथ घेतली की शिवाजीला साखळदंडात बांधून परत आणीन.</p>
+      <p>त्याचं नाव <span class="term">अफझल खान</span>. कल्पना करशील तितका अवाढव्य, बलाढ्य माणूस — उंच,
+        धिप्पाड आणि प्रचंड शक्तिशाली सेनानी, अख्ख्या दख्खनेत प्रसिद्ध. आणि तो एकटा आला नाही: त्याच्यासोबत एक
+        <em>अवाढव्य</em> सैन्य होतं. जुन्या नोंदी सांगतात की नुसते घोडेस्वारच सुमारे दहा हजार, आणि त्यांच्या
+        मागे राखाडी डोंगरांसारखे डुलणारे हत्ती, उंट, कुरकुरणाऱ्या गाड्यांवरच्या तोफा, आणि मोजता न येण्याइतकं
+        पायदळ. ते सैन्य हलू लागलं की मैलोन्‌मैल धूळ उठे, आणि जमीनसुद्धा त्याखाली थरथरल्यासारखी वाटे — एखाद्या
+        संथ, काळ्या वादळासारखी मुलखावर पसरत जाणारी.</p>
+      <p>आणि हा काही साधासुधा शत्रू नव्हता. हे वैर <em>व्यक्तिगत</em> होतं. काही वर्षांपूर्वी याच अफझल खानाने,
+        <em>दगाबाजीने</em>, एका दूरच्या लढाईत शिवाजीच्या स्वतःच्या मोठ्या भावाचा घात घडवून आणला होता. म्हणून
+        शिवाजीकडे कूच करणारा हा राक्षस त्याच्या घराण्याचा जुना, कडवा शत्रू होता — आणि जितका बलवान, तितकाच
+        धूर्त आणि क्रूर, हे साऱ्यांना ठाऊक होतं.</p>
+      <p>आता अफझल खानाला एक विशिष्ट गोष्ट हवी होती. त्याला शिवाजीने रागाच्या भरात <em>खाली</em> यावं असं
+        वाटत होतं — आपल्या डोंगरांतून बाहेर, त्या सपाट, मोकळ्या मैदानात, जिथे तोफा आणि घोडदळ असलेलं मोठं
+        सैन्य लहान सैन्याला सहज चिरडून टाकेल. म्हणून शिवाजीला चिडवायला त्याने वाटेत भयंकर, अपमानास्पद गोष्टी
+        केल्या. जुन्या नोंदी सांगतात की त्याने तुळजापूरचं <span class="term">तुळजा भवानी</span>चं देऊळ फोडलं —
+        जिच्यापुढे शिवाजीच्या स्वतःच्या आईने प्रार्थना केली होती, तीच कुलदेवता! — आणि <span class="term">पंढरपूर</span>चं
+        विठोबाचं महान देऊळही. आणि बढाया मारत त्याने एक भला मोठा लोखंडी <em>पिंजरा</em> बनवला, की शिवाजीला
+        जनावरासारखं पकडून त्यात घालून विजापूरला ओढत नेईन.</p>
+      <p>अख्ख्या मुलखावर भीती थंड वाऱ्यासारखी पसरली. प्रत्येक गावात लोक तोच काळजीचा प्रश्न कुजबुजत:
+        <em>असल्या राक्षसाला थांबवणार तरी कोण?</em> मोठमोठे, अनुभवी शिपाईसुद्धा त्या अफाट सैन्याकडे बघून
+        मनातून खचून जात.</p>
+      <p>पण शिवाजी — आणि आजच्या रात्रीचं सारं मर्म हेच आहे — <em>घाबरला नाही.</em> तो आमिषाला बळी पडला नाही.
+        त्याला राग आला, हो; आईच्या देवीचं देऊळ फोडलं गेल्याची आग त्याच्या मनात नक्कीच धगधगत असेल. पण रागाच्या
+        भरात सर्वस्व गमावण्याइतका तो मूर्ख नव्हता. त्याला स्वतःच्या नावाइतकं पक्कं ठाऊक होतं की ते मोकळं
+        मैदान म्हणजे एक सापळा आहे. सपाट जमिनीवर राक्षसच जिंकणार.</p>
+      <p>त्याचं बळ मैदानात नव्हतं. त्याचं खरं बळ होतं <em>डोंगरांत</em> — खोल जंगलं, वळणावळणाच्या वाटा, उंच
+        दगडी किल्ले, आणि प्रत्येक दगड ठाऊक असलेले पावलं पक्की मावळे. म्हणून शिवाजी शांतपणे, थंड डोक्याने बसला
+        आणि विचार केला, आणि असा एक डाव रचला की चारशे वर्षांनंतर आजही लोक त्याचं कौतुक करतात.</p>
+      <p>डाव असा होता: तो <em>खाली</em> राक्षसाकडे जाणार नव्हता. तो राक्षसालाच <em>वर</em> ओढणार होता — जावळीच्या
+        दाट, ओलसर जंगलांत खोल आत, थेट आपल्या नव्याकोऱ्या किल्ल्याच्या — <span class="term">प्रतापगडा</span>च्या
+        — पायथ्याशी. त्या डोंगरांत अवाढव्य सैन्य हतबल होतं: तोफा जंगलातून ओढता येत नाहीत, घोडे उतारावर धावू
+        शकत नाहीत, आणि हजारो शिपाई झाडांत वाट चुकून, भुकेने बेजार होतात. तिथे, मुलूख ठाऊक असलेलं एक छोटं,
+        चतुर सैन्य, मुलूख न कळणाऱ्या बलाढ्य सैन्यालाही हरवू शकतं.</p>
+      <p>म्हणून शिवाजीने आपली माणसं डोंगरांच्या सुरक्षिततेत मागे घेतली, आणि एक फार चतुर खेळी केली: त्याने
+        अफझल खानाकडे नम्र दूत पाठवले, की मी घाबरलोय आणि मला फक्त तह करायचाय — <em>महाराज, आपणच प्रतापगडावर
+        या ना, आणि बोलणी करू.</em> इकडून तिकडे जपून निवडलेले, मधासारखे गोड शब्द येत-जात राहिले — नोंदी तर ते
+        शब्द वाहणाऱ्या दूतांची नावंही सांगतात: शिवाजीच्या वतीने चतुर पंताजी गोपिनाथ, आणि खानाच्या वतीने कृष्णाजी
+        भास्कर — दोन्ही बाजू हसत, वाकून मुजरे करत, आणि मनातून एकमेकांचं सापळ्यासाठी माप घेत. सापळा रचला गेला,
+        आणि तो अगदी सुंदररीत्या उलटवला गेला. राक्षसाला वाटत होतं
+        की <em>तो</em> शिवाजीला कोंडीत पकडतोय. पण खरं तर शिवाजी राक्षसालाच <em>आपल्या</em> कोंडीत ओढत होता.</p>
+      <p>आणि मग शिवाजीने आणखी एक गोष्ट केली. तो आपल्या देवीकडे गेला — साक्षात <span class="term">भवानी</span>
+        कडे, जिचं देऊळ त्या राक्षसाने फोडलं होतं — आणि मनोभावे प्रार्थना केली, धैर्यासाठी आणि बळासाठी.
+        (सर्वांत सुंदर दंतकथा तर असंही सांगतात की देवीने त्याच्या तलवारीला आशीर्वाद दिला; ही गोष्टीची सुंदर,
+        श्रद्धेची बाजू आहे, आणि तशीच आपण ती सांगतो.) मग शांतपणे त्याने आपले उत्तम मावळे प्रतापगडाभोवतीच्या
+        जंगलांत लपवून ठेवले — तयार, आणि टपून.</p>
+      <p>तर आज रात्री, अंधारत चाललेल्या डोंगरांतून, ते दोघे हळूहळू एकमेकांकडे सरकत आहेत: एकीकडे राक्षस —
+        आत्मविश्वासाने, थाटामाटात, आपल्या अफाट सैन्यासह आणि रिकाम्या पिंजऱ्यासह वर चढत येणारा; आणि दुसरीकडे
+        तरुण सिंह — आपल्या किल्ल्यावर शांत, हाती फक्त एक चतुर डाव, लपलेले भाऊ, आणि एक प्रार्थना.</p>
+      <p>आज रात्री युद्ध नाही — फक्त ती लांब, थरारक, श्वास रोखून धरलेली <em>वाट</em>. पण घट्ट धरून ठेव, बाळा,
+        कारण उद्या रात्री राक्षस आणि सिंह शेवटी समोरासमोर येणार आहेत, आणि शिवाजीच्या अख्ख्या आयुष्यातला सर्वांत
+        प्रसिद्ध क्षण आपल्या डोळ्यांसमोर उलगडणार आहे.</p>
+      <p class="goodnight">शुभ रात्री — आजचं जपायचं नाणं: <b>युक्ती,</b> "डाव" — बळाने जिंकता येत नसेल,
+        तेव्हा बुद्धीने आणि स्वतःच्या भूमीच्या ज्ञानाने जिंकावं.</p>
+    </div>
+
+    <div class="moon-note">
+      <svg class="moon" width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">
+        <circle cx="26" cy="26" r="22" fill="none" stroke="var(--gold)" stroke-width="2.4" opacity=".5"/>
+        <path d="M32 8 a18 18 0 1 0 0 36 a13 13 0 1 1 0 -36 Z" fill="var(--gold)" opacity=".9"/>
+      </svg>
+      <p>Remember Day 8's lesson — his strength was the <b>hills</b>, not the plains. Tonight he uses
+        it: when a giant offers you his kind of fight, refuse it,
+        <span class="fwd">and choose the ground where <em>you</em> are strong.</span></p>
+    </div>
+
+    <h3 class="subhead">Say it out loud</h3>
+    <div class="say-grid">
+      <div class="say"><div class="head"><span class="dev">अफझल खान</span><span class="rom">Afzal Khan</span></div>
+        <div class="phon">af-ZAL khaan</div><div class="gloss">the giant Bijapur general</div></div>
+      <div class="say"><div class="head"><span class="dev">तुळजा भवानी</span><span class="rom">Tulja Bhavani</span></div>
+        <div class="phon">TUL-jaa bha-VAA-nee</div><div class="gloss">Shivaji's family goddess</div></div>
+      <div class="say"><div class="head"><span class="dev">पंढरपूर</span><span class="rom">Pandharpur</span></div>
+        <div class="phon">PANDH-ar-poor</div><div class="gloss">town of the Vithoba temple</div></div>
+      <div class="say"><div class="head"><span class="dev">प्रतापगड</span><span class="rom">Pratapgad</span></div>
+        <div class="phon">pra-TAAP-ga-ḍ</div><div class="gloss">the fort where he set the trap</div></div>
+      <div class="say"><div class="head"><span class="dev">युक्ती</span><span class="rom">yukti</span></div>
+        <div class="phon">YUK-tee</div><div class="gloss">a clever plan or stratagem</div></div>
+      <div class="say"><div class="head"><span class="dev">धीर</span><span class="rom">dheer</span></div>
+        <div class="phon">DHEER</div><div class="gloss">calm, steady nerve</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== COIN ===================== -->
+  <section aria-labelledby="coin-h">
+    <div class="sec-head">
+      <span class="num">03</span>
+      <h2 id="coin-h">Tonight's collectible</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="coin-wrap">
+      <button class="coin" id="coin" aria-label="Yukti badge — flip to read its meaning">
+        <span class="coin-inner">
+          <span class="face front">
+            <span class="big">युक्ती</span>
+            <span class="rom">The Plan</span>
+            <span class="dots">Badge · Day 9</span>
+          </span>
+          <span class="face back">
+            <span class="mean">choose the ground where you are strong</span>
+            <span class="dots">nerve over fear · 1659</span>
+          </span>
+        </span>
+      </button>
+      <div class="coin-copy">
+        <h3>The ninth badge</h3>
+        <p>A giant tried to drag Shivaji onto flat ground and into a rage. Shivaji answered with
+          <em>yukti</em> — a cool head, and the wisdom to fight only where he could win: his own
+          hills.</p>
+        <p class="hint">↻ Hover or tap the coin to turn it over.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HISTORY CARDS ===================== -->
+  <section aria-labelledby="hist-h">
+    <div class="sec-head">
+      <span class="num">04</span>
+      <h2 id="hist-h">For the grown-up reading aloud</h2>
+      <span class="rule"></span>
+    </div>
+    <p class="grown-note">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 7v4M8 4.6v.4" stroke-linecap="round"/></svg>
+      The real history behind tonight's tension — for the curious.
+    </p>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>Who was Afzal Khan?</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p><b>Afzal Khan</b> was one of Bijapur's most senior and feared generals, chosen in
+          <b>1659</b> to destroy Shivaji. Sources note he had earlier been connected, by treachery,
+          to the death of Shivaji's <b>elder brother</b> (around Kanakgiri) — so this was a personal
+          as well as a political enemy. He advanced with a large, well-equipped army.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>The temples, and the cage</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>The widely recorded accounts (the Maratha bakhars and later histories) say Afzal Khan
+          <b>desecrated the Bhavani temple at Tuljapur</b> and the <b>Vithoba temple at Pandharpur</b>,
+          and had a great <b>cage</b> made for Shivaji — deliberate provocations to lure him onto the
+          plains. <span class="tag debated" style="margin-left:0">Debated</span> Modern historians
+          differ on the exact scale of the temple damage, but the intent — to enrage and bait
+          Shivaji — is the consistent thread.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>Why Pratapgad, not the plains</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>Afzal Khan's whole aim was to fight on <b>open ground</b>, where a big army with cavalry
+          and cannon dominates. Shivaji's counter was pure <b>ganimi kava</b> thinking (Day 4, Day
+          20): refuse the enemy's battlefield and pick your own. He withdrew into the forested Javali
+          hills below <b>Pratapgad</b>, and even sent word suggesting he wanted to <em>negotiate</em>
+          — turning the giant's trap inside out.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag l">Legend</span><h4>Bhavani and the blessed sword</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>Shivaji's devotion to <b>Tulja Bhavani</b> is historical and deep. The beloved tradition
+          that the goddess <b>blessed his sword</b> (the "Bhavani talwar") before the encounter is the
+          <b>legend layer</b> — a genuine expression of the era's faith, told as a cherished story
+          rather than a documented fact. The bond between Shivaji and Bhavani, though, is very real
+          (and we meet the temple at Pratapgad again on Day 10).</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===================== JOURNEY ===================== -->
+  <section aria-labelledby="journey-h">
+    <div class="sec-head">
+      <span class="num">05</span>
+      <h2 id="journey-h">The thirty-night journey</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="ribbon">
+      <div class="acts">
+        <div class="act-col">
+          <div class="name">I · Dream is Born ✓</div>
+          <div class="dots-row">
+            <span class="d done"></span><span class="d done"></span><span class="d done"></span>
+            <span class="d done"></span><span class="d done"></span><span class="d done"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">II · Lion Rises</div>
+          <div class="dots-row">
+            <span class="d done" title="Day 7 — told"></span>
+            <span class="d done" title="Day 8 — told"></span>
+            <span class="d now" title="Day 9 — tonight"></span>
+            <span class="d" title="Day 10"></span><span class="d" title="Day 11"></span><span class="d" title="Day 12"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">III · Shaking Empires</div>
+          <div class="dots-row">
+            <span class="d" title="Day 13"></span><span class="d" title="Day 14"></span><span class="d" title="Day 15"></span><span class="d" title="Day 16"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">IV · The Crown</div>
+          <div class="dots-row">
+            <span class="d" title="Day 17"></span><span class="d" title="Day 18"></span><span class="d" title="Day 19"></span><span class="d" title="Day 20"></span>
+            <span class="d" title="Day 21"></span><span class="d" title="Day 22"></span><span class="d" title="Day 23"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">V · King &amp; Legacy</div>
+          <div class="dots-row">
+            <span class="d" title="Day 24"></span><span class="d" title="Day 25"></span><span class="d" title="Day 26"></span><span class="d" title="Day 27"></span>
+            <span class="d" title="Day 28"></span><span class="d" title="Day 29"></span><span class="d" title="Day 30"></span>
+          </div>
+        </div>
+      </div>
+      <div class="legend">
+        <span><span class="d now"></span> Tonight</span>
+        <span><span class="d"></span> Nights to come</span>
+        <span><span class="d done"></span> Nights told</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LEDGER ===================== -->
+  <section aria-labelledby="ledger-h">
+    <div class="ledger">
+      <h2 id="ledger-h">Fact &amp; legend, kept honest</h2>
+      <dl>
+        <div class="row"><dt class="h">History</dt>
+          <dd>In <b>1659</b> Bijapur sent <b>Afzal Khan</b> — a family enemy — to crush Shivaji; he
+            marched provocatively toward the Maratha country, seeking an open-plains battle. Shivaji
+            refused, and drew him instead into the forested hills below <b>Pratapgad</b>.</dd></div>
+        <div class="row"><dt class="c">Traditional / debated</dt>
+          <dd>The <b>temple desecrations</b> (Tuljapur, Pandharpur) and the <b>cage</b> are strongly
+            in the traditional record; the exact extent is debated. The <b>goddess blessing his
+            sword</b> is legend.</dd></div>
+      </dl>
+    </div>
+
+    <div class="foot">
+      <span><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Trip map</a></span>
+      <span class="next">Next → <a href="day-10.html">Day 10 · Pratapgad &amp; Afzal Khan</a></span>
+    </div>
+  </section>
+</main>
+
+<script>
+  (function(){
+    var tabs={en:document.getElementById('tab-en'),mr:document.getElementById('tab-mr')};
+    var panes={en:document.getElementById('story-en'),mr:document.getElementById('story-mr')};
+    function show(l){for(var k in tabs){var on=(k===l);tabs[k].setAttribute('aria-selected',on?'true':'false');panes[k].hidden=!on;}}
+    tabs.en.addEventListener('click',function(){show('en')});
+    tabs.mr.addEventListener('click',function(){show('mr')});
+  })();
+  (function(){var coin=document.getElementById('coin');coin.addEventListener('click',function(){coin.classList.toggle('flipped')});})();
+</script>

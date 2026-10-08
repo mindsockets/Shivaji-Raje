@@ -1,0 +1,443 @@
+<meta charset="utf-8">
+<title>The First Fort — Torna</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tiro+Devanagari+Marathi:ital@0;1&family=Karla:wght@400;600;700&display=swap">
+
+<link rel="stylesheet" href="day.css">
+
+<nav class="daynav">
+  <a href="day-05.html">‹ Day 5</a>
+  <span class="mid"><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Map</a> · <a href="sayings-sheet.html">📜 Sayings</a></span>
+  <a href="day-07.html">Day 7 ›</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">
+      <span class="daynum">Day 6</span>
+      <span class="act-tag">Act I · The Dream is Born</span>
+      <span class="act-tag">The promise becomes stone</span>
+    </div>
+    <h1>The First Fort — Torna</h1>
+    <p class="dek">The vow becomes real — a first fort of stone (1646) — and the crescent moon from
+      the night he was born returns as his <b>royal seal, the Rajmudra</b>. Act I closes.</p>
+  </div>
+  <svg class="ridge" viewBox="0 0 880 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,90 L0,54 L70,30 L130,50 L200,20 L270,46 L340,14 L410,44 L480,24 L560,50 L620,28 L700,52 L770,26 L830,48 L880,32 L880,90 Z"
+      fill="var(--map-ridge)" opacity=".55"/>
+    <path d="M0,90 L0,66 L90,48 L170,66 L250,40 L340,64 L430,44 L520,66 L610,48 L700,68 L790,50 L880,66 L880,90 Z"
+      fill="var(--map-ridge)"/>
+  </svg>
+</header>
+
+<main class="wrap">
+
+  <!-- ===================== PLACE ===================== -->
+  <section aria-labelledby="place-h">
+    <div class="sec-head">
+      <span class="num">01</span>
+      <h2 id="place-h">The place — Torna, and the seal</h2>
+      <span class="rule"></span>
+    </div>
+    <figure class="map">
+      <svg viewBox="0 0 700 460" role="img"
+        aria-label="An illustration of Torna, a massive hill-fort with long walls and bastions flying a saffron flag, with Rajgad rising on a distant peak. In the sky, where a crescent moon would hang, glows Shivaji's golden royal seal — the Rajmudra — a ringed seal with a crescent at its centre.">
+        <defs>
+          <linearGradient id="skyGrad6" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" style="stop-color:color-mix(in srgb,var(--saffron) 15%,var(--paper))"/>
+            <stop offset="1" style="stop-color:var(--paper)"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="700" height="460" fill="url(#skyGrad6)"/>
+
+        <!-- the Rajmudra seal in the sky (the moon, become a seal) -->
+        <g transform="translate(582,104)">
+          <circle r="54" fill="var(--saffron)" opacity=".12"/>
+          <circle r="45" fill="none" stroke="var(--gold)" stroke-width="3"/>
+          <circle r="37" fill="none" stroke="var(--gold)" stroke-width="4" stroke-dasharray="2 7" opacity=".65"/>
+          <path d="M7,-17 a17 17 0 1 0 0 34 a13 13 0 1 1 0 -34 Z" fill="var(--gold)"/>
+        </g>
+        <text class="m-sub" x="582" y="172" text-anchor="middle" style="fill:var(--gold)">the Rajmudra</text>
+
+        <!-- distant ranges -->
+        <path d="M0,286 L110,244 L210,286 L300,250 L700,300 L700,320 L0,320 Z"
+          fill="var(--map-ridge)" opacity=".35"/>
+
+        <!-- ground -->
+        <rect x="0" y="320" width="700" height="140" fill="var(--green)" opacity=".13"/>
+
+        <!-- Torna: a massive hill-fort -->
+        <path d="M40,320 C120,190 260,150 350,150 C440,150 560,196 640,320 Z" fill="var(--map-ridge)"/>
+        <!-- long summit wall with bastions + battlements -->
+        <g fill="var(--ink-soft)">
+          <rect x="150" y="176" width="360" height="15"/>
+          <!-- bastions -->
+          <rect x="150" y="164" width="30" height="27" rx="3"/>
+          <rect x="330" y="158" width="34" height="33" rx="3"/>
+          <rect x="480" y="164" width="30" height="27" rx="3"/>
+          <!-- battlement notches -->
+          <rect x="196" y="168" width="9" height="9"/><rect x="216" y="168" width="9" height="9"/>
+          <rect x="236" y="168" width="9" height="9"/><rect x="392" y="168" width="9" height="9"/>
+          <rect x="412" y="168" width="9" height="9"/><rect x="432" y="168" width="9" height="9"/>
+        </g>
+        <!-- main gate -->
+        <path d="M330,320 L330,214 a17 17 0 0 1 34 0 L364,320 Z" fill="var(--ink)" opacity=".68"/>
+        <!-- big saffron flag on central bastion -->
+        <line x1="347" y1="158" x2="347" y2="126" stroke="var(--ink-soft)" stroke-width="2.4"/>
+        <path d="M347,127 l30,7 l-30,9 Z" fill="var(--saffron)"/>
+
+        <!-- Rajgad rising on a farther peak to the right -->
+        <path d="M620,300 l35,-76 l39,76 Z" fill="var(--map-ridge)" opacity=".9"/>
+        <rect x="645" y="232" width="20" height="7" fill="var(--ink-soft)"/>
+        <line x1="655" y1="232" x2="655" y2="218" stroke="var(--ink-soft)" stroke-width="1.6"/>
+        <path d="M655,219 l12,3 l-12,4 Z" fill="var(--saffron)"/>
+        <text class="m-sub" x="658" y="316" text-anchor="middle" style="fill:var(--ink-soft)">Rajgad →</text>
+
+        <!-- marker -->
+        <text class="m-shiv" x="60" y="360" style="fill:var(--ink)">Torna</text>
+        <text class="m-shiv-sub" x="60" y="378">→ Prachandagad · first fort, 1646</text>
+      </svg>
+      <figcaption><b>Won in stone, stamped in Sanskrit.</b>
+        <span style="color:var(--saffron)">Torna</span> — renamed Prachandagad — was Shivaji's first
+        fort (1646); its treasure helped raise <b>Rajgad</b> nearby. Above, the
+        <span style="color:var(--gold)">Rajmudra</span>: the crescent moon of his birth-night, now
+        his own royal seal.</figcaption>
+    </figure>
+    <p class="map-cta"><a href="trip-companion.html">📍 Find Torna &amp; Rajgad on the real map →</a></p>
+  </section>
+
+  <!-- ===================== STORY ===================== -->
+  <section aria-labelledby="story-h">
+    <div class="sec-head">
+      <span class="num">02</span>
+      <h2 id="story-h">Tonight's telling</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="read-cue">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.4"/><path d="M8 4.4V8l2.6 1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      About 10 minutes, read aloud slowly · choose your language
+    </div>
+
+    <div class="lang-bar" role="tablist" aria-label="Choose language">
+      <button role="tab" id="tab-en" aria-controls="story-en" aria-selected="true">English</button>
+      <button role="tab" id="tab-mr" class="mr" aria-controls="story-mr" aria-selected="false">मराठी</button>
+    </div>
+
+    <div class="telling" id="story-en" role="tabpanel" aria-labelledby="tab-en">
+      <p>A promise is a beautiful thing — but a promise must be <em>kept</em>. Last night, in the
+        hidden temple, the boys swore to build swarajya. Tonight they take their very first real
+        step out of dreaming and into doing: they win a fort of solid stone.</p>
+      <p>High on a mountain south-west of Pune stood an old, giant fort — the tallest hill-fort in
+        all the region, so huge that people came to call it <span class="term">Prachandagad</span>,
+        "the massive fort." Its older name was <span class="term">Torna</span>. And in
+        <span class="term">1646</span>, when Shivaji was still only about sixteen, he and his Mavlas
+        took it. Now — pause and think about how daring that was. This fort belonged to the Sultan of
+        Bijapur. To walk in and take it was to say, out loud and for everyone to hear, "this land is
+        ours now." It was their very first fort, and the first solid brick of swarajya.</p>
+      <p>The old stories tell a wonderful tale about what happened next: while the men were repairing
+        the crumbling walls, they dug up a hidden pot of gold coins — buried treasure!
+        <em>(Is it true? We cannot be sure — it's a beloved legend more than a proven fact — but it
+        is a lovely story, and Rajgad certainly did get built.)</em> With gold and grit and
+        stubborn work, Shivaji strengthened Torna, and then, on a nearby peak, he built up a mighty
+        new fortress of his own: <span class="term">Rajgad</span>, "the king's fort," with its great
+        stone bastions and three broad shoulders of rock. Rajgad would be his home and his capital
+        for the next <em>twenty-six years</em> — longer than any other place he ever ruled from.</p>
+      <p>But something even more remarkable happened around this very same time — and it reaches all
+        the way back to a secret we planted on the night he was born.</p>
+      <p>Do you remember the thin crescent moon over Shivneri, and Jijabai's wish that swarajya would
+        <em>grow</em> like it? Well, the young Shivaji now made himself a royal seal — a
+        <span class="term">Rajmudra</span> — to stamp on his letters and orders, the way a king puts
+        his mark on his commands. And around the edge of that seal, in beautiful Sanskrit, he had
+        these words carved:</p>
+      <p class="sig"><span class="q">"प्रतिपच्चंद्रलेखेव वर्धिष्णुर्विश्ववंदिता, शाहसूनोः शिवस्यैषा मुद्रा भद्राय राजते"</span><span class="t">"Like the crescent moon of the first night — ever-growing, honoured by the world — this seal of Shahaji's son Shivaji shines for the good of the people."</span></p>
+      <p>There it was — the crescent moon of his birth-night, turned into his very own royal mark! And
+        read the words again, because they are a tiny promise all by themselves: the seal does not
+        say "bow before me." It says the rule will keep <em>growing</em>, that it is honoured by the
+        world, and that it shines <em>for the good of the people</em>. Even his stamp was about
+        service, not showing off.</p>
+      <p>And here is the boldest part of all. In those days, every royal seal in the Deccan was
+        written in <em>Persian</em>, the grand court-language of the sultans. But this sixteen-year-old
+        deliberately chose <em>Sanskrit</em>, written in the Devanagari letters of his own land. It
+        was a quiet, dazzling act of courage — like announcing, without shouting a single word:
+        <em>this rule belongs to this soil, and to its own people.</em></p>
+      <p>And this is not just a story — historians can hold the proof in their hands. Shivaji's oldest
+        surviving letter carrying this very seal is dated <span class="term">January 1646</span> — the
+        same season he was taking Torna. So the fort and the seal arrived together, both saying the
+        same brave thing at once: <b>swarajya has begun.</b></p>
+      <p>And with that, our first act is complete. Look how far we have come in six nights: the dream
+        was <em>born</em> (Swarajya), the dreamer was <em>named</em> (Shivaji), he was <em>taught</em>
+        (by Jijau), he found his <em>brothers</em> (the Mavlas), he <em>swore</em> the oath
+        (Raireshwar) — and now, tonight, the dream is <em>planted in stone and stamped in Sanskrit.</em>
+        A boy has become a builder of forts. Tomorrow, a new act begins, and the young lion starts,
+        at last, to roar.</p>
+      <p class="goodnight">Goodnight — tonight's badge: the <b>Rajmudra</b>, the crescent-moon seal
+        that grows.</p>
+    </div>
+
+    <div class="telling mr" id="story-mr" role="tabpanel" aria-labelledby="tab-mr" hidden>
+      <p><span class="dropcap">व</span>चन देणं सुंदर असतं — पण वचन <em>पाळावंही</em> लागतं. काल त्या लपलेल्या
+        देवळात मुलांनी स्वराज्य उभं करायची शपथ घेतली. आज ते नुसतं स्वप्न पाहण्यातून प्रत्यक्ष कृतीत उतरण्याचं
+        पहिलं खरंखुरं पाऊल टाकतात: भक्कम दगडांचा एक अख्खा किल्ला जिंकतात.</p>
+      <p>पुण्याच्या नैऋत्येला, एका उंच डोंगरावर, एक जुना अवाढव्य किल्ला होता — साऱ्या प्रदेशातला सर्वांत
+        उंच किल्ला, इतका प्रचंड की लोक त्याला म्हणायचे <span class="term">प्रचंडगड,</span> "प्रचंड मोठा किल्ला."
+        त्याचं जुनं नाव <span class="term">तोरणा.</span> आणि <span class="term">इ.स. १६४६</span> मध्ये,
+        शिवाजी अवघा सोळा वर्षांचा असताना, त्याने आणि त्याच्या मावळ्यांनी तो घेतला. आता जरा थांब आणि विचार
+        कर, हे किती धाडसी होतं — हा किल्ला विजापूरच्या सुलतानाचा होता. आत शिरून तो घेणं म्हणजे अख्ख्या जगाला
+        ऐकू जाईल असं मोठ्याने जाहीर करणं: "आता ही भूमी आमची आहे." तो त्यांचा पहिलावहिला किल्ला होता, आणि
+        स्वराज्याची पहिली भक्कम वीट.</p>
+      <p>पुढे काय झालं, याबद्दल जुन्या गोष्टी एक मस्त कथा सांगतात: ढासळती तटबंदी दुरुस्त करताना माणसांना
+        जमिनीत खोल लपलेला सोन्याच्या मोहरांचा हंडा सापडला — गुप्तधन! <em>(खरं का? नक्की नाही सांगता येत — ही
+        सिद्ध झालेली गोष्ट नसून लाडकी दंतकथा अधिक — पण गोष्ट गोड आहे, आणि राजगड मात्र खरोखरच उभा राहिला.)</em>
+        त्या सोन्याने, जिद्दीने आणि अपार कष्टाने शिवाजीने आधी तोरणा मजबूत केला, आणि मग जवळच्याच एका शिखरावर
+        स्वतःचा एक भव्य नवा किल्ला उभारला — <span class="term">राजगड,</span> "राजाचा किल्ला," भक्कम
+        बुरुजांचा आणि तीन विशाल माच्यांचा. पुढची तब्बल <em>सव्वीस वर्षं</em> राजगड त्याचं घर आणि राजधानी
+        राहिला — इतर कोणत्याही ठिकाणाहून त्याने केलं नाही, तितकं दीर्घ राज्य त्याने इथून केलं.</p>
+      <p>राजगड म्हणजे नुसता एक किल्ला नव्हे — ते एक अख्खं डोंगरी शहरच होतं. त्याला तीन विशाल माच्या (रुंद
+        सपाट अंगं) होत्या — पद्मावती, संजीवनी आणि सुवेळा — आणि सर्वांत वर बालेकिल्ला. तिथे राजवाडा होता,
+        देवीचं देऊळ होतं, पाण्याची तळी, धान्याची कोठारं, आणि हजारो माणसं राहू शकतील एवढी जागा. एवढ्या उंचावर,
+        एवढ्या बेलाग जागी असं शहर वसवणं — हे केवढं मोठं काम! पण शिवाजी नुसता लढवय्या नव्हता; तो एक उत्तम
+        बांधणारा, नियोजन करणाराही होता. आणि हे सारं त्याने वयाच्या विशीच्या आतच करून दाखवलं.</p>
+      <p>पण याच सुमारास त्याहूनही एक अद्भुत गोष्ट घडली — आणि तिचे धागे थेट त्याच्या जन्मरात्रीपर्यंत मागे
+        पोहोचतात.</p>
+      <p>शिवनेरीवरची ती बारीक चंद्रकोर, आणि जिजाऊंची इच्छा की स्वराज्य तिच्यासारखं हळूहळू <em>वाढावं</em> —
+        आठवते ना? तर, तरुण शिवाजीने आता स्वतःची एक <span class="term">राजमुद्रा</span> तयार केली — आपल्या
+        पत्रांवर आणि आज्ञांवर उमटवायला, अगदी जसा राजा आपल्या हुकुमांवर स्वतःची मोहोर उठवतो तशी. आणि त्या
+        मुद्रेच्या कडेने, सुंदर संस्कृत भाषेत, त्याने हे शब्द कोरवून घेतले:</p>
+      <p class="sig"><span class="q">"प्रतिपच्चंद्रलेखेव वर्धिष्णुर्विश्ववंदिता, शाहसूनोः शिवस्यैषा मुद्रा भद्राय राजते"</span><span class="t">"पहिल्या दिवसाच्या चंद्रकोरीसारखी वाढत जाणारी, जगाने वंदावी अशी शहाजीपुत्र शिवाजीची ही मुद्रा लोककल्याणासाठी शोभते."</span></p>
+      <p>तीच ती जन्मरात्रीची चंद्रकोर — आता त्याच्या स्वतःच्या राजचिन्हात बदललेली! आणि ते शब्द पुन्हा एकदा
+        वाच, कारण ते स्वतःच एक छोटंसं वचन आहेत: मुद्रा "माझ्यापुढे झुका" असं मुळीच म्हणत नाही. ती म्हणते की
+        हे राज्य सतत <em>वाढत</em> जाईल, अख्खं जग त्याला वंदेल, आणि ते <em>लोकांच्या कल्याणासाठी</em> तळपेल.
+        त्याची मोहोरसुद्धा दिमाखाबद्दल नव्हे, तर सेवेबद्दल बोलत होती.</p>
+      <p>आणि सर्वांत धाडसी भाग हा. त्या काळी दख्खनेतली प्रत्येक राजमुद्रा <em>फारसीत</em> असायची — सुलतानांच्या
+        थाटामाटाच्या दरबारी भाषेत. पण या सोळा वर्षांच्या मुलाने मुद्दाम निवडली <em>संस्कृत,</em> स्वतःच्या
+        भूमीच्या देवनागरी अक्षरांत. एकही शब्द न ओरडता जणू जगाला जाहीर करणारं ते एक शांत, पण थक्क करणारं धाडस
+        होतं: <em>हे राज्य या मातीचं आहे, आणि इथल्या लोकांचं आहे.</em></p>
+      <p>आणि ही नुसती दंतकथा नाही — इतिहासकार त्याचा पुरावा आजही हातात धरू शकतात. ही मुद्रा उमटलेलं शिवाजीचं
+        सर्वांत जुनं उपलब्ध पत्र <span class="term">जानेवारी १६४६</span> चं आहे — नेमक्या त्याच मोसमात तो
+        तोरणा घेत होता. म्हणजे किल्ला आणि मुद्रा एकत्रच आले, दोघंही एकाच वेळी तीच धाडसी गोष्ट सांगत:
+        <b>स्वराज्य सुरू झालं.</b></p>
+      <p>आणि इथे आपला पहिला अंक पूर्ण होतो. अवघ्या सहा रात्रींत आपण किती पुढे आलो, जरा बघ: स्वप्न
+        <em>जन्मलं</em> (स्वराज्य), स्वप्न पाहणाऱ्याला <em>नाव</em> मिळालं (शिवाजी), त्याला <em>शिकवण</em>
+        मिळाली (जिजाऊंकडून), त्याला <em>भाऊ</em> मिळाले (मावळे), त्याने <em>शपथ</em> घेतली (रायरेश्वर) — आणि
+        आज, ते स्वप्न <em>दगडात रुजलं नि संस्कृतात उमटलं.</em> एक मुलगा आता किल्ले उभारणारा झाला. उद्या एक
+        नवा अंक सुरू होतो, आणि हा तरुण सिंह शेवटी गर्जना करू लागतो.</p>
+      <p>पण जाण्याआधी त्या मुद्रेकडे पुन्हा एकदा नीट बघ. फारसी ही सुलतानांच्या दरबाराची, सत्तेची भाषा होती —
+        तिच्यात मुद्रा करणं म्हणजे "मीही त्यांच्यातलाच" असं म्हणण्यासारखं. पण देवनागरीतली संस्कृत निवडणं
+        म्हणजे "मी वेगळा आहे; हे राज्य या मातीचं, इथल्या भाषेचं, इथल्या लोकांचं आहे" असं ठणकावून सांगणं.
+        कोणतीही तलवार न उपसता, एका छोट्याशा मुद्रेतून त्याने केवढं मोठं धाडस दाखवलं! आणि म्हणूनच आजचं नाणं
+        नुसती मोहोर नाही — ती एका स्वतंत्र स्वप्नाची पहिली अधिकृत घोषणा आहे.</p>
+      <p>आजही तोरणा आणि राजगड सह्याद्रीत ताठ मानेने उभे आहेत, आणि हजारो लोक दरवर्षी ते चढून जातात. राजगडाच्या
+        त्या तीन माच्यांवर उभं राहिलं, की समजतं — इथून एका तरुणाने अख्खं स्वराज्य चालवलं. आणि २०२५ साली तर
+        जगानेही या किल्ल्यांचं मोल ओळखलं: राजगडासह शिवरायांचे बारा किल्ले <b>युनेस्को जागतिक वारसा</b> म्हणून
+        घोषित झाले. एका सोळा वर्षांच्या मुलाने रचलेल्या पायावर, आज अख्खं जग कौतुकाने बघतंय.</p>
+      <p class="goodnight">शुभ रात्री — आजचं जपायचं नाणं: <b>राजमुद्रा,</b> वाढत जाणारी चंद्रकोर-मुद्रा.</p>
+    </div>
+
+    <div class="moon-note">
+      <svg class="moon" width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">
+        <circle cx="26" cy="26" r="22" fill="none" stroke="var(--gold)" stroke-width="2.4" opacity=".6"/>
+        <circle cx="26" cy="26" r="15" fill="none" stroke="var(--gold)" stroke-width="3" stroke-dasharray="2 5" opacity=".7"/>
+        <path d="M30 15 a11 11 0 1 0 0 22 a8 8 0 1 1 0 -22 Z" fill="var(--gold)"/>
+      </svg>
+      <p>On <b>Night 2</b>, Jijabai wished swarajya would grow "like the thin first-day crescent
+        moon." Tonight that moon returns — as the <b>Rajmudra</b>, stamped in Sanskrit on his letters.
+        <span class="fwd">Foreshadow fulfilled — and Act I complete.</span></p>
+    </div>
+
+    <h3 class="subhead">Say it out loud</h3>
+    <div class="say-grid">
+      <div class="say"><div class="head"><span class="dev">तोरणा</span><span class="rom">Torna</span></div>
+        <div class="phon">TOR-ṇaa</div><div class="gloss">his first fort</div></div>
+      <div class="say"><div class="head"><span class="dev">प्रचंडगड</span><span class="rom">Prachandagad</span></div>
+        <div class="phon">pra-CHAND-ga-ḍ</div><div class="gloss">"the massive fort" (Torna renamed)</div></div>
+      <div class="say"><div class="head"><span class="dev">राजगड</span><span class="rom">Rajgad</span></div>
+        <div class="phon">RAAJ-ga-ḍ</div><div class="gloss">"king's fort" — his first capital</div></div>
+      <div class="say"><div class="head"><span class="dev">राजमुद्रा</span><span class="rom">Rajmudra</span></div>
+        <div class="phon">RAAJ-mud-raa</div><div class="gloss">the royal seal</div></div>
+      <div class="say"><div class="head"><span class="dev">मुद्रा</span><span class="rom">mudra</span></div>
+        <div class="phon">MUD-raa</div><div class="gloss">a seal / stamp</div></div>
+      <div class="say"><div class="head"><span class="dev">संस्कृत</span><span class="rom">Sanskrit</span></div>
+        <div class="phon">SANS-krit</div><div class="gloss">the language he chose for the seal</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== COIN ===================== -->
+  <section aria-labelledby="coin-h">
+    <div class="sec-head">
+      <span class="num">03</span>
+      <h2 id="coin-h">Tonight's collectible</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="coin-wrap">
+      <button class="coin" id="coin" aria-label="Rajmudra badge — flip to read its meaning">
+        <span class="coin-inner">
+          <span class="face front">
+            <span class="big">राजमुद्रा</span>
+            <span class="rom">Rajmudra</span>
+            <span class="dots">Badge · Day 6</span>
+          </span>
+          <span class="face back">
+            <span class="mean">the crescent-moon seal that grows</span>
+            <span class="dots">Sanskrit, not Persian · 1646</span>
+          </span>
+        </span>
+      </button>
+      <div class="coin-copy">
+        <h3>The sixth badge — the seal</h3>
+        <p>The Day-2 crescent moon, made real: Shivaji's own <em>Rajmudra</em>, declaring in Sanskrit
+          that swarajya will keep growing "like the waxing moon." See it on the
+          <a href="sayings-sheet.html">Sayings Sheet</a> (Layer 2).</p>
+        <p class="hint">↻ Hover or tap the coin to turn it over.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HISTORY CARDS ===================== -->
+  <section aria-labelledby="hist-h">
+    <div class="sec-head">
+      <span class="num">04</span>
+      <h2 id="hist-h">For the grown-up reading aloud</h2>
+      <span class="rule"></span>
+    </div>
+    <p class="grown-note">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 7v4M8 4.6v.4" stroke-linecap="round"/></svg>
+      The real history behind tonight's scene — for the curious.
+    </p>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>Torna, the first fort (1646)</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p><b>Torna</b>, the highest hill-fort in Pune district, is generally counted as Shivaji's
+          <b>first capture (1646)</b>, when he was about sixteen. He repaired and strengthened it,
+          and it came to be called <b>Prachandagad</b> ("massive fort"). Taking a fort from the
+          Adil Shahi realm was, in effect, the first physical act of swarajya.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag l">Legend</span><h4>The buried treasure</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>A cherished tradition says a <b>pot of gold</b> was unearthed while repairing Torna, and
+          used to build <b>Rajgad</b>. Rajgad's construction is historical; the treasure detail is
+          the ballad layer — a good story, told as one.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>Rajgad, the first capital</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p><b>Rajgad</b> ("king's fort"), built up on the Murumbadev hill near Torna, served as
+          Shivaji's <b>capital for roughly 26 years</b> before Raigad. It's one of the twelve
+          <b>UNESCO</b> Maratha forts (2025) — see the <a href="trip-companion.html">trip map</a>.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>The Rajmudra — a seal in Sanskrit</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>Shivaji's <b>Rajmudra</b> is genuinely contemporary: the earliest surviving letter bearing
+          it is dated <b>28 January 1646</b>. Its Sanskrit couplet compares his growing rule to the
+          <b>waxing first-day (pratipada) moon</b> and says the seal shines "for the welfare of the
+          people."</p>
+        <p>The striking choice: in a Deccan where royal seals were written in <b>Persian</b>, a
+          teenager used <b>Sanskrit in Devanagari</b> — a deliberate statement of an indigenous,
+          people-centred kingship. It ties directly to Jijabai's crescent-moon wish on Day 2.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===================== JOURNEY ===================== -->
+  <section aria-labelledby="journey-h">
+    <div class="sec-head">
+      <span class="num">05</span>
+      <h2 id="journey-h">The thirty-night journey</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="ribbon">
+      <div class="acts">
+        <div class="act-col">
+          <div class="name">I · Dream is Born ✓</div>
+          <div class="dots-row">
+            <span class="d done" title="Day 1 — told"></span>
+            <span class="d done" title="Day 2 — told"></span>
+            <span class="d done" title="Day 3 — told"></span>
+            <span class="d done" title="Day 4 — told"></span>
+            <span class="d done" title="Day 5 — told"></span>
+            <span class="d now" title="Day 6 — tonight"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">II · Lion Rises</div>
+          <div class="dots-row">
+            <span class="d" title="Day 7"></span><span class="d" title="Day 8"></span><span class="d" title="Day 9"></span>
+            <span class="d" title="Day 10"></span><span class="d" title="Day 11"></span><span class="d" title="Day 12"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">III · Shaking Empires</div>
+          <div class="dots-row">
+            <span class="d" title="Day 13"></span><span class="d" title="Day 14"></span><span class="d" title="Day 15"></span><span class="d" title="Day 16"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">IV · The Crown</div>
+          <div class="dots-row">
+            <span class="d" title="Day 17"></span><span class="d" title="Day 18"></span><span class="d" title="Day 19"></span><span class="d" title="Day 20"></span>
+            <span class="d" title="Day 21"></span><span class="d" title="Day 22"></span><span class="d" title="Day 23"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">V · King &amp; Legacy</div>
+          <div class="dots-row">
+            <span class="d" title="Day 24"></span><span class="d" title="Day 25"></span><span class="d" title="Day 26"></span><span class="d" title="Day 27"></span>
+            <span class="d" title="Day 28"></span><span class="d" title="Day 29"></span><span class="d" title="Day 30"></span>
+          </div>
+        </div>
+      </div>
+      <div class="legend">
+        <span><span class="d now"></span> Tonight</span>
+        <span><span class="d"></span> Nights to come</span>
+        <span><span class="d done"></span> Nights told</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LEDGER ===================== -->
+  <section aria-labelledby="ledger-h">
+    <div class="ledger">
+      <h2 id="ledger-h">Fact &amp; legend, kept honest</h2>
+      <dl>
+        <div class="row"><dt class="h">History</dt>
+          <dd><b>Torna</b> was Shivaji's first fort (1646, ~age 16), strengthened as
+            <b>Prachandagad</b>; <b>Rajgad</b> became his capital for ~26 years; the <b>Rajmudra</b>
+            is documented from a letter dated <b>28 Jan 1646</b>, in Sanskrit/Devanagari (not the
+            usual Persian).</dd></div>
+        <div class="row"><dt class="c">Legend</dt>
+          <dd>The <b>buried pot of gold</b> at Torna (said to fund Rajgad) is the ballad layer.</dd></div>
+      </dl>
+    </div>
+
+    <div class="foot">
+      <span><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Trip map</a></span>
+      <span class="next">Next → <a href="day-07.html">Day 7 · Freeing Father Shahaji</a> (Act II)</span>
+    </div>
+  </section>
+</main>
+
+<script>
+  (function(){
+    var tabs={en:document.getElementById('tab-en'),mr:document.getElementById('tab-mr')};
+    var panes={en:document.getElementById('story-en'),mr:document.getElementById('story-mr')};
+    function show(l){for(var k in tabs){var on=(k===l);tabs[k].setAttribute('aria-selected',on?'true':'false');panes[k].hidden=!on;}}
+    tabs.en.addEventListener('click',function(){show('en')});
+    tabs.mr.addEventListener('click',function(){show('mr')});
+  })();
+  (function(){var coin=document.getElementById('coin');coin.addEventListener('click',function(){coin.classList.toggle('flipped')});})();
+</script>
