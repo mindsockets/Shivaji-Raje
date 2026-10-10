@@ -14,7 +14,7 @@
     --saffron-bright:#E0842C;
     --green:#3C5A40;
     --green-soft:#6E8A6A;
-    --gold:#A8842A;
+    --gold:#A8842A;--rust:#9E4A2E;
     --sea:#CBD8D2;
     --sea-line:#9FB6AE;
     --shadow:rgba(43,38,32,.14);
@@ -34,7 +34,7 @@
       --saffron-bright:#F4B06A;
       --green:#84A47E;
       --green-soft:#6E8A6A;
-      --gold:#D6B45A;
+      --gold:#D6B45A;--rust:#D98A6A;
       --sea:#1B262A;
       --sea-line:#33474C;
       --shadow:rgba(0,0,0,.5);
@@ -45,7 +45,7 @@
   :root[data-theme="dark"]{
     --bg:#131110;--paper:#1E1A15;--paper-2:#231E18;--ink:#ECE3D3;--ink-soft:#AA9E89;
     --ink-faint:#786E5C;--line:#332C22;--saffron:#E8934A;--saffron-bright:#F4B06A;
-    --green:#84A47E;--green-soft:#6E8A6A;--gold:#D6B45A;--sea:#1B262A;--sea-line:#33474C;
+    --green:#84A47E;--green-soft:#6E8A6A;--gold:#D6B45A;--rust:#D98A6A;--sea:#1B262A;--sea-line:#33474C;
     --shadow:rgba(0,0,0,.5);--map-land:#231F18;--map-ridge:#4A4132;
   }
 
@@ -252,6 +252,9 @@
     text-transform:uppercase;padding:4px 9px;border-radius:100px;flex:0 0 auto}
   .tag.hist{background:color-mix(in srgb,var(--green) 16%,transparent);color:var(--green)}
   .tag.word{background:color-mix(in srgb,var(--saffron) 15%,transparent);color:var(--saffron)}
+  .tag.l{background:color-mix(in srgb,var(--saffron) 15%,transparent);color:var(--saffron)}
+  .tag.c{background:color-mix(in srgb,var(--gold) 18%,transparent);color:var(--gold)}
+  .tag.debated{background:color-mix(in srgb,var(--rust) 16%,transparent);color:var(--rust)}
   .card summary h4{font-family:"Marcellus",serif;font-weight:400;font-size:1.18rem;margin:0;flex:1}
   .card .chev{transition:transform .25s;color:var(--ink-faint);flex:0 0 auto}
   details[open] .chev{transform:rotate(90deg)}
@@ -285,6 +288,7 @@
     letter-spacing:.1em;text-transform:uppercase;padding-top:2px}
   .ledger dt.h{color:var(--green)}
   .ledger dt.c{color:var(--saffron)}
+  .ledger dt.l{color:var(--rust)}
   .ledger dd{margin:0;color:var(--ink-soft);font-size:1rem;line-height:1.6}
   .ledger dd b{color:var(--ink);font-weight:600}
 
