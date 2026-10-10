@@ -1,0 +1,403 @@
+<meta charset="utf-8">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#BE5A11">
+<title>The Southern Campaign</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tiro+Devanagari+Marathi:ital@0;1&family=Karla:wght@400;600;700&display=swap">
+
+<link rel="stylesheet" href="day.css">
+
+<nav class="daynav">
+  <a href="day-24.html">‹ Day 24</a>
+  <span class="mid"><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Map</a> · <a href="sayings-sheet.html">📜 Sayings</a></span>
+  <a href="day-26.html">Day 26 ›</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">
+      <span class="daynum">Day 25</span>
+      <span class="act-tag">Act V · The King &amp; the Legacy</span>
+      <span class="act-tag">1677–78 · the far south</span>
+    </div>
+    <h1>The Southern Campaign</h1>
+    <p class="dek">Shivaji's longest journey: across the Deccan to Hyderabad, down to the great fort of Gingee, and to the
+      riverbank where he meets the half-brother he hardly knew. Tonight: <b>a quarrel, and a peace</b>.</p>
+  </div>
+  <svg class="ridge" viewBox="0 0 880 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,90 L0,54 L70,30 L130,50 L200,20 L270,46 L340,14 L410,44 L480,24 L560,50 L620,28 L700,52 L770,26 L830,48 L880,32 L880,90 Z"
+      fill="var(--map-ridge)" opacity=".55"/>
+    <path d="M0,90 L0,66 L90,48 L170,66 L250,40 L340,64 L430,44 L520,66 L610,48 L700,68 L790,50 L880,66 L880,90 Z"
+      fill="var(--map-ridge)"/>
+  </svg>
+</header>
+
+<main class="wrap">
+
+  <!-- ===================== PLACE ===================== -->
+  <section aria-labelledby="place-h">
+    <div class="sec-head">
+      <span class="num">01</span>
+      <h2 id="place-h">The long road south</h2>
+      <span class="rule"></span>
+    </div>
+    <figure class="map">
+      <svg viewBox="0 0 700 460" role="img"
+        aria-label="A map of southern India. Raigad is on the west coast at upper left. A dotted saffron route runs east across the Deccan to Hyderabad, the capital of Golconda; then south to the temple town of Srisailam; then down to the forts of Vellore and Gingee near the east coast; and further south to the Kollidam river, just north of Thanjavur, where Ekoji ruled. A second dotted line returns north-west through the Karnataka plateau near Bangalore and back to Raigad.">
+        <defs>
+          <linearGradient id="sea25" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" style="stop-color:color-mix(in srgb,var(--sea-line,#5b7f8c) 40%,var(--paper))"/>
+            <stop offset="1" style="stop-color:color-mix(in srgb,var(--sea-line,#5b7f8c) 24%,var(--paper))"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="700" height="460" fill="url(#sea25)"/>
+
+        <!-- the peninsula -->
+        <path d="M60,0 L700,0 L700,120 C690,140 670,150 660,157 C640,210 612,262 598,296 C584,320 570,336 566,350
+                 C568,380 572,400 568,421 C540,436 500,446 460,452 L330,460 L310,436 C280,400 240,350 208,304
+                 C180,260 150,220 132,187 C120,150 110,110 100,70 C90,40 76,16 60,0 Z" fill="var(--paper)"/>
+        <path d="M60,0 L700,0 L700,120 C690,140 670,150 660,157 C640,210 612,262 598,296 C584,320 570,336 566,350
+                 C568,380 572,400 568,421 C540,436 500,446 460,452 L330,460 L310,436 C280,400 240,350 208,304
+                 C180,260 150,220 132,187 C120,150 110,110 100,70 C90,40 76,16 60,0 Z" fill="var(--gold)" opacity=".1"/>
+        <text class="m-sea-label" x="80" y="300" text-anchor="middle" style="fill:var(--ink-soft)">Arabian Sea</text>
+        <text class="m-sea-label" x="650" y="250" text-anchor="middle" style="fill:var(--ink-soft)">Bay of</text>
+        <text class="m-sea-label" x="650" y="266" text-anchor="middle" style="fill:var(--ink-soft)">Bengal</text>
+
+        <!-- Kollidam river near Thanjavur -->
+        <path d="M440,384 C470,380 500,388 530,382 C548,378 560,384 572,386" fill="none" stroke="var(--sea-line,#5b7f8c)" stroke-width="3" opacity=".8"/>
+        <text class="m-sub" x="440" y="376" style="fill:var(--ink-soft)">Kollidam river</text>
+
+        <!-- route out -->
+        <path d="M110,66 C220,70 360,90 468,103 C486,124 494,140 497,162 C506,220 516,268 516,304 C524,316 532,326 536,334
+                 C530,352 524,368 516,382" fill="none" stroke="var(--saffron)" stroke-width="2.6" stroke-dasharray="2 7" stroke-linecap="round"/>
+        <path d="M516,382 l-6,-11 l11,1 Z" fill="var(--saffron)"/>
+        <!-- route home -->
+        <path d="M500,380 C460,350 430,320 405,301 C330,250 220,160 116,74" fill="none" stroke="var(--saffron)" stroke-width="1.8"
+          stroke-dasharray="6 7" stroke-linecap="round" opacity=".65"/>
+
+        <!-- places -->
+        <g fill="var(--ink-soft)">
+          <circle cx="106" cy="65" r="6"/><circle cx="468" cy="103" r="5"/><circle cx="497" cy="162" r="4.6"/>
+          <circle cx="516" cy="304" r="4.6"/><circle cx="536" cy="334" r="6"/><circle cx="516" cy="399" r="5"/><circle cx="405" cy="301" r="4.2"/>
+        </g>
+        <path d="M106,52 l12,3 l-12,5 Z" fill="var(--saffron)"/>
+        <text class="m-shiv" x="122" y="50" style="fill:var(--ink)">Raigad</text>
+        <text class="m-shiv-sub" x="468" y="90" text-anchor="middle" style="fill:var(--ink)">Hyderabad (Golconda)</text>
+        <text class="m-sub" x="508" y="166" style="fill:var(--ink)">Srisailam</text>
+        <text class="m-sub" x="504" y="296" text-anchor="end" style="fill:var(--ink)">Vellore</text>
+        <text class="m-shiv-sub" x="548" y="338" style="fill:var(--ink)">Gingee</text>
+        <text class="m-shiv-sub" x="516" y="420" text-anchor="middle" style="fill:var(--ink)">Thanjavur (Ekoji)</text>
+        <text class="m-sub" x="398" y="318" text-anchor="end" style="fill:var(--ink-soft)">Bangalore — Shahaji's old lands</text>
+        <text class="m-label" x="260" y="64" style="fill:var(--saffron)">the long road south, 1677</text>
+      </svg>
+      <figcaption><b>More than a year away from home.</b> Shivaji rode east to <span style="color:var(--ink)">Hyderabad</span>,
+        south past Srisailam to <span style="color:var(--ink)">Gingee</span> and Vellore, and to the Kollidam river near
+        Thanjavur — then back home through the lands where his father Shahaji had once ruled.</figcaption>
+    </figure>
+    <p class="map-cta"><a href="trip-companion.html">📍 See Gingee on the real map →</a></p>
+  </section>
+
+  <!-- ===================== STORY ===================== -->
+  <section aria-labelledby="story-h">
+    <div class="sec-head">
+      <span class="num">02</span>
+      <h2 id="story-h">Tonight's telling</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="read-cue">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.4"/><path d="M8 4.4V8l2.6 1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      About 10 minutes, read aloud slowly · choose your language
+    </div>
+
+    <div class="lang-bar" role="tablist" aria-label="Choose language">
+      <button role="tab" id="tab-en" aria-controls="story-en" aria-selected="true">English</button>
+      <button role="tab" id="tab-mr" class="mr" aria-controls="story-mr" aria-selected="false">मराठी</button>
+    </div>
+
+    <div class="telling" id="story-en" role="tabpanel" aria-labelledby="tab-en">
+      <p>Tonight we leave both the mountains and the sea behind, for the longest journey of Shivaji's whole life. In 1677,
+        three years after his coronation, the Chhatrapati rode far to the south — all the way to the land of the Tamil kings,
+        where the rivers run into the Bay of Bengal.</p>
+      <p>Why go so far? Partly because of family. Do you remember Shivaji's father, Shahaji, who spent so many years serving
+        the sultans far in the south? For a long time Shahaji had ruled lands there, around Bangalore. After his death, those
+        lands were held by Shivaji's half-brother, <span class="term">Ekoji</span> — and Shivaji believed part of their father's
+        inheritance was his. And partly because of the future: a rich southern territory, with strong forts, would make
+        swarajya safer if the Mughals ever came at it with all their might.</p>
+      <p>But first, he needed a friend. To the east lay the sultanate of <span class="term">Golconda</span>, ruled from the city
+        of Hyderabad, and its affairs were run by two clever brothers, the ministers Madanna and Akkanna. They and Shivaji agreed
+        to work together. Early in 1677, Shivaji rode into Hyderabad in a grand procession, and the people crowded the streets
+        to see the famous king. Golconda promised money and cannon; Shivaji would lead the campaign in the south.</p>
+      <p>On the way south he stopped at <span class="term">Srisailam</span>, a famous temple of Shiva high in the hills above the
+        Krishna river. He stayed there for about ten days, and is remembered for giving gifts toward a great gateway tower for the temple —
+        which people still call the Shivaji Gopuram today.</p>
+      <p>Then he marched on to <span class="term">Gingee</span>, one of the strongest forts in all the south: three rocky hills,
+        joined together by mighty walls, rising out of the plain. In 1677 its commander handed it over to Shivaji after
+        talks, without a long siege. Shivaji had its walls and bastions made even stronger.</p>
+      <p>Not far away stood <span class="term">Vellore</span>, a great fort with a deep, wide moat all around it. Vellore did not
+        give in so easily. Shivaji left part of his army to besiege it, and it held out for many months, until it finally fell
+        the following year.</p>
+      <p>And now the hardest part of the journey: family. Ekoji was Shivaji's half-brother — a son of their father Shahaji by
+        another wife. He had grown up far away in the south, and the two brothers hardly knew each other. By now Ekoji had
+        made himself king of <span class="term">Thanjavur</span>, a rich old kingdom on the Kaveri river.</p>
+      <p>Shivaji marched close to Thanjavur, and camped on the north bank of the <span class="term">Kollidam</span> river, a
+        branch of the Kaveri. And he did something thoughtful: he did not cross the river. He stayed on his side, as a sign
+        that he had come to talk, not to fight. Then he invited his brother to meet him.</p>
+      <p>The brothers met. Shivaji asked for his share of their father's lands. But Ekoji would not agree, and the talks went
+        round and round without an answer. In the end Ekoji slipped away back to Thanjavur by night, and nothing was settled. Later, as
+        Shivaji was on his way home, Ekoji's army even fought Shivaji's commanders in the south — and was beaten.</p>
+      <p>So who made the peace? A woman named <span class="term">Dipabai</span>, Ekoji's wife. Shivaji respected her deeply,
+        and she was wise. She talked with Shivaji's people, and she talked with her husband, and slowly she brought them closer.
+        Shivaji also wrote his brother a long letter, full of sharp words and brotherly advice. In the end an agreement was
+        reached, and much of the land the brothers had argued over was given to Dipabai, to pass down in her family. The quarrel was over.</p>
+      <p>There is a lesson in that, for every family. Brothers and sisters do argue, sometimes about things that seem very
+        important. But a quarrel can end in peace when someone wise and patient helps everyone listen — and when each side
+        is willing to give a little.</p>
+      <p>Shivaji came home, to Panhala, in 1678, after being away for well over a year. He had won Gingee and Vellore, and a
+        stretch of rich land in the south, and made his kingdom far larger than before.</p>
+      <p>And Ekoji's family? They went on ruling Thanjavur for nearly two hundred years, until 1855 — a Marathi-speaking royal
+        family deep in the Tamil country. One of them, a king named Serfoji the Second, added thousands of precious books and
+        manuscripts to a great old library, the Saraswati Mahal, which you can still visit in Thanjavur today.</p>
+      <p>And here is why that mattered so much. Years later, after Shivaji's time, the Mughal emperor marched into Maharashtra
+        with a gigantic army. Shivaji's younger son, Rajaram, slipped away to faraway <em>Gingee</em> and ruled from there, and
+        from that southern fortress the Marathas kept on fighting. The fort Shivaji won in 1677 helped save his kingdom.
+        Today Gingee is one of the twelve forts recognised together by UNESCO in 2025.</p>
+      <p>Now for the honest part. The dates and the numbers of this long campaign vary between accounts, and so do the details
+        of the brothers' meeting. Golconda's sultan was not pleased when Shivaji kept Gingee for himself, and stopped sending
+        money. And the exact terms of the brothers' agreement are told in different ways.</p>
+      <p class="goodnight">Goodnight — tonight's badge: <b>samet</b>, "making peace" — even brothers quarrel, and even
+        brothers can make it right.</p>
+    </div>
+
+    <div class="telling mr" id="story-mr" role="tabpanel" aria-labelledby="tab-mr" hidden>
+      <p><span class="dropcap">आ</span>ज रात्री आपण डोंगर आणि समुद्र, दोन्ही मागे ठेवून शिवाजीच्या अख्ख्या आयुष्यातल्या सर्वांत
+        लांबच्या प्रवासाला निघणार आहोत. १६७७ मध्ये, राज्याभिषेकानंतर तीन वर्षांनी, छत्रपती दूर दक्षिणेला गेला — थेट तमिळ
+        राजांच्या भूमीपर्यंत, जिथे नद्या बंगालच्या उपसागराला मिळतात.</p>
+      <p>इतक्या दूर का? अंशतः, कुटुंबामुळे. दक्षिणेत कितीतरी वर्षं सुलतानांची चाकरी करणारे शिवाजीचे वडील, शहाजीराजे, आठवतात?
+        बराच काळ शहाजीराजांनी तिथे, बंगळूरच्या आसपासच्या मुलखावर अंमल केला होता. त्यांच्या निधनानंतर तो मुलूख शिवाजीचा
+        सावत्र भाऊ, <span class="term">एकोजी</span>, याच्या ताब्यात होता — आणि वडिलांच्या वारशातला काही भाग आपला आहे, असं
+        शिवाजीला वाटत होतं. आणि अंशतः, भविष्यामुळे: बळकट किल्ल्यांचा एक श्रीमंत दक्षिणी मुलूख हाती असेल, तर मुघलांनी कधी
+        पूर्ण ताकदीनिशी हल्ला केलाच, तरी स्वराज्य अधिक सुरक्षित राहणार होतं.</p>
+      <p>पण आधी, त्याला एका मित्राची गरज होती. पूर्वेला होती <span class="term">गोवळकोंड्याची</span> सुलतानशाही, जिचा कारभार
+        हैदराबाद शहरातून चालत असे; आणि तिथला कारभार पाहत होते मादण्णा आणि आकण्णा हे दोन हुशार मंत्री-बंधू. त्यांनी आणि
+        शिवाजीने मिळून काम करायचं ठरवलं. १६७७ च्या सुरुवातीला शिवाजी एका भव्य मिरवणुकीसह हैदराबादेत शिरला, आणि त्या प्रसिद्ध
+        राजाला पाहायला रस्त्यांवर लोकांची एकच गर्दी झाली. गोवळकोंड्याने पैसा आणि तोफा द्यायचं वचन दिलं; दक्षिणेतल्या मोहिमेचं नेतृत्व
+        शिवाजी करणार होता.</p>
+      <p>दक्षिणेकडे जाताना तो <span class="term">श्रीशैलम</span>ला थांबला — कृष्णा नदीच्या वरच्या डोंगरांतलं शंकराचं एक प्रसिद्ध
+        मंदिर. तिथे तो सुमारे दहा दिवस राहिला, आणि मंदिराचं एक मोठं गोपुर — प्रवेशद्वारावरचा उंच मनोरा — बांधायला त्याने देणगी दिल्याची आठवण जपली जाते;
+        आजही लोक त्याला शिवाजी गोपुर म्हणतात.</p>
+      <p>मग तो <span class="term">जिंजी</span>कडे निघाला — अख्ख्या दक्षिणेतल्या सर्वांत बळकट किल्ल्यांपैकी एक: मैदानातून वर उठणारे
+        तीन खडकाळ डोंगर, बलाढ्य तटबंदीने एकमेकांना जोडलेले. १६७७ मध्ये बोलणी झाल्यावर, लांब वेढा न घालताच, त्याच्या किल्लेदाराने
+        तो शिवाजीच्या हवाली केला. शिवाजीने त्याची तटबंदी आणि बुरूज आणखी बळकट करून घेतले.</p>
+      <p>जवळच होता <span class="term">वेल्लोर</span> — चहूबाजूंनी खोल, रुंद खंदक असलेला एक मोठा किल्ला. वेल्लोर इतक्या सहजासहजी
+        शरण आला नाही. शिवाजीने आपल्या सैन्याचा एक भाग त्याला वेढा घालायला ठेवला, आणि तो कितीतरी महिने टिकून राहिला; शेवटी
+        पुढच्या वर्षी तो पडला.</p>
+      <p>आणि आता प्रवासातला सर्वांत अवघड भाग: कुटुंब. एकोजी हा शिवाजीचा सावत्र भाऊ होता — शहाजीराजांच्या दुसऱ्या पत्नीचा मुलगा.
+        तो दूर दक्षिणेत वाढला होता, आणि दोघे भाऊ एकमेकांना जवळजवळ ओळखतच नव्हते. आतापर्यंत एकोजीने कावेरीकाठच्या
+        <span class="term">तंजावर</span> या एका श्रीमंत, प्राचीन राज्याचा राज्य ताब्यात घेऊन तो तिथला राजा झाला होता.</p>
+      <p>शिवाजी तंजावरच्या जवळ आला, आणि त्याने कावेरीची एक शाखा असलेल्या <span class="term">कोळीडम</span> नदीच्या उत्तर
+        काठावर तळ ठोकला. आणि त्याने एक विचारपूर्वक गोष्ट केली: त्याने नदी ओलांडली नाही. तो आपल्याच काठावर थांबला — आपण
+        लढायला नव्हे, तर बोलायला आलो आहोत, याची खूण म्हणून. मग त्याने आपल्या भावाला भेटायला बोलावलं.</p>
+      <p>भाऊ भेटले. शिवाजीने वडिलांच्या मुलखातला आपला वाटा मागितला. पण एकोजी तयार झाला नाही, आणि उत्तर न मिळता बोलणी
+        लांबत राहिली. शेवटी एकोजी रातोरात तंजावरला निघून गेला, आणि काहीच ठरलं नाही. नंतर, शिवाजी घरी परतत असताना, एकोजीच्या
+        सैन्याने दक्षिणेत शिवाजीच्या सरदारांशी लढाईसुद्धा केली — आणि ते हरलं.</p>
+      <p>मग शांतता कुणी घडवली? एकोजीची पत्नी, <span class="term">दीपाबाई</span>. शिवाजीला त्यांच्याबद्दल अतिशय आदर होता, आणि
+        त्या शहाण्या होत्या. त्यांनी शिवाजीच्या माणसांशी बोलणी केली, आपल्या पतीशी बोलल्या, आणि हळूहळू दोघांना जवळ आणलं.
+        शिवाजीनेही आपल्या भावाला एक लांबलचक पत्र लिहिलं — कडक शब्दांनी आणि भावाच्या नात्याने दिलेल्या सल्ल्याने भरलेलं.
+        शेवटी एक करार झाला, आणि ज्या मुलखावरून भाऊ भांडत होते, त्यातला बराचसा भाग दीपाबाईंना — आणि पुढे त्यांच्या वंशजांना — दिला
+        गेला. भांडण मिटलं.</p>
+      <p>यात प्रत्येक कुटुंबासाठी एक धडा आहे. भावंडं भांडतात — कधीकधी फार महत्त्वाच्या वाटणाऱ्या गोष्टींवरून. पण कुणीतरी
+        शहाणं, संयमी माणूस सगळ्यांना एकमेकांचं ऐकायला मदत करतं, आणि प्रत्येक बाजू थोडं थोडं सोडायला तयार होते, तेव्हा
+        भांडणाचा शेवट शांततेत होऊ शकतो.</p>
+      <p>वर्षाहून कितीतरी जास्त काळ दूर राहिल्यानंतर, १६७८ मध्ये शिवाजी पन्हाळ्याला परतला. त्याने जिंजी आणि वेल्लोर जिंकले होते,
+        दक्षिणेतला एक श्रीमंत मुलूख मिळवला होता, आणि आपलं राज्य पूर्वीपेक्षा कितीतरी मोठं केलं होतं.</p>
+      <p>आणि एकोजीचं घराणं? त्यांनी जवळजवळ दोनशे वर्षं — १८५५ पर्यंत — तंजावरवर राज्य केलं: तमिळ मुलखात खोलवर राज्य करणारं
+        एक मराठी बोलणारं राजघराणं. त्यांच्यापैकी एक, दुसरे सरफोजी महाराज, यांनी हजारो मौल्यवान ग्रंथ आणि हस्तलिखितं जमवून
+        सरस्वती महाल या जुन्या ग्रंथालयाला खूप समृद्ध केलं; तंजावरमध्ये ते आजही पाहायला मिळतं.</p>
+      <p>आणि हे इतकं महत्त्वाचं का ठरलं, ते असं. कितीतरी वर्षांनी, शिवाजीच्या पश्चात, मुघल बादशहा एका प्रचंड सैन्यासह महाराष्ट्रात
+        घुसला. तेव्हा शिवाजीचा धाकटा मुलगा, राजाराम, निसटून दूरच्या <em>जिंजी</em>ला गेला आणि तिथून राज्य चालवू लागला, आणि त्या
+        दक्षिणी किल्ल्यावरून मराठे लढत राहिले. १६७७ मध्ये शिवाजीने जिंकलेल्या किल्ल्याने त्याचं राज्य वाचवायला हातभार लावला.
+        आज जिंजी हा २०२५ मध्ये युनेस्कोने एकत्रितपणे मान्यता दिलेल्या बारा किल्ल्यांपैकी एक आहे.</p>
+      <p>आता प्रामाणिकपणाचा भाग. या लांब मोहिमेच्या तारखा आणि आकडे, आणि भावांच्या भेटीचे तपशील, यांबाबत नोंदींत फरक आहे.
+        शिवाजीने जिंजी स्वतःकडे ठेवला, तेव्हा गोवळकोंड्याचा सुलतान नाराज झाला, आणि त्याने पैसा पाठवणं बंद केलं. आणि भावांच्या
+        कराराच्या नेमक्या अटीही वेगवेगळ्या प्रकारे सांगितल्या जातात.</p>
+      <p class="goodnight">शुभ रात्री — आजचं जपायचं नाणं: <b>समेट</b> — भावंडंही भांडतात, आणि भावंडंही समेट करू शकतात.</p>
+    </div>
+
+    <div class="moon-note">
+      <svg class="moon" width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">
+        <circle cx="26" cy="26" r="22" fill="none" stroke="var(--gold)" stroke-width="2.4" opacity=".5"/>
+        <path d="M23.22,10.09 A17,17 0 1 0 41.44,31.34 A14,14 0 0 1 23.22,10.09 Z" fill="var(--gold)" opacity=".9"/>
+      </svg>
+      <p>Day 2 mentioned Shahaji "far away in the south" — tonight Shivaji finally travels there. And notice who makes the
+        peace: not a general, but <b>Dipabai</b>.
+        <span class="fwd">Gingee will matter again, long after this night.</span></p>
+    </div>
+
+    <h3 class="subhead">Say it out loud</h3>
+    <div class="say-grid">
+      <div class="say"><div class="head"><span class="dev">एकोजी</span><span class="rom">Ekoji (Venkoji)</span></div>
+        <div class="phon">AY-ko-jee</div><div class="gloss">Shivaji's half-brother, king of Thanjavur</div></div>
+      <div class="say"><div class="head"><span class="dev">दीपाबाई</span><span class="rom">Dipabai</span></div>
+        <div class="phon">DEE-paa-baa-ee</div><div class="gloss">Ekoji's wife, the peacemaker</div></div>
+      <div class="say"><div class="head"><span class="dev">जिंजी</span><span class="rom">Gingee</span></div>
+        <div class="phon">JIN-jee</div><div class="gloss">the three-hill fortress in the south</div></div>
+      <div class="say"><div class="head"><span class="dev">गोवळकोंडा</span><span class="rom">Golconda</span></div>
+        <div class="phon">GOV-ḷa-koṇ-ḍaa</div><div class="gloss">the sultanate of Hyderabad</div></div>
+      <div class="say"><div class="head"><span class="dev">तंजावर</span><span class="rom">Thanjavur</span></div>
+        <div class="phon">TAN-jaa-var</div><div class="gloss">Ekoji's kingdom on the Kaveri</div></div>
+      <div class="say"><div class="head"><span class="dev">समेट</span><span class="rom">samet</span></div>
+        <div class="phon">sa-MAYṬ</div><div class="gloss">reconciliation, making peace</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== COIN ===================== -->
+  <section aria-labelledby="coin-h">
+    <div class="sec-head">
+      <span class="num">03</span>
+      <h2 id="coin-h">Tonight's collectible</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="coin-wrap">
+      <button class="coin" id="coin" aria-label="Samet badge — flip to read its meaning">
+        <span class="coin-inner">
+          <span class="face front">
+            <span class="big">समेट</span>
+            <span class="rom">Making Peace</span>
+            <span class="dots">Badge · Day 25</span>
+          </span>
+          <span class="face back">
+            <span class="mean">even brothers can make it right</span>
+            <span class="dots">Gingee · 1677</span>
+          </span>
+        </span>
+      </button>
+      <div class="coin-copy">
+        <h3>The twenty-fifth badge</h3>
+        <p>The night's great fort is Gingee — but its great lesson is at home. A quarrel between brothers, a camp that
+          stayed on its own side of the river, and a wise woman who helped them both listen.</p>
+        <p class="hint">↻ Hover or tap the coin to turn it over.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HISTORY CARDS ===================== -->
+  <section aria-labelledby="hist-h">
+    <div class="sec-head">
+      <span class="num">04</span>
+      <h2 id="hist-h">For the grown-up reading aloud</h2>
+      <span class="rule"></span>
+    </div>
+    <p class="grown-note">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 7v4M8 4.6v.4" stroke-linecap="round"/></svg>
+      The Dakshin Digvijay of 1677–78, in brief — and the family quarrel at its heart.
+    </p>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>Golconda, Srisailam, Gingee, Vellore</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>Allied with <b>Golconda</b> through the ministers <b>Madanna and Akkanna</b>, Shivaji visited <b>Hyderabad</b> early in
+          <b>1677</b> and received money and artillery for a campaign into the Carnatic. He stayed about ten days at
+          <b>Srisailam</b>, where a gopuram is associated with his gifts. <b>Gingee</b> was obtained by negotiation in 1677 and
+          strengthened; <b>Vellore</b> fell after a long siege in 1678. Golconda, which expected a share, was displeased when
+          Shivaji kept Gingee.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>Ekoji (Vyankoji) and the inheritance</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p><b>Ekoji (Vyankoji) Bhosale</b>, Shahaji's son by another wife, held Shahaji's southern jagir and had made himself
+          ruler of <b>Thanjavur</b>. Shivaji camped on the north bank of the <b>Kollidam (Coleroon)</b>, declining to cross, and
+          pressed his claim to a share of the inheritance; the talks failed. Ekoji's forces were defeated by Shivaji's
+          commanders in <b>November 1677</b>. A settlement followed, with Ekoji's wife <b>Dipabai</b> mediating and much of the
+          disputed property assigned to her and her descendants; Shivaji also wrote Ekoji a long letter of rebuke and counsel.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag c">Legacy</span><h4>Gingee after Shivaji</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>During Aurangzeb's invasion of the Deccan, <b>Rajaram</b> moved to <b>Gingee</b> (1689) and directed Maratha
+          resistance from there until it fell in 1698. Gingee is one of the twelve components of the 2025 UNESCO
+          <b>Maratha Military Landscapes of India</b>, and the only one outside Maharashtra.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag debated">Debated</span><h4>Dates, numbers and details</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>Chronology, troop strengths and the details of the brothers' meeting and settlement vary between accounts; the
+          campaign is often dated late 1676 to mid-1678. A popular story that Shivaji wished to give up his life at Srisailam is
+          not well attested and is left out.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===================== JOURNEY ===================== -->
+  <section aria-labelledby="journey-h">
+    <div class="sec-head">
+      <span class="num">05</span>
+      <h2 id="journey-h">The thirty-night journey</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="ribbon">
+      <div class="acts">
+        <div class="act-col"><div class="name">I · Dream is Born ✓</div><div class="dots-row">
+          <span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span></div></div>
+        <div class="act-col"><div class="name">II · Lion Rises ✓</div><div class="dots-row">
+          <span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span></div></div>
+        <div class="act-col"><div class="name">III · Shaking Empires ✓</div><div class="dots-row">
+          <span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span></div></div>
+        <div class="act-col"><div class="name">IV · The Crown ✓</div><div class="dots-row">
+          <span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span></div></div>
+        <div class="act-col"><div class="name">V · King &amp; Legacy</div><div class="dots-row">
+          <span class="d done" title="Day 24 — told"></span><span class="d now" title="Day 25 — tonight"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></div></div>
+      </div>
+      <div class="legend">
+        <span><span class="d now"></span> Tonight</span>
+        <span><span class="d"></span> Nights to come</span>
+        <span><span class="d done"></span> Nights told</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LEDGER ===================== -->
+  <section aria-labelledby="ledger-h">
+    <div class="ledger">
+      <h2 id="ledger-h">Fact &amp; legend, kept honest</h2>
+      <dl>
+        <div class="row"><dt class="h">History</dt>
+          <dd>In <b>1677–78</b> Shivaji allied with Golconda, visited Hyderabad and Srisailam, took <b>Gingee</b> and
+            <b>Vellore</b>, and disputed Shahaji's inheritance with <b>Ekoji</b>; a settlement followed, with <b>Dipabai</b>
+            mediating.</dd></div>
+        <div class="row"><dt class="c">Debated</dt>
+          <dd>Chronology and numbers; the details of the brothers' meeting and the settlement's exact terms.</dd></div>
+      </dl>
+    </div>
+
+    <div class="foot">
+      <span><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Trip map</a></span>
+      <span class="next">Next → <a href="day-26.html">Day 26 · The Just King</a></span>
+    </div>
+  </section>
+</main>
+
+<script>
+  (function(){
+    var tabs={en:document.getElementById('tab-en'),mr:document.getElementById('tab-mr')};
+    var panes={en:document.getElementById('story-en'),mr:document.getElementById('story-mr')};
+    function show(l){for(var k in tabs){var on=(k===l);tabs[k].setAttribute('aria-selected',on?'true':'false');panes[k].hidden=!on;}}
+    tabs.en.addEventListener('click',function(){show('en')});
+    tabs.mr.addEventListener('click',function(){show('mr')});
+  })();
+  (function(){var coin=document.getElementById('coin');coin.addEventListener('click',function(){coin.classList.toggle('flipped')});})();
+</script>

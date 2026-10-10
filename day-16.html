@@ -1,0 +1,434 @@
+<meta charset="utf-8">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#BE5A11">
+<title>Agra: The Cage and the Escape</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tiro+Devanagari+Marathi:ital@0;1&family=Karla:wght@400;600;700&display=swap">
+
+<link rel="stylesheet" href="day.css">
+
+<nav class="daynav">
+  <a href="day-15.html">‹ Day 15</a>
+  <span class="mid"><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Map</a> · <a href="sayings-sheet.html">📜 Sayings</a></span>
+  <a href="day-17.html">Day 17 ›</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">
+      <span class="daynum">Day 16</span>
+      <span class="act-tag">Act III · Shaking the Empires — finale</span>
+      <span class="act-tag">May–August 1666</span>
+    </div>
+    <h1>Agra — The Cage &amp; the Escape</h1>
+    <p class="dek">Shivaji walks into the emperor's own court — and finds himself a prisoner. Tonight: an
+      insult, a house under guard, a pile of baskets, and <b>the most famous escape</b> in Indian history.</p>
+  </div>
+  <svg class="ridge" viewBox="0 0 880 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,90 L0,54 L70,30 L130,50 L200,20 L270,46 L340,14 L410,44 L480,24 L560,50 L620,28 L700,52 L770,26 L830,48 L880,32 L880,90 Z"
+      fill="var(--map-ridge)" opacity=".55"/>
+    <path d="M0,90 L0,66 L90,48 L170,66 L250,40 L340,64 L430,44 L520,66 L610,48 L700,68 L790,50 L880,66 L880,90 Z"
+      fill="var(--map-ridge)"/>
+  </svg>
+</header>
+
+<main class="wrap">
+
+  <!-- ===================== PLACE ===================== -->
+  <section aria-labelledby="place-h">
+    <div class="sec-head">
+      <span class="num">01</span>
+      <h2 id="place-h">From the emperor's city to home</h2>
+      <span class="rule"></span>
+    </div>
+    <figure class="map">
+      <svg viewBox="0 0 700 460" role="img"
+        aria-label="A map of northern and western India. Agra, the emperor's city, is near the top right, marked with a basket. Mathura sits just north-west of it, where young Sambhaji was hidden. Far to the south-west, near the bottom left, are Rajgad and Pune, Shivaji's home. The Narmada river crosses the middle of the map. Between Agra and Rajgad runs a broad, faint band rather than a single line, labelled 'exact route unknown', because no one knows exactly which way Shivaji travelled home in disguise.">
+        <rect x="0" y="0" width="700" height="460" fill="var(--paper)"/>
+        <rect x="0" y="0" width="700" height="460" fill="var(--gold)" opacity=".08"/>
+
+        <!-- a little of the sea at bottom-left -->
+        <path d="M0,240 C40,250 80,262 104,290 C108,340 110,400 116,460 L0,460 Z" fill="var(--sea-line,#5b7f8c)" opacity=".28"/>
+        <text class="m-sea-label" x="46" y="360" text-anchor="middle" style="fill:var(--ink-soft)">Arabian Sea</text>
+
+        <!-- the Narmada -->
+        <path d="M160,272 C220,262 270,282 330,270 C390,258 440,276 500,266 C540,260 570,268 600,262"
+          fill="none" stroke="var(--sea-line,#5b7f8c)" stroke-width="2.4" opacity=".7"/>
+        <text class="m-sub" x="560" y="254" text-anchor="middle" style="fill:var(--ink-soft)">Narmada</text>
+
+        <!-- the unknown route: a broad faint band, not a line -->
+        <path d="M384,92 C360,170 300,250 250,320 C220,362 190,400 160,424" fill="none" stroke="var(--saffron)"
+          stroke-width="34" stroke-linecap="round" opacity=".14"/>
+        <path d="M384,92 C360,170 300,250 250,320 C220,362 190,400 160,424" fill="none" stroke="var(--saffron)"
+          stroke-width="2.2" stroke-dasharray="2 9" stroke-linecap="round" opacity=".8"/>
+        <text class="m-label" x="356" y="214" style="fill:var(--saffron)">exact route unknown</text>
+        <text class="m-sub" x="356" y="230" style="fill:var(--ink-soft)">in disguise, by back roads</text>
+        <text class="m-sub" x="356" y="246" style="fill:var(--ink-soft)">more than 1,000 km</text>
+
+        <!-- Agra -->
+        <circle cx="391" cy="84" r="7" fill="var(--rust)"/>
+        <text class="m-shiv" x="408" y="78" style="fill:var(--ink)">Agra</text>
+        <text class="m-sub" x="408" y="96" style="fill:var(--ink-soft)">the emperor's court</text>
+        <!-- a basket -->
+        <g transform="translate(470,104)">
+          <path d="M0,0 L36,0 L31,20 L5,20 Z" fill="var(--gold)" opacity=".85"/>
+          <path d="M3,6 L33,6 M5,12 L31,12" stroke="var(--ink-soft)" stroke-width="1.2" opacity=".7"/>
+          <path d="M4,0 C8,-12 28,-12 32,0" fill="none" stroke="var(--ink-soft)" stroke-width="1.8"/>
+        </g>
+        <text class="m-sub" x="488" y="140" text-anchor="middle" style="fill:var(--ink-soft)">the baskets</text>
+
+        <!-- Mathura -->
+        <circle cx="370" cy="68" r="4.6" fill="var(--ink-soft)"/>
+        <text class="m-sub" x="360" y="50" text-anchor="end" style="fill:var(--ink)">Mathura —</text>
+        <text class="m-sub" x="360" y="64" text-anchor="end" style="fill:var(--ink-soft)">Sambhaji hidden here</text>
+
+        <!-- home: Rajgad / Pune -->
+        <path d="M140,432 L150,416 L172,412 L180,422 L176,432 Z" fill="var(--map-ridge)"/>
+        <line x1="160" y1="414" x2="160" y2="398" stroke="var(--ink-soft)" stroke-width="1.4"/>
+        <path d="M160,399 l12,3 l-12,5 Z" fill="var(--saffron)"/>
+        <text class="m-shiv" x="196" y="426" style="fill:var(--ink)">Rajgad · home</text>
+      </svg>
+      <figcaption><b>A thousand kilometres, in secret.</b> After escaping from <span style="color:var(--rust)">Agra</span>,
+        Shivaji travelled home disguised, by roads no one expected. No one knows his exact route, so the map
+        shows only a broad <span style="color:var(--saffron)">band</span>, not a line.</figcaption>
+    </figure>
+    <p class="map-cta"><a href="trip-companion.html">📍 See Agra on the real map →</a></p>
+  </section>
+
+  <!-- ===================== STORY ===================== -->
+  <section aria-labelledby="story-h">
+    <div class="sec-head">
+      <span class="num">02</span>
+      <h2 id="story-h">Tonight's telling</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="read-cue">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.4"/><path d="M8 4.4V8l2.6 1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      About 10 minutes, read aloud slowly · choose your language
+    </div>
+
+    <div class="lang-bar" role="tablist" aria-label="Choose language">
+      <button role="tab" id="tab-en" aria-controls="story-en" aria-selected="true">English</button>
+      <button role="tab" id="tab-mr" class="mr" aria-controls="story-mr" aria-selected="false">मराठी</button>
+    </div>
+
+    <div class="telling" id="story-en" role="tabpanel" aria-labelledby="tab-en">
+      <p>Last night Shivaji signed away twenty-three forts, and Jai Singh persuaded him to do something even
+        more dangerous: to travel north to Agra, to the court of the emperor Aurangzeb himself. Tonight is the
+        last night of Act III — and the most dangerous journey of Shivaji's whole life.</p>
+      <p>Why would he go into the lion's den? Jai Singh had promised him safety and honour, and a meeting with
+        the emperor might bring a lasting peace. So in the spring of 1666 Shivaji set out, with a small company
+        and his son <span class="term">Sambhaji</span>, a boy of about nine. While he was away, his mother Jijau
+        looked after the kingdom at home. It was a journey of many weeks, far, far to the north.</p>
+      <p><span class="term">Agra</span> was one of the grandest cities on earth: great red walls, marble
+        palaces, gardens, elephants with painted trunks, and the shining Taj Mahal beside the river. On the
+        <span class="term">12th of May, 1666</span>, the emperor held a magnificent court to celebrate his
+        birthday, and that was the day Shivaji was brought before him.</p>
+      <p>But Agra also held a dark secret. Only a few months earlier, in January 1666, the old emperor Shah Jahan
+        — the very man who had built the Taj Mahal — had died inside Agra's great fort, where he had been kept a
+        prisoner for years by his own son, Aurangzeb. That tells you what kind of emperor Shivaji was going to
+        meet: one who would not hesitate to lock up even his own father.</p>
+      <p>Shivaji was a king in his own lands, and he expected to be treated as an honoured guest. But the
+        emperor did not speak a single word of welcome. Instead, Shivaji was led to the back of the hall and
+        made to stand among nobles he thought far beneath him — behind men he had beaten in battle, the Maratha chroniclers say.</p>
+      <p>Shivaji was not a man to swallow such an insult in silence. In front of that whole glittering court he
+        made his anger plain, and turned away. Hardly anyone had ever dared to behave like that before the
+        Mughal emperor.</p>
+      <p>The answer came quickly. Shivaji was taken to a house in Agra and kept there under guard, with soldiers
+        posted all around it. Jai Singh's son, Ram Singh, was made responsible for him. Shivaji had become a
+        prisoner — a lion in a cage — and in the palace, people whispered about what the emperor might do with
+        him next.</p>
+      <p>Weeks passed, and then months. May turned into June, June into July. From his windows Shivaji could hear the
+        sounds of the great city going about its business, while he and his son stayed shut inside. Every day he
+        must have wondered whether this would be the day the emperor decided his fate.</p>
+      <p>A lesser man might have raged, or given up hope. Shivaji did neither. He grew calm and patient, and
+        began to plan. He asked to send most of his soldiers back home, which made the guards feel safer. Then
+        he fell ill — or seemed to. And as he "recovered," he began sending out huge covered baskets of sweets
+        and fruit every day, as gifts to holy men and nobles all over the city.</p>
+      <p>At first the guards lifted every lid and peered inside. Sweets. Fruit. Sweets again. Day after day,
+        the baskets came and went. And slowly, as Shivaji had hoped, the guards grew bored, and stopped
+        looking.</p>
+      <p>Then, on the <span class="term">17th of August, 1666</span>, Shivaji and little Sambhaji climbed into
+        two of those big baskets. The lids went on, the bearers lifted them onto their shoulders, and out
+        they went — right past the guards and through the streets of Agra — to a quiet place outside the city,
+        where trusted men were waiting with horses.</p>
+      <p>Back in the house, a brave man named Hiroji Farzand lay in Shivaji's bed with a blanket pulled up, so
+        that only his arm showed, while a young servant, Madari Mehtar, sat pressing his feet, as if caring
+        for a sick king. When anyone came near, they were told the king was resting and must not be
+        disturbed. Some hours later, those two slipped quietly out as well.</p>
+      <p>When the guards finally discovered the empty bed, Agra was in uproar! Riders galloped out along every
+        road. But Shivaji had vanished. Dressed as a wandering holy man, he took roads no one expected. He left
+        young Sambhaji hidden in the town of Mathura with trusted friends, so the boy would be safe, and later
+        Sambhaji was brought safely home. Shivaji himself travelled secretly for weeks, and reached his own lands
+        late in 1666. Imagine Jijau's face when her son walked in!</p>
+      <p>Now for the honest part. That Shivaji was held in Agra and escaped in the middle of August 1666 — usually dated the 17th — is solid history. <em>How</em> he escaped is less certain. The baskets come from the old chronicles, and the great historian Jadunath Sarkar accepted them, though some tellings say fruit rather than sweets, and some historians still doubt the baskets altogether. His route home
+        is not known. And the emperor later suspected that Ram Singh had quietly helped him.</p>
+      <p>Think what it meant. The ruler of the largest empire in India, with all his guards and soldiers, could
+        not keep hold of one patient, clever man. The story ran across the land. And Shivaji had learned one
+        hard lesson for ever: the emperor's promises could not be trusted. From now on, he would take back every
+        fort he had given away.</p>
+      <p>And so ends Act III, <em>Shaking the Empires</em>: the Lal Mahal raid, Surat, Purandar, and now the cage
+        at Agra. Tomorrow Act IV begins, <em>The Crown</em> — and the very first fort Shivaji wants back is
+        Kondhana, which takes us to a man named Tanaji, and a cliff in the dark.</p>
+      <p class="goodnight">Goodnight — tonight's badge: <b>sutka</b>, "the escape" — patience plus a plan can open
+        even the emperor's cage.</p>
+    </div>
+
+    <div class="telling mr" id="story-mr" role="tabpanel" aria-labelledby="tab-mr" hidden>
+      <p><span class="dropcap">का</span>ल रात्री शिवाजीने तेवीस किल्ले सोडून दिले, आणि जयसिंगांनी त्याला याहूनही धोकादायक
+        गोष्टीसाठी राजी केलं: उत्तरेला आग्र्याला जायचं, खुद्द औरंगजेब बादशहाच्या दरबारात. आज तिसऱ्या अंकाची शेवटची रात्र
+        आहे — आणि शिवाजीच्या अख्ख्या आयुष्यातला सर्वांत धोकादायक प्रवास.</p>
+      <p>तो सिंहाच्या गुहेत का गेला? जयसिंगांनी त्याला सुरक्षिततेचं आणि सन्मानाचं वचन दिलं होतं, आणि बादशहाशी भेट
+        झाली, तर कदाचित कायमची शांतता लाभली असती. म्हणून १६६६ च्या वसंत ऋतूत शिवाजी निघाला — सोबत थोडी माणसं, आणि
+        त्याचा मुलगा <span class="term">संभाजी</span>, सुमारे नऊ वर्षांचा. तो दूर असताना घरी राज्याचा कारभार आई
+        जिजाऊ पाहत होत्या. उत्तरेकडचा, कितीतरी आठवड्यांचा तो लांबचा प्रवास होता.</p>
+      <p><span class="term">आग्रा</span> हे जगातल्या सर्वांत वैभवशाली शहरांपैकी एक होतं: उंच लाल तटबंदी, संगमरवरी
+        महाल, बागा, रंगवलेल्या सोंडांचे हत्ती, आणि नदीकाठी झळाळणारा ताजमहाल. <span class="term">१२ मे १६६६</span>
+        रोजी बादशहाने आपल्या वाढदिवसानिमित्त भव्य दरबार भरवला, आणि त्याच दिवशी शिवाजीला त्याच्यासमोर नेण्यात आलं.</p>
+      <p>पण आग्र्याच्या पोटात एक काळं गुपितही होतं. काही महिन्यांपूर्वीच, जानेवारी १६६६ मध्ये, म्हातारा बादशहा शाहजहान
+        — ताजमहाल बांधणारा तोच — आग्र्याच्या मोठ्या किल्ल्यात मरण पावला होता; त्याच्या स्वतःच्या मुलाने, औरंगजेबाने, त्याला
+        तिथे कित्येक वर्षं कैदेत ठेवलं होतं. यावरून कळतं, शिवाजी कसल्या बादशहाला भेटायला चालला होता: जो स्वतःच्या
+        वडिलांनाही कैदेत टाकायला मागेपुढे पाहत नाही.</p>
+      <p>शिवाजी आपल्या मुलखाचा राजा होता, आणि सन्माननीय पाहुण्यासारखी वागणूक मिळेल, अशी त्याची अपेक्षा होती. पण
+        बादशहाने स्वागताचा एक शब्दही उच्चारला नाही. उलट शिवाजीला दरबाराच्या मागच्या बाजूला नेऊन ज्यांना तो आपल्यापेक्षा कितीतरी कमी मानत असे, अशा सरदारांमध्ये उभं करण्यात आलं — आणि मराठी बखरी सांगतात, ज्यांना त्याने लढाईत हरवलं होतं, त्यांच्याही मागे.</p>
+      <p>असा अपमान मुकाट्याने गिळणाऱ्यांपैकी शिवाजी नव्हता. त्या झगमगत्या भरल्या दरबारासमोर त्याने आपला संताप उघडपणे
+        दाखवला, आणि पाठ फिरवली. मुघल बादशहासमोर असं वागायचं धाडस आजवर क्वचितच कुणी केलं होतं.</p>
+      <p>उत्तर लगेच मिळालं. शिवाजीला आग्र्यातल्या एका हवेलीत नेऊन पहाऱ्यात ठेवण्यात आलं; भोवती चहूबाजूंनी शिपाई
+        तैनात होते. जयसिंगांचा मुलगा, रामसिंग, याच्यावर त्याची जबाबदारी सोपवली गेली. शिवाजी कैदी झाला होता —
+        पिंजऱ्यातला सिंह — आणि बादशहा आता त्याचं काय करणार, याची महालात कुजबुज सुरू होती.</p>
+      <p>आठवडे गेले, मग महिने. मे गेला, जून आला; जून गेला, जुलै आला. खिडक्यांमधून शिवाजीला त्या मोठ्या शहराची
+        गजबज ऐकू येत होती, आणि तो आणि त्याचा मुलगा मात्र आत कोंडलेले होते. बादशहा आज आपल्या नशिबाचा फैसला करतो
+        की काय, असा विचार त्याच्या मनात रोज येत असेल.</p>
+      <p>दुसरा एखादा माणूस संतापाने वेडा झाला असता, किंवा हताश झाला असता. शिवाजीने यातलं काहीच केलं नाही. तो शांत
+        आणि संयमी झाला, आणि त्याने डाव रचायला सुरुवात केली. आपल्या बहुतेक शिपायांना घरी परत पाठवायची त्याने
+        परवानगी मागितली, त्यामुळे पहारेकऱ्यांना जरा निर्धास्त वाटू लागलं. मग तो आजारी पडला — किंवा तसं भासवलं.
+        आणि "बरं वाटू लागल्यावर" त्याने रोज मिठाई आणि फळांचे मोठमोठे झाकलेले पेटारे शहरभरच्या साधुसंतांना आणि
+        सरदारांना भेट म्हणून पाठवायला सुरुवात केली.</p>
+      <p>सुरुवातीला पहारेकरी प्रत्येक पेटाऱ्याचं झाकण उघडून आत डोकावत. मिठाई. फळं. पुन्हा मिठाई. दिवसामागून दिवस
+        पेटारे येत-जात राहिले. आणि हळूहळू, शिवाजीला हवं होतं तसंच, पहारेकरी कंटाळले, आणि त्यांनी तपासणं सोडून दिलं.</p>
+      <p>आणि मग <span class="term">१७ ऑगस्ट १६६६</span> रोजी शिवाजी आणि छोटा संभाजी त्या मोठ्या पेटाऱ्यांपैकी दोन पेटाऱ्यांत जाऊन बसले. झाकणं लागली, भोयांनी पेटारे खांद्यावर उचलले, आणि ते बाहेर निघाले — थेट पहारेकऱ्यांच्या
+        समोरून, आग्र्याच्या रस्त्यांवरून — शहराबाहेरच्या एका निवांत जागी, जिथे विश्वासू माणसं घोडे घेऊन वाट पाहत होती.</p>
+      <p>तिकडे हवेलीत, हिरोजी फर्जंद नावाचा एक धाडसी माणूस शिवाजीच्या बिछान्यावर पांघरूण ओढून झोपला होता — फक्त
+        त्याचा हात तेवढा दिसत होता — आणि मदारी मेहतर नावाचा एक तरुण सेवक, आजारी राजाची सेवा करत असल्यासारखा,
+        त्याचे पाय चेपत बसला होता. कुणी जवळ आलं, की सांगितलं जाई, महाराज विश्रांती घेत आहेत, त्रास देऊ नका. काही
+        तासांनी तेही दोघे हळूच बाहेर निसटले.</p>
+      <p>शेवटी पहारेकऱ्यांना रिकामा बिछाना दिसला, तेव्हा अख्ख्या आग्र्यात हलकल्लोळ माजला! प्रत्येक रस्त्यावरून घोडेस्वार
+        भरधाव सुटले. पण शिवाजी गायब झाला होता. एका फिरत्या साधूचा वेष घेऊन, कुणाच्या ध्यानीमनी नसलेल्या वाटांनी तो
+        निघाला. छोट्या संभाजीला त्याने मथुरेत विश्वासू माणसांकडे लपवून ठेवलं, म्हणजे तो सुरक्षित राहील; आणि नंतर
+        संभाजीला सुखरूप घरी आणलं गेलं. शिवाजी स्वतः कितीतरी आठवडे गुपचूप प्रवास करत, १६६६ च्या अखेरीस आपल्या
+        मुलखात पोहोचला. आपला मुलगा दारातून आत येताना पाहून जिजाऊंचा चेहरा कसा उजळला असेल, कल्पना कर!</p>
+      <p>आता प्रामाणिकपणाचा भाग. शिवाजीला आग्र्यात अडकवून ठेवलं होतं, आणि ऑगस्ट १६६६ च्या मध्यावर — सहसा १७ ऑगस्ट मानतात — तो निसटला, हा पक्का इतिहास आहे. तो <em>कसा</em> निसटला, हे मात्र तितकं नक्की नाही. पेटारे जुन्या बखरींत आहेत, आणि थोर इतिहासकार जदुनाथ सरकार यांनी ते मान्य केले आहेत; पण काही कथांत मिठाईऐवजी फळं आहेत, आणि काही इतिहासकारांना पेटाऱ्यांबद्दल आजही शंका आहे. त्याचा घरी परतण्याचा
+        मार्ग माहीत नाही. आणि रामसिंगाने गुपचूप मदत केली, असा संशय नंतर बादशहाला आला.</p>
+      <p>याचा अर्थ काय, विचार कर. भारतातल्या सर्वांत मोठ्या साम्राज्याचा बादशहा, आपल्या सगळ्या पहारेकऱ्यांसह आणि
+        शिपायांसह, एका संयमी, चतुर माणसाला धरून ठेवू शकला नाही. ही गोष्ट अख्ख्या देशात पसरली. आणि शिवाजी एक कठोर
+        धडा कायमचा शिकला: बादशहाच्या वचनांवर विश्वास ठेवता येत नाही. आता तो सोडून दिलेला प्रत्येक किल्ला परत
+        घेणार होता.</p>
+      <p>आणि इथे तिसरा अंक, <em>साम्राज्यांना हादरे</em>, संपतो: लाल महालावरचा छापा, सुरत, पुरंदर, आणि आता आग्र्याचा
+        पिंजरा. उद्यापासून चौथा अंक सुरू होतो, <em>राज्याभिषेक</em> — आणि शिवाजीला परत हवा असलेला पहिलाच
+        किल्ला म्हणजे कोंढाणा, जो आपल्याला घेऊन जातो तानाजी नावाच्या एका वीराकडे, आणि अंधारातल्या एका कड्याकडे.</p>
+      <p class="goodnight">शुभ रात्री — आजचं जपायचं नाणं: <b>सुटका</b> — संयम आणि योजना एकत्र आली, की बादशहाचा
+        पिंजराही उघडतो.</p>
+    </div>
+
+    <div class="moon-note">
+      <svg class="moon" width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">
+        <circle cx="26" cy="26" r="22" fill="none" stroke="var(--gold)" stroke-width="2.4" opacity=".5"/>
+        <path d="M23.22,10.09 A17,17 0 1 0 41.44,31.34 A14,14 0 0 1 23.22,10.09 Z" fill="var(--gold)" opacity=".9"/>
+      </svg>
+      <p>On Day 9 the giant brought a cage for Shivaji and went home without him. Tonight the emperor actually
+        caught him — and still <b>could not keep him</b>.
+        <span class="fwd">Notice who helped: Hiroji and Madari, two more ordinary heroes.</span></p>
+    </div>
+
+    <h3 class="subhead">Say it out loud</h3>
+    <div class="say-grid">
+      <div class="say"><div class="head"><span class="dev">आग्रा</span><span class="rom">Agra</span></div>
+        <div class="phon">AAG-raa</div><div class="gloss">the emperor's city</div></div>
+      <div class="say"><div class="head"><span class="dev">औरंगजेब</span><span class="rom">Aurangzeb</span></div>
+        <div class="phon">ow-RANG-zayb</div><div class="gloss">the Mughal emperor</div></div>
+      <div class="say"><div class="head"><span class="dev">हिरोजी फर्जंद</span><span class="rom">Hiroji Farzand</span></div>
+        <div class="phon">HEE-ro-jee FAR-zand</div><div class="gloss">lay in the king's bed</div></div>
+      <div class="say"><div class="head"><span class="dev">मदारी मेहतर</span><span class="rom">Madari Mehtar</span></div>
+        <div class="phon">ma-DAA-ree MEH-tar</div><div class="gloss">the young servant who kept watch</div></div>
+      <div class="say"><div class="head"><span class="dev">पेटारा</span><span class="rom">petara</span></div>
+        <div class="phon">pay-TAA-raa</div><div class="gloss">a big basket or box</div></div>
+      <div class="say"><div class="head"><span class="dev">सुटका</span><span class="rom">sutka</span></div>
+        <div class="phon">SUṬ-kaa</div><div class="gloss">escape, release</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== COIN ===================== -->
+  <section aria-labelledby="coin-h">
+    <div class="sec-head">
+      <span class="num">03</span>
+      <h2 id="coin-h">Tonight's collectible</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="coin-wrap">
+      <button class="coin" id="coin" aria-label="Sutka badge — flip to read its meaning">
+        <span class="coin-inner">
+          <span class="face front">
+            <span class="big">सुटका</span>
+            <span class="rom">The Escape</span>
+            <span class="dots">Badge · Day 16</span>
+          </span>
+          <span class="face back">
+            <span class="mean">patience plus a plan opens any cage</span>
+            <span class="dots">Agra · 1666</span>
+          </span>
+        </span>
+      </button>
+      <div class="coin-copy">
+        <h3>The sixteenth badge — and the end of Act III</h3>
+        <p>He did not break out by force. He waited, made the guards comfortable, and let routine do the rest.
+          <em>Sutka</em> is the escape that patience builds.</p>
+        <p class="hint">↻ Hover or tap the coin to turn it over.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HISTORY CARDS ===================== -->
+  <section aria-labelledby="hist-h">
+    <div class="sec-head">
+      <span class="num">04</span>
+      <h2 id="hist-h">For the grown-up reading aloud</h2>
+      <span class="rule"></span>
+    </div>
+    <p class="grown-note">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 7v4M8 4.6v.4" stroke-linecap="round"/></svg>
+      What is certain about Agra — and what is the beloved story around it.
+    </p>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>The audience and the arrest, 1666</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>Under the Purandar settlement, Shivaji travelled to Agra with <b>Sambhaji</b> and was received on
+          <b>12 May 1666</b>, at the court held for Aurangzeb's birthday. Placed among lower-ranking mansabdars and
+          given no welcome, he protested openly, and was then kept under guard, with <b>Ram Singh</b> (Jai Singh's son)
+          responsible for him.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag c">Tradition</span><h4>Baskets, Hiroji and Madari</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>The escape in <b>mid-August 1666</b> (usually dated <b>17 August</b>; Sarkar gives the 19th) is well established. The <b>basket</b> method comes from the chroniclers (Sabhasad, Khafi Khan) and is accepted by Jadunath Sarkar, though some historians doubt it; versions differ on sweets, fruit or alms. The roles
+          of <b>Hiroji Farzand</b> and <b>Madari Mehtar</b>, who covered for him in the house, are part of the same
+          tradition and widely retold.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag debated">Debated</span><h4>The road home</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>Shivaji's exact <b>route</b> is not known; he is said to have travelled disguised as an ascetic. Sambhaji
+          was left at <b>Mathura</b> with trusted people and brought back later. Dates given for Shivaji's return home
+          vary (from about mid-September to late December 1666), so the telling says "late in 1666." Aurangzeb later
+          suspected <b>Ram Singh</b> of complicity and demoted him.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag c">Context</span><h4>Why it mattered</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>The escape made Shivaji's reputation across India and ended any trust in Mughal guarantees. After a
+          short peace (1667–69), he went back to war in 1670, beginning to recover the forts given up at Purandar
+          — starting with Kondhana (Day 17).</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===================== JOURNEY ===================== -->
+  <section aria-labelledby="journey-h">
+    <div class="sec-head">
+      <span class="num">05</span>
+      <h2 id="journey-h">The thirty-night journey</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="ribbon">
+      <div class="acts">
+        <div class="act-col">
+          <div class="name">I · Dream is Born ✓</div>
+          <div class="dots-row">
+            <span class="d done"></span><span class="d done"></span><span class="d done"></span>
+            <span class="d done"></span><span class="d done"></span><span class="d done"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">II · Lion Rises ✓</div>
+          <div class="dots-row">
+            <span class="d done"></span><span class="d done"></span><span class="d done"></span>
+            <span class="d done"></span><span class="d done"></span><span class="d done"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">III · Shaking Empires ✓</div>
+          <div class="dots-row">
+            <span class="d done" title="Day 13 — told"></span><span class="d done" title="Day 14 — told"></span><span class="d done" title="Day 15 — told"></span><span class="d now" title="Day 16 — tonight"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">IV · The Crown</div>
+          <div class="dots-row">
+            <span class="d" title="Day 17"></span><span class="d" title="Day 18"></span><span class="d" title="Day 19"></span><span class="d" title="Day 20"></span>
+            <span class="d" title="Day 21"></span><span class="d" title="Day 22"></span><span class="d" title="Day 23"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">V · King &amp; Legacy</div>
+          <div class="dots-row">
+            <span class="d" title="Day 24"></span><span class="d" title="Day 25"></span><span class="d" title="Day 26"></span><span class="d" title="Day 27"></span>
+            <span class="d" title="Day 28"></span><span class="d" title="Day 29"></span><span class="d" title="Day 30"></span>
+          </div>
+        </div>
+      </div>
+      <div class="legend">
+        <span><span class="d now"></span> Tonight</span>
+        <span><span class="d"></span> Nights to come</span>
+        <span><span class="d done"></span> Nights told</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LEDGER ===================== -->
+  <section aria-labelledby="ledger-h">
+    <div class="ledger">
+      <h2 id="ledger-h">Fact &amp; legend, kept honest</h2>
+      <dl>
+        <div class="row"><dt class="h">History</dt>
+          <dd>Shivaji was received at Aurangzeb's court on <b>12 May 1666</b>, protested his treatment, was held under
+            guard, and <b>escaped in mid-August 1666</b> (usually dated 17 August), returning home late that year; Sambhaji followed later.</dd></div>
+        <div class="row"><dt class="c">Tradition</dt>
+          <dd>The <b>baskets</b> of sweets or fruit, Hiroji Farzand in the bed and Madari Mehtar at his feet — the
+            chroniclers' account, accepted by Sarkar but doubted by some.</dd></div>
+        <div class="row"><dt class="c">Debated</dt>
+          <dd>The exact <b>route</b> home and the <b>date</b> of his return; the exact day of the escape.</dd></div>
+      </dl>
+    </div>
+
+    <div class="foot">
+      <span><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Trip map</a></span>
+      <span class="next">Next → <a href="day-17.html">Day 17 · Sinhagad &amp; Tanaji</a></span>
+    </div>
+  </section>
+</main>
+
+<script>
+  (function(){
+    var tabs={en:document.getElementById('tab-en'),mr:document.getElementById('tab-mr')};
+    var panes={en:document.getElementById('story-en'),mr:document.getElementById('story-mr')};
+    function show(l){for(var k in tabs){var on=(k===l);tabs[k].setAttribute('aria-selected',on?'true':'false');panes[k].hidden=!on;}}
+    tabs.en.addEventListener('click',function(){show('en')});
+    tabs.mr.addEventListener('click',function(){show('mr')});
+  })();
+  (function(){var coin=document.getElementById('coin');coin.addEventListener('click',function(){coin.classList.toggle('flipped')});})();
+</script>

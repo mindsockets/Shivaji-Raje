@@ -1,0 +1,431 @@
+<meta charset="utf-8">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#BE5A11">
+<title>Salher</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tiro+Devanagari+Marathi:ital@0;1&family=Karla:wght@400;600;700&display=swap">
+
+<link rel="stylesheet" href="day.css">
+
+<nav class="daynav">
+  <a href="day-17.html">‹ Day 17</a>
+  <span class="mid"><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Map</a> · <a href="sayings-sheet.html">📜 Sayings</a></span>
+  <a href="day-19.html">Day 19 ›</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">
+      <span class="daynum">Day 18</span>
+      <span class="act-tag">Act IV · The Crown</span>
+      <span class="act-tag">1672 · and Panhala, 1673</span>
+    </div>
+    <h1>Salher</h1>
+    <p class="dek">For years Shivaji refused to fight the Mughals on open ground. Tonight, at one of the highest forts
+      in Maharashtra, his army meets them <b>face to face on the plain</b> — and wins.</p>
+  </div>
+  <svg class="ridge" viewBox="0 0 880 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,90 L0,54 L70,30 L130,50 L200,20 L270,46 L340,14 L410,44 L480,24 L560,50 L620,28 L700,52 L770,26 L830,48 L880,32 L880,90 Z"
+      fill="var(--map-ridge)" opacity=".55"/>
+    <path d="M0,90 L0,66 L90,48 L170,66 L250,40 L340,64 L430,44 L520,66 L610,48 L700,68 L790,50 L880,66 L880,90 Z"
+      fill="var(--map-ridge)"/>
+  </svg>
+</header>
+
+<main class="wrap">
+
+  <!-- ===================== PLACE ===================== -->
+  <section aria-labelledby="place-h">
+    <div class="sec-head">
+      <span class="num">01</span>
+      <h2 id="place-h">The battle on the plain</h2>
+      <span class="rule"></span>
+    </div>
+    <figure class="map">
+      <svg viewBox="0 0 700 460" role="img"
+        aria-label="An illustration of the battle of Salher. A tall, steep fort-mountain rises on the right with a saffron flag: Salher. A ring of Mughal tents besieges its foot. Two Maratha forces, drawn as saffron arrows, converge on the open plain from two directions: Moropant Pingle's from the left and Prataprao Gujar's from the bottom. Where they meet the Mughal army, a great cloud of dust rises over the plain.">
+        <defs>
+          <linearGradient id="skyGrad18" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" style="stop-color:color-mix(in srgb,var(--gold) 16%,var(--paper))"/>
+            <stop offset="1" style="stop-color:var(--paper)"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="700" height="460" fill="url(#skyGrad18)"/>
+
+        <!-- the open plain -->
+        <path d="M0,460 L0,250 C160,236 320,250 460,262 C560,270 640,262 700,256 L700,460 Z" fill="var(--gold)" opacity=".18"/>
+
+        <!-- Salher: a tall steep mountain on the right -->
+        <path d="M470,262 C500,210 520,120 548,70 C560,50 584,46 598,62 C626,110 646,200 700,256 L700,262 Z"
+          fill="var(--green)" opacity=".9"/>
+        <path d="M548,74 L560,58 L590,56 L598,70 Z" fill="var(--map-ridge)"/>
+        <rect x="560" y="46" width="28" height="12" fill="var(--ink-soft)"/>
+        <line x1="574" y1="46" x2="574" y2="24" stroke="var(--ink-soft)" stroke-width="1.6"/>
+        <path d="M574,25 l14,4 l-14,6 Z" fill="var(--saffron)"/>
+        <text class="m-shiv" x="640" y="40" text-anchor="middle" style="fill:var(--ink)">Salher</text>
+        <text class="m-sub" x="578" y="160" text-anchor="middle" style="fill:var(--paper)">one of the highest</text>
+        <text class="m-sub" x="578" y="174" text-anchor="middle" style="fill:var(--paper)">forts in Maharashtra</text>
+
+        <!-- Mughal siege camp at the foot -->
+        <g fill="var(--paper)" stroke="var(--ink)" stroke-width="1.1" stroke-linejoin="round">
+          <path d="M400,262 L408,248 L416,262 Z"/><path d="M424,270 L432,256 L440,270 Z"/><path d="M448,262 L456,248 L464,262 Z"/>
+          <path d="M412,284 L420,270 L428,284 Z"/><path d="M436,290 L444,276 L452,290 Z"/><path d="M460,282 L468,268 L476,282 Z"/>
+          <path d="M488,292 L496,278 L504,292 Z"/>
+        </g>
+        <line x1="444" y1="256" x2="444" y2="236" stroke="var(--ink)" stroke-width="1.4"/>
+        <path d="M444,237 l12,3 l-12,5 Z" fill="var(--green)"/>
+        <text class="m-shiv-sub" x="400" y="228" text-anchor="middle" style="fill:var(--ink)">Mughal army</text>
+
+        <!-- the dust of battle -->
+        <g fill="var(--ink-soft)" opacity=".18">
+          <circle cx="360" cy="300" r="46"/><circle cx="410" cy="320" r="40"/><circle cx="320" cy="330" r="34"/>
+          <circle cx="380" cy="350" r="30"/>
+        </g>
+        <text class="m-label" x="360" y="324" text-anchor="middle" style="fill:var(--ink)">a day-long battle</text>
+
+        <!-- Moropant's force from the left -->
+        <path d="M40,300 C110,296 200,300 300,310" fill="none" stroke="var(--saffron)" stroke-width="3"
+          stroke-dasharray="2 8" stroke-linecap="round"/>
+        <path d="M300,310 l-13,-6 l1,12 Z" fill="var(--saffron)"/>
+        <text class="m-shiv-sub" x="40" y="286" style="fill:var(--saffron)">Moropant Pingle</text>
+
+        <!-- Prataprao's force from below -->
+        <path d="M300,450 C320,420 340,390 356,360" fill="none" stroke="var(--saffron)" stroke-width="3"
+          stroke-dasharray="2 8" stroke-linecap="round"/>
+        <path d="M356,360 l-2,13 l-10,-6 Z" fill="var(--saffron)"/>
+        <text class="m-shiv-sub" x="196" y="440" style="fill:var(--saffron)">Prataprao Gujar</text>
+      </svg>
+      <figcaption><b>Two arms closing.</b> While a Mughal army besieged <span style="color:var(--ink)">Salher</span>,
+        Shivaji sent two forces under <span style="color:var(--saffron)">Moropant Pingle</span> and
+        <span style="color:var(--saffron)">Prataprao Gujar</span>. They met the Mughals out on the open plain, and
+        after a long, hard day, the Mughal army broke.</figcaption>
+    </figure>
+    <p class="map-cta"><a href="trip-companion.html">📍 See Salher on the real map →</a></p>
+  </section>
+
+  <!-- ===================== STORY ===================== -->
+  <section aria-labelledby="story-h">
+    <div class="sec-head">
+      <span class="num">02</span>
+      <h2 id="story-h">Tonight's telling</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="read-cue">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.4"/><path d="M8 4.4V8l2.6 1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      About 10 minutes, read aloud slowly · choose your language
+    </div>
+
+    <div class="lang-bar" role="tablist" aria-label="Choose language">
+      <button role="tab" id="tab-en" aria-controls="story-en" aria-selected="true">English</button>
+      <button role="tab" id="tab-mr" class="mr" aria-controls="story-mr" aria-selected="false">मराठी</button>
+    </div>
+
+    <div class="telling" id="story-en" role="tabpanel" aria-labelledby="tab-en">
+      <p>Do you remember Day 9, when Afzal Khan tried to tempt Shivaji down onto the open plains, where a big army
+        always wins? Shivaji refused, and fought from his hills instead. For years after that, the Marathas mostly
+        fought by surprise, by night, and from the mountains. Tonight, thirteen years later, something new happens:
+        Shivaji's army meets the Mughals face to face, on open ground — and wins.</p>
+      <p>Far to the north of Shivaji's home country, near the edge of Gujarat, rises a tall, steep mountain fort
+        called <span class="term">Salher</span>. It is one of the very highest forts in all of Maharashtra; from its
+        summit you can look out over hills and plains for miles and miles. It guarded the roads that ran between the
+        Deccan and the rich lands of the north.</p>
+      <p>After Shivaji's men captured Salher, the Mughals were determined to take it back. In 1672 a large Mughal army
+        marched up and camped all around the foot of the mountain, under a commander named
+        <span class="term">Ikhlas Khan</span>, to besiege it. The Maratha soldiers inside could see the enemy tents
+        spread out below them.</p>
+      <p>How had Shivaji's army grown strong enough to dream of beating the Mughals in the open? Partly through careful
+        organisation. Shivaji paid his soldiers regular wages from his treasury, instead of handing out land, so that
+        they stayed loyal to the kingdom rather than to some local chief. And his army had strict rules: Sabhasad's chronicle records that soldiers were paid in cash and had to hand over whatever they captured, and in one of his own letters Shivaji ordered his officers that the soldiers must never trample or take the farmers' crops.
+        A paid, disciplined army that the villagers did not fear: that was something new.</p>
+      <p>Shivaji could have let the fort fend for itself. Instead, he made a bold plan: he would send two whole
+        armies, from two different directions, to strike the besiegers. One came under
+        <span class="term">Moropant Pingle</span> — the same Moropant who, years before, had built Pratapgad for
+        Shivaji. The other came under the dashing cavalry commander <span class="term">Prataprao Gujar</span>.</p>
+      <p>Prataprao's horsemen reached the Mughals first and charged. The Mughal army was big and strong, and for a
+        while Prataprao had to pull back. The Mughals must have thought they had won. But then Moropant's soldiers
+        arrived from the other side, and the two Maratha forces closed in together, like two arms of a great pincer.</p>
+      <p>Imagine being one of the defenders, high on Salher's walls, looking down. For weeks you have seen nothing but
+        enemy tents. And then, far off across the plain, a cloud of dust appears — and another, from a different
+        direction — and you begin to make out saffron banners. Help is coming. Your hands grip the wall, and you
+        watch.</p>
+      <p>And then came a real battle, out in the open: horsemen against horsemen, foot-soldiers against
+        foot-soldiers, elephants, banners and drums. The fighting went on for a long, hard day. The dust kicked up by
+        thousands of hooves and feet rose into the sky until the sun turned dim.</p>
+      <p>By the end of the day, the Mughal army had broken and fled. Ikhlas Khan himself was wounded and captured.
+        The Marathas took a huge haul of spoils: thousands of horses, camels and many elephants, and the whole
+        Mughal camp with all its supplies. Soon afterwards the nearby fort of Mulher fell to the Marathas as well.</p>
+      <p>Why does Salher matter so much? Because for the first time, Shivaji's army had beaten a great Mughal army not
+        with a trick, not by night, not in a narrow pass, but in an open-field battle — the very kind of fight
+        Afzal Khan had wanted all those years ago. The news shook the empire. The Marathas were no longer just
+        clever raiders of the hills; they were a real army that could face anyone, anywhere.</p>
+      <p>Now for the honest part. The accounts agree that Salher was a decisive Maratha victory, early in 1672, and
+        that Ikhlas Khan was captured. They do not agree on all the numbers — how many soldiers fought on each side,
+        how many fell, exactly how many horses and elephants were taken — or on the exact month. So we keep to what
+        all of them share.</p>
+      <p>And there is one more story for tonight, because it closes a circle. Do you remember Panhala, where Shivaji
+        was trapped on Day 11, and which he had to give up after his escape? For thirteen years it stayed out of his
+        hands. Then, the Maratha accounts say, on the night of the <span class="term">6th of March, 1673</span>, a daring officer named
+        <span class="term">Kondaji Farzand</span> led a small band up its walls in the dark, surprised the garrison,
+        and took the fort back.</p>
+      <p>Tradition says Kondaji's band was tiny — only a few dozen men against a garrison many times larger. (One great historian, Jadunath Sarkar, thought the fort was
+        actually won by bribing its defenders — so how it was won is debated.) Whatever the method, Panhala, the fort of Shiva Kashid and Baji Prabhu, was swarajya's again. Shiva Kashid's
+        sacrifice and Baji Prabhu's stand had not been in vain.</p>
+      <p>So tonight leaves us with a picture of a kingdom grown up. It could strike by night and vanish into the hills
+        — and now it could also stand on an open plain and win. With every fort won back, the day was coming closer
+        when this kingdom would need a proper crown.</p>
+      <p class="goodnight">Goodnight — tonight's badge: <b>maidan</b>, "the open field" — the day the Marathas showed
+        they could win not only in the hills, but anywhere.</p>
+    </div>
+
+    <div class="telling mr" id="story-mr" role="tabpanel" aria-labelledby="tab-mr" hidden>
+      <p><span class="dropcap">न</span>ववी रात्र आठवते? अफझल खानाने शिवाजीला मोकळ्या मैदानात उतरवायचा प्रयत्न केला होता —
+        जिथे मोठं सैन्य नेहमी जिंकतं. शिवाजीने नकार दिला, आणि आपल्या डोंगरांतूनच लढला. त्यानंतर कितीतरी वर्षं मराठे
+        मुख्यतः अचानक छापे घालून, रात्री, आणि डोंगरांतूनच लढले. पण आज रात्री, तेरा वर्षांनंतर, काहीतरी नवं घडतं:
+        शिवाजीचं सैन्य मुघलांशी मोकळ्या मैदानात समोरासमोर भिडतं — आणि जिंकतं.</p>
+      <p>शिवाजीच्या मुलखापासून दूर उत्तरेला, गुजरातच्या सीमेजवळ, <span class="term">साल्हेर</span> नावाचा एक उंच,
+        सरळसोट डोंगरी किल्ला उभा आहे. तो अख्ख्या महाराष्ट्रातल्या सर्वांत उंच किल्ल्यांपैकी एक आहे; त्याच्या माथ्यावरून
+        मैलोन्मैल डोंगर आणि मैदानं दिसतात. दख्खन आणि उत्तरेकडचा श्रीमंत मुलूख यांना जोडणाऱ्या वाटांवर तो पहारा देत होता.</p>
+      <p>शिवाजीच्या माणसांनी साल्हेर जिंकल्यावर, तो परत घ्यायचाच, असा मुघलांनी चंग बांधला. १६७२ मध्ये एक मोठं मुघल सैन्य
+        <span class="term">इखलासखान</span> नावाच्या सरदाराच्या हाताखाली येऊन डोंगराच्या पायथ्याला चहूबाजूंनी तळ ठोकून
+        बसलं, वेढा घालायला. किल्ल्यातल्या मराठा शिपायांना खाली पसरलेले शत्रूचे तंबू दिसत होते.</p>
+      <p>मुघलांना मोकळ्या मैदानात हरवायचं स्वप्न पाहण्याइतकं शिवाजीचं सैन्य बलवान कसं झालं? अंशतः, काटेकोर
+        व्यवस्थेमुळे. शिवाजी आपल्या शिपायांना जमिनी वाटण्याऐवजी खजिन्यातून नियमित पगार देत असे, त्यामुळे ते एखाद्या स्थानिक सरदाराशी नव्हे, तर राज्याशी इमान राखत. आणि सैन्यासाठी कडक नियम होते: शिपायांना रोख पगार मिळे आणि हाती आलेली लूट जमा करावी लागे, अशी नोंद सभासदाच्या बखरीत आहे; आणि शिवाजीने आपल्या अधिकाऱ्यांना लिहिलेल्या एका पत्रात, कूच करताना शेतकऱ्यांच्या पिकांना हात लावू नका, अशी सक्त ताकीद दिली होती.
+        नियमित पगार घेणारं, शिस्तीचं, आणि गावकऱ्यांना ज्याची भीती वाटत नाही असं सैन्य: ही एक नवीच गोष्ट होती.</p>
+      <p>शिवाजी किल्ल्याला त्याच्या नशिबावर सोडू शकला असता. पण त्याने एक धाडसी योजना आखली: दोन दिशांनी दोन पूर्ण
+        सैन्यं पाठवून वेढा घालणाऱ्यांवर घाव घालायचा. एक सैन्य आलं <span class="term">मोरोपंत पिंगळे</span> यांच्या
+        नेतृत्वाखाली — तेच मोरोपंत, ज्यांनी वर्षांपूर्वी शिवाजीसाठी प्रतापगड बांधला होता. आणि दुसरं आलं घोडदळाचे
+        तडफदार सरदार <span class="term">प्रतापराव गुजर</span> यांच्या नेतृत्वाखाली.</p>
+      <p>प्रतापरावांचे घोडेस्वार आधी पोहोचले, आणि त्यांनी धडक मारली. मुघल सैन्य मोठं आणि बलवान होतं, आणि काही काळ
+        प्रतापरावांना मागे हटावं लागलं. आपण जिंकलो, असंच मुघलांना वाटलं असेल. पण तेवढ्यात दुसऱ्या बाजूने मोरोपंतांचे
+        शिपाई येऊन पोहोचले, आणि मराठ्यांच्या दोन्ही फौजा एखाद्या प्रचंड चिमट्याच्या दोन बाजूंसारख्या एकत्र आवळत आल्या.</p>
+      <p>कल्पना कर, आपण साल्हेरच्या उंच तटावर उभे राहून खाली पाहत आहोत. कितीतरी आठवडे शत्रूच्या तंबूंशिवाय काहीच दिसलेलं नाही. आणि मग दूर मैदानापलीकडे धुळीचा एक लोट दिसतो — आणि दुसरा, वेगळ्या दिशेने — आणि हळूहळू
+        भगवी निशाणं ओळखू येऊ लागतात. मदत येतेय! आपण तट घट्ट धरून, श्वास रोखून सगळं पाहत राहतो.</p>
+      <p>आणि मग मोकळ्या मैदानावर खरीखुरी लढाई झाली: घोडेस्वारांविरुद्ध घोडेस्वार, पायदळाविरुद्ध पायदळ, हत्ती, निशाणं
+        आणि नगारे. दिवसभर घनघोर लढाई चालली. हजारो घोड्यांच्या टापांनी आणि पायांनी उडालेली धूळ आकाशात इतकी उंच गेली,
+        की सूर्यसुद्धा अंधुक झाला.</p>
+      <p>दिवस संपेपर्यंत मुघल सैन्य मोडून पळून गेलं होतं. खुद्द इखलासखान जखमी होऊन पकडला गेला. मराठ्यांच्या हाती प्रचंड
+        लूट आली: हजारो घोडे, उंट, अनेक हत्ती, आणि सगळ्या रसदीसह अख्खी मुघल छावणी. त्यानंतर लवकरच जवळचा मुल्हेर
+        किल्लाही मराठ्यांच्या ताब्यात आला.</p>
+      <p>साल्हेर इतकं महत्त्वाचं का? कारण पहिल्यांदाच शिवाजीच्या सैन्याने एका मोठ्या मुघल सैन्याला युक्तीने नव्हे,
+        रात्रीच्या अंधारात नव्हे, अरुंद खिंडीत नव्हे, तर मोकळ्या मैदानातल्या लढाईत हरवलं होतं — अफझल खानाला वर्षांपूर्वी
+        जशी लढाई हवी होती, नेमकी तशीच. या बातमीने साम्राज्य हादरलं. मराठे आता फक्त डोंगरातले चतुर छापेमार राहिले
+        नव्हते; ते कुणालाही, कुठेही तोंड देऊ शकणारं खरंखुरं सैन्य झाले होते.</p>
+      <p>आता प्रामाणिकपणाचा भाग. १६७२ च्या सुरुवातीला साल्हेरला मराठ्यांचा निर्णायक विजय झाला, आणि इखलासखान पकडला
+        गेला, यावर सगळ्या नोंदींचं एकमत आहे. पण सगळ्या आकड्यांवर नाही — दोन्ही बाजूंनी किती शिपाई लढले, किती पडले,
+        नेमके किती घोडे आणि हत्ती हाती आले — आणि नेमक्या महिन्यावरही नाही. म्हणून सगळ्यांत जे समान आहे, तेवढंच आपण
+        सांगतो.</p>
+      <p>आणि आज रात्री आणखी एक गोष्ट आहे, कारण तिच्यामुळे एक वर्तुळ पूर्ण होतं. पन्हाळा आठवतो? अकराव्या रात्री शिवाजी
+        तिथे अडकला होता, आणि सुटकेनंतर तो किल्ला त्याला सोडून द्यावा लागला होता. तेरा वर्षं तो त्याच्या हाताबाहेर
+        राहिला. मग, मराठी नोंदी सांगतात, <span class="term">६ मार्च १६७३</span>च्या रात्री, <span class="term">कोंडाजी फर्जंद</span> नावाच्या
+        एका धाडसी सरदाराने एक छोटी तुकडी घेऊन अंधारात त्याची तटबंदी चढली, शिबंदीला बेसावध गाठलं, आणि किल्ला परत
+        जिंकला.</p>
+      <p>परंपरा सांगते, की कोंडाजीची तुकडी अगदी लहान होती — कितीतरी पट मोठ्या शिबंदीविरुद्ध अवघे काही डझन वीर. (जदुनाथ सरकार या थोर इतिहासकारांच्या मते मात्र किल्लेदारांना लाच
+        देऊन किल्ला मिळवला गेला — म्हणून तो कसा जिंकला, यावर वाद आहे.) मार्ग कोणताही असो, शिवा काशिदाचा आणि बाजीप्रभूंचा पन्हाळा पुन्हा स्वराज्यात आला. शिवा काशिदाचं बलिदान आणि बाजीप्रभूंची
+        झुंज वाया गेली नव्हती.</p>
+      <p>म्हणून आजची रात्र आपल्यासमोर एका मोठ्या झालेल्या राज्याचं चित्र ठेवते. ते रात्री घाव घालून डोंगरांत नाहीसं होऊ
+        शकत होतं — आणि आता मोकळ्या मैदानात उभं राहून जिंकूही शकत होतं. प्रत्येक परत मिळवलेल्या किल्ल्यासोबत तो दिवस
+        जवळ येत होता, जेव्हा या राज्याला एका खऱ्याखुऱ्या मुकुटाची गरज भासणार होती.</p>
+      <p class="goodnight">शुभ रात्री — आजचं जपायचं नाणं: <b>मैदान</b> — ज्या दिवशी मराठ्यांनी दाखवून दिलं, की ते फक्त
+        डोंगरांतच नव्हे, तर कुठेही जिंकू शकतात.</p>
+    </div>
+
+    <div class="moon-note">
+      <svg class="moon" width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">
+        <circle cx="26" cy="26" r="22" fill="none" stroke="var(--gold)" stroke-width="2.4" opacity=".5"/>
+        <path d="M23.22,10.09 A17,17 0 1 0 41.44,31.34 A14,14 0 0 1 23.22,10.09 Z" fill="var(--gold)" opacity=".9"/>
+      </svg>
+      <p>Day 9: Shivaji <b>refused</b> the open plain, because it would have been suicide. Day 18: his army
+        <b>chose</b> the open plain, and won. That is how much the kingdom had grown —
+        <span class="fwd">and Panhala, lost on Day 11, came home.</span></p>
+    </div>
+
+    <h3 class="subhead">Say it out loud</h3>
+    <div class="say-grid">
+      <div class="say"><div class="head"><span class="dev">साल्हेर</span><span class="rom">Salher</span></div>
+        <div class="phon">SAAL-hayr</div><div class="gloss">the tall fort near Gujarat</div></div>
+      <div class="say"><div class="head"><span class="dev">मोरोपंत पिंगळे</span><span class="rom">Moropant Pingle</span></div>
+        <div class="phon">MO-ro-pant PING-ḷay</div><div class="gloss">minister and general; built Pratapgad</div></div>
+      <div class="say"><div class="head"><span class="dev">प्रतापराव गुजर</span><span class="rom">Prataprao Gujar</span></div>
+        <div class="phon">pra-TAAP-raav GU-jar</div><div class="gloss">the dashing cavalry commander</div></div>
+      <div class="say"><div class="head"><span class="dev">इखलासखान</span><span class="rom">Ikhlas Khan</span></div>
+        <div class="phon">ikh-LAAS KHAAN</div><div class="gloss">the Mughal commander, captured</div></div>
+      <div class="say"><div class="head"><span class="dev">कोंडाजी फर्जंद</span><span class="rom">Kondaji Farzand</span></div>
+        <div class="phon">KON-ḍaa-jee FAR-zand</div><div class="gloss">won back Panhala by night</div></div>
+      <div class="say"><div class="head"><span class="dev">मैदान</span><span class="rom">maidan</span></div>
+        <div class="phon">mai-DAAN</div><div class="gloss">open ground, a field</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== COIN ===================== -->
+  <section aria-labelledby="coin-h">
+    <div class="sec-head">
+      <span class="num">03</span>
+      <h2 id="coin-h">Tonight's collectible</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="coin-wrap">
+      <button class="coin" id="coin" aria-label="Maidan badge — flip to read its meaning">
+        <span class="coin-inner">
+          <span class="face front">
+            <span class="big">मैदान</span>
+            <span class="rom">The Open Field</span>
+            <span class="dots">Badge · Day 18</span>
+          </span>
+          <span class="face back">
+            <span class="mean">not only in the hills — anywhere</span>
+            <span class="dots">Salher · 1672</span>
+          </span>
+        </span>
+      </button>
+      <div class="coin-copy">
+        <h3>The eighteenth badge</h3>
+        <p>Guerrilla war kept swarajya alive; Salher showed it could stand and fight like any great power. Two
+          kinds of strength — and knowing which to use, and when.</p>
+        <p class="hint">↻ Hover or tap the coin to turn it over.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HISTORY CARDS ===================== -->
+  <section aria-labelledby="hist-h">
+    <div class="sec-head">
+      <span class="num">04</span>
+      <h2 id="hist-h">For the grown-up reading aloud</h2>
+      <span class="rule"></span>
+    </div>
+    <p class="grown-note">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 7v4M8 4.6v.4" stroke-linecap="round"/></svg>
+      The real history behind tonight — and where the figures diverge.
+    </p>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>The battle of Salher, 1672</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>After the Marathas took <b>Salher</b> (in the Baglan region of present Nashik district), a Mughal force
+          under <b>Ikhlas Khan</b> besieged it. Relief armies under <b>Moropant Pingle</b> and <b>Prataprao Gujar</b>
+          converged and defeated it in the field, after a long day's fighting; Ikhlas Khan was wounded and
+          <b>captured</b>, the camp was taken, and nearby <b>Mulher</b> fell soon after. It is widely regarded as the
+          Marathas' first major open-field victory over a Mughal army.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag debated">Debated</span><h4>Dates and numbers</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>Sources place the battle in <b>January or February 1672</b>. Troop strengths, casualties and the spoils
+          (about 6,000 horses, 6,000 camels and 125 elephants, in Sabhasad's chronicle) vary between accounts. Salher's height is usually quoted as about <b>1,567 m</b>, though an older gazetteer measurement is
+          higher.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag debated">Debated</span><h4>Panhala retaken, March 1673</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>Maratha accounts credit <b>Kondaji Farzand</b> with a night escalade that took Panhala from Bijapur on <b>6 March 1673</b>; Jadunath Sarkar instead records that Shivaji gained it, around 5 March, by bribery.
+          The popular figure of <b>60 men</b> owes much to modern retellings, including a 2018 Marathi film, so the
+          telling says only "a small band — a few dozen, tradition says."</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag c">Context</span><h4>Moropant and Prataprao</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p><b>Moropant Trimbak Pingle</b>, who supervised the building of Pratapgad (1656), became Shivaji's
+          <b>Peshwa</b> (chief minister) — we meet him again at the coronation (Day 22). <b>Prataprao Gujar</b> was
+          the cavalry commander (sarnaubat) whose story ends at Nesari tomorrow (Day 19).</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===================== JOURNEY ===================== -->
+  <section aria-labelledby="journey-h">
+    <div class="sec-head">
+      <span class="num">05</span>
+      <h2 id="journey-h">The thirty-night journey</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="ribbon">
+      <div class="acts">
+        <div class="act-col">
+          <div class="name">I · Dream is Born ✓</div>
+          <div class="dots-row">
+            <span class="d done"></span><span class="d done"></span><span class="d done"></span>
+            <span class="d done"></span><span class="d done"></span><span class="d done"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">II · Lion Rises ✓</div>
+          <div class="dots-row">
+            <span class="d done"></span><span class="d done"></span><span class="d done"></span>
+            <span class="d done"></span><span class="d done"></span><span class="d done"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">III · Shaking Empires ✓</div>
+          <div class="dots-row">
+            <span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">IV · The Crown</div>
+          <div class="dots-row">
+            <span class="d done" title="Day 17 — told"></span><span class="d now" title="Day 18 — tonight"></span><span class="d" title="Day 19"></span><span class="d" title="Day 20"></span>
+            <span class="d" title="Day 21"></span><span class="d" title="Day 22"></span><span class="d" title="Day 23"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">V · King &amp; Legacy</div>
+          <div class="dots-row">
+            <span class="d" title="Day 24"></span><span class="d" title="Day 25"></span><span class="d" title="Day 26"></span><span class="d" title="Day 27"></span>
+            <span class="d" title="Day 28"></span><span class="d" title="Day 29"></span><span class="d" title="Day 30"></span>
+          </div>
+        </div>
+      </div>
+      <div class="legend">
+        <span><span class="d now"></span> Tonight</span>
+        <span><span class="d"></span> Nights to come</span>
+        <span><span class="d done"></span> Nights told</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LEDGER ===================== -->
+  <section aria-labelledby="ledger-h">
+    <div class="ledger">
+      <h2 id="ledger-h">Fact &amp; legend, kept honest</h2>
+      <dl>
+        <div class="row"><dt class="h">History</dt>
+          <dd>Early in <b>1672</b> Maratha armies under Moropant Pingle and Prataprao Gujar defeated the Mughal force
+            besieging <b>Salher</b> in open battle and captured <b>Ikhlas Khan</b>. In <b>March 1673</b> <b>Panhala</b>
+            was won back.</dd></div>
+        <div class="row"><dt class="c">Debated</dt>
+          <dd>The exact <b>month</b> of Salher, troop numbers and spoils; <b>how Panhala was won</b> (Kondaji Farzand's night climb, or bribery) and the size of his band.</dd></div>
+      </dl>
+    </div>
+
+    <div class="foot">
+      <span><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Trip map</a></span>
+      <span class="next">Next → <a href="day-19.html">Day 19 · Nesari &amp; Prataprao</a></span>
+    </div>
+  </section>
+</main>
+
+<script>
+  (function(){
+    var tabs={en:document.getElementById('tab-en'),mr:document.getElementById('tab-mr')};
+    var panes={en:document.getElementById('story-en'),mr:document.getElementById('story-mr')};
+    function show(l){for(var k in tabs){var on=(k===l);tabs[k].setAttribute('aria-selected',on?'true':'false');panes[k].hidden=!on;}}
+    tabs.en.addEventListener('click',function(){show('en')});
+    tabs.mr.addEventListener('click',function(){show('mr')});
+  })();
+  (function(){var coin=document.getElementById('coin');coin.addEventListener('click',function(){coin.classList.toggle('flipped')});})();
+</script>

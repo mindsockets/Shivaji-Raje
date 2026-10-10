@@ -1,0 +1,415 @@
+<meta charset="utf-8">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#BE5A11">
+<title>Master of the Sea</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tiro+Devanagari+Marathi:ital@0;1&family=Karla:wght@400;600;700&display=swap">
+
+<link rel="stylesheet" href="day.css">
+
+<nav class="daynav">
+  <a href="day-23.html">‹ Day 23</a>
+  <span class="mid"><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Map</a> · <a href="sayings-sheet.html">📜 Sayings</a></span>
+  <a href="day-25.html">Day 25 ›</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">
+      <span class="daynum">Day 24</span>
+      <span class="act-tag">Act V · The King &amp; the Legacy</span>
+      <span class="act-tag">the navy, 1650s–1680</span>
+    </div>
+    <h1>Master of the Sea</h1>
+    <p class="dek">A king of the mountains looks out at the waves — and builds ships, and forts that rise straight out of
+      the sea. Tonight: <b>the Maratha navy</b>, and the one island fort he could never take.</p>
+  </div>
+  <svg class="ridge" viewBox="0 0 880 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,90 L0,54 L70,30 L130,50 L200,20 L270,46 L340,14 L410,44 L480,24 L560,50 L620,28 L700,52 L770,26 L830,48 L880,32 L880,90 Z"
+      fill="var(--map-ridge)" opacity=".55"/>
+    <path d="M0,90 L0,66 L90,48 L170,66 L250,40 L340,64 L430,44 L520,66 L610,48 L700,68 L790,50 L880,66 L880,90 Z"
+      fill="var(--map-ridge)"/>
+  </svg>
+</header>
+
+<main class="wrap">
+
+  <!-- ===================== PLACE ===================== -->
+  <section aria-labelledby="place-h">
+    <div class="sec-head">
+      <span class="num">01</span>
+      <h2 id="place-h">The forts of the sea</h2>
+      <span class="rule"></span>
+    </div>
+    <figure class="map">
+      <svg viewBox="0 0 700 460" role="img"
+        aria-label="A map of the Konkan coast, with the Arabian Sea to the west on the left. Running from north to south are: the shipyard at Kalyan, inland in the north; the island fort of Khanderi; the Siddis' island fortress of Janjira, marked with a dark flag as never taken, with Shivaji's Padmadurg beside it; Suvarnadurg; Vijaydurg; and, far in the south, the island fort of Sindhudurg off Malvan, drawn largest. Small Maratha ships sail along the coast.">
+        <defs>
+          <linearGradient id="sea24" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" style="stop-color:color-mix(in srgb,var(--sea-line,#5b7f8c) 50%,var(--paper))"/>
+            <stop offset="1" style="stop-color:color-mix(in srgb,var(--sea-line,#5b7f8c) 22%,var(--paper))"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="700" height="460" fill="var(--paper)"/>
+        <rect x="0" y="0" width="700" height="460" fill="var(--green)" opacity=".1"/>
+
+        <!-- the sea to the west of the coastline -->
+        <path d="M0,0 L238,0 C242,40 246,90 252,120 C270,140 300,152 320,166 C344,184 366,204 382,224 C420,276 462,330 502,372
+                 C530,400 556,426 580,460 L0,460 Z" fill="url(#sea24)"/>
+        <path d="M238,0 C242,40 246,90 252,120 C270,140 300,152 320,166 C344,184 366,204 382,224 C420,276 462,330 502,372
+                 C530,400 556,426 580,460" fill="none" stroke="var(--ink-soft)" stroke-width="1.4" opacity=".7"/>
+        <text class="m-sea-label" x="120" y="300" text-anchor="middle" style="fill:var(--ink-soft)">Arabian Sea</text>
+        <text class="m2-region" x="560" y="200" text-anchor="middle" style="fill:var(--ink-soft)">KONKAN</text>
+
+        <!-- Kalyan shipyard (inland, north) -->
+        <circle cx="385" cy="49" r="5" fill="var(--ink-soft)"/>
+        <path d="M394,46 l18,0 l-4,6 l-10,0 Z" fill="var(--saffron)"/>
+        <text class="m-sub" x="420" y="54" style="fill:var(--ink)">Kalyan — the first shipyard</text>
+
+        <!-- sea forts -->
+        <g>
+          <circle cx="227" cy="118" r="7" fill="var(--map-ridge)" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <text class="m-shiv-sub" x="216" y="122" text-anchor="end" style="fill:var(--ink)">Khanderi (1679)</text>
+        </g>
+        <g>
+          <circle cx="300" cy="164" r="8" fill="var(--ink)" opacity=".85"/>
+          <line x1="300" y1="156" x2="300" y2="138" stroke="var(--ink)" stroke-width="1.4"/>
+          <path d="M300,139 l12,3 l-12,5 Z" fill="var(--ink)"/>
+          <text class="m-shiv-sub" x="288" y="168" text-anchor="end" style="fill:var(--ink)">Janjira</text>
+          <text class="m-sub" x="288" y="182" text-anchor="end" style="fill:var(--rust)">the Siddis' — never taken</text>
+          <circle cx="284" cy="196" r="5" fill="var(--map-ridge)" stroke="var(--saffron)" stroke-width="1.4"/>
+          <text class="m-sub" x="274" y="212" text-anchor="end" style="fill:var(--ink)">Padmadurg</text>
+        </g>
+        <g>
+          <circle cx="364" cy="220" r="7" fill="var(--map-ridge)" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <text class="m-shiv-sub" x="352" y="250" text-anchor="end" style="fill:var(--ink)">Suvarnadurg</text>
+        </g>
+        <g>
+          <circle cx="487" cy="368" r="7" fill="var(--map-ridge)" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <text class="m-shiv-sub" x="474" y="372" text-anchor="end" style="fill:var(--ink)">Vijaydurg</text>
+        </g>
+        <g>
+          <circle cx="548" cy="430" r="12" fill="var(--map-ridge)" stroke="var(--saffron)" stroke-width="2.4"/>
+          <line x1="548" y1="418" x2="548" y2="396" stroke="var(--ink-soft)" stroke-width="1.6"/>
+          <path d="M548,397 l14,4 l-14,6 Z" fill="var(--saffron)"/>
+          <text class="m-shiv" x="532" y="436" text-anchor="end" style="fill:var(--ink)">Sindhudurg</text>
+          <text class="m-sub" x="532" y="452" text-anchor="end" style="fill:var(--ink-soft)">begun 1664 · off Malvan</text>
+        </g>
+
+        <!-- Maratha ships along the coast -->
+        <g fill="var(--saffron)">
+          <g transform="translate(110,236)"><path d="M0,0 L30,0 L24,8 L6,8 Z"/><line x1="15" y1="0" x2="15" y2="-20" stroke="var(--ink-soft)" stroke-width="1.4"/><path d="M16,-19 L28,-6 L16,-6 Z"/></g>
+          <g transform="translate(260,300)"><path d="M0,0 L30,0 L24,8 L6,8 Z"/><line x1="15" y1="0" x2="15" y2="-20" stroke="var(--ink-soft)" stroke-width="1.4"/><path d="M16,-19 L28,-6 L16,-6 Z"/></g>
+          <g transform="translate(380,400)"><path d="M0,0 L30,0 L24,8 L6,8 Z"/><line x1="15" y1="0" x2="15" y2="-20" stroke="var(--ink-soft)" stroke-width="1.4"/><path d="M16,-19 L28,-6 L16,-6 Z"/></g>
+        </g>
+      </svg>
+      <figcaption><b>A wall of forts along the waves.</b> From the first shipyard at Kalyan to
+        <span style="color:var(--saffron)">Sindhudurg</span> in the south, Shivaji's sea forts guarded the Konkan — all
+        except one rock he could never take: the Siddis' <span style="color:var(--rust)">Janjira</span>.</figcaption>
+    </figure>
+    <p class="map-cta"><a href="trip-companion.html">📍 See the sea forts on the real map →</a></p>
+  </section>
+
+  <!-- ===================== STORY ===================== -->
+  <section aria-labelledby="story-h">
+    <div class="sec-head">
+      <span class="num">02</span>
+      <h2 id="story-h">Tonight's telling</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="read-cue">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.4"/><path d="M8 4.4V8l2.6 1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      About 10 minutes, read aloud slowly · choose your language
+    </div>
+
+    <div class="lang-bar" role="tablist" aria-label="Choose language">
+      <button role="tab" id="tab-en" aria-controls="story-en" aria-selected="true">English</button>
+      <button role="tab" id="tab-mr" class="mr" aria-controls="story-mr" aria-selected="false">मराठी</button>
+    </div>
+
+    <div class="telling" id="story-en" role="tabpanel" aria-labelledby="tab-en">
+      <p>Tonight the last act begins: <em>The King &amp; the Legacy</em>. For the next few nights we will see not just how
+        Shivaji fought, but what kind of king he was, and what he left behind. And we begin somewhere new. We have spent so
+        long in the mountains that we have almost forgotten the sea. But Shivaji never forgot it.</p>
+      <p>Remember Day 8, when Shivaji won Javali and opened the door to the Konkan, the long green coast along the Arabian
+        Sea? Once that door was open, he faced a new kind of danger. The sea was full of powerful strangers: the Portuguese
+        with their great ships and cannon, English and Dutch traders, and — most dangerous of all to the coast — the
+        <span class="term">Siddis</span>, fierce sailors who raided the Konkan villages from their island fortress.</p>
+      <p>Who were the Siddis? Remember them from our very first night — "fierce sailors who held an island fort no one could
+        crack." Their families had come to India from Africa long before, and they were famous seamen and soldiers. They
+        served first the Deccan sultans and later the Mughal emperor as admirals, and from their island they could strike
+        anywhere along the coast.</p>
+      <p>Shivaji understood something that very few kings of his time in India understood: whoever rules the sea can guard
+        the coast, protect the traders, and keep the fishing villages safe. A kingdom with a long coastline and no ships is
+        like a house with no door. So this king of the mountains decided to build a navy.</p>
+      <p>But how do you build ships if your people have never built warships before? Shivaji began at the creeks near
+        <span class="term">Kalyan</span>, in the north of the Konkan, in the late 1650s. He even hired Portuguese carpenters
+        who knew how to build ocean-going ships. When the Portuguese viceroy found out, he ordered his men to stop helping.
+        But by then the work had begun, and the building went on.</p>
+      <p>The Maratha ships were not giant galleons. Most were fast, light vessels called <em>gurab</em> and <em>galbat</em>,
+        which could dart through shallow coastal waters and hide in creeks where big ships could not follow — ganimi kava,
+        but on the water! Over the years Shivaji's fleet grew to many dozens of warships, along with many more small boats.</p>
+      <p>Then he began something even bolder: forts that rose straight out of the sea. The greatest of them is
+        <span class="term">Sindhudurg</span>, "the sea fort," built on a rocky island called Kurte, just off the town of
+        Malvan. Its first stone was laid in November 1664, and it took about three years to finish. Its walls rise right up
+        from the waves, and its gate is hidden so cleverly that it is hard to see from the sea.</p>
+      <p>Inside Sindhudurg, people show you something wonderful: the print of a hand and a foot pressed into the lime,
+        which tradition says were made by Shivaji himself while the fort was being built. (We cannot be sure they are his —
+        but imagine the king pressing his palm into the wet lime of his own sea fort!)</p>
+      <p>Along the coast, other sea forts were built or strengthened: <span class="term">Vijaydurg</span>, "the fort of
+        victory"; <span class="term">Suvarnadurg</span>, "the golden fort"; and, later, <span class="term">Khanderi</span>,
+        on a small island near the mouth of Bombay harbour. Building Khanderi in 1679 was dangerous work: the English and the
+        Siddis attacked again and again, but the Maratha boats fought back so cleverly that they even captured an English
+        ship, and Khanderi was finished.</p>
+      <p>But there was one fortress that Shivaji could never take, and we should tell it honestly. Off the coast stood
+        <span class="term">Janjira</span>, the island stronghold of the Siddis, with massive walls rising from the sea. Shivaji
+        attacked it again and again — and failed every time. Even his great commanders could not break it. Janjira was
+        never taken by the Marathas at all.</p>
+      <p>And here is the lesson inside that failure. When Shivaji could not take Janjira, he did not give up on the sea. He
+        built his own island fort, <span class="term">Padmadurg</span>, right near Janjira, to keep watch on it — and he built
+        Sindhudurg and his other sea forts to make his coast strong. Even the greatest heroes have limits. What matters is
+        what you build when you meet one.</p>
+      <p>Now for the honest part. The dates of the very first ships, and the size of the fleet, vary between accounts. The
+        hand- and footprints are tradition. And the famous title "Father of the Indian Navy" is a loving honour given to
+        Shivaji in our own times, not a title from his day. But this is certain: he built a real navy and real sea forts,
+        when few Indian rulers of his time thought about the sea at all.</p>
+      <p>And the story did not end with him. After his time, Maratha admirals like Kanhoji Angre kept that navy strong along
+        the coast for many years. And in 2022, when the Indian Navy chose a new flag, its badge was given an eight-sided shape
+        inspired by Shivaji's royal seal — the very Rajmudra we met on Day 6, the crescent-moon seal that promised to grow.</p>
+      <p>Tomorrow we travel far from the sea — south, all the way to the land of the Tamil kings, on Shivaji's longest
+        journey of all, where he meets the brother he hardly knew.</p>
+      <p class="goodnight">Goodnight — tonight's badge: <b>armar</b>, "the navy" — a wise king guards every door of his
+        land, even the one that opens onto the sea.</p>
+    </div>
+
+    <div class="telling mr" id="story-mr" role="tabpanel" aria-labelledby="tab-mr" hidden>
+      <p><span class="dropcap">आ</span>ज रात्री शेवटचा अंक सुरू होतो: <em>राजा आणि वारसा</em>. पुढच्या काही रात्री आपण शिवाजी
+        कसा लढला एवढंच नव्हे, तर तो कसा राजा होता, आणि त्याने मागे काय ठेवलं, हे पाहणार आहोत. आणि सुरुवात एका नव्या ठिकाणाहून.
+        आपण इतका काळ डोंगरांत घालवला, की समुद्र जवळजवळ विसरूनच गेलो. पण शिवाजी तो कधीच विसरला नाही.</p>
+      <p>आठवी रात्र आठवते? जावळी जिंकून शिवाजीने कोकणाचं — अरबी समुद्राकाठच्या लांबलचक हिरव्या किनारपट्टीचं — दार उघडलं होतं.
+        ते दार उघडताच त्याच्यापुढे एका नव्या प्रकारचा धोका उभा राहिला. समुद्र बलाढ्य परक्यांनी भरला होता: मोठमोठी जहाजं आणि
+        तोफा असलेले पोर्तुगीज, इंग्रज आणि डच व्यापारी, आणि — किनाऱ्यासाठी सर्वांत धोकादायक — <span class="term">सिद्दी</span>,
+        आपल्या बेटावरच्या किल्ल्यातून कोकणातल्या गावांवर छापे घालणारे कडवे दर्यावर्दी.</p>
+      <p>सिद्दी कोण होते? आपल्या अगदी पहिल्या रात्री आपण त्यांना भेटलो होतो — "कुणालाही न जिंकता आलेला एक बेटावरचा किल्ला
+        बाळगणारे कडवे दर्यावर्दी." त्यांची घराणी फार पूर्वी आफ्रिकेतून भारतात आली होती, आणि ते नामवंत खलाशी आणि योद्धे होते.
+        आधी दख्खनच्या सुलतानांची, आणि पुढे मुघल बादशहाची चाकरी त्यांनी आरमारप्रमुख म्हणून केली, आणि आपल्या बेटावरून ते
+        किनाऱ्यावर कुठेही घाव घालू शकत.</p>
+      <p>त्या काळच्या भारतातल्या फार थोड्या राजांना जी गोष्ट उमगली होती, ती शिवाजीला उमगली: समुद्रावर ज्याची सत्ता, तो किनाऱ्याचं
+        रक्षण करू शकतो, व्यापाऱ्यांना संरक्षण देऊ शकतो, आणि कोळीवाडे सुरक्षित ठेवू शकतो. लांब किनारा असलेलं, पण जहाजं नसलेलं
+        राज्य म्हणजे दरवाजा नसलेलं घर. म्हणून डोंगरांच्या या राजाने आरमार उभारायचं ठरवलं.</p>
+      <p>पण ज्यांनी कधी युद्धनौका बांधल्याच नाहीत, अशा लोकांकडून जहाजं कशी बांधून घ्यायची? शिवाजीने सुरुवात केली कोकणाच्या
+        उत्तरेला, <span class="term">कल्याण</span>जवळच्या खाड्यांत, १६५० च्या दशकाच्या अखेरीस. समुद्रात चालणारी जहाजं बांधणं
+        जाणणारे पोर्तुगीज सुतारसुद्धा त्याने कामाला ठेवले. पोर्तुगीज व्हाइसरॉयला हे कळलं, तेव्हा त्याने आपल्या माणसांना मदत
+        थांबवायचा हुकूम दिला. पण तोवर काम सुरू झालं होतं, आणि बांधणी चालूच राहिली.</p>
+      <p>मराठ्यांची जहाजं प्रचंड, अवजड नव्हती. बहुतेक होती <em>गुराब</em> आणि <em>गलबत</em> नावाची चपळ, हलकी जहाजं — उथळ
+        किनारी पाण्यातून सुळकन जाणारी, आणि मोठी जहाजं जिथे पोहोचूच शकत नाहीत, अशा खाड्यांत लपणारी — समुद्रावरचा गनिमी कावाच!
+        वर्षानुवर्षं शिवाजीचं आरमार डझनावारी युद्धनौकांपर्यंत, आणि त्याहून कितीतरी जास्त छोट्या होड्यांपर्यंत वाढत गेलं.</p>
+      <p>मग त्याने याहूनही धाडसी काम सुरू केलं: समुद्रातून थेट वर उठणारे किल्ले. त्यांतला सर्वांत भव्य म्हणजे
+        <span class="term">सिंधुदुर्ग</span> — "सागरातला दुर्ग" — मालवण गावाजवळच्या कुरटे नावाच्या खडकाळ बेटावर बांधलेला.
+        नोव्हेंबर १६६४ मध्ये त्याचा पहिला दगड रचला गेला, आणि तो पूर्ण व्हायला सुमारे तीन वर्षं लागली. त्याच्या भिंती थेट लाटांतून
+        वर उठतात, आणि त्याचा दरवाजा इतक्या हुशारीने लपवला आहे, की समुद्रातून तो सहज दिसत नाही.</p>
+      <p>सिंधुदुर्गात लोक एक अद्भुत गोष्ट दाखवतात: चुन्यात उमटलेले एका हाताचे आणि एका पावलाचे ठसे — किल्ला बांधला जात
+        असताना ते खुद्द शिवाजीने उमटवले, असं परंपरा सांगते. (ते त्याचेच आहेत, याची खात्री देता येत नाही — पण आपल्याच सागरी
+        किल्ल्याच्या ओल्या चुन्यात राजा आपला तळवा दाबतोय, अशी कल्पना कर!)</p>
+      <p>किनाऱ्यावर इतरही सागरी किल्ले बांधले किंवा बळकट केले गेले: <span class="term">विजयदुर्ग</span>, "विजयाचा किल्ला";
+        <span class="term">सुवर्णदुर्ग</span>, "सोन्याचा किल्ला"; आणि पुढे, मुंबईच्या बंदराच्या तोंडाजवळच्या एका छोट्या बेटावर,
+        <span class="term">खांदेरी</span>. १६७९ मध्ये खांदेरी बांधणं धोक्याचं काम होतं: इंग्रज आणि सिद्दी पुन्हा पुन्हा हल्ले करत होते,
+        पण मराठ्यांच्या होड्यांनी इतक्या चतुराईने प्रतिकार केला, की त्यांनी एक इंग्रज जहाजसुद्धा पकडलं, आणि खांदेरी पूर्ण झाला.</p>
+      <p>पण एक किल्ला असा होता, जो शिवाजीला कधीच घेता आला नाही — आणि तो आपण प्रामाणिकपणे सांगायला हवा. किनाऱ्यापासून
+        थोड्या अंतरावर उभा होता <span class="term">जंजिरा</span> — समुद्रातून उठणाऱ्या प्रचंड भिंतींचा, सिद्दींचा बेटावरचा
+        बालेकिल्ला. शिवाजीने त्यावर पुन्हा पुन्हा हल्ले केले — आणि प्रत्येक वेळी अपयश आलं. त्याच्या थोर सरदारांनाही तो फोडता
+        आला नाही. मराठ्यांना जंजिरा कधीच जिंकता आला नाही.</p>
+      <p>आणि त्या अपयशातच एक धडा दडला आहे. जंजिरा घेता आला नाही, तेव्हा शिवाजीने समुद्राचा नाद सोडला नाही. जंजिऱ्यावर नजर
+        ठेवायला त्याने त्याच्या अगदी जवळ आपला स्वतःचा बेटावरचा किल्ला बांधला — <span class="term">पद्मदुर्ग</span> — आणि
+        आपला किनारा बळकट करायला सिंधुदुर्ग आणि इतर सागरी किल्ले उभारले. मोठ्यातल्या मोठ्या वीरांनाही मर्यादा असतात. एखादी मर्यादा
+        समोर आली, की आपण काय उभारतो, हेच महत्त्वाचं.</p>
+      <p>आता प्रामाणिकपणाचा भाग. अगदी पहिल्या जहाजांच्या तारखा, आणि आरमाराचा आकार, यांबाबत नोंदींत फरक आहे. हाता-पायांचे ठसे
+        ही परंपरा आहे. आणि "भारतीय नौदलाचे जनक" ही प्रसिद्ध पदवी आपल्या काळात शिवाजीला प्रेमाने दिलेला सन्मान आहे — त्याच्या
+        काळातली पदवी नव्हे. पण इतकं नक्की: त्याच्या काळात फार थोड्या भारतीय राज्यकर्त्यांनी समुद्राचा विचार केला; पण
+        त्याने खरंखुरं आरमार आणि खरेखुरे सागरी किल्ले उभारले.</p>
+      <p>आणि ही गोष्ट त्याच्याबरोबर संपली नाही. त्याच्या पश्चात कान्होजी आंग्रे यांच्यासारख्या मराठा सरखेलांनी ते आरमार अनेक
+        वर्षं किनाऱ्यावर बलवान ठेवलं. आणि २०२२ मध्ये भारतीय नौदलाने नवा ध्वज निवडला, तेव्हा त्याच्या चिन्हाला शिवाजीच्या
+        राजमुद्रेपासून प्रेरणा घेतलेला अष्टकोनी आकार दिला गेला — सहाव्या रात्री आपण भेटलेली तीच राजमुद्रा, वाढत जाण्याचं वचन
+        देणारी चंद्रकोरीची मुद्रा.</p>
+      <p>उद्या आपण समुद्रापासून दूर जाणार आहोत — दक्षिणेला, थेट तमिळ राजांच्या भूमीपर्यंत, शिवाजीच्या सर्वांत लांबच्या प्रवासावर,
+        जिथे तो जवळजवळ अनोळखी असलेल्या आपल्या भावाला भेटतो.</p>
+      <p class="goodnight">शुभ रात्री — आजचं जपायचं नाणं: <b>आरमार</b> — शहाणा राजा आपल्या भूमीच्या प्रत्येक दरवाजाचं रक्षण
+        करतो, समुद्राकडे उघडणाऱ्या दरवाजाचंही.</p>
+    </div>
+
+    <div class="moon-note">
+      <svg class="moon" width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">
+        <circle cx="26" cy="26" r="22" fill="none" stroke="var(--gold)" stroke-width="2.4" opacity=".5"/>
+        <path d="M23.22,10.09 A17,17 0 1 0 41.44,31.34 A14,14 0 0 1 23.22,10.09 Z" fill="var(--gold)" opacity=".9"/>
+      </svg>
+      <p>Day 8 opened <b>the door to the sea</b>; tonight Shivaji guards it. And the Rajmudra from Day 6 sails on today, on the
+        Indian Navy's flag.
+        <span class="fwd">Janjira reminds us: even heroes have limits — and build anyway.</span></p>
+    </div>
+
+    <h3 class="subhead">Say it out loud</h3>
+    <div class="say-grid">
+      <div class="say"><div class="head"><span class="dev">आरमार</span><span class="rom">armar</span></div>
+        <div class="phon">AAR-maar</div><div class="gloss">a navy, a war-fleet</div></div>
+      <div class="say"><div class="head"><span class="dev">सिंधुदुर्ग</span><span class="rom">Sindhudurg</span></div>
+        <div class="phon">SIN-dhu-durg</div><div class="gloss">the great sea fort off Malvan</div></div>
+      <div class="say"><div class="head"><span class="dev">जंजिरा</span><span class="rom">Janjira</span></div>
+        <div class="phon">jan-JEE-raa</div><div class="gloss">the Siddis' island fortress</div></div>
+      <div class="say"><div class="head"><span class="dev">जलदुर्ग</span><span class="rom">jaldurg</span></div>
+        <div class="phon">JAL-durg</div><div class="gloss">a water fort, built in the sea</div></div>
+      <div class="say"><div class="head"><span class="dev">गुराब</span><span class="rom">gurab</span></div>
+        <div class="phon">gu-RAAB</div><div class="gloss">a Maratha warship</div></div>
+      <div class="say"><div class="head"><span class="dev">कान्होजी आंग्रे</span><span class="rom">Kanhoji Angre</span></div>
+        <div class="phon">KAAN-ho-jee AAN-gray</div><div class="gloss">a later Maratha admiral</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== COIN ===================== -->
+  <section aria-labelledby="coin-h">
+    <div class="sec-head">
+      <span class="num">03</span>
+      <h2 id="coin-h">Tonight's collectible</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="coin-wrap">
+      <button class="coin" id="coin" aria-label="Armar badge — flip to read its meaning">
+        <span class="coin-inner">
+          <span class="face front">
+            <span class="big">आरमार</span>
+            <span class="rom">The Navy</span>
+            <span class="dots">Badge · Day 24</span>
+          </span>
+          <span class="face back">
+            <span class="mean">guard every door — even the sea</span>
+            <span class="dots">Sindhudurg · 1664</span>
+          </span>
+        </span>
+      </button>
+      <div class="coin-copy">
+        <h3>The twenty-fourth badge — Act V begins</h3>
+        <p>A mountain king who looked out to sea. The badge carries both lessons of the night: think beyond what everyone
+          else is doing — and when you meet a limit, like Janjira, build something anyway.</p>
+        <p class="hint">↻ Hover or tap the coin to turn it over.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HISTORY CARDS ===================== -->
+  <section aria-labelledby="hist-h">
+    <div class="sec-head">
+      <span class="num">04</span>
+      <h2 id="hist-h">For the grown-up reading aloud</h2>
+      <span class="rule"></span>
+    </div>
+    <p class="grown-note">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 7v4M8 4.6v.4" stroke-linecap="round"/></svg>
+      The history of the Maratha navy — and a modern honour, kept in its place.
+    </p>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>Ships and shipyards</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>Shivaji's first warships were built at <b>Kalyan–Bhiwandi</b>, usually dated 1657–58 (some say c. 1654), initially
+          with Portuguese shipwrights (the Viegas family) until the Portuguese viceroy withdrew them. The fleet relied on light
+          craft such as <b>gurabs</b> and <b>galbats</b>; estimates of its size vary widely.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>The sea forts</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p><b>Sindhudurg</b> on Kurte island off Malvan: foundation laid <b>25 November 1664</b>, completed c. 1667; it became
+          the navy's headquarters. <b>Vijaydurg</b> and <b>Suvarnadurg</b> were strengthened; <b>Khanderi</b> was fortified in
+          <b>1679</b> despite English and Siddi opposition (an English vessel was captured), the dispute ending in a treaty in
+          1680. All four are part of the 2025 UNESCO listing. The <b>hand and foot impressions</b> at Sindhudurg are tradition.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>Janjira, the fort he never took</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>The Siddis' island fortress of <b>Janjira</b> withstood repeated attacks by Shivaji (and later Sambhaji) and was never
+          captured by the Marathas. Shivaji built <b>Padmadurg</b> nearby as a counter-fort. It is a good example to share with
+          children of a great figure meeting a real limit.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag c">Legacy</span><h4>"Father of the Indian Navy" and the 2022 ensign</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>"Father of the Indian Navy" is a <b>modern honorific</b>. The navy's tradition continued under admirals such as
+          <b>Kanhoji Angre</b> in the 18th century. On <b>2 September 2022</b> the Indian Navy unveiled a new ensign whose
+          octagonal badge is described as inspired by Shivaji's <b>Rajmudra</b>.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===================== JOURNEY ===================== -->
+  <section aria-labelledby="journey-h">
+    <div class="sec-head">
+      <span class="num">05</span>
+      <h2 id="journey-h">The thirty-night journey</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="ribbon">
+      <div class="acts">
+        <div class="act-col"><div class="name">I · Dream is Born ✓</div><div class="dots-row">
+          <span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span></div></div>
+        <div class="act-col"><div class="name">II · Lion Rises ✓</div><div class="dots-row">
+          <span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span></div></div>
+        <div class="act-col"><div class="name">III · Shaking Empires ✓</div><div class="dots-row">
+          <span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span></div></div>
+        <div class="act-col"><div class="name">IV · The Crown ✓</div><div class="dots-row">
+          <span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span><span class="d done"></span></div></div>
+        <div class="act-col"><div class="name">V · King &amp; Legacy</div><div class="dots-row">
+          <span class="d now" title="Day 24 — tonight"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span><span class="d"></span></div></div>
+      </div>
+      <div class="legend">
+        <span><span class="d now"></span> Tonight</span>
+        <span><span class="d"></span> Nights to come</span>
+        <span><span class="d done"></span> Nights told</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LEDGER ===================== -->
+  <section aria-labelledby="ledger-h">
+    <div class="ledger">
+      <h2 id="ledger-h">Fact &amp; legend, kept honest</h2>
+      <dl>
+        <div class="row"><dt class="h">History</dt>
+          <dd>Shivaji built a navy from the late 1650s and a chain of sea forts — <b>Sindhudurg</b> (begun 1664), Vijaydurg,
+            Suvarnadurg, <b>Khanderi</b> (1679), Padmadurg — but never took <b>Janjira</b>.</dd></div>
+        <div class="row"><dt class="c">Debated</dt>
+          <dd>The date of the first ships and the <b>size</b> of the fleet.</dd></div>
+        <div class="row"><dt class="l">Tradition</dt>
+          <dd>The <b>hand and foot impressions</b> at Sindhudurg; "Father of the Indian Navy" is a modern honorific.</dd></div>
+      </dl>
+    </div>
+
+    <div class="foot">
+      <span><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Trip map</a></span>
+      <span class="next">Next → <a href="day-25.html">Day 25 · The Southern Campaign</a></span>
+    </div>
+  </section>
+</main>
+
+<script>
+  (function(){
+    var tabs={en:document.getElementById('tab-en'),mr:document.getElementById('tab-mr')};
+    var panes={en:document.getElementById('story-en'),mr:document.getElementById('story-mr')};
+    function show(l){for(var k in tabs){var on=(k===l);tabs[k].setAttribute('aria-selected',on?'true':'false');panes[k].hidden=!on;}}
+    tabs.en.addEventListener('click',function(){show('en')});
+    tabs.mr.addEventListener('click',function(){show('mr')});
+  })();
+  (function(){var coin=document.getElementById('coin');coin.addEventListener('click',function(){coin.classList.toggle('flipped')});})();
+</script>
