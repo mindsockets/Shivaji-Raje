@@ -1,0 +1,452 @@
+<meta charset="utf-8">
+<title>The Surat Raid</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Tiro+Devanagari+Marathi:ital@0;1&family=Karla:wght@400;600;700&display=swap">
+
+<link rel="stylesheet" href="day.css">
+
+<nav class="daynav">
+  <a href="day-13.html">‹ Day 13</a>
+  <span class="mid"><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Map</a> · <a href="sayings-sheet.html">📜 Sayings</a></span>
+  <a href="day-15.html">Day 15 ›</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">
+      <span class="daynum">Day 14</span>
+      <span class="act-tag">Act III · Shaking the Empires</span>
+      <span class="act-tag">January 1664 · a harder, honest night</span>
+    </div>
+    <h1>The Surat Raid</h1>
+    <p class="dek">A long, secret ride north to the Mughal empire's richest port. Tonight: striking an empire
+      where it is weakest — its <b>purse</b> — and an honest look at who paid the price.</p>
+  </div>
+  <svg class="ridge" viewBox="0 0 880 90" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,90 L0,54 L70,30 L130,50 L200,20 L270,46 L340,14 L410,44 L480,24 L560,50 L620,28 L700,52 L770,26 L830,48 L880,32 L880,90 Z"
+      fill="var(--map-ridge)" opacity=".55"/>
+    <path d="M0,90 L0,66 L90,48 L170,66 L250,40 L340,64 L430,44 L520,66 L610,48 L700,68 L790,50 L880,66 L880,90 Z"
+      fill="var(--map-ridge)"/>
+  </svg>
+</header>
+
+<main class="wrap">
+
+  <!-- ===================== PLACE ===================== -->
+  <section aria-labelledby="place-h">
+    <div class="sec-head">
+      <span class="num">01</span>
+      <h2 id="place-h">The long ride north</h2>
+      <span class="rule"></span>
+    </div>
+    <figure class="map">
+      <svg viewBox="0 0 700 460" role="img"
+        aria-label="A map of India's west coast. The Arabian Sea lies on the left. Near the top, on the coast in Mughal Gujarat, is Surat, the Mughal empire's richest port, with trading ships offshore. Far to the south at the bottom are Shivaji's lands around Pune and Rajgad, behind the Sahyadri ridge. A dotted saffron line runs a long way north through Mughal lands from Shivaji's country to Surat, and a second dotted line returns south: the ride there and back.">
+        <defs>
+          <linearGradient id="sea14" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0" style="stop-color:color-mix(in srgb,var(--sea-line,#5b7f8c) 45%,var(--paper))"/>
+            <stop offset="1" style="stop-color:color-mix(in srgb,var(--sea-line,#5b7f8c) 18%,var(--paper))"/>
+          </linearGradient>
+        </defs>
+        <rect x="0" y="0" width="700" height="460" fill="var(--paper)"/>
+        <!-- land tint -->
+        <rect x="0" y="0" width="700" height="460" fill="var(--gold)" opacity=".08"/>
+
+        <!-- the sea (west) with the coastline -->
+        <path d="M0,0 L222,0 C220,40 232,96 242,131 C246,170 240,200 241,216 C240,260 236,300 238,340 C240,380 256,420 268,460 L0,460 Z"
+          fill="url(#sea14)"/>
+        <path d="M222,0 C220,40 232,96 242,131 C246,170 240,200 241,216 C240,260 236,300 238,340 C240,380 256,420 268,460"
+          fill="none" stroke="var(--ink-soft)" stroke-width="1.4" opacity=".7"/>
+        <text class="m-sea-label" x="110" y="260" text-anchor="middle" style="fill:var(--ink-soft)">Arabian Sea</text>
+
+        <!-- Sahyadri ridge -->
+        <path d="M296,250 C306,300 312,360 326,460" fill="none" stroke="var(--map-ridge)" stroke-width="12" stroke-linecap="round" opacity=".8"/>
+        <text class="m-sub" x="292" y="246" text-anchor="end" style="fill:var(--ink-soft)">Sahyadri</text>
+
+        <!-- region labels -->
+        <text class="m2-region" x="540" y="214" text-anchor="middle" style="fill:var(--ink-soft)">MUGHAL LANDS</text>
+        <text class="m2-region" x="440" y="436" text-anchor="middle" style="fill:var(--saffron)">SHIVAJI'S LANDS</text>
+
+        <!-- Shivaji's country: Rajgad / Pune -->
+        <path d="M360,410 L370,394 L392,390 L400,400 L396,410 Z" fill="var(--map-ridge)"/>
+        <line x1="380" y1="392" x2="380" y2="376" stroke="var(--ink-soft)" stroke-width="1.4"/>
+        <path d="M380,377 l12,3 l-12,5 Z" fill="var(--saffron)"/>
+        <text class="m-shiv-sub" x="412" y="404" style="fill:var(--ink)">Pune · Rajgad</text>
+
+        <!-- Surat: walled port, castle, ships -->
+        <circle cx="258" cy="128" r="16" fill="var(--paper)" stroke="var(--ink-soft)" stroke-width="2"/>
+        <rect x="248" y="120" width="12" height="12" fill="var(--ink-soft)"/>
+        <g fill="var(--ink-soft)">
+          <path d="M196,118 l20,0 l-4,6 l-12,0 Z"/><line x1="206" y1="118" x2="206" y2="104" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <path d="M206,105 l9,6 l-9,2 Z"/>
+          <path d="M176,152 l20,0 l-4,6 l-12,0 Z"/><line x1="186" y1="152" x2="186" y2="138" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <path d="M186,139 l9,6 l-9,2 Z"/>
+        </g>
+        <text class="m-shiv" x="258" y="104" text-anchor="middle" style="fill:var(--ink)">Surat</text>
+        <text class="m-sub" x="268" y="84" text-anchor="middle" style="fill:var(--ink-soft)">the Mughal empire's richest port</text>
+
+        <!-- the ride north and back -->
+        <path d="M372,388 C400,330 420,270 400,210 C384,170 330,140 278,132" fill="none" stroke="var(--saffron)"
+          stroke-width="2.6" stroke-dasharray="2 7" stroke-linecap="round"/>
+        <path d="M278,132 l12,-6 l0,12 Z" fill="var(--saffron)"/>
+        <path d="M274,146 C320,170 360,200 372,250 C382,300 372,350 360,380" fill="none" stroke="var(--saffron)"
+          stroke-width="1.8" stroke-dasharray="6 7" stroke-linecap="round" opacity=".7"/>
+        <path d="M360,380 l-6,-12 l11,2 Z" fill="var(--saffron)" opacity=".7"/>
+        <text class="m-label" x="438" y="282" style="fill:var(--saffron)">the long ride north</text>
+        <text class="m-sub" x="438" y="298" style="fill:var(--ink-soft)">through Mughal lands, in secret</text>
+      </svg>
+      <figcaption><b>Strike the purse.</b> Shivaji rode far north through Mughal territory to
+        <span style="color:var(--ink)">Surat</span>, where ships from across the world traded, and back again
+        before the emperor's armies could catch him.</figcaption>
+    </figure>
+    <p class="map-cta"><a href="trip-companion.html">📍 See Surat on the real map →</a></p>
+  </section>
+
+  <!-- ===================== STORY ===================== -->
+  <section aria-labelledby="story-h">
+    <div class="sec-head">
+      <span class="num">02</span>
+      <h2 id="story-h">Tonight's telling</h2>
+      <span class="rule"></span>
+    </div>
+
+    <div class="read-cue">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.4"/><path d="M8 4.4V8l2.6 1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      About 10 minutes, read aloud slowly · choose your language
+    </div>
+
+    <div class="lang-bar" role="tablist" aria-label="Choose language">
+      <button role="tab" id="tab-en" aria-controls="story-en" aria-selected="true">English</button>
+      <button role="tab" id="tab-mr" class="mr" aria-controls="story-mr" aria-selected="false">मराठी</button>
+    </div>
+
+    <div class="telling" id="story-en" role="tabpanel" aria-labelledby="tab-en">
+      <p>Last night Shivaji struck the Mughal general in his own bedroom. Tonight he strikes at something an
+        empire cares about even more: its money. This is a famous story, but not a gentle one — so, just as
+        we did at Javali, we are going to tell it honestly.</p>
+      <p>Why money? Because armies, horses, cannon and forts all cost a great deal, and an empire like the
+        Mughals' was strong because it was rich. And for three long years Shaista Khan's soldiers had been
+        taking from Shivaji's lands — raiding villages, burning fields, carrying off what they pleased. So
+        Shivaji decided to answer by striking at the place where the emperor's riches flowed in.</p>
+      <p>That place was <span class="term">Surat</span>, far to the north in Gujarat, on a river near the sea.
+        It was the greatest port of the whole Mughal empire. Ships came there from Arabia, Persia, Africa and
+        Europe; pilgrims sailed from there to Mecca; its warehouses were stuffed with silk, cotton, spices,
+        pearls and gold. Some of the richest merchants on earth lived in Surat — one of them, Virji Vora,
+        was called by the English "the richest merchant in the world."</p>
+      <p>Surat had another name, too: people called it the "Gate of Mecca," because it was from Surat that the
+        great ships carried pilgrims across the sea to Mecca. A strong stone castle guarded the river, and the
+        emperor's officials collected taxes on every bale and barrel that came off the ships. Every day,
+        Surat poured money into the Mughal treasury.</p>
+      <p>But Surat was a very long way off — a great journey north, right through the emperor's own lands.
+        So Shivaji gathered a force of fast horsemen and rode secretly and swiftly. Hardly anyone knew where
+        he was heading, until, in the first days of <span class="term">January 1664</span>, his riders
+        suddenly appeared outside Surat.</p>
+      <p>The accounts say that Shivaji first sent word into the city, to the governor and to the richest
+        merchants, demanding that they come out and pay him — and warning that if they did not, the city would
+        be plundered. No one came.</p>
+      <p>The governor of Surat, a man named <span class="term">Inayat Khan</span>, should have defended his
+        city. Instead, he fled into the city's castle and shut the gates behind him — leaving the townspeople
+        to face the raiders on their own.</p>
+      <p>For several days, Shivaji's men went from one great mansion to the next, the houses of the wealthiest
+        merchants, carrying away gold, silver, pearls and fine goods. There was so much treasure that it had to
+        be loaded onto horses and bullocks. It was wealth that would pay soldiers and build forts for
+        swarajya.</p>
+      <p>Not everyone was taken by surprise. English and Dutch traders had "factories" in Surat — big trading
+        houses with storerooms and offices. The English barricaded theirs, armed the sailors from their ships,
+        and defended it so stoutly that the raiders left them alone; the Dutch, too, held firm behind their
+        walls.</p>
+      <p>A few acts of mercy were written down by people who were there or who heard about it soon after. A
+        French traveller recorded that Shivaji spared the house of a Christian priest, Father Ambrose,
+        because he was a good man who helped people, and also the house of a merchant who had died, because he
+        had been famous for his kindness and charity. And an English prisoner, Anthony Smith, was set free when
+        it turned out that he was a poor man.</p>
+      <p>There was danger too. A messenger came from the governor, saying he wanted to talk — and suddenly he
+        lunged at Shivaji with a hidden blade! Shivaji's bodyguards struck him down at once. Angry after this
+        treachery, the raiders punished some of their prisoners very harshly.</p>
+      <p>Now for the hardest part, and you deserve to hear it. A raid is a terrible thing for a city. Fires
+        broke out and spread, and a great part of Surat burned. Many ordinary people — not only the rich —
+        lost their homes, and lived through days of terror; some were treated cruelly to make them reveal
+        where their money was hidden.</p>
+      <p>Try, just for a moment, to imagine being a child in Surat that week: smoke in the sky, strangers on
+        horseback in the street, your parents frightened and whispering. That child did not choose the war
+        between the emperor and Shivaji. Remembering that child, too, is part of telling the story
+        honestly.</p>
+      <p>You may hear people say that at Surat Shivaji "spared the poor." The truth is more mixed than that:
+        a few people were spared, and many ordinary people suffered. Shivaji's side saw the raid as a blow
+        against the emperor's treasury in a hard war. The people of Surat remembered it as a disaster. Both
+        of those things are true at once — and we would rather tell you the real story than a too-perfect
+        one.</p>
+      <p>Before the Mughal armies could arrive, Shivaji's riders were gone, heading south with their treasure.
+        The news raced all the way to the emperor, and stung him again: first his own uncle attacked in his
+        bedroom, now his richest city emptied. Aurangzeb decided he must send his very best general to deal
+        with Shivaji once and for all. That is tomorrow night's story.</p>
+      <p>So tonight leaves us with two lessons. One is about strategy: to fight a giant, strike at what feeds
+        it. The other is about being honest: even a great hero's choices can hurt people who did nothing
+        wrong, and remembering them is part of telling history truly.</p>
+      <p class="goodnight">Goodnight — tonight's badge: <b>khajina</b>, "the treasury" — an empire runs on
+        money, and so does a kingdom; and every treasure has a cost, sometimes paid by others.</p>
+    </div>
+
+    <div class="telling mr" id="story-mr" role="tabpanel" aria-labelledby="tab-mr" hidden>
+      <p><span class="dropcap">का</span>ल रात्री शिवाजीने मुघल सेनापतीवर त्याच्याच शयनगृहात घाव घातला. आज
+        रात्री तो साम्राज्याला त्याहूनही जास्त प्रिय असलेल्या गोष्टीवर घाव घालतो: त्याचा पैसा. ही गोष्ट प्रसिद्ध
+        आहे, पण हळुवार नाही — म्हणून, जावळीच्या वेळेसारखंच, आपण ती प्रामाणिकपणे सांगणार आहोत.</p>
+      <p>पैसाच का? कारण सैन्य, घोडे, तोफा आणि किल्ले — सगळ्यालाच खूप पैसा लागतो, आणि मुघलांसारखं साम्राज्य
+        श्रीमंत होतं, म्हणूनच बलवान होतं. आणि लागोपाठ तीन वर्षं शाइस्ता खानाचे शिपाई शिवाजीचा मुलूख ओरबाडत
+        होते — गावं लुटत, शेतं जाळत, हवं ते उचलून नेत. म्हणून शिवाजीने ठरवलं, की ज्या ठिकाणी बादशहाची संपत्ती
+        वाहत येते, नेमक्या तिथेच घाव घालून उत्तर द्यायचं.</p>
+      <p>ते ठिकाण होतं <span class="term">सुरत</span> — दूर उत्तरेला, गुजरातमध्ये, समुद्राजवळच्या एका नदीकाठी.
+        अख्ख्या मुघल साम्राज्याचं ते सर्वांत मोठं बंदर होतं. अरबस्तान, इराण, आफ्रिका आणि युरोपातून तिथे जहाजं
+        येत; तिथून यात्रेकरू मक्केला जात; तिथली गुदामं रेशीम, कापूस, मसाले, मोती आणि सोन्याने भरलेली होती.
+        जगातले काही सर्वांत श्रीमंत व्यापारी सुरतेत राहत — त्यांच्यापैकी एक, वीरजी व्होरा, याला इंग्रज
+        "जगातला सर्वांत श्रीमंत व्यापारी" म्हणत.</p>
+      <p>सुरतेला आणखी एक नाव होतं: लोक तिला "मक्केचा दरवाजा" म्हणत, कारण सुरतेहूनच मोठी जहाजं यात्रेकरूंना समुद्रापार
+        मक्केला घेऊन जात. नदीकाठी एक भक्कम दगडी किल्ला शहराचं रक्षण करत होता, आणि जहाजांवरून उतरणाऱ्या प्रत्येक
+        गाठोड्यावर आणि पिंपावर बादशहाचे अधिकारी जकात वसूल करत. रोज सुरत मुघल खजिन्यात पैसा ओतत होती.</p>
+      <p>पण सुरत फार फार दूर होती — उत्तरेकडचा एक मोठा प्रवास, आणि तोही बादशहाच्याच मुलखातून. म्हणून शिवाजीने
+        चपळ घोडेस्वारांची फौज जमवली, आणि गुपचूप, भरधाव कूच केलं. तो कुठे निघालाय, हे जवळजवळ कुणालाच ठाऊक
+        नव्हतं — आणि मग <span class="term">जानेवारी १६६४</span>च्या पहिल्याच दिवसांत त्याचे स्वार अचानक सुरतेबाहेर
+        येऊन उभे ठाकले.</p>
+      <p>नोंदी सांगतात की शिवाजीने आधी शहरात — सुभेदाराला आणि सर्वांत श्रीमंत व्यापाऱ्यांना — निरोप पाठवला, की बाहेर
+        येऊन खंडणी भरा; नाहीतर शहर लुटलं जाईल. कुणीही आलं नाही.</p>
+      <p>सुरतेचा सुभेदार, <span class="term">इनायत खान</span>, याने खरं तर आपल्या शहराचं रक्षण करायला हवं होतं.
+        पण तो शहरातल्या किल्ल्यात पळून गेला आणि त्याने दरवाजे लावून घेतले — आणि शहरातल्या लोकांना एकट्यानेच
+        हल्लेखोरांना तोंड द्यायला सोडून दिलं.</p>
+      <p>कित्येक दिवस शिवाजीची माणसं एका मोठ्या वाड्यातून दुसऱ्या वाड्यात — सर्वांत श्रीमंत व्यापाऱ्यांच्या घरांत —
+        फिरत राहिली, आणि सोनं, चांदी, मोती आणि मौल्यवान माल घेऊन गेली. एवढा खजिना होता, की तो घोड्यांवर आणि
+        बैलांवर लादावा लागला. स्वराज्याच्या शिपायांचे पगार देणारी आणि किल्ले बांधणारी ती संपत्ती होती.</p>
+      <p>सगळेच बेसावध सापडले नाहीत. इंग्रज आणि डच व्यापाऱ्यांच्या सुरतेत "वखारी" होत्या — कोठारं आणि कचेऱ्या
+        असलेली मोठी व्यापारी घरं. इंग्रजांनी आपली वखार भक्कम बंद केली, आपल्या जहाजांवरच्या खलाशांना शस्त्रं दिली,
+        आणि इतक्या नेटाने तिचं रक्षण केलं, की हल्लेखोरांनी त्यांच्या वाटेला जाणं सोडून दिलं; डचही आपल्या
+        भिंतींआड ठाम राहिले.</p>
+      <p>काही दयेच्या प्रसंगांची नोंद तिथे असलेल्या, किंवा लवकरच त्याबद्दल ऐकलेल्या लोकांनी करून ठेवली आहे. एका
+        फ्रेंच प्रवाशाने लिहिलं, की शिवाजीने फादर अँब्रोज नावाच्या एका ख्रिस्ती धर्मगुरूचं घर सोडून दिलं, कारण तो
+        लोकांना मदत करणारा चांगला माणूस होता; आणि एका मृत व्यापाऱ्याचं घरही, कारण तो आपल्या दयाळूपणासाठी आणि
+        दानधर्मासाठी प्रसिद्ध होता. आणि अँथनी स्मिथ नावाचा एक इंग्रज कैदी गरीब माणूस आहे, असं कळल्यावर त्याला
+        सोडून देण्यात आलं.</p>
+      <p>धोकाही होता. सुभेदाराकडून एक दूत आला, बोलणी करायची आहेत असं सांगत — आणि अचानक त्याने लपवलेल्या शस्त्राने
+        शिवाजीवर झडप घातली! शिवाजीच्या अंगरक्षकांनी त्याला तत्क्षणी कापून काढलं. त्या दगाबाजीमुळे संतापलेल्या
+        हल्लेखोरांनी काही कैद्यांना फार कठोर शिक्षा दिल्या.</p>
+      <p>आता सर्वांत कठीण भाग — आणि तो ऐकणं हा तुझा हक्क आहे. छापा म्हणजे शहरासाठी एक भयंकर गोष्ट असते. आगी
+        लागल्या, पसरत गेल्या, आणि सुरतेचा मोठा भाग जळून गेला. अनेक साधी माणसं — फक्त श्रीमंतच नव्हेत — बेघर झाली,
+        आणि त्यांनी दहशतीचे दिवस काढले; लपवलेला पैसा कुठे आहे हे सांगायला लावण्यासाठी काहींचे फार हाल केले गेले.</p>
+      <p>क्षणभर कल्पना करून बघ — त्या आठवड्यात सुरतेतलं एक लहान मूल असणं: आकाशात धूर, रस्त्यांवर घोड्यांवरचे
+        अनोळखी लोक, आणि घाबरलेले, कुजबुजणारे आई-बाबा. बादशहा आणि शिवाजी यांच्यातलं युद्ध त्या मुलाने निवडलं नव्हतं.
+        त्या मुलाचीही आठवण ठेवणं, हासुद्धा गोष्ट प्रामाणिकपणे सांगण्याचाच भाग आहे.</p>
+      <p>"सुरतेत शिवाजीने गरिबांना हात लावला नाही," असं तू कधी ऐकशील. खरं याहून गुंतागुंतीचं आहे: काही लोकांना
+        सोडून दिलं गेलं, पण अनेक साध्या माणसांना त्रास भोगावा लागला. शिवाजीच्या बाजूने पाहिलं, तर एका कठीण युद्धात
+        बादशहाच्या खजिन्यावर घातलेला तो घाव होता. सुरतेच्या लोकांनी मात्र तो एक अनर्थ म्हणून लक्षात ठेवला. या
+        दोन्ही गोष्टी एकाच वेळी खऱ्या आहेत — आणि अति-परिपूर्ण गोष्टीपेक्षा खरी गोष्ट सांगणंच आम्हाला आवडेल.</p>
+      <p>मुघलांची फौज येऊन पोहोचण्याआधीच शिवाजीचे स्वार खजिना घेऊन दक्षिणेकडे निघून गेले होते. ही बातमी धावत
+        थेट बादशहापर्यंत पोहोचली, आणि त्याच्या अभिमानाला पुन्हा एकदा घाव बसला: आधी त्याच्या मामावर त्याच्याच शयनगृहात हल्ला,
+        आणि आता त्याचं सर्वांत श्रीमंत शहर रिकामं. आता आपला सर्वांत उत्तम सेनापती पाठवून शिवाजीचा कायमचा बंदोबस्त
+        करायचा, असं औरंगजेबाने ठरवलं. ती उद्या रात्रीची गोष्ट.</p>
+      <p>म्हणून आजची रात्र आपल्याला दोन धडे देऊन जाते. एक डावपेचाचा: राक्षसाशी लढायचं, तर त्याला जे पोसतं, त्यावर
+        घाव घाला. आणि दुसरा प्रामाणिकपणाचा: मोठ्या वीराच्या निर्णयांनीही निरपराध माणसांना दुखापत होऊ शकते, आणि
+        त्यांची आठवण ठेवणं हाही खरा इतिहास सांगण्याचाच भाग आहे.</p>
+      <p class="goodnight">शुभ रात्री — आजचं जपायचं नाणं: <b>खजिना</b> — साम्राज्य पैशावर चालतं, आणि राज्यही; आणि
+        प्रत्येक खजिन्याची एक किंमत असते, जी कधीकधी दुसरेच चुकवतात.</p>
+    </div>
+
+    <div class="moon-note">
+      <svg class="moon" width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">
+        <circle cx="26" cy="26" r="22" fill="none" stroke="var(--gold)" stroke-width="2.4" opacity=".5"/>
+        <path d="M32 8 a18 18 0 1 0 0 36 a13 13 0 1 1 0 -36 Z" fill="var(--gold)" opacity=".9"/>
+      </svg>
+      <p>Remember Day 8's lesson — <b>history is true, not perfect</b>. Surat is that lesson again:
+        a brilliant blow against an empire,
+        <span class="fwd">and a hard few days for the people who lived there.</span></p>
+    </div>
+
+    <h3 class="subhead">Say it out loud</h3>
+    <div class="say-grid">
+      <div class="say"><div class="head"><span class="dev">सुरत</span><span class="rom">Surat</span></div>
+        <div class="phon">SOO-rat</div><div class="gloss">the Mughals' richest port, in Gujarat</div></div>
+      <div class="say"><div class="head"><span class="dev">इनायत खान</span><span class="rom">Inayat Khan</span></div>
+        <div class="phon">i-NAA-yat KHAAN</div><div class="gloss">Surat's governor, who hid in the castle</div></div>
+      <div class="say"><div class="head"><span class="dev">वीरजी व्होरा</span><span class="rom">Virji Vora</span></div>
+        <div class="phon">VEER-jee VHO-raa</div><div class="gloss">"the richest merchant in the world"</div></div>
+      <div class="say"><div class="head"><span class="dev">वखार</span><span class="rom">vakhar</span></div>
+        <div class="phon">va-KHAAR</div><div class="gloss">a European trading house ("factory")</div></div>
+      <div class="say"><div class="head"><span class="dev">बंदर</span><span class="rom">bandar</span></div>
+        <div class="phon">BAN-dar</div><div class="gloss">a port, a harbour</div></div>
+      <div class="say"><div class="head"><span class="dev">खजिना</span><span class="rom">khajina</span></div>
+        <div class="phon">kha-JEE-naa</div><div class="gloss">treasure, a treasury</div></div>
+    </div>
+  </section>
+
+  <!-- ===================== COIN ===================== -->
+  <section aria-labelledby="coin-h">
+    <div class="sec-head">
+      <span class="num">03</span>
+      <h2 id="coin-h">Tonight's collectible</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="coin-wrap">
+      <button class="coin" id="coin" aria-label="Khajina badge — flip to read its meaning">
+        <span class="coin-inner">
+          <span class="face front">
+            <span class="big">खजिना</span>
+            <span class="rom">The Treasury</span>
+            <span class="dots">Badge · Day 14</span>
+          </span>
+          <span class="face back">
+            <span class="mean">strike what feeds the giant</span>
+            <span class="dots">Surat · 1664</span>
+          </span>
+        </span>
+      </button>
+      <div class="coin-copy">
+        <h3>The fourteenth badge — with two sides</h3>
+        <p>Swarajya needed money for soldiers and forts, and Surat fed the Mughal treasury. The badge stands
+          for a smart strategy — and, flipped over, for the reminder that treasure taken in war is paid for by
+          someone.</p>
+        <p class="hint">↻ Hover or tap the coin to turn it over.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== HISTORY CARDS ===================== -->
+  <section aria-labelledby="hist-h">
+    <div class="sec-head">
+      <span class="num">04</span>
+      <h2 id="hist-h">For the grown-up reading aloud</h2>
+      <span class="rule"></span>
+    </div>
+    <p class="grown-note">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="8" cy="8" r="6.5"/><path d="M8 7v4M8 4.6v.4" stroke-linecap="round"/></svg>
+      Unusually, Surat was seen by European eyewitnesses — so we know more, including the uncomfortable parts.
+    </p>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>The sack of Surat, January 1664</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>Shivaji's cavalry reached Surat around <b>5–6 January 1664</b>; accounts give the plunder as lasting
+          from about <b>three to six days</b>. Governor <b>Inayat Khan</b> shut himself in the castle. The houses
+          of great merchants such as <b>Virji Vora</b> were plundered. The <b>English factory</b> under George
+          Oxenden and the <b>Dutch factory</b> defended themselves and were largely left alone.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag debated">Debated</span><h4>"He spared the poor" — what the evidence shows</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>The often-repeated claim that the raid <b>spared the poor</b> is not supported as a general policy.
+          Specific mercies are recorded: <b>François Bernier</b> reports that Shivaji spared the house of the
+          Capuchin <b>Father Ambrose</b> and that of a deceased, charitable broker; the English record that a
+          poor captive, <b>Anthony Smith</b>, was released. Against this, contemporary and later accounts describe
+          <b>large fires</b> (Grant Duff says two-thirds of the city burned) and <b>torture</b> to extract hidden
+          wealth.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag hist">History</span><h4>The attempt on Shivaji's life</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>An envoy sent by Inayat Khan attacked Shivaji during a parley and was killed by his guards. Accounts
+          record harsh reprisals on prisoners afterwards — executions and mutilations — which the telling
+          mentions only in general terms for young listeners.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="tag c">Context</span><h4>Why Surat, and what came next</h4>
+        <svg class="chev" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 4l4 4-4 4" stroke-linecap="round" stroke-linejoin="round"/></svg></summary>
+      <div class="body">
+        <p>Surat was the Mughal empire's chief port and customs revenue centre, and the raid answered three years
+          of Mughal occupation and plunder of Shivaji's territory. Coming after the Lal Mahal raid, it pushed
+          Aurangzeb to send <b>Mirza Raja Jai Singh</b> in 1665 (Day 15). Shivaji raided Surat a <b>second time in
+          1670</b>.</p>
+      </div>
+    </details>
+  </section>
+
+  <!-- ===================== JOURNEY ===================== -->
+  <section aria-labelledby="journey-h">
+    <div class="sec-head">
+      <span class="num">05</span>
+      <h2 id="journey-h">The thirty-night journey</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="ribbon">
+      <div class="acts">
+        <div class="act-col">
+          <div class="name">I · Dream is Born ✓</div>
+          <div class="dots-row">
+            <span class="d done"></span><span class="d done"></span><span class="d done"></span>
+            <span class="d done"></span><span class="d done"></span><span class="d done"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">II · Lion Rises ✓</div>
+          <div class="dots-row">
+            <span class="d done"></span><span class="d done"></span><span class="d done"></span>
+            <span class="d done"></span><span class="d done"></span><span class="d done"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">III · Shaking Empires</div>
+          <div class="dots-row">
+            <span class="d done" title="Day 13 — told"></span><span class="d now" title="Day 14 — tonight"></span><span class="d" title="Day 15"></span><span class="d" title="Day 16"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">IV · The Crown</div>
+          <div class="dots-row">
+            <span class="d" title="Day 17"></span><span class="d" title="Day 18"></span><span class="d" title="Day 19"></span><span class="d" title="Day 20"></span>
+            <span class="d" title="Day 21"></span><span class="d" title="Day 22"></span><span class="d" title="Day 23"></span>
+          </div>
+        </div>
+        <div class="act-col">
+          <div class="name">V · King &amp; Legacy</div>
+          <div class="dots-row">
+            <span class="d" title="Day 24"></span><span class="d" title="Day 25"></span><span class="d" title="Day 26"></span><span class="d" title="Day 27"></span>
+            <span class="d" title="Day 28"></span><span class="d" title="Day 29"></span><span class="d" title="Day 30"></span>
+          </div>
+        </div>
+      </div>
+      <div class="legend">
+        <span><span class="d now"></span> Tonight</span>
+        <span><span class="d"></span> Nights to come</span>
+        <span><span class="d done"></span> Nights told</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== LEDGER ===================== -->
+  <section aria-labelledby="ledger-h">
+    <div class="ledger">
+      <h2 id="ledger-h">Fact &amp; legend, kept honest</h2>
+      <dl>
+        <div class="row"><dt class="h">History</dt>
+          <dd>In <b>January 1664</b> Shivaji sacked <b>Surat</b> for several days while its governor hid in the
+            castle; merchant houses were plundered, the English and Dutch factories held out, and large parts of
+            the city burned.</dd></div>
+        <div class="row"><dt class="c">Debated</dt>
+          <dd>"<b>Sparing the poor</b>" is a popular claim, not a documented policy: a few specific people were
+            spared, while many ordinary residents suffered. The raid's <b>length</b> varies by account (3–6 days).</dd></div>
+      </dl>
+    </div>
+
+    <div class="foot">
+      <span><a href="index.html">🏠 All nights</a> · <a href="trip-companion.html">📍 Trip map</a></span>
+      <span class="next">Next → <a href="day-15.html">Day 15 · Purandar &amp; Murarbaji</a></span>
+    </div>
+  </section>
+</main>
+
+<script>
+  (function(){
+    var tabs={en:document.getElementById('tab-en'),mr:document.getElementById('tab-mr')};
+    var panes={en:document.getElementById('story-en'),mr:document.getElementById('story-mr')};
+    function show(l){for(var k in tabs){var on=(k===l);tabs[k].setAttribute('aria-selected',on?'true':'false');panes[k].hidden=!on;}}
+    tabs.en.addEventListener('click',function(){show('en')});
+    tabs.mr.addEventListener('click',function(){show('mr')});
+  })();
+  (function(){var coin=document.getElementById('coin');coin.addEventListener('click',function(){coin.classList.toggle('flipped')});})();
+</script>
