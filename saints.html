@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#BE5A11">
+<title>The Saints</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Marathi:ital@0;1&family=Karla:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+  .saints{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px;margin-top:6px}
+  .saint-card{display:flex;gap:16px;text-decoration:none;color:inherit;border:1px solid var(--line);border-radius:14px;
+    padding:18px 18px 16px;background:color-mix(in srgb,var(--gold) 6%,var(--paper));transition:transform .15s,border-color .15s}
+  .saint-card:hover{transform:translateY(-2px);border-color:color-mix(in srgb,var(--saffron) 45%,var(--line))}
+  .saint-card:focus-visible{outline:2px solid var(--saffron);outline-offset:3px}
+  .saint-card .seal{flex:0 0 56px;height:56px;border-radius:50%;display:grid;place-items:center;font-size:1.5rem;
+    color:var(--paper);background:var(--saffron);box-shadow:inset 0 0 0 3px color-mix(in srgb,var(--paper) 55%,transparent)}
+  .saint-card .body{display:flex;flex-direction:column;gap:3px;min-width:0}
+  .saint-card .nm{font-family:"Marcellus",serif;font-size:1.25rem;line-height:1.2}
+  .saint-card .nm-mr{color:var(--ink-soft);font-size:1rem}
+  .saint-card .meta{margin:6px 0 4px;font-family:"Karla",sans-serif;font-size:.78rem;color:var(--ink-soft);display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+  .saint-card .teaser{font-size:.98rem;line-height:1.5;color:var(--ink-soft)}
+  .saint-card .go{margin-top:8px;font-family:"Karla",sans-serif;font-weight:700;font-size:.82rem;color:var(--saffron)}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="index.html">🏠 Home</a><span class="sep">·</span>
+  <a href="cast.html">Cast</a><span class="sep">·</span>
+  <a href="forts.html">Forts</a><span class="sep">·</span>
+  <a href="map.html">Map</a><span class="sep">·</span>
+  <a href="sayings-sheet.html">Sayings</a><span class="sep">·</span>
+  <a href="relics.html">Relics</a><span class="sep">·</span>
+  <a class="here" href="saints.html">Saints</a><span class="sep">·</span>
+  <a href="trip-companion.html">📍 Trip map</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-in">
+    <div class="eyebrow">Bonus stories · read on any evening</div>
+    <h1>The Saints</h1>
+    <p class="dek">The saints and holy people who shaped Shivaji's Maharashtra — each with a story of their own, in English
+      and Marathi, with history, tradition and legend kept honest. Tap a saint to read.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <div class="sec-head"><h2>Choose a story</h2><span class="rule"></span></div>
+    <p class="lead">Arranged in time order — from the saints who lived centuries before Shivaji, to those of his own day.</p>
+    <div class="saints">
+      <a class="saint-card" href="saint-varkari.html">
+        <span class="seal mr">ज्ञा</span>
+        <span class="body">
+          <span class="nm">The Road to Pandharpur</span>
+          <span class="nm-mr mr">वारकरी संत</span>
+          <span class="meta"><span class="tag hist">History</span> <span class="era">13th–16th c.</span></span>
+          <span class="teaser">Dnyaneshwar, Namdev and Eknath — the saints before Shivaji, and the singing road to Pandharpur.</span>
+          <span class="go">Read the story →</span>
+        </span>
+      </a>
+      <a class="saint-card" href="saint-tukaram.html">
+        <span class="seal mr">तु</span>
+        <span class="body">
+          <span class="nm">Sant Tukaram</span>
+          <span class="nm-mr mr">संत तुकाराम</span>
+          <span class="meta"><span class="tag c">History &amp; tradition</span> <span class="era">c. 1608–1650</span></span>
+          <span class="teaser">The shopkeeper-poet of Dehu, and the gifts he sent back to a young king.</span>
+          <span class="go">Read the story →</span>
+        </span>
+      </a>
+      <a class="saint-card" href="saint-ramdas.html">
+        <span class="seal mr">रा</span>
+        <span class="body">
+          <span class="nm">Samarth Ramdas &amp; Sajjangad</span>
+          <span class="nm-mr mr">समर्थ रामदास · सज्जनगड</span>
+          <span class="meta"><span class="tag debated">Guru debated</span> <span class="era">1608–c. 1682</span></span>
+          <span class="teaser">The wedding he ran from, the fort of good people — and the guru question, told fairly.</span>
+          <span class="go">Read the story →</span>
+        </span>
+      </a>
+      <a class="saint-card" href="saint-mauni-baba.html">
+        <span class="seal mr">मौ</span>
+        <span class="body">
+          <span class="nm">Mauni Baba of Patgaon</span>
+          <span class="nm-mr mr">पाटगावचे मौनी बाबा</span>
+          <span class="meta"><span class="tag hist">History</span> <span class="era">17th c.</span></span>
+          <span class="teaser">The silent saint Shivaji visited before his longest campaign.</span>
+          <span class="go">Read the story →</span>
+        </span>
+      </a>
+      <a class="saint-card" href="saint-sufi.html">
+        <span class="seal mr">सू</span>
+        <span class="body">
+          <span class="nm">Shared Faith</span>
+          <span class="nm-mr mr">सूफी संत</span>
+          <span class="meta"><span class="tag l">Tradition + history</span> <span class="era">16th–17th c.</span></span>
+          <span class="teaser">Two Sufi traditions, honestly labelled — and what an enemy historian recorded.</span>
+          <span class="go">Read the story →</span>
+        </span>
+      </a>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h2>How these fit the thirty nights</h2><span class="rule"></span></div>
+    <p class="lead">These are extra stories, outside the thirty-night journey. They pair naturally with <b>Day 26 · The Just King</b>
+      and <b>Day 27 · The Saints</b>, and you can read them on any evening. Where people disagree — most of all over whether
+      Samarth Ramdas was Shivaji's guru — each story says so plainly, and gives both views.</p>
+  </section>
+</main>
+</body>
+</html>
