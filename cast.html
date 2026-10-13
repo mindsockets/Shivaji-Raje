@@ -12,19 +12,28 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Marathi:ital@0;1&family=Karla:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="site.css">
+<link rel="stylesheet" href="shell.css">
 </head>
 <body>
-<nav class="topnav">
-  <a href="index.html">🏠 Home</a><span class="sep">·</span>
-  <a class="here" href="cast.html">Cast</a><span class="sep">·</span>
-  <a href="family-tree.html">Family tree</a><span class="sep">·</span>
-  <a href="forts.html">Forts</a><span class="sep">·</span>
-  <a href="map.html">Map</a><span class="sep">·</span>
-  <a href="sayings-sheet.html">Sayings</a><span class="sep">·</span>
-  <a href="relics.html">Relics</a><span class="sep">·</span>
-  <a href="saints.html">Saints</a><span class="sep">·</span>
-  <a href="trip-companion.html">📍 Trip map</a>
+<!-- shell:header -->
+<nav class="sitebar" aria-label="Site">
+  <div class="sb-in">
+    <a class="sb-brand" href="index.html"><span class="sb-moon" aria-hidden="true">☾</span>A Story a Night</a>
+    <div class="sb-links">
+      <a href="index.html#nights">30 Nights</a>
+      <a href="saints.html">Saints</a>
+      <a href="cast.html" aria-current="page">Cast</a>
+      <a href="family-tree.html">Family tree</a>
+      <a href="forts.html">Forts</a>
+      <a href="map.html">Map</a>
+      <a href="sayings-sheet.html">Sayings</a>
+      <a href="relics.html">Relics</a>
+      <a href="trip-companion.html">📍 Trip map</a>
+    </div>
+    <a class="sb-prog" href="index.html#progress"><span class="sb-ring" aria-hidden="true"></span><span data-sb-count>My progress</span></a>
+  </div>
 </nav>
+<!-- /shell:header -->
 
 <header class="hero">
   <div class="hero-in">
@@ -186,10 +195,19 @@
     </div>
   </section>
 
-  <footer>
-    <span>The Cast · everyone has a home day</span>
-    <span><a href="index.html">← All nights</a></span>
-  </footer>
 </main>
+<!-- shell:footer -->
+<div class="sitefoot" role="contentinfo">
+  <div class="sf-in">
+    <div><h2>Read</h2><ul><li><a href="index.html#nights">The 30 nights</a></li><li><a href="day-01.html">Begin with Night 1</a></li><li><a href="saints.html">Saint stories</a></li><li><a href="index.html#progress">Your progress</a></li></ul></div>
+    <div><h2>Who & where</h2><ul><li><a href="cast.html">The Cast</a></li><li><a href="family-tree.html">The Family Tree</a></li><li><a href="forts.html">The Forts</a></li><li><a href="map.html">The Map</a></li></ul></div>
+    <div><h2>Collect & visit</h2><ul><li><a href="sayings-sheet.html">The Sayings</a></li><li><a href="relics.html">The Relics</a></li><li><a href="trip-companion.html">Trip map</a></li></ul></div>
+    <div class="sf-progress"><h2>Your reading</h2><div data-foot-progress><p>Your progress is saved only in this browser.</p></div>
+      <button type="button" data-reset>Clear my progress</button></div>
+    <div class="sf-about"><b>A Story a Night · छत्रपती शिवाजी महाराज</b><span>Fact first, legend always labelled.</span></div>
+  </div>
+</div>
+<!-- /shell:footer -->
+<script src="shell.js" defer></script>
 </body>
 </html>

@@ -1,0 +1,92 @@
+/* ============================================================
+   Shivaji — A Story a Night · the shared site shell
+   Common header (.sitebar), story pager (.pager), common footer
+   (.sitefoot) and the reading-progress pieces. Used by every page;
+   colours come from each page's own tokens (site.css / day.css).
+   The markup is stamped into pages by tools/build_shell.py.
+   ============================================================ */
+
+/* ---------- header ---------- */
+.sitebar{background:var(--paper);border-bottom:1px solid var(--line);font-family:"Karla",sans-serif;position:relative;z-index:5}
+.sitebar .sb-in{max-width:1180px;margin:0 auto;padding:10px 22px;display:flex;align-items:center;gap:6px 18px;flex-wrap:wrap}
+.sitebar a{text-decoration:none}
+.sb-brand{display:inline-flex;align-items:center;gap:8px;font-family:"Marcellus",serif;font-size:1.08rem;color:var(--ink);white-space:nowrap}
+.sb-brand .sb-moon{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;
+  background:var(--saffron);color:#fff;font-size:.95rem;line-height:1}
+.sb-links{display:flex;align-items:center;gap:2px;flex:1 1 auto;min-width:0;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.sb-links::-webkit-scrollbar{display:none}
+.sb-links a{flex:0 0 auto;font-size:.84rem;font-weight:600;color:var(--ink-soft);padding:7px 10px;border-radius:999px;white-space:nowrap}
+.sb-links a:hover{color:var(--saffron);background:var(--bg)}
+.sb-links a[aria-current="page"]{color:#fff;background:var(--saffron)}
+.sb-prog{display:inline-flex;align-items:center;gap:8px;font-size:.8rem;font-weight:700;color:var(--ink);white-space:nowrap;
+  border:1px solid var(--line);border-radius:999px;padding:4px 12px 4px 5px;background:var(--bg)}
+.sb-prog:hover{border-color:var(--saffron)}
+.sb-ring{width:26px;height:26px;border-radius:50%;display:inline-grid;place-items:center;
+  background:conic-gradient(var(--saffron) calc(var(--p,0)*1%),var(--line) 0)}
+.sb-ring::after{content:"";width:18px;height:18px;border-radius:50%;background:var(--bg)}
+@media (max-width:720px){
+  .sitebar .sb-in{padding:8px 14px 6px;gap:4px 10px}
+  .sb-brand{font-size:1rem}
+  .sb-prog{margin-left:auto}
+  .sb-links{order:3;flex-basis:100%;margin:0 -14px;padding:2px 14px 4px}
+  .sb-links a{font-size:.8rem;padding:6px 9px}
+}
+
+/* ---------- story pager ---------- */
+.pager{max-width:880px;margin:0 auto;padding:14px 22px 0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;
+  font-family:"Karla",sans-serif;font-size:.8rem}
+.pager a{color:var(--ink-soft);text-decoration:none;white-space:nowrap}
+.pager a:hover{color:var(--saffron)}
+.pager .pg-next{justify-self:end}
+.pager .pg-pos{text-align:center;color:var(--ink-faint);font-weight:700;letter-spacing:.06em;text-transform:uppercase;font-size:.68rem}
+.pager .pg-pos .pg-read{display:none;color:var(--green);margin-left:6px}
+.pager .pg-pos.is-read .pg-read{display:inline}
+@media (max-width:560px){ .pager{padding:10px 16px 0;font-size:.76rem} .pager .pg-pos{font-size:.6rem} }
+
+/* ---------- "mark as read" ---------- */
+.readmark{margin:22px 0 4px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px;
+  font-family:"Karla",sans-serif;font-size:.86rem;color:var(--ink-soft);text-align:center}
+.readmark button{font:inherit;font-weight:700;cursor:pointer;border-radius:999px;padding:9px 18px;
+  border:1.5px solid var(--saffron);background:transparent;color:var(--saffron)}
+.readmark button:hover{background:color-mix(in srgb,var(--saffron) 10%,transparent)}
+.readmark.is-read .rm-done{display:inline-flex;align-items:center;gap:8px;color:var(--green);font-weight:700}
+.readmark .rm-undo{border:0;padding:4px 6px;color:var(--ink-faint);font-weight:600;text-decoration:underline}
+.readmark .rm-next{font-weight:700;color:var(--saffron);text-decoration:none}
+
+/* ---------- footer ---------- */
+.sitefoot{margin-top:56px;border-top:1px solid var(--line);background:var(--paper-2);font-family:"Karla",sans-serif;font-size:.84rem;color:var(--ink-soft)}
+.sitefoot .sf-in{max-width:1180px;margin:0 auto;padding:26px 22px 30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:18px 28px}
+.sitefoot h2{font-family:"Karla",sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin:0 0 8px}
+.sitefoot ul{list-style:none;margin:0;padding:0;line-height:1.9}
+.sitefoot a{color:var(--ink-soft);text-decoration:none}
+.sitefoot a:hover{color:var(--saffron)}
+.sitefoot .sf-about{grid-column:1/-1;border-top:1px solid var(--line);padding-top:14px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+.sitefoot .sf-about b{color:var(--ink);font-family:"Marcellus",serif;font-weight:400;font-size:.98rem}
+.sitefoot .sf-progress p{margin:0 0 6px;line-height:1.5}
+.sitefoot button{font:inherit;font-size:.78rem;border:1px solid var(--line);background:var(--paper);color:var(--ink-soft);border-radius:999px;padding:4px 12px;cursor:pointer}
+.sitefoot button:hover{border-color:var(--rust);color:var(--rust)}
+
+/* ---------- progress panel (home) ---------- */
+.progress-panel{border:1px solid var(--line);border-radius:18px;background:var(--paper);padding:20px 22px 18px;margin-top:8px}
+.pp-top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 18px}
+.pp-top h2{font-family:"Marcellus",serif;font-weight:400;font-size:1.45rem;margin:0}
+.pp-count{font-family:"Karla",sans-serif;font-size:.84rem;color:var(--ink-soft)}
+.pp-count b{color:var(--saffron);font-size:1.05rem}
+.pp-beads{display:grid;grid-template-columns:repeat(30,1fr);gap:4px;margin:14px 0 6px}
+.pp-beads a{aspect-ratio:1;border-radius:50%;border:2px solid var(--line);background:var(--bg);display:block;position:relative}
+.pp-beads a.read{background:var(--saffron);border-color:var(--saffron)}
+.pp-beads a.seen{border-color:var(--saffron)}
+.pp-beads a.act-start{margin-left:6px}
+.pp-beads a:hover{transform:scale(1.25)}
+.pp-acts{display:grid;grid-template-columns:6fr 6fr 4fr 7fr 7fr;font-family:"Karla",sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);gap:4px}
+.pp-row{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;margin-top:14px}
+.pp-row .btn{margin:0}
+.pp-note{font-family:"Karla",sans-serif;font-size:.76rem;color:var(--ink-faint);margin:10px 0 0}
+@media (max-width:560px){
+  .pp-beads{grid-template-columns:repeat(15,1fr)}
+  .pp-beads a.act-start{margin-left:0}
+  .pp-acts{display:none}
+}
+.night .s.read{color:var(--green)!important}
+.night.is-read{border-color:color-mix(in srgb,var(--green) 55%,var(--line))!important}
+.saint-card .read-badge,.night .read-badge{display:inline-block;margin-left:6px;color:var(--green);font-family:"Karla",sans-serif;font-weight:700;font-size:.72rem}

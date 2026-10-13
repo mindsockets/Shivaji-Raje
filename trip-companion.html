@@ -62,6 +62,7 @@
   .place .pin{flex:0 0 auto;width:14px;height:14px;border-radius:50%;margin-top:4px;
     box-shadow:0 0 0 3px color-mix(in srgb,currentColor 22%,transparent)}
   .place .txt{min-width:0}
+  .place .nm,.place .meta,.place .desc{display:block}
   .place .nm{font-family:"Marcellus",serif;font-size:1.06rem;line-height:1.15}
   .place .nm .mr{font-family:"Tiro Devanagari Marathi",serif;color:var(--ink-soft);font-size:.92rem;margin-left:6px}
   .place .meta{font-family:"Karla",sans-serif;font-size:.72rem;color:var(--saffron);letter-spacing:.03em;margin-top:2px}
@@ -94,16 +95,36 @@
     header .note{max-width:100%;order:3;margin-left:0}
   }
 </style>
+<link rel="stylesheet" href="shell.css">
 </head>
 <body>
+<!-- shell:header -->
+<nav class="sitebar" aria-label="Site">
+  <div class="sb-in">
+    <a class="sb-brand" href="index.html"><span class="sb-moon" aria-hidden="true">☾</span>A Story a Night</a>
+    <div class="sb-links">
+      <a href="index.html#nights">30 Nights</a>
+      <a href="saints.html">Saints</a>
+      <a href="cast.html">Cast</a>
+      <a href="family-tree.html">Family tree</a>
+      <a href="forts.html">Forts</a>
+      <a href="map.html">Map</a>
+      <a href="sayings-sheet.html">Sayings</a>
+      <a href="relics.html">Relics</a>
+      <a href="trip-companion.html" aria-current="page">📍 Trip map</a>
+    </div>
+    <a class="sb-prog" href="index.html#progress"><span class="sb-ring" aria-hidden="true"></span><span data-sb-count>My progress</span></a>
+  </div>
+</nav>
+<!-- /shell:header -->
 <header>
   <div class="brand">
-    <span class="eyebrow"><a href="index.html" style="color:inherit;text-decoration:none">🏠 A Story a Night</a> · Trip Companion</span>
+    <span class="eyebrow">Trip Companion</span>
     <h1>Shivaji's Maharashtra — a Trip Companion</h1>
   </div>
   <div class="note">
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6.4"/><path d="M2 8h12M8 2c2 2 2 10 0 12M8 2c-2 2-2 10 0 12" stroke-linecap="round"/></svg>
-    Live map by <b>OpenStreetMap</b> · needs internet. Tap a place to fly there; open it in Maps to plan a real visit.
+    <span>Live map by <b>OpenStreetMap</b> · needs internet. Tap a place to fly there; open it in Maps to plan a real visit.</span>
   </div>
 </header>
 
@@ -251,5 +272,6 @@
   }
 })();
 </script>
+<script src="shell.js" defer></script>
 </body>
 </html>
