@@ -1,0 +1,614 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#BE5A11">
+<title>The Family Tree</title>
+<meta name="description" content="Shivaji Maharaj's family tree across five generations, and a tree of everyone around him: how and when each person came into the story.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marcellus&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Tiro+Devanagari+Marathi:ital@0;1&family=Karla:wght@400;600;700&display=swap">
+<link rel="stylesheet" href="site.css">
+<style>
+  /* ---------- family tree (org chart on wide screens, indented on phones) ---------- */
+  .wide{max-width:1240px;margin:0 auto;padding:0 22px}
+  .tree-box{border:1px solid var(--line);border-radius:14px;background:var(--paper);padding:18px 10px 22px;overflow-x:auto}
+  .tree-hint{font-family:"Karla",sans-serif;font-size:.74rem;color:var(--ink-faint);margin:8px 2px 0;display:none}
+  .tree{min-width:max-content;margin:0 auto}
+  .tree ul{position:relative;display:flex;justify-content:center;margin:0;padding:22px 0 0}
+  .tree>ul{padding-top:0}
+  .tree li{list-style:none;position:relative;padding:22px 4px 0;text-align:center;display:flex;flex-direction:column;align-items:center}
+  .tree li::before,.tree li::after{content:"";position:absolute;top:0;right:50%;width:50%;height:22px;border-top:2px solid var(--line)}
+  .tree li::after{right:auto;left:50%;border-left:2px solid var(--line)}
+  .tree li:only-child::before,.tree li:only-child::after{display:none}
+  .tree li:only-child{padding-top:0}
+  .tree li:first-child::before,.tree li:last-child::after{border:0 none}
+  .tree li:last-child::before{border-right:2px solid var(--line);border-radius:0 8px 0 0}
+  .tree li:first-child::after{border-radius:8px 0 0 0}
+  .tree ul ul::before{content:"";position:absolute;top:0;left:50%;height:22px;border-left:2px solid var(--line)}
+  .tree>ul>li{padding-top:0}
+  .tree>ul>li::before,.tree>ul>li::after{display:none}
+
+  .p{display:inline-flex;flex-direction:column;align-items:center;gap:1px;width:134px;padding:8px 8px 9px;
+     border:1px solid var(--line);border-radius:10px;background:var(--bg);font-size:.8rem;line-height:1.3;text-align:center}
+  .p b{font-family:"Marcellus",serif;font-weight:400;font-size:.98rem;color:var(--ink)}
+  .p .mr{color:var(--ink-soft);font-size:.85rem}
+  .p .d{font-family:"Karla",sans-serif;font-size:.7rem;font-weight:700;color:var(--saffron);letter-spacing:.02em}
+  .p .x{color:var(--ink-soft);font-size:.74rem}
+  .p .daychip{margin-top:4px;text-decoration:none}
+  .p.wed{border:1.5px dashed color-mix(in srgb,var(--gold) 70%,var(--line));background:var(--paper-2)}
+  .p.wed .ring{font-family:"Karla",sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)}
+  .p.hero{border:2px solid var(--saffron);background:color-mix(in srgb,var(--saffron) 10%,var(--paper));width:156px}
+  .p.hero b{font-size:1.15rem;color:var(--saffron)}
+  .p.wide-p{width:176px}
+  .p.line{border-style:dotted;background:transparent}
+
+  @media (max-width:760px){
+    .tree{min-width:0}
+    .tree ul{display:block;padding:0 0 0 20px}
+    .tree>ul{padding-left:0}
+    .tree li{display:block;text-align:left;padding:10px 0 0 18px}
+    .tree li::before{top:31px;left:0;right:auto;width:16px;height:0;border-top:2px solid var(--line);border-radius:0}
+    .tree li::after{top:0;left:0;width:0;height:100%;border-top:0;border-left:2px solid var(--line);border-radius:0}
+    .tree li:last-child::after{height:31px;border-left:2px solid var(--line)}
+    .tree li:first-child::before{border-top:2px solid var(--line)}
+    .tree li:last-child::before{border-right:0;border-radius:0}
+    .tree li:only-child::before,.tree li:only-child::after{display:block}
+    .tree li:only-child{padding-top:10px}
+    .tree ul ul::before{display:none}
+    .tree>ul>li{padding-left:0}
+    .tree>ul>li::before,.tree>ul>li::after{display:none}
+    .p,.p.hero,.p.wide-p{display:flex;align-items:flex-start;text-align:left;width:auto;max-width:100%}
+    .tree-box{padding:14px 12px 18px}
+  }
+
+  /* ---------- clans ---------- */
+  .clans{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;margin-top:14px}
+  .clan{border:1px solid var(--line);border-radius:12px;background:var(--paper);padding:12px 14px;font-size:.9rem;line-height:1.5;color:var(--ink-soft)}
+  .clan b{font-family:"Marcellus",serif;font-weight:400;font-size:1.05rem;color:var(--ink);display:block}
+
+  /* ---------- relationship tree ---------- */
+  .controls{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:4px 0 18px;font-family:"Karla",sans-serif}
+  .seg{display:inline-flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;background:var(--paper)}
+  .seg button{font:inherit;font-size:.82rem;font-weight:700;border:0;background:transparent;color:var(--ink-soft);padding:8px 16px;cursor:pointer}
+  .seg button[aria-pressed="true"]{background:var(--saffron);color:#fff}
+  .controls label{font-size:.82rem;color:var(--ink-soft);display:inline-flex;align-items:center;gap:6px;cursor:pointer}
+  .controls input[type="search"]{font:inherit;font-size:.86rem;padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink);min-width:0;width:200px;max-width:100%}
+
+  .root{display:flex;justify-content:center;margin:8px 0 0}
+  .root .medal{font-family:"Marcellus",serif;font-size:1.3rem;color:var(--saffron);border:2px solid var(--saffron);border-radius:999px;padding:8px 22px;background:var(--paper);text-align:center;line-height:1.25}
+  .root .medal small{display:block;font-family:"Karla",sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+  .branches{position:relative;margin-top:0;padding-top:26px}
+  .branches::before{content:"";position:absolute;left:50%;top:0;height:26px;border-left:2px solid var(--line)}
+  .branch{position:relative;margin:0 0 26px;padding-left:24px;border-left:2px solid var(--line)}
+  .branch:last-child{border-left-color:transparent}
+  .branch:last-child::after{content:"";position:absolute;left:-2px;top:0;height:22px;border-left:2px solid var(--line)}
+  .branch>h3{position:relative;font-family:"Karla",sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;margin:0 0 4px;display:flex;align-items:center;gap:10px}
+  .branch>h3::before{content:"";position:absolute;left:-24px;top:50%;width:18px;border-top:2px solid var(--line)}
+  .branch>h3 .dot{width:12px;height:12px;border-radius:50%;flex:none}
+  .branch>.bnote{font-size:.9rem;color:var(--ink-soft);margin:0 0 10px;max-width:68ch}
+  .people{display:grid;grid-template-columns:repeat(auto-fill,minmax(262px,1fr));gap:10px}
+  .card{border:1px solid var(--line);border-radius:12px;background:var(--paper);padding:12px 14px 12px;position:relative;font-size:.9rem;line-height:1.5}
+  .card .top{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+  .card .nm{font-family:"Marcellus",serif;font-size:1.08rem;line-height:1.2}
+  .card .nm .mr{color:var(--ink-soft);font-size:.9rem;margin-left:5px}
+  .card .when{font-family:"Karla",sans-serif;font-weight:700;font-size:.72rem;color:var(--saffron);white-space:nowrap}
+  .card .rel{font-weight:600;color:var(--ink);margin-top:3px}
+  .card .how{color:var(--ink-soft);margin-top:3px}
+  .card .via{font-family:"Karla",sans-serif;font-size:.74rem;color:var(--ink-soft);margin-top:5px}
+  .card .via b{color:var(--ink)}
+  .card .foot{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;align-items:center}
+  .card .daychip{text-decoration:none}
+  .card .beyond{font-family:"Karla",sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+     border:1px dashed var(--ink-faint);color:var(--ink-soft);border-radius:999px;padding:2px 8px}
+  .card.is-beyond{border-style:dashed}
+  .card .gdot{display:none}
+  .timeline .card .gdot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:6px;vertical-align:middle}
+  .timeline .card .gname{font-family:"Karla",sans-serif;font-size:.62rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
+  .era{margin:22px 0 10px;display:flex;align-items:center;gap:12px;font-family:"Marcellus",serif;font-size:1.25rem;color:var(--ink)}
+  .era::after{content:"";flex:1;height:1px;background:var(--line)}
+  .era:first-child{margin-top:4px}
+  .empty{color:var(--ink-soft);font-style:italic}
+  .legend-key{display:flex;flex-wrap:wrap;gap:6px 14px;font-family:"Karla",sans-serif;font-size:.74rem;color:var(--ink-soft);margin:0 0 14px}
+  .legend-key span{display:inline-flex;align-items:center;gap:6px}
+  .legend-key i{display:inline-block;width:10px;height:10px;border-radius:50%}
+
+  @media (max-width:760px){
+    .tree-hint{display:none}
+    .branch{padding-left:16px}
+    .branch>h3::before{left:-16px;width:12px}
+  }
+  @media (min-width:761px){ .tree-hint{display:block} }
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <a href="index.html">🏠 Home</a><span class="sep">·</span>
+  <a href="cast.html">Cast</a><span class="sep">·</span>
+  <a class="here" href="family-tree.html">Family tree</a><span class="sep">·</span>
+  <a href="forts.html">Forts</a><span class="sep">·</span>
+  <a href="map.html">Map</a><span class="sep">·</span>
+  <a href="sayings-sheet.html">Sayings</a><span class="sep">·</span>
+  <a href="relics.html">Relics</a><span class="sep">·</span>
+  <a href="saints.html">Saints</a><span class="sep">·</span>
+  <a href="trip-companion.html">📍 Trip map</a>
+</nav>
+
+<header class="hero">
+  <div class="hero-in">
+    <div class="eyebrow">Reference · who belongs to whom</div>
+    <h1>The Family Tree</h1>
+    <p class="dek">Shivaji Maharaj's family over five generations. After it comes a second tree of everyone
+      around him: how each person came into the story, and when. It includes some people the nights
+      never had room for.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap" style="padding-bottom:0">
+    <section>
+      <div class="sec-head"><h2>Where he came from</h2><span class="rule"></span></div>
+      <p class="lead">Grandparents, parents and brothers. A dashed box is a marriage; a child hangs below
+        the marriage it came from. The coloured chip opens the night where that person appears.</p>
+    </section>
+  </div>
+
+  <div class="wide">
+    <div class="tree-box" role="region" aria-label="Shivaji's parents and grandparents" tabindex="0">
+      <div class="tree">
+        <ul>
+          <li>
+            <div class="p wide-p"><b>Maloji ═ Umabai</b><span class="mr">मालोजी ═ उमाबाई</span>
+              <span class="d">Maloji d. c. 1605</span>
+              <span class="x">Grandparents. Maloji rose in the service of the Nizam Shahi of Ahmadnagar with his brother Vithoji; he gave land and a math to the saint Sheikh Muhammad of Shrigonda.</span>
+              <a class="daychip" href="saint-sufi.html">Saints</a></div>
+            <ul>
+              <li>
+                <div class="p"><b>Shahaji</b><span class="mr">शहाजी</span><span class="d">1594 – 1664</span>
+                  <span class="x">Father. A general of Ahmadnagar, then Bijapur; held the Pune jagir and lands around Bengaluru.</span>
+                  <a class="daychip" href="day-02.html">Day 2 · 7</a></div>
+                <ul>
+                  <li>
+                    <div class="p wed"><span class="ring">married</span><b>Jijabai</b><span class="mr">जिजाबाई</span><span class="d">1598 – 1674</span>
+                      <span class="x">Mother. Daughter of Lakhuji Jadhav of Sindkhed (killed 1629).</span>
+                      <a class="daychip" href="day-03.html">Day 3 · 23</a></div>
+                    <ul>
+                      <li>
+                        <div class="p"><b>Sambhaji</b><span class="mr">संभाजी</span><span class="d">d. c. 1654</span>
+                          <span class="x">Elder brother; killed in battle at Kanakgiri.</span>
+                          <a class="daychip" href="day-02.html">Day 2 · 9</a></div>
+                      </li>
+                      <li>
+                        <div class="p hero"><b>Shivaji</b><span class="mr">शिवाजी महाराज</span><span class="d">1630 – 1680</span>
+                          <span class="x">Born at Shivneri; crowned Chhatrapati at Raigad, 1674. His own family is below.</span></div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="p wed"><span class="ring">married</span><b>Tukabai Mohite</b><span class="mr">तुकाबाई मोहिते</span>
+                      <span class="x">Shahaji's second wife.</span></div>
+                    <ul>
+                      <li>
+                        <div class="p"><b>Ekoji (Vyankoji)</b><span class="mr">एकोजी</span><span class="d">d. c. 1686</span>
+                          <span class="x">Half-brother; ruler of Thanjavur. Married Dipabai, who helped the brothers make peace.</span>
+                          <a class="daychip" href="day-25.html">Day 25</a></div>
+                        <ul>
+                          <li><div class="p line"><b>The Thanjavur Bhosales</b><span class="x">Ruled Thanjavur until 1855.</span></div></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="p"><b>Sharifji</b><span class="mr">शरीफजी</span>
+                  <span class="x">Uncle: Shahaji's younger brother.</span>
+                  <a class="daychip" href="saint-sufi.html">Saints</a></div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p class="tree-hint">On a narrow window, scroll sideways inside the box to see the whole tree.</p>
+  </div>
+
+  <div class="wrap" style="padding-bottom:0">
+    <section>
+      <div class="sec-head"><h2>His own family</h2><span class="rule"></span></div>
+      <p class="lead">Shivaji Maharaj married eight times by the usual count, as kings of his age often did, mostly to bind
+        powerful families to swarajya. He had two sons and, by the usual count, six daughters. Below are his queens, his
+        children, and his grandsons, all born after his death, who carried the crown into the next century.</p>
+    </section>
+  </div>
+
+  <div class="wide">
+    <div class="tree-box" role="region" aria-label="Shivaji's wives, children and grandchildren" tabindex="0">
+      <div class="tree">
+        <ul>
+          <li>
+            <div class="p hero"><b>Shivaji</b><span class="mr">शिवाजी महाराज</span><span class="d">1630 – 1680</span></div>
+            <ul>
+              <li>
+                <div class="p wed"><span class="ring">married 1640</span><b>Saibai</b><span class="mr">सईबाई</span><span class="d">d. 1659</span>
+                  <span class="x">Of the Nimbalkars of Phaltan. Married as children at the Lal Mahal; died at Rajgad.</span>
+                  <a class="daychip" href="day-23.html">Day 23</a></div>
+                <ul>
+                  <li>
+                    <div class="p"><b>Sambhaji</b><span class="mr">संभाजी महाराज</span><span class="d">1657 – 1689</span>
+                      <span class="x">Elder son; Chhatrapati from 1681.</span>
+                      <a class="daychip" href="day-29.html">Day 15 · 16 · 28 · 29</a></div>
+                    <ul>
+                      <li>
+                        <div class="p wed"><span class="ring">married</span><b>Yesubai</b><span class="mr">येसूबाई</span>
+                          <span class="x">Of the Shirke family. A Mughal prisoner from 1689 to 1719.</span>
+                          <a class="daychip" href="day-29.html">Day 29</a></div>
+                        <ul>
+                          <li><div class="p"><b>Shahu</b><span class="mr">शाहू</span><span class="d">1682 – 1749</span>
+                            <span class="x">Grandson. Captive until 1707; then Chhatrapati at Satara.</span>
+                            <a class="daychip" href="day-29.html">Day 29</a></div></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="p"><b>Three daughters</b><span class="mr">सखूबाई · राणूबाई · अंबिकाबाई</span>
+                      <span class="x">Sakhubai (married Mahadji Nimbalkar), Ranubai, and Ambikabai (married Harji Mahadik).</span></div>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="p wed"><span class="ring">married c. 1650</span><b>Soyarabai</b><span class="mr">सोयराबाई</span><span class="d">d. 1681</span>
+                  <span class="x">Of the Mohites; sister of Hambirrao Mohite.</span>
+                  <a class="daychip" href="day-29.html">Day 28 · 29</a></div>
+                <ul>
+                  <li>
+                    <div class="p"><b>Rajaram</b><span class="mr">राजाराम</span><span class="d">1670 – 1700</span>
+                      <span class="x">Younger son; led swarajya from Gingee. His first wife was Jankibai, Prataprao Gujar's daughter (married 1680).</span>
+                      <a class="daychip" href="day-29.html">Day 28 · 29</a></div>
+                    <ul>
+                      <li>
+                        <div class="p wed"><span class="ring">married</span><b>Tarabai</b><span class="mr">ताराबाई</span><span class="d">1675 – 1761</span>
+                          <span class="x">Hambirrao Mohite's daughter; led the war after 1700.</span>
+                          <a class="daychip" href="day-29.html">Day 29</a></div>
+                        <ul>
+                          <li><div class="p"><b>Shivaji II</b><span class="mr">दुसरे शिवाजी</span><span class="d">1696 – 1726</span>
+                            <span class="x">Grandson; Tarabai ruled in his name. Kolhapur line.</span></div></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div class="p wed"><span class="ring">married</span><b>Rajasbai</b><span class="mr">राजसबाई</span>
+                          <span class="x">Rajaram's wife, of the Ghatge family of Kagal.</span></div>
+                        <ul>
+                          <li><div class="p"><b>Sambhaji II</b><span class="mr">दुसरे संभाजी</span><span class="d">1698 – 1760</span>
+                            <span class="x">Grandson; ruled Kolhapur from 1714.</span></div></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="p"><b>Dipabai</b><span class="mr">दीपाबाई</span>
+                      <span class="x">Daughter. (Not the Dipabai who married Ekoji.)</span></div>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="p wed"><span class="ring">married c. 1657</span><b>Sakvarbai</b><span class="mr">सकवारबाई</span>
+                  <span class="x">Of the Gaikwad family.</span></div>
+                <ul>
+                  <li><div class="p"><b>Kamalabai</b><span class="mr">कमळाबाई</span>
+                    <span class="x">Daughter; married Janoji Palkar.</span></div></li>
+                </ul>
+              </li>
+              <li>
+                <div class="p wed"><span class="ring">married</span><b>Sagunabai</b><span class="mr">सगुणाबाई</span>
+                  <span class="x">Usually said to be of the Shirke family.</span></div>
+                <ul>
+                  <li><div class="p"><b>Rajkunwarbai</b><span class="mr">राजकुंवरबाई</span>
+                    <span class="x">Daughter; married Ganoji Shirke.</span></div></li>
+                </ul>
+              </li>
+              <li>
+                <div class="p wed wide-p"><span class="ring">four more queens</span><b>Putalabai · Kashibai · Lakshmibai · Gunvantabai</b>
+                  <span class="mr">पुतळाबाई · काशीबाई · लक्ष्मीबाई · गुणवंताबाई</span>
+                  <span class="x">Usually given as of the Palkar, Jadhav, Vichare and Ingle families. Putalabai (married c. 1653) died by sati in 1680.</span>
+                  <a class="daychip" href="day-28.html">Day 28</a></div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <p class="tree-hint">On a narrow window, scroll sideways inside the box to see the whole tree.</p>
+  </div>
+
+  <div class="wrap" style="padding-bottom:0">
+    <div class="callout" style="margin-top:22px">
+      <h4>How sure is this?</h4>
+      <p>Parents, brothers, the two sons, and the grandsons are <b>well recorded</b>. The four best-recorded queens are Saibai, Soyarabai, Putalabai and Sakvarbai. For the others, and for some queens' families (Sarkar, for one, calls Putalabai a Mohite), the sources vary, and the marriage years are approximate. The daughters' names, their
+        mothers and their husbands come from <b>family histories that vary</b>. Dates of this period are
+        often in the <b>Old Style</b> calendar, ten days behind ours.</p>
+      <p>Two things here are <b>uncertain</b>. Maloji's wife is usually named <b>Umabai</b>, but the story
+        about her and the naming of Shahaji and Sharifji comes from the <i>Shiva Digvijay</i>, a text
+        historians regard as late. The birth years of Ekoji and the elder Sambhaji also vary between
+        sources.</p>
+    </div>
+
+    <section>
+      <div class="sec-head"><h2>Families woven together</h2><span class="rule"></span></div>
+      <p class="lead">Marriages tied the great Maratha families to the Bhosales. The same surnames keep
+        coming back, in the family and on the battlefield.</p>
+      <div class="clans">
+        <div class="clan"><b>Mohite <span class="mr">मोहिते</span></b>Tukabai (Shahaji's wife); Soyarabai (Shivaji's queen); her brother <b>Hambirrao</b>, the senapati; his daughter <b>Tarabai</b>, who married Rajaram.</div>
+        <div class="clan"><b>Jadhav <span class="mr">जाधव</span></b>Jijabai, daughter of Lakhuji Jadhav of Sindkhed; Kashibai, one of the queens.</div>
+        <div class="clan"><b>Nimbalkar <span class="mr">निंबाळकर</span></b>Saibai of Phaltan, the first queen; her nephew Mahadji (in most accounts) married Shivaji's daughter Sakhubai.</div>
+        <div class="clan"><b>Shirke <span class="mr">शिर्के</span></b>Sagunabai, a queen; <b>Yesubai</b>, Sambhaji's wife; Ganoji Shirke, who married Shivaji's daughter Rajkunwarbai.</div>
+        <div class="clan"><b>Gujar <span class="mr">गुजर</span></b>Prataprao, the general of Nesari; his daughter <b>Jankibai</b>, Rajaram's first wife.</div>
+        <div class="clan"><b>Palkar <span class="mr">पालकर</span></b>Putalabai, a queen (in most accounts); Janoji Palkar, who married Shivaji's daughter Kamalabai.</div>
+      </div>
+    </section>
+
+    <section id="everyone">
+      <div class="sec-head"><h2>Everyone around Shivaji</h2><span class="rule"></span></div>
+      <p class="lead">Every person in the story, grouped by how they were connected to him: when they
+        came in, how, and through whom. Cards with a dashed edge are <b>beyond the nights</b>. They
+        are real people the stories had no room for, added here to give the whole picture.</p>
+
+      <div class="controls">
+        <div class="seg" role="group" aria-label="Arrange">
+          <button type="button" id="v-tree" aria-pressed="true">By relation</button>
+          <button type="button" id="v-time" aria-pressed="false">By year</button>
+        </div>
+        <label><input type="checkbox" id="only-beyond"> Only people beyond the nights</label>
+        <input type="search" id="q" placeholder="Find a name…" aria-label="Find a name">
+      </div>
+      <div class="legend-key" id="key"></div>
+
+      <div id="view"></div>
+    </section>
+
+    <footer>
+      <span>The Family Tree · everyone has a place</span>
+      <span><a href="cast.html">The Cast →</a> · <a href="index.html">All nights</a></span>
+    </footer>
+  </div>
+</main>
+
+<script>
+(function(){
+  var G = {
+    family:  {n:"Family",                              c:"var(--saffron)", note:"Blood and marriage. The tree above shows how they fit together."},
+    faith:   {n:"Teachers, saints & faith",            c:"var(--gold)",    note:"Those who shaped his mind and his kingship, and the goddesses of his family."},
+    friends: {n:"Companions & commanders",             c:"var(--green)",   note:"The Mavlas and generals, in the order they came into his life."},
+    court:   {n:"Ministers, builders & the navy",      c:"var(--green-soft)", note:"The people who turned conquests into a working state."},
+    allies:  {n:"Allies & visitors",                   c:"var(--ink-soft)", note:"Rulers and chiefs from elsewhere who joined, helped or came to see him."},
+    bijapur: {n:"Bijapur & the Deccan sultanate",      c:"var(--rust)",    note:"The Adil Shahi kingdom his father served, and its generals."},
+    mughal:  {n:"The Mughal empire",                   c:"color-mix(in srgb,var(--rust) 60%,var(--ink))", note:"The emperor, his family and his generals."},
+    coast:   {n:"The coast & the foreigners",          c:"color-mix(in srgb,var(--green) 50%,var(--gold))", note:"Siddis, the English and other Europeans."},
+    after:   {n:"Those who carried it on (after 1680)", c:"color-mix(in srgb,var(--saffron) 55%,var(--ink))", note:"The people of the twenty-seven-year war that followed his death."},
+    voices:  {n:"Voices that tell the story",          c:"var(--ink-faint)", note:"Poets, chroniclers and historians: how we know what we know."}
+  };
+  var ORDER = ["family","faith","friends","court","allies","bijapur","mughal","coast","after","voices"];
+  function D(){ return Array.prototype.slice.call(arguments); }
+  /* y: year used for sorting · w: when (shown) · r: relation · h: how they came in · v: through whom
+     d: home nights · s: saint page · b: beyond the nights · t: label [class, text] */
+  var P = [
+    // ---------- family ----------
+    {g:"family", n:"Maloji Bhosale", mr:"मालोजी भोसले", y:1590, w:"c. 1595", r:"Grandfather (father's father)", h:"A captain of the Nizam Shahi of Ahmadnagar. He gave land and a math to the saint Sheikh Muhammad of Shrigonda. Died c. 1605 (some say 1620).", s:"sufi"},
+    {g:"family", n:"Vithoji Bhosale", mr:"विठोजी भोसले", y:1591, w:"1590s", r:"Grandfather's younger brother", h:"Rode beside Maloji as a cavalryman, first under the Jadhavs of Sindkhed and then for the Nizam Shahi.", b:1},
+    {g:"family", n:"Lakhuji Jadhav", mr:"लखुजी जाधव", y:1592, w:"d. 1629", r:"Grandfather (mother's father)", h:"A great noble of the Nizam Shahi and Deshmukh of Sindkhed. He was killed at its court with his sons on 25 July 1629.", d:D(23)},
+    {g:"family", n:"Shahaji", mr:"शहाजी", y:1594, w:"1594–1664", r:"Father", h:"A general of Ahmadnagar, then of Bijapur. He held the Pune jagir and lands in the south; arrested in 1648, freed in 1649. Died after a hunting fall, January 1664.", d:D(2,7)},
+    {g:"family", n:"Jijabai", mr:"जिजाबाई", y:1598, w:"1598–1674", r:"Mother", h:"Raised him at Pune and was his first teacher. Died at Pachad on 17 June 1674, eleven days after the coronation.", d:D(3,23)},
+    {g:"family", n:"Sharifji", mr:"शरीफजी", y:1597, w:"1600s–1620s", r:"Uncle, Shahaji's younger brother", h:"Historical, though the story of how he was named is a tradition.", s:"sufi"},
+    {g:"family", n:"Tukabai Mohite", mr:"तुकाबाई मोहिते", y:1628, w:"c. 1630", r:"Stepmother, Shahaji's second wife", h:"Mother of Ekoji. She lived with Shahaji in the south.", b:1},
+    {g:"family", n:"Sambhaji (the elder)", mr:"संभाजी", y:1623, w:"d. c. 1654", r:"Elder brother", h:"Grew up with Shahaji in the south and was killed in battle at Kanakgiri.", d:D(2,9)},
+    {g:"family", n:"Saibai", mr:"सईबाई", y:1640, w:"m. 1640", r:"First wife", h:"Of the Nimbalkars of Phaltan. Married as children on 16 May 1640 at the Lal Mahal. Mother of Sambhaji and three daughters; died at Rajgad on 5 September 1659.", d:D(23)},
+    {g:"family", n:"Soyarabai", mr:"सोयराबाई", y:1650, w:"m. c. 1650", r:"Queen, mother of Rajaram", h:"Of the Mohites; Hambirrao's sister. In 1680 her faction put the young Rajaram on the throne, but Sambhaji took power within months. Died 1681.", d:D(28,29)},
+    {g:"family", n:"Putalabai", mr:"पुतळाबाई", y:1653, w:"m. c. 1653", r:"Queen", h:"Usually said to be of the Palkar family (Sarkar says Mohite). She died by sati after Shivaji's death in 1680.", d:D(28)},
+    {g:"family", n:"Sakvarbai", mr:"सकवारबाई", y:1657, w:"m. c. 1657", r:"Queen, mother of Kamalabai", h:"Of the Gaikwad family; mother of Kamalabai. After Raigad fell in 1689 she was a Mughal prisoner. The four queens with no card of their own are Sagunabai, Kashibai, Lakshmibai and Gunvantabai.", b:1},
+    {g:"family", n:"Sambhaji", mr:"संभाजी महाराज", y:1657, w:"b. 14 May 1657", r:"Elder son and successor", h:"Born at Purandar. At nine he went to Agra with his father. Chhatrapati from 1681; captured in 1689 and put to death at Tulapur.", d:D(15,16,28,29)},
+    {g:"family", n:"His six daughters", mr:"सहा मुली", y:1658, w:"1650s–60s", r:"Daughters", h:"Sakhubai, Ranubai and Ambikabai (Saibai's), Dipabai (Soyarabai's), Kamalabai (Sakvarbai's) and Rajkunwarbai (Sagunabai's). They married into the Nimbalkar, Mahadik, Palkar and other families. Names and details vary between sources.", b:1, t:["c","Varies"]},
+    {g:"family", n:"Rajaram", mr:"राजाराम", y:1670, w:"b. 24 Feb 1670", r:"Younger son", h:"Escaped from Raigad in 1689 and led the war from Gingee. Died at Sinhagad on 3 March 1700.", d:D(28,29)},
+    {g:"family", n:"Ekoji (Vyankoji)", mr:"एकोजी", y:1677, w:"met 1677", r:"Half-brother, Tukabai's son", h:"Ruler of Thanjavur. Shivaji camped by the Kollidam in 1677 to claim a share of Shahaji's lands; they settled after a war.", d:D(25)},
+    {g:"family", n:"Dipabai (Ekoji's wife)", mr:"दीपाबाई", y:1678, w:"1678", r:"Sister-in-law", h:"Mediated the peace between the two brothers; much of the disputed property was assigned to her.", d:D(25)},
+    {g:"family", n:"Jankibai", mr:"जानकीबाई", y:1680, w:"m. March 1680", r:"Daughter-in-law, Rajaram's first wife", h:"Prataprao Gujar's daughter. Her wedding at Raigad was the last great family event of Shivaji's life.", v:"Prataprao Gujar", d:D(19,28)},
+    {g:"family", n:"Yesubai", mr:"येसूबाई", y:1681, w:"queen 1681", r:"Daughter-in-law, Sambhaji's wife", h:"Of the Shirke family. In 1689 she sent Rajaram out of Raigad and was herself a Mughal prisoner until 1719.", d:D(29)},
+    {g:"family", n:"Tarabai", mr:"ताराबाई", y:1675, w:"1675–1761", r:"Daughter-in-law, Rajaram's wife", h:"Hambirrao Mohite's daughter. Ruled for her son Shivaji II and led the war after 1700.", v:"Hambirrao Mohite", d:D(29)},
+    {g:"family", n:"Shahu", mr:"शाहू", y:1682, w:"1682–1749", r:"Grandson, Sambhaji's son", h:"A Mughal captive from age seven until 1707, then Chhatrapati at Satara for forty years.", d:D(29)},
+    {g:"family", n:"Shivaji II & Sambhaji II", mr:"दुसरे शिवाजी · दुसरे संभाजी", y:1696, w:"b. 1696 · 1698", r:"Grandsons, Rajaram's sons", h:"Shivaji II (Tarabai's son) and Sambhaji II (Rajasbai's son) began the Kolhapur line.", b:1},
+
+    // ---------- faith ----------
+    {g:"faith", n:"Sheikh Muhammad", mr:"शेख महंमद", y:1595, w:"c. 1595", r:"Grandfather's guru", h:"A Muslim saint-poet of Shrigonda, revered by the Varkaris. Maloji built him a math and called him his guru.", v:"Maloji", s:"sufi"},
+    {g:"faith", n:"Shah Sharif", mr:"शहा शरीफ", y:1594, w:"tradition", r:"Sufi saint of Ahmednagar", h:"A tradition says Maloji and Umabai prayed at his tomb for sons. The text it comes from is late.", s:"sufi", t:["l","Tradition"]},
+    {g:"faith", n:"Shivai Devi", mr:"शिवाई देवी", y:1630, w:"1630", r:"The goddess he was named for", h:"The deity of Shivneri fort, where he was born.", d:D(2)},
+    {g:"faith", n:"Tulja Bhavani", mr:"तुळजा भवानी", y:1631, w:"lifelong", r:"Family goddess", h:"The goddess of Tuljapur, worshipped by Jijabai and by him all his life.", d:D(2,9)},
+    {g:"faith", n:"Dadoji Konddev", mr:"दादोजी कोंडदेव", y:1636, w:"1630s–1647", r:"Manager of the Pune jagir", h:"Ran the family's lands at Pune and helped with the boy's practical training. Died 1647. How big his role was is debated.", v:"Shahaji", d:D(3), t:["debated","Debated"]},
+    {g:"faith", n:"Sant Tukaram", mr:"संत तुकाराम", y:1649, w:"d. c. 1650", r:"Saint-poet of his youth", h:"The Varkari poet of Dehu. The story that he returned Shivaji's gifts is a tradition.", d:D(27), s:"tukaram"},
+    {g:"faith", n:"Samarth Ramdas", mr:"समर्थ रामदास", y:1672, w:"1649 or c. 1672", r:"Saint, honoured at Sajjangad", h:"Lived at Sajjangad from c. 1676 at Shivaji's invitation. When they first met, and whether he was Shivaji's guru, are debated.", d:D(27), s:"ramdas", t:["debated","Debated"]},
+    {g:"faith", n:"Gaga Bhatt", mr:"गागाभट्ट", y:1674, w:"June 1674", r:"Priest of the coronation", h:"The great scholar of Varanasi who led the rites on 6 June 1674.", d:D(22)},
+    {g:"faith", n:"Nischalpuri Goswami", mr:"निश्चलपुरी गोसावी", y:1674.7, w:"Sept 1674", r:"Priest of the second coronation", h:"Led a second, Tantric coronation on 24 September 1674.", d:D(22)},
+    {g:"faith", n:"Mauni Baba", mr:"मौनी बाबा", y:1676, w:"1676", r:"The silent saint of Patgaon", h:"Shivaji visited him before the southern campaign and endowed his math.", d:D(27), s:"mauni-baba"},
+    {g:"faith", n:"Yakub Baba", mr:"याकूब बाबा", y:1676.5, w:"tradition", r:"Sufi saint of Kelshi", h:"A local tradition says Shivaji sought his blessing; no record from the time mentions it.", d:D(27), s:"sufi", t:["l","Tradition"]},
+
+    // ---------- friends ----------
+    {g:"friends", n:"Kanhoji Jedhe", mr:"कान्होजी जेधे", y:1642, w:"1640s", r:"Maval chief and early ally", h:"A Deshmukh of the Maval who had served Shahaji. He brought many of the hill clans to Shivaji's side and stood by him when Afzal Khan came.", v:"Shahaji", d:D(4)},
+    {g:"friends", n:"Tanaji Malusare", mr:"तानाजी मालुसरे", y:1643, w:"1640s", r:"Boyhood companion", h:"One of the first Mavla friends. Took Kondhana and died there, 4 February 1670.", d:D(4,17)},
+    {g:"friends", n:"Baji Pasalkar", mr:"बाजी पासलकर", y:1643.5, w:"1640s", r:"Early companion", h:"Among the earliest named companions of the young Shivaji.", d:D(4)},
+    {g:"friends", n:"Yesaji Kank", mr:"येसाजी कंक", y:1644, w:"1640s", r:"Early companion; infantry commander", h:"Commanded the Mavla foot-soldiers by 1659. At Hyderabad in 1677 he faced an elephant with his sword, as Sarkar records.", d:D(4)},
+    {g:"friends", n:"Sambhaji Kavji", mr:"संभाजी कावजी", y:1656, w:"1656", r:"Envoy at Javali", h:"The envoy in the hard Javali campaign; he killed Hanmantrao More.", d:D(8)},
+    {g:"friends", n:"Murarbaji Deshpande", mr:"मुरारबाजी देशपांडे", y:1656.5, w:"after 1656", r:"Commander of Purandar", h:"Accounts say he first served the Mores of Javali, then Shivaji. Fell defending Purandar in May 1665.", v:"Javali", d:D(15)},
+    {g:"friends", n:"Baji Prabhu Deshpande", mr:"बाजीप्रभू देशपांडे", y:1656.7, w:"after Rohida", r:"Commander from a rival's camp", h:"Had served Krishnaji Bandal of Rohida, who opposed Shivaji, and joined him when Rohida fell. Held Ghod Khind on 13 July 1660.", v:"Bandal of Rohida", d:D(12)},
+    {g:"friends", n:"Fulaji", mr:"फुलाजी", y:1656.8, w:"after Rohida", r:"Baji Prabhu's brother", h:"Fell beside him at the pass.", d:D(12)},
+    {g:"friends", n:"Netaji Palkar", mr:"नेताजी पालकर", y:1657, w:"by 1659", r:"Cavalry commander", h:"Famed for deep raids; called \"the second Shivaji\". Left in 1666, was forcibly converted by the Mughals, and came back in 1676.", d:D(11,20)},
+    {g:"friends", n:"Jiva Mahala", mr:"जिवा महाला", y:1659, w:"Nov 1659", r:"Bodyguard at Pratapgad", h:"Cut down Sayyad Banda in the meeting with Afzal Khan.", d:D(10)},
+    {g:"friends", n:"Siddi Hilal", mr:"सिद्दी हिलाल", y:1660, w:"1660", r:"Commander", h:"A Muslim officer who fought for Shivaji.", s:"sufi"},
+    {g:"friends", n:"Shiva Kashid", mr:"शिवा काशीद", y:1660.4, w:"July 1660", r:"The decoy of Panhala", h:"A barber who rode out as the king. Maratha tradition; thinly documented.", d:D(11), t:["l","Tradition"]},
+    {g:"friends", n:"Firangoji Narsala", mr:"फिरंगोजी नरसाळा", y:1660.5, w:"June–Aug 1660", r:"Defender of Chakan", h:"Held the small fort of Chakan against Shaista Khan for about 56 days.", d:D(13)},
+    {g:"friends", n:"Bahirji Naik", mr:"बहिर्जी नाईक", y:1661, w:"1660s", r:"Master spy", h:"Remembered as head of Shivaji's scouts. Little is documented from the time.", d:D(20)},
+    {g:"friends", n:"Hiroji Farzand", mr:"हिरोजी फर्जंद", y:1666.6, w:"Aug 1666", r:"The man in the bed at Agra", h:"Lay in Shivaji's bed so the guards would not notice the escape. Some genealogies count him as a son of Shahaji, which would make him a half-brother.", d:D(16), t:["l","Tradition"]},
+    {g:"friends", n:"Madari Mehtar", mr:"मदारी मेहतर", y:1666.7, w:"Aug 1666", r:"Servant at Agra", h:"Pressed the sleeper's feet during the escape (tradition).", d:D(16), t:["l","Tradition"]},
+    {g:"friends", n:"Suryaji Malusare", mr:"सूर्याजी मालुसरे", y:1670, w:"Feb 1670", r:"Tanaji's brother", h:"Completed the capture of Kondhana after Tanaji fell.", d:D(17)},
+    {g:"friends", n:"Prataprao Gujar", mr:"प्रतापराव गुजर", y:1671, w:"1670s", r:"Commander of the cavalry", h:"Won at Salher in 1672; charged at Nesari with six companions on 24 February 1674. His daughter married Rajaram.", d:D(18,19)},
+    {g:"friends", n:"Kondaji Farzand", mr:"कोंडाजी फर्जंद", y:1673, w:"March 1673", r:"Officer", h:"Credited with retaking Panhala by a night climb (Sarkar says it was won by bribery).", d:D(18), t:["debated","Debated"]},
+    {g:"friends", n:"Hambirrao Mohite", mr:"हंबीरराव मोहिते", y:1674, w:"1674", r:"Senapati; brother-in-law", h:"Born Hansaji; Soyarabai's brother and Tarabai's father. Avenged Prataprao and led the army until he was killed near Wai in 1687.", d:D(19,29)},
+    {g:"friends", n:"Anandrao", mr:"आनंदराव", y:1674.2, w:"1674", r:"Commander", h:"Avenged Prataprao together with Hambirrao.", d:D(19)},
+
+    // ---------- court ----------
+    {g:"court", n:"Moropant Pingle", mr:"मोरोपंत पिंगळे", y:1656, w:"1656", r:"Builder, general, Peshwa", h:"Oversaw the building of Pratapgad, fought at Salher in 1672, and was Peshwa (chief minister), confirmed in the council of 1674.", d:D(18,22)},
+    {g:"court", n:"Abaji Sondev", mr:"आबाजी सोनदेव", y:1657, w:"1657", r:"Governor of North Konkan", h:"Given charge of the newly won Kalyan–Bhiwandi country in 1657, and later the post of Surnis (keeper of correspondence).", b:1},
+    {g:"court", n:"Daulat Khan", mr:"दौलतखान", y:1660, w:"1660s–70s", r:"Admiral", h:"One of the first commanders of the navy; his fleet guarded Khanderi in 1679.", s:"sufi"},
+    {g:"court", n:"Hiroji Indulkar", mr:"हिरोजी इंदुलकर", y:1662, w:"from c. 1662", r:"Builder of Raigad", h:"Remembered as the chief builder of the new capital; his name is on a temple step.", d:D(21)},
+    {g:"court", n:"The Ashtapradhan", mr:"अष्टप्रधान", y:1674.1, w:"June 1674", r:"The council of eight", h:"Peshwa, Amatya, Sachiv, Mantri, Senapati, Sumant, Nyayadhish and Panditrao, named at the coronation.", d:D(22)},
+    {g:"court", n:"Ramchandra Pant Amatya", mr:"रामचंद्रपंत अमात्य", y:1674.15, w:"1674", r:"Minister of finance", h:"Amatya from the coronation; after 1689 he held the home forts for Rajaram. The Ajnapatra is attributed to him, though that is debated.", d:D(22,26)},
+    {g:"court", n:"Annaji Datto", mr:"अण्णाजी दत्तो", y:1674.2, w:"1674", r:"Sachiv (secretary)", h:"Ran revenue and records. He was put to death in 1681 after a plot against Sambhaji.", d:D(22)},
+    {g:"court", n:"Raghunath Pandit", mr:"रघुनाथ पंडित", y:1675, w:"c. 1675", r:"Panditrao; scholar", h:"Compiled the Rajavyavahara Kosha, a Sanskrit dictionary of government words.", d:D(22)},
+    {g:"court", n:"Raghunath Narayan Hanumante", mr:"रघुनाथ नारायण हणमंते", y:1676, w:"c. 1676", r:"Adviser for the south", h:"Shahaji had left him as guardian of young Ekoji in the south. He fell out with Ekoji and came to Shivaji, bringing knowledge that shaped the southern campaign.", v:"Shahaji / Ekoji", b:1},
+    {g:"court", n:"Mayanak Bhandari", mr:"मायनाक भंडारी", y:1679, w:"Sept 1679", r:"Naval commander", h:"Landed on Khanderi island with 150 men and fortified it in spite of the English and the Siddis.", b:1},
+
+    // ---------- allies ----------
+    {g:"allies", n:"Chhatrasal Bundela", mr:"छत्रसाल बुंदेला", y:1670.9, w:"winter 1670–71", r:"Young Rajput visitor", h:"Left the Mughal army to offer his service. Shivaji, Sarkar writes, sent him home to fight for his own land; a Mughal-side writer says he left disappointed.", b:1, t:["debated","Accounts differ"]},
+    {g:"allies", n:"Abul Hasan Qutb Shah", mr:"अबुल हसन कुतुबशहा", y:1677, w:"early 1677", r:"King of Golconda", h:"Received Shivaji at Hyderabad and funded the southern campaign.", b:1},
+    {g:"allies", n:"Madanna & Akkanna", mr:"मादण्णा · आकण्णा", y:1677.1, w:"1677", r:"Ministers of Golconda", h:"The brothers who made the alliance with Golconda.", d:D(25)},
+
+    // ---------- bijapur ----------
+    {g:"bijapur", n:"Baji Ghorpade", mr:"बाजी घोरपडे", y:1648, w:"1648", r:"Bijapur noble who arrested Shahaji", h:"Seized Shahaji in 1648 on orders. Shivaji struck his jagir at Mudhol in October 1664, and he was killed.", d:D(7)},
+    {g:"bijapur", n:"Ali Adil Shah II", mr:"अली आदिलशहा", y:1656.1, w:"r. 1656–72", r:"Sultan of Bijapur", h:"The sultan in whose name Afzal Khan and Siddi Johar were sent.", d:D(11)},
+    {g:"bijapur", n:"Bari Sahiba", mr:"बडी साहिबा", y:1658, w:"to 1660", r:"Queen mother of Bijapur", h:"Ran the state until 1660, the years when Bijapur turned its armies on Shivaji.", b:1},
+    {g:"bijapur", n:"Chandrarao More", mr:"चंद्रराव मोरे", y:1656.05, w:"1656", r:"Chief of Javali", h:"Refused to join swarajya and was overthrown, one of the hardest episodes of the story.", d:D(8)},
+    {g:"bijapur", n:"Afzal Khan", mr:"अफझल खान", y:1659.2, w:"1659", r:"Bijapur's great general", h:"Sent to crush Shivaji; killed at the meeting below Pratapgad on 10 November 1659.", d:D(9,10)},
+    {g:"bijapur", n:"Krishnaji Bhaskar", mr:"कृष्णाजी भास्कर", y:1659.3, w:"1659", r:"Afzal Khan's envoy", h:"The go-between who arranged the meeting.", d:D(10)},
+    {g:"bijapur", n:"Sayyad Banda", mr:"सय्यद बंडा", y:1659.4, w:"1659", r:"Afzal Khan's swordsman", h:"Attacked Shivaji and was cut down by Jiva Mahala.", d:D(10)},
+    {g:"bijapur", n:"Siddi Johar", mr:"सिद्दी जौहर", y:1660.1, w:"1660", r:"Besieger of Panhala", h:"Held Panhala in a ring through the monsoon of 1660.", d:D(11,12)},
+    {g:"bijapur", n:"Siddi Masud", mr:"सिद्दी मसूद", y:1660.45, w:"July 1660", r:"The pursuer", h:"Chased the escaping king to Ghod Khind.", d:D(11,12)},
+    {g:"bijapur", n:"Surve & Dalvi", mr:"सुर्वे · दळवी", y:1660.5, w:"July 1660", r:"Chiefs blockading Vishalgad", h:"Suryarao Surve and Jaswantrao Dalvi barred the road to the fort.", d:D(12)},
+    {g:"bijapur", n:"Bahlol Khan", mr:"बहलोलखान", y:1673.5, w:"1673–74", r:"Adil Shahi general", h:"Released by Prataprao at Umrani, then met at Nesari.", d:D(19)},
+
+    // ---------- mughal ----------
+    {g:"mughal", n:"Shah Jahan", mr:"शाहजहान", y:1630.5, w:"r. 1628–58", r:"Mughal emperor of his childhood", h:"Pushed the empire into the Deccan; died his son's prisoner in 1666.", d:D(1,16)},
+    {g:"mughal", n:"Murad Bakhsh", mr:"मुराद बख्श", y:1649, w:"1649", r:"Mughal prince", h:"Shivaji pledged loyalty to him to win his father's release.", d:D(7)},
+    {g:"mughal", n:"Aurangzeb", mr:"औरंगजेब", y:1657.2, w:"1657–1707", r:"His greatest adversary", h:"Fought Shivaji's raiders as viceroy of the Deccan in 1657; held him at Agra in 1666; fought his sons until his own death in 1707.", d:D(16,29)},
+    {g:"mughal", n:"Shaista Khan", mr:"शाइस्ता खान", y:1660.3, w:"1660–63", r:"Mughal governor in Pune", h:"Aurangzeb's uncle. Lived in the Lal Mahal until the night raid of April 1663.", d:D(13)},
+    {g:"mughal", n:"Kartalab Khan & Rai Bagan", mr:"करतलबखान · रायबागन", y:1661.1, w:"Feb 1661", r:"Trapped at Umberkhind", h:"A Mughal force surrendered in the forest pass; Rai Bagan, a Maratha woman commander on the Mughal side, advised terms.", d:D(20)},
+    {g:"mughal", n:"Maharaja Jaswant Singh", mr:"जसवंतसिंग", y:1663.9, w:"1663–68", r:"Rajput general for the Mughals", h:"Besieged Kondhana without success (1663–64), and later helped arrange the peace of 1668.", b:1},
+    {g:"mughal", n:"Inayat Khan", mr:"इनायतखान", y:1664, w:"Jan 1664", r:"Governor of Surat", h:"Shut himself in the castle during the sack of Surat.", d:D(14)},
+    {g:"mughal", n:"Prince Muazzam", mr:"शहजादा मुअज्जम", y:1664.1, w:"1664–68", r:"Mughal viceroy of the Deccan", h:"Aurangzeb's son. His court at Aurangabad was the channel for the peace of 1668. He later became emperor as Bahadur Shah.", b:1},
+    {g:"mughal", n:"Mirza Raja Jai Singh", mr:"मिर्झाराजे जयसिंग", y:1665, w:"1665", r:"Mughal general", h:"Besieged Purandar and made the Treaty of Purandar, 11 June 1665.", d:D(15)},
+    {g:"mughal", n:"Diler Khan", mr:"दिलेरखान", y:1665.1, w:"1665 · 1678", r:"Mughal general", h:"Fought at Purandar; in 1678 Sambhaji went over to him for a year.", d:D(15,28)},
+    {g:"mughal", n:"Ram Singh", mr:"रामसिंग", y:1666.4, w:"1666", r:"Jai Singh's son", h:"Responsible for Shivaji at Agra; later suspected of helping the escape.", d:D(16)},
+    {g:"mughal", n:"Udaybhan Rathod", mr:"उदयभान राठोड", y:1670.05, w:"Feb 1670", r:"Commander of Kondhana", h:"Fell fighting Tanaji.", d:D(17)},
+    {g:"mughal", n:"Ikhlas Khan", mr:"इखलासखान", y:1672, w:"1672", r:"Mughal commander", h:"Defeated and captured at Salher.", d:D(18)},
+    {g:"mughal", n:"Bahadur Khan", mr:"बहादूरखान", y:1673, w:"1673", r:"Mughal general", h:"His camp at Pedgaon grew into Bahadurgad, where Sambhaji was later taken in 1689.", s:"sufi"},
+    {g:"mughal", n:"Prince Akbar", mr:"शहजादा अकबर", y:1681, w:"1681", r:"Aurangzeb's rebel son", h:"Rebelled against his father and took refuge with Sambhaji, one reason Aurangzeb came south himself.", b:1},
+    {g:"mughal", n:"Muqarrab Khan", mr:"मुकर्रबखान", y:1689, w:"Feb 1689", r:"Captor of Sambhaji", h:"Captured Sambhaji and Kavi Kalash at Sangameshwar.", d:D(29)},
+
+    // ---------- coast ----------
+    {g:"coast", n:"The Siddis of Janjira", mr:"जंजिऱ्याचे सिद्दी", y:1659.9, w:"1650s onward", r:"Rivals at sea", h:"Their island fortress was never taken by the Marathas.", d:D(24)},
+    {g:"coast", n:"George Oxenden", mr:"जॉर्ज ऑक्झेंडन", y:1664.05, w:"Jan 1664", r:"Chief of the English at Surat", h:"Defended the English factory during the sack of Surat.", d:D(14)},
+    {g:"coast", n:"Henry Oxenden", mr:"हेन्री ऑक्झेंडन", y:1674.05, w:"June 1674", r:"English envoy", h:"Attended the coronation and kept a diary of it.", d:D(22)},
+
+    // ---------- after ----------
+    {g:"after", n:"Kavi Kalash", mr:"कवी कलश", y:1681.1, w:"1680s", r:"Sambhaji's adviser", h:"Poet and trusted minister; captured and killed with Sambhaji in 1689.", d:D(29)},
+    {g:"after", n:"Santaji Ghorpade", mr:"संताजी घोरपडे", y:1689.2, w:"1689–97", r:"Commander of the long war", h:"Lightning raids that wore down the Mughal armies.", d:D(29)},
+    {g:"after", n:"Dhanaji Jadhav", mr:"धनाजी जाधव", y:1689.3, w:"1689–1708", r:"Commander of the long war", h:"Santaji's partner; later Senapati.", d:D(29)},
+    {g:"after", n:"Keladi Chennamma", mr:"केळदीची चेन्नम्मा", y:1689.5, w:"1689", r:"Queen who sheltered Rajaram", h:"Helped Rajaram on his escape to Gingee.", d:D(29)},
+    {g:"after", n:"Kanhoji Angre", mr:"कान्होजी आंग्रे", y:1698, w:"from 1698", r:"Admiral", h:"Carried the navy on into the 18th century.", d:D(24)},
+
+    // ---------- voices ----------
+    {g:"voices", n:"Paramanand", mr:"परमानंद", y:1673.9, w:"in his lifetime", r:"Court poet", h:"His Sanskrit poem, the Shivbharat, was written while Shivaji lived.", d:D(20)},
+    {g:"voices", n:"Kavi Bhushan", mr:"कवी भूषण", y:1673.8, w:"1673", r:"Hindi court poet", h:"His Shivraj Bhushan praises Shivaji in Braj verse. Sarkar warns that his imagination sometimes runs ahead of the facts.", b:1},
+    {g:"voices", n:"Narayan Shenvi", mr:"नारायण शेणवी", y:1674.03, w:"April 1674", r:"English interpreter", h:"His letter of 4 April 1674 describes Prataprao's charge.", d:D(19)},
+    {g:"voices", n:"François Bernier", mr:"फ्रान्स्वा बर्निये", y:1664.2, w:"1660s", r:"French traveller", h:"Recorded who was spared in the sack of Surat.", d:D(14)},
+    {g:"voices", n:"Cosme da Guarda", mr:"कोस्मे द ग्वार्दा", y:1695, w:"1690s", r:"Early Portuguese biographer", h:"Wrote one of the first European lives of Shivaji, printed in Lisbon in 1730. Sarkar found it full of mistakes and gossip.", b:1},
+    {g:"voices", n:"Krishnaji Anant Sabhasad", mr:"कृष्णाजी अनंत सभासद", y:1697, w:"1697", r:"Courtier and chronicler", h:"His bakhar is one of the earliest Maratha accounts.", d:D(18,19)},
+    {g:"voices", n:"Khafi Khan", mr:"खाफी खान", y:1730, w:"c. 1730s", r:"Mughal-side historian", h:"No friend of Shivaji, yet recorded his rules protecting mosques, the Quran and women.", d:D(10,26)},
+    {g:"voices", n:"James Grant Duff", mr:"ग्रँट डफ", y:1826, w:"1826", r:"British historian", h:"Wrote A History of the Mahrattas.", d:D(10,20)},
+    {g:"voices", n:"Jyotirao Phule", mr:"जोतिराव फुले", y:1869, w:"1869", r:"Reformer", h:"Credited with finding the neglected samadhi; wrote a powada on Shivaji.", d:D(28)},
+    {g:"voices", n:"Lokmanya Tilak", mr:"लोकमान्य टिळक", y:1895, w:"1895", r:"Leader", h:"Helped lead the effort to restore the samadhi on Raigad.", d:D(28)},
+    {g:"voices", n:"Jadunath Sarkar", mr:"जदुनाथ सरकार", y:1919, w:"1919", r:"Historian", h:"His Shivaji and His Times weighed the evidence story by story.", d:D(10,26)},
+    {g:"voices", n:"Kusumagraj", mr:"कुसुमाग्रज", y:1950, w:"20th century", r:"Marathi poet", h:"Wrote the poem of the seven riders of Nesari.", d:D(19)},
+
+    // ---------- people of the land ----------
+    {g:"friends", n:"Hirkani", mr:"हिरकणी", y:1674.5, w:"legend", r:"Milkmaid of Raigad", h:"Climbed down the cliff at night to reach her baby. Folklore; the bastion named for her is real.", d:D(21), t:["l","Legend"]},
+    {g:"court", n:"The patil of Ranjhe", mr:"रांझ्याचा पाटील", y:1645.5, w:"c. 1645–46", r:"A headman brought to justice", h:"Punished severely for wronging a woman, one of Shivaji's first acts of justice.", d:D(26)}
+  ];
+
+  var SAINT = {sufi:"saint-sufi.html", tukaram:"saint-tukaram.html", ramdas:"saint-ramdas.html", "mauni-baba":"saint-mauni-baba.html"};
+  function pad(n){return (n<10?"0":"")+n}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+
+  function card(p, showGroup){
+    var foot = [];
+    if (p.d) foot.push('<a class="daychip" href="day-'+pad(p.d[0])+'.html">Day '+p.d.join(" · ")+'</a>');
+    if (p.s) foot.push('<a class="daychip soft" href="'+SAINT[p.s]+'">Saint story</a>');
+    if (p.b) foot.push('<span class="beyond">Beyond the nights</span>');
+    if (p.t) foot.push('<span class="tag '+p.t[0]+'">'+esc(p.t[1])+'</span>');
+    var grp = showGroup ? '<div><span class="gdot" style="background:'+G[p.g].c+'"></span><span class="gname">'+esc(G[p.g].n)+'</span></div>' : '';
+    return '<article class="card'+(p.b?' is-beyond':'')+'">'+grp+
+      '<div class="top"><span class="nm">'+esc(p.n)+'<span class="mr">'+esc(p.mr)+'</span></span><span class="when">'+esc(p.w)+'</span></div>'+
+      '<div class="rel">'+esc(p.r)+'</div><div class="how">'+esc(p.h)+'</div>'+
+      (p.v ? '<div class="via">Came in through <b>'+esc(p.v)+'</b></div>' : '')+
+      '<div class="foot">'+foot.join("")+'</div></article>';
+  }
+
+  var mode = "tree";
+  var view = document.getElementById("view");
+  var q = document.getElementById("q");
+  var onlyB = document.getElementById("only-beyond");
+
+  function matches(p){
+    if (onlyB.checked && !p.b) return false;
+    var s = q.value.trim().toLowerCase();
+    if (!s) return true;
+    return (p.n+" "+p.mr+" "+p.r+" "+p.h+" "+(p.v||"")).toLowerCase().indexOf(s) > -1;
+  }
+
+  function render(){
+    var list = P.filter(matches);
+    var html = "";
+    if (!list.length){ view.innerHTML = '<p class="empty">Nobody matches that.</p>'; return; }
+    if (mode === "tree"){
+      html += '<div class="root"><div class="medal"><small>at the centre</small>Shivaji Maharaj<br><span class="mr" style="font-size:1rem">शिवाजी महाराज · 1630–1680</span></div></div><div class="branches">';
+      ORDER.forEach(function(g){
+        var ps = list.filter(function(p){return p.g===g}).sort(function(a,b){return a.y-b.y});
+        if (!ps.length) return;
+        html += '<div class="branch"><h3 style="color:'+G[g].c+'"><span class="dot" style="background:'+G[g].c+'"></span>'+esc(G[g].n)+'</h3>'+
+                '<p class="bnote">'+esc(G[g].note)+'</p><div class="people">'+ps.map(function(p){return card(p,false)}).join("")+'</div></div>';
+      });
+      html += '</div>';
+      view.className = "";
+    } else {
+      var eras = [[0,1630,"Before he was born"],[1630,1645,"Childhood · 1630–1644"],[1645,1656,"The first forts · 1645–1655"],
+                  [1656,1665,"Rise and storms · 1656–1664"],[1665,1674,"Agra and recovery · 1665–1673"],
+                  [1674,1680.5,"The crowned king · 1674–1680"],[1680.5,1720,"After him · 1680–1720"],[1720,3000,"Telling the story · later"]];
+      eras.forEach(function(e){
+        var ps = list.filter(function(p){return p.y>=e[0] && p.y<e[1]}).sort(function(a,b){return a.y-b.y});
+        if (!ps.length) return;
+        html += '<h3 class="era">'+esc(e[2])+'</h3><div class="people">'+ps.map(function(p){return card(p,true)}).join("")+'</div>';
+      });
+      view.className = "timeline";
+    }
+    view.innerHTML = html;
+  }
+
+  document.getElementById("key").innerHTML = ORDER.map(function(g){return '<span><i style="background:'+G[g].c+'"></i>'+esc(G[g].n)+'</span>'}).join("");
+  function setMode(m){
+    mode = m;
+    document.getElementById("v-tree").setAttribute("aria-pressed", m==="tree");
+    document.getElementById("v-time").setAttribute("aria-pressed", m==="time");
+    try { localStorage.setItem("ft-mode", m); } catch(e){}
+    render();
+  }
+  document.getElementById("v-tree").addEventListener("click", function(){setMode("tree")});
+  document.getElementById("v-time").addEventListener("click", function(){setMode("time")});
+  q.addEventListener("input", render);
+  onlyB.addEventListener("change", render);
+  var saved = null; try { saved = localStorage.getItem("ft-mode"); } catch(e){}
+  setMode(saved === "time" ? "time" : "tree");
+})();
+</script>
+</body>
+</html>
