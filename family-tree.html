@@ -123,6 +123,110 @@
     .branch>h3::before{left:-16px;width:12px}
   }
   @media (min-width:761px){ .tree-hint{display:block} }
+
+  /* ---------- tabs ---------- */
+  .tabs{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 20px}
+  .tabs button{font-family:"Karla",sans-serif;font-size:.9rem;font-weight:700;border:1px solid var(--line);background:var(--paper);
+    color:var(--ink-soft);border-radius:999px;padding:9px 18px;cursor:pointer}
+  .tabs button[aria-selected="true"]{background:var(--saffron);border-color:var(--saffron);color:#fff}
+
+  /* ---------- life path ---------- */
+  .howto{border:1px solid var(--line);border-radius:14px;background:var(--paper);padding:14px 16px 6px;margin-bottom:18px}
+  .howto p{margin:8px 0 10px;font-size:.95rem;color:var(--ink-soft)}
+  .howto p b{color:var(--ink)}
+  .howto-cols{display:grid;grid-template-columns:1fr 220px 1fr;gap:10px;font-family:"Karla",sans-serif;font-size:.74rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+  .hc.with{color:var(--green)} .hc.mid{color:var(--saffron);text-align:center} .hc.against{color:var(--rust);text-align:right}
+  .lp{position:relative}
+  .lp::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:6px;margin-left:-3px;border-radius:3px;
+    background:linear-gradient(var(--saffron),var(--gold));opacity:.35}
+  .lp-row{position:relative;display:grid;grid-template-columns:1fr 220px 1fr;gap:10px;align-items:start;margin:0 0 18px}
+  .lp-mid{grid-column:2;grid-row:1;position:relative;z-index:1;text-align:center;background:var(--paper);border:2px solid var(--saffron);
+    border-radius:16px;padding:10px 10px 12px}
+  .lp-with{grid-column:1;grid-row:1}
+  .lp-against{grid-column:3;grid-row:1}
+  .lp-mid .yr{font-family:"Karla",sans-serif;font-size:.72rem;font-weight:700;letter-spacing:.1em;color:var(--ink-soft);text-transform:uppercase}
+  .lp-mid .age{font-family:"Marcellus",serif;font-size:1.35rem;color:var(--saffron);line-height:1.15;margin:2px 0 4px}
+  .lp-mid .age small{display:block;font-family:"Karla",sans-serif;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+  .lp-mid .ev{font-size:.84rem;line-height:1.45;color:var(--ink);margin:0}
+  .lp-mid .go{display:inline-block;margin-top:6px;font-family:"Karla",sans-serif;font-size:.72rem;font-weight:700;text-decoration:none}
+  .lp-mid .tokens{justify-content:center;margin-top:8px;padding-top:8px;border-top:1px dashed var(--line)}
+  .lp-with .tokens{justify-content:flex-end}
+  .lp-against .tokens{justify-content:flex-start}
+  .side-h{display:none;font-family:"Karla",sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin:4px 0 2px}
+  .lp-with .side-h{color:var(--green)} .lp-against .side-h{color:var(--rust)}
+  .tokens{display:flex;flex-wrap:wrap;gap:6px 4px}
+  .tk{all:unset;box-sizing:border-box;width:84px;display:flex;flex-direction:column;align-items:center;gap:3px;cursor:pointer;
+    padding:4px 2px;border-radius:12px;transition:opacity .2s ease,transform .15s ease}
+  .tk:hover{transform:translateY(-2px)}
+  .tk:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
+  .tk .av{width:50px;height:50px;border-radius:50%;display:grid;place-items:center;font-size:1.45rem;line-height:1;
+    background:var(--paper);border:3px solid var(--gc);box-shadow:0 1px 3px var(--shadow)}
+  .tk.is-beyond .av{border-style:dashed}
+  .tk .tn{font-family:"Karla",sans-serif;font-size:.7rem;font-weight:600;line-height:1.2;text-align:center;color:var(--ink)}
+  .tk .ty{font-family:"Karla",sans-serif;font-size:.6rem;color:var(--ink-faint)}
+  .lp.focus .tk{opacity:.22}
+  .lp.focus .tk.on,.lp.focus .tk.link{opacity:1}
+  .tk.on .av{box-shadow:0 0 0 4px var(--saffron);transform:scale(1.08)}
+  .tk.link .av{box-shadow:0 0 0 3px var(--gold)}
+  .lp-end{position:relative;z-index:1;text-align:center;margin:0 auto;max-width:300px;font-family:"Marcellus",serif;font-size:1.05rem;
+    color:var(--ink-soft);background:var(--bg);padding:4px 0}
+
+  /* spotlight */
+  .spot{position:fixed;z-index:20;right:18px;bottom:18px;width:min(380px,calc(100vw - 32px));max-height:min(70vh,560px);overflow:auto;
+    background:var(--paper);border:2px solid var(--saffron);border-radius:16px;padding:16px 16px 14px;box-shadow:0 10px 34px var(--shadow)}
+  .spot.left{right:auto;left:18px}
+  .spot-x{position:absolute;top:8px;right:10px;border:0;background:transparent;color:var(--ink-soft);font-size:1.05rem;cursor:pointer;padding:4px 6px}
+  .spot .s-head{display:flex;gap:12px;align-items:center;margin-right:24px}
+  .spot .s-av{width:56px;height:56px;flex:none;border-radius:50%;display:grid;place-items:center;font-size:1.6rem;border:3px solid var(--gc);background:var(--bg)}
+  .spot .s-nm{font-family:"Marcellus",serif;font-size:1.25rem;line-height:1.15}
+  .spot .s-nm .mr{display:block;font-size:.95rem;color:var(--ink-soft)}
+  .spot .s-when{font-family:"Karla",sans-serif;font-size:.74rem;font-weight:700;color:var(--saffron)}
+  .spot .s-rel{font-weight:600;margin:10px 0 2px;font-size:.95rem}
+  .spot .s-how{color:var(--ink-soft);font-size:.92rem;line-height:1.55;margin:0}
+  .spot .s-age{margin:8px 0 0;font-family:"Karla",sans-serif;font-size:.8rem;color:var(--ink);background:var(--paper-2);border-radius:10px;padding:6px 10px}
+  .spot .s-links{margin-top:10px}
+  .spot .s-links h5{margin:0 0 6px;font-family:"Karla",sans-serif;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+  .spot .s-links button{font-family:"Karla",sans-serif;font-size:.76rem;font-weight:600;border:1px solid var(--line);background:var(--bg);color:var(--ink);
+    border-radius:999px;padding:4px 10px 4px 6px;margin:0 4px 5px 0;cursor:pointer}
+  .spot .foot{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+  .spot .daychip{text-decoration:none}
+  .spot .beyond{font-family:"Karla",sans-serif;font-size:.6rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+     border:1px dashed var(--ink-faint);color:var(--ink-soft);border-radius:999px;padding:2px 8px}
+
+  /* quiz */
+  .quiz{max-width:640px;margin:0 auto}
+  .q-top{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-family:"Karla",sans-serif;font-size:.84rem;color:var(--ink-soft);margin-bottom:10px}
+  .q-score{font-weight:700;color:var(--saffron)}
+  .q-card{border:2px solid var(--saffron);border-radius:18px;background:var(--paper);padding:20px 20px 18px;text-align:center}
+  .q-ic{width:76px;height:76px;margin:0 auto 10px;border-radius:50%;display:grid;place-items:center;font-size:2.2rem;border:3px solid var(--gold);background:var(--bg)}
+  .q-riddle{font-size:1.08rem;line-height:1.6;margin:0 0 16px}
+  .q-opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+  .q-opts button{font-family:"Marcellus",serif;font-size:1.02rem;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:12px;padding:11px 10px;cursor:pointer}
+  .q-opts button .mr{display:block;font-size:.85rem;color:var(--ink-soft)}
+  .q-opts button.right{border-color:var(--green);background:color-mix(in srgb,var(--green) 16%,var(--bg))}
+  .q-opts button.wrong{border-color:var(--rust);background:color-mix(in srgb,var(--rust) 12%,var(--bg));opacity:.8}
+  .q-opts button:disabled{cursor:default}
+  .q-res{min-height:1.4em;margin:12px 0 4px;font-size:.95rem;color:var(--ink-soft)}
+  .q-res b{color:var(--ink)}
+  .q-res a{font-family:"Karla",sans-serif;font-weight:700;font-size:.8rem}
+  .q-next{font-family:"Karla",sans-serif;font-weight:700;font-size:.9rem;border:0;background:var(--saffron);color:#fff;border-radius:999px;padding:10px 20px;cursor:pointer;margin-top:6px}
+  .q-tip{font-size:.85rem;color:var(--ink-faint);text-align:center;margin-top:12px}
+  .q-clue{font-family:"Karla",sans-serif;font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-right:4px}
+  .rd{letter-spacing:-.1em;color:var(--saffron)}
+
+  @media (max-width:760px){
+    .howto-cols{display:none}
+    .lp::before{left:22px}
+    .lp-row{grid-template-columns:1fr;gap:6px;padding-left:0}
+    .lp-mid,.lp-with,.lp-against{grid-column:1;grid-row:auto}
+    .lp-mid{text-align:left}
+    .lp-mid .tokens{justify-content:flex-start}
+    .lp-with .tokens,.lp-against .tokens{justify-content:flex-start}
+    .lp-with,.lp-against{padding-left:12px}
+    .side-h{display:block}
+    .spot,.spot.left{left:12px;right:12px;bottom:12px;width:auto;max-height:62vh}
+    .lp-end{text-align:left;padding-left:40px}
+  }
 </style>
 </head>
 <body>
@@ -142,9 +246,8 @@
   <div class="hero-in">
     <div class="eyebrow">Reference · who belongs to whom</div>
     <h1>The Family Tree</h1>
-    <p class="dek">Shivaji Maharaj's family over five generations. After it comes a second tree of everyone
-      around him: how each person came into the story, and when. It includes some people the nights
-      never had room for.</p>
+    <p class="dek">Shivaji Maharaj's family over five generations, then everyone around him laid along the road of his
+      life: who came in, at what age, and on whose side. It includes some people the nights never had room for.</p>
   </div>
 </header>
 
@@ -354,22 +457,67 @@
 
     <section id="everyone">
       <div class="sec-head"><h2>Everyone around Shivaji</h2><span class="rule"></span></div>
-      <p class="lead">Every person in the story, grouped by how they were connected to him: when they
-        came in, how, and through whom. Cards with a dashed edge are <b>beyond the nights</b>. They
-        are real people the stories had no room for, added here to give the whole picture.</p>
+      <p class="lead">About 115 real people: who came into his story, when, and whose side they were on.
+        Walk down his life year by year, play a guessing game, or look anyone up.</p>
 
-      <div class="controls">
-        <div class="seg" role="group" aria-label="Arrange">
-          <button type="button" id="v-tree" aria-pressed="true">By relation</button>
-          <button type="button" id="v-time" aria-pressed="false">By year</button>
-        </div>
-        <label><input type="checkbox" id="only-beyond"> Only people beyond the nights</label>
-        <input type="search" id="q" placeholder="Find a name…" aria-label="Find a name">
+      <div class="tabs" role="tablist" aria-label="Ways to explore">
+        <button type="button" role="tab" id="t-path" aria-controls="p-path" aria-selected="true"><span aria-hidden="true">🛤️</span> Life path</button>
+        <button type="button" role="tab" id="t-quiz" aria-controls="p-quiz" aria-selected="false"><span aria-hidden="true">❓</span> Who am I?</button>
+        <button type="button" role="tab" id="t-index" aria-controls="p-index" aria-selected="false"><span aria-hidden="true">🗂️</span> Card index</button>
       </div>
-      <div class="legend-key" id="key"></div>
 
-      <div id="view"></div>
+      <!-- life path -->
+      <div id="p-path" role="tabpanel" aria-labelledby="t-path">
+        <div class="howto">
+          <div class="howto-cols" aria-hidden="true">
+            <span class="hc with">⬅ On his side</span><span class="hc mid">His life · his age</span><span class="hc against">Against him ➡</span>
+          </div>
+          <p>Shivaji's life runs down the middle like a road, with <b>his age</b> at every stop. Friends stand on
+            the left and rivals on the right. People who watched, wrote, or stood in between are in the middle.
+            <b>Tap anyone</b> to read their story and see who they are linked to.</p>
+          <div class="legend-key" id="key2"></div>
+        </div>
+        <div class="lp" id="lp"></div>
+      </div>
+
+      <!-- quiz -->
+      <div id="p-quiz" role="tabpanel" aria-labelledby="t-quiz" hidden>
+        <div class="quiz">
+          <div class="q-top">
+            <span class="q-score" id="q-score">Score 0 / 0</span>
+            <label><input type="checkbox" id="q-nights" checked> Only people from the nights</label>
+          </div>
+          <div class="q-card">
+            <div class="q-ic" id="q-ic" aria-hidden="true">❓</div>
+            <p class="q-riddle" id="q-riddle"></p>
+            <div class="q-opts" id="q-opts"></div>
+            <div class="q-res" id="q-res" aria-live="polite"></div>
+            <button type="button" class="q-next" id="q-next">Next riddle →</button>
+          </div>
+          <p class="q-tip">For the grown-up: read the riddle aloud and let the child guess before showing the three
+            choices. The ▢▢▢ boxes hide the person's own name.</p>
+        </div>
+      </div>
+
+      <!-- card index -->
+      <div id="p-index" role="tabpanel" aria-labelledby="t-index" hidden>
+        <div class="controls">
+          <div class="seg" role="group" aria-label="Arrange">
+            <button type="button" id="v-tree" aria-pressed="true">By relation</button>
+            <button type="button" id="v-time" aria-pressed="false">By year</button>
+          </div>
+          <label><input type="checkbox" id="only-beyond"> Only people beyond the nights</label>
+          <input type="search" id="q" placeholder="Find a name…" aria-label="Find a name">
+        </div>
+        <div class="legend-key" id="key"></div>
+        <div id="view"></div>
+      </div>
     </section>
+
+    <aside class="spot" id="spot" hidden aria-live="polite">
+      <button type="button" class="spot-x" id="spot-x" aria-label="Close">✕</button>
+      <div id="spot-body"></div>
+    </aside>
 
     <footer>
       <span>The Family Tree · everyone has a place</span>
@@ -404,7 +552,7 @@
     {g:"family", n:"Shahaji", mr:"शहाजी", y:1594, w:"1594–1664", r:"Father", h:"A general of Ahmadnagar, then of Bijapur. He held the Pune jagir and lands in the south; arrested in 1648, freed in 1649. Died after a hunting fall, January 1664.", d:D(2,7)},
     {g:"family", n:"Jijabai", mr:"जिजाबाई", y:1598, w:"1598–1674", r:"Mother", h:"Raised him at Pune and was his first teacher. Died at Pachad on 17 June 1674, eleven days after the coronation.", d:D(3,23)},
     {g:"family", n:"Sharifji", mr:"शरीफजी", y:1597, w:"1600s–1620s", r:"Uncle, Shahaji's younger brother", h:"Historical, though the story of how he was named is a tradition.", s:"sufi"},
-    {g:"family", n:"Tukabai Mohite", mr:"तुकाबाई मोहिते", y:1628, w:"c. 1630", r:"Stepmother, Shahaji's second wife", h:"Mother of Ekoji. She lived with Shahaji in the south.", b:1},
+    {g:"family", n:"Tukabai Mohite", mr:"तुकाबाई मोहिते", y:1628, na:1, w:"c. 1630", r:"Stepmother, Shahaji's second wife", h:"Mother of Ekoji. She lived with Shahaji in the south.", b:1},
     {g:"family", n:"Sambhaji (the elder)", mr:"संभाजी", y:1623, w:"d. c. 1654", r:"Elder brother", h:"Grew up with Shahaji in the south and was killed in battle at Kanakgiri.", d:D(2,9)},
     {g:"family", n:"Saibai", mr:"सईबाई", y:1640, w:"m. 1640", r:"First wife", h:"Of the Nimbalkars of Phaltan. Married as children on 16 May 1640 at the Lal Mahal. Mother of Sambhaji and three daughters; died at Rajgad on 5 September 1659.", d:D(23)},
     {g:"family", n:"Soyarabai", mr:"सोयराबाई", y:1650, w:"m. c. 1650", r:"Queen, mother of Rajaram", h:"Of the Mohites; Hambirrao's sister. In 1680 her faction put the young Rajaram on the throne, but Sambhaji took power within months. Died 1681.", d:D(28,29)},
@@ -417,7 +565,7 @@
     {g:"family", n:"Dipabai (Ekoji's wife)", mr:"दीपाबाई", y:1678, w:"1678", r:"Sister-in-law", h:"Mediated the peace between the two brothers; much of the disputed property was assigned to her.", d:D(25)},
     {g:"family", n:"Jankibai", mr:"जानकीबाई", y:1680, w:"m. March 1680", r:"Daughter-in-law, Rajaram's first wife", h:"Prataprao Gujar's daughter. Her wedding at Raigad was the last great family event of Shivaji's life.", v:"Prataprao Gujar", d:D(19,28)},
     {g:"family", n:"Yesubai", mr:"येसूबाई", y:1681, w:"queen 1681", r:"Daughter-in-law, Sambhaji's wife", h:"Of the Shirke family. In 1689 she sent Rajaram out of Raigad and was herself a Mughal prisoner until 1719.", d:D(29)},
-    {g:"family", n:"Tarabai", mr:"ताराबाई", y:1675, w:"1675–1761", r:"Daughter-in-law, Rajaram's wife", h:"Hambirrao Mohite's daughter. Ruled for her son Shivaji II and led the war after 1700.", v:"Hambirrao Mohite", d:D(29)},
+    {g:"family", n:"Tarabai", mr:"ताराबाई", y:1689.6, w:"1675–1761", r:"Daughter-in-law, Rajaram's wife", h:"Hambirrao Mohite's daughter. Ruled for her son Shivaji II and led the war after 1700.", v:"Hambirrao Mohite", d:D(29)},
     {g:"family", n:"Shahu", mr:"शाहू", y:1682, w:"1682–1749", r:"Grandson, Sambhaji's son", h:"A Mughal captive from age seven until 1707, then Chhatrapati at Satara for forty years.", d:D(29)},
     {g:"family", n:"Shivaji II & Sambhaji II", mr:"दुसरे शिवाजी · दुसरे संभाजी", y:1696, w:"b. 1696 · 1698", r:"Grandsons, Rajaram's sons", h:"Shivaji II (Tarabai's son) and Sambhaji II (Rajasbai's son) began the Kolhapur line.", b:1},
 
@@ -539,33 +687,240 @@
   var SAINT = {sufi:"saint-sufi.html", tukaram:"saint-tukaram.html", ramdas:"saint-ramdas.html", "mauni-baba":"saint-mauni-baba.html"};
   function pad(n){return (n<10?"0":"")+n}
   function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+  var BY = {}; P.forEach(function(p,i){ p.i = i; BY[p.n] = p; });
 
-  function card(p, showGroup){
+  /* ---------- picture, side and links ---------- */
+  var ICON = {
+    "Maloji Bhosale":"🐎","Vithoji Bhosale":"🐎","Lakhuji Jadhav":"👑","Shahaji":"⚔️","Jijabai":"🌙","Sharifji":"🐎","Tukabai Mohite":"💍",
+    "Sambhaji (the elder)":"🛡️","Saibai":"💍","Soyarabai":"💍","Putalabai":"💍","Sakvarbai":"💍","Sambhaji":"👶","His six daughters":"👧",
+    "Rajaram":"👶","Ekoji (Vyankoji)":"👑","Dipabai (Ekoji's wife)":"🕊️","Jankibai":"💍","Yesubai":"💍","Tarabai":"⚔️","Shahu":"👑",
+    "Shivaji II & Sambhaji II":"👑",
+    "Sheikh Muhammad":"🙏","Shah Sharif":"🙏","Shivai Devi":"🔱","Tulja Bhavani":"🔱","Dadoji Konddev":"📜","Sant Tukaram":"🙏",
+    "Samarth Ramdas":"🙏","Gaga Bhatt":"🔥","Nischalpuri Goswami":"🔥","Mauni Baba":"🤫","Yakub Baba":"🙏",
+    "Kanhoji Jedhe":"🤝","Tanaji Malusare":"🦁","Baji Pasalkar":"⚔️","Yesaji Kank":"🐘","Sambhaji Kavji":"📨","Murarbaji Deshpande":"🛡️",
+    "Baji Prabhu Deshpande":"🛡️","Fulaji":"🛡️","Netaji Palkar":"🐎","Jiva Mahala":"⚔️","Siddi Hilal":"⚔️","Shiva Kashid":"🎭",
+    "Firangoji Narsala":"🏰","Bahirji Naik":"🕵️","Hiroji Farzand":"🛏️","Madari Mehtar":"🧺","Suryaji Malusare":"🧗","Prataprao Gujar":"🐎",
+    "Kondaji Farzand":"🧗","Hambirrao Mohite":"⚔️","Anandrao":"⚔️","Hirkani":"🥛",
+    "Moropant Pingle":"📜","Abaji Sondev":"📜","Daulat Khan":"⚓","Hiroji Indulkar":"🧱","The Ashtapradhan":"🏛️","Ramchandra Pant Amatya":"📜",
+    "Annaji Datto":"📜","Raghunath Pandit":"📖","Raghunath Narayan Hanumante":"🗺️","Mayanak Bhandari":"⚓","The patil of Ranjhe":"⚖️",
+    "Chhatrasal Bundela":"🏹","Abul Hasan Qutb Shah":"👑","Madanna & Akkanna":"🤝",
+    "Baji Ghorpade":"⛓️","Ali Adil Shah II":"👑","Bari Sahiba":"👑","Chandrarao More":"🏰","Afzal Khan":"⚔️","Krishnaji Bhaskar":"📨",
+    "Sayyad Banda":"🗡️","Siddi Johar":"⛺","Siddi Masud":"🐎","Surve & Dalvi":"⛺","Bahlol Khan":"⚔️",
+    "Shah Jahan":"👑","Murad Bakhsh":"🤴","Aurangzeb":"👑","Shaista Khan":"🏠","Kartalab Khan & Rai Bagan":"🌲","Maharaja Jaswant Singh":"⚔️",
+    "Inayat Khan":"🏰","Prince Muazzam":"🤴","Mirza Raja Jai Singh":"⚔️","Diler Khan":"🏹","Ram Singh":"🔑","Udaybhan Rathod":"🏰",
+    "Ikhlas Khan":"⚔️","Bahadur Khan":"⛺","Prince Akbar":"🤴","Muqarrab Khan":"⛓️",
+    "The Siddis of Janjira":"⚓","George Oxenden":"🚢","Henry Oxenden":"📓",
+    "Kavi Kalash":"✒️","Santaji Ghorpade":"🐎","Dhanaji Jadhav":"🐎","Keladi Chennamma":"👑","Kanhoji Angre":"⚓",
+    "Paramanand":"✒️","Kavi Bhushan":"✒️","Narayan Shenvi":"✉️","François Bernier":"🧭","Cosme da Guarda":"📕",
+    "Krishnaji Anant Sabhasad":"📜","Khafi Khan":"📜","James Grant Duff":"📚","Jyotirao Phule":"✒️","Lokmanya Tilak":"🗣️",
+    "Jadunath Sarkar":"📚","Kusumagraj":"🎵"
+  };
+  var SIDE_BY_GROUP = {family:"with",faith:"with",friends:"with",court:"with",allies:"with",after:"with",bijapur:"against",mughal:"against",coast:"mid",voices:"mid"};
+  var SIDE = {"Murad Bakhsh":"mid","Prince Muazzam":"mid","Ram Singh":"mid","Prince Akbar":"with","The patil of Ranjhe":"mid",
+              "Ekoji (Vyankoji)":"mid","The Siddis of Janjira":"against"};
+  function side(p){ return SIDE[p.n] || SIDE_BY_GROUP[p.g]; }
+  var LINKS = [
+    ["Shahaji",["Jijabai","Tukabai Mohite","Maloji Bhosale","Sharifji","Sambhaji (the elder)","Ekoji (Vyankoji)","Dadoji Konddev","Kanhoji Jedhe","Baji Ghorpade","Murad Bakhsh","Raghunath Narayan Hanumante"]],
+    ["Maloji Bhosale",["Vithoji Bhosale","Sheikh Muhammad","Shah Sharif","Sharifji"]],
+    ["Jijabai",["Lakhuji Jadhav","Saibai","Shivai Devi","Tulja Bhavani"]],
+    ["Tukabai Mohite",["Ekoji (Vyankoji)"]],
+    ["Ekoji (Vyankoji)",["Dipabai (Ekoji's wife)","Raghunath Narayan Hanumante"]],
+    ["Saibai",["Sambhaji","His six daughters"]],
+    ["Soyarabai",["Hambirrao Mohite","Rajaram","His six daughters"]],
+    ["Sakvarbai",["His six daughters"]],
+    ["Hambirrao Mohite",["Tarabai","Anandrao","Prataprao Gujar","The Ashtapradhan"]],
+    ["Prataprao Gujar",["Jankibai","Bahlol Khan","Moropant Pingle","Ikhlas Khan","Narayan Shenvi","Kusumagraj","Krishnaji Anant Sabhasad"]],
+    ["Rajaram",["Jankibai","Tarabai","Keladi Chennamma","Yesubai","Shivaji II & Sambhaji II","Ramchandra Pant Amatya","Santaji Ghorpade","Dhanaji Jadhav"]],
+    ["Tarabai",["Shivaji II & Sambhaji II"]],
+    ["Sambhaji",["Yesubai","Shahu","Kavi Kalash","Diler Khan","Muqarrab Khan","Prince Akbar","Annaji Datto","Bahadur Khan","Mirza Raja Jai Singh"]],
+    ["Tanaji Malusare",["Suryaji Malusare","Udaybhan Rathod","Kanhoji Jedhe","Baji Pasalkar"]],
+    ["Baji Prabhu Deshpande",["Fulaji","Siddi Masud","Shiva Kashid","Surve & Dalvi"]],
+    ["Afzal Khan",["Krishnaji Bhaskar","Sayyad Banda","Jiva Mahala","Ali Adil Shah II","Bari Sahiba","Sambhaji (the elder)","Tulja Bhavani","Khafi Khan","Jadunath Sarkar","James Grant Duff"]],
+    ["Siddi Johar",["Siddi Masud","Ali Adil Shah II","Netaji Palkar","Shiva Kashid","Siddi Hilal"]],
+    ["Shaista Khan",["Firangoji Narsala","Aurangzeb","Maharaja Jaswant Singh"]],
+    ["Mirza Raja Jai Singh",["Ram Singh","Diler Khan","Murarbaji Deshpande","Aurangzeb","Chhatrasal Bundela"]],
+    ["Aurangzeb",["Shah Jahan","Murad Bakhsh","Prince Muazzam","Prince Akbar","Ram Singh","Muqarrab Khan","Hiroji Farzand","Madari Mehtar","Khafi Khan"]],
+    ["Hiroji Farzand",["Madari Mehtar","Ram Singh"]],
+    ["Prince Muazzam",["Maharaja Jaswant Singh"]],
+    ["Madanna & Akkanna",["Abul Hasan Qutb Shah","Yesaji Kank"]],
+    ["Moropant Pingle",["Ikhlas Khan","The Ashtapradhan","Chandrarao More"]],
+    ["The Ashtapradhan",["Ramchandra Pant Amatya","Annaji Datto","Raghunath Pandit","Gaga Bhatt"]],
+    ["Gaga Bhatt",["Henry Oxenden","Nischalpuri Goswami"]],
+    ["Daulat Khan",["Mayanak Bhandari","The Siddis of Janjira","Kanhoji Angre"]],
+    ["Santaji Ghorpade",["Dhanaji Jadhav"]],
+    ["Inayat Khan",["George Oxenden","François Bernier","Bahirji Naik"]],
+    ["Chandrarao More",["Sambhaji Kavji","Murarbaji Deshpande"]],
+    ["Jyotirao Phule",["Lokmanya Tilak"]],
+    ["Kondaji Farzand",["Jadunath Sarkar"]],
+    ["Kartalab Khan & Rai Bagan",["Paramanand"]],
+    ["Samarth Ramdas",["Sant Tukaram","Sheikh Muhammad"]],
+    ["Hirkani",["Hiroji Indulkar"]]
+  ];
+  var ADJ = {};
+  LINKS.forEach(function(l){ l[1].forEach(function(b){
+    if (!BY[l[0]] || !BY[b]) { if (window.console) console.warn("link name not found", l[0], b); return; }
+    (ADJ[l[0]]=ADJ[l[0]]||{})[b]=1; (ADJ[b]=ADJ[b]||{})[l[0]]=1; }); });
+  function links(p){ return Object.keys(ADJ[p.n]||{}).map(function(n){return BY[n]}).sort(function(a,b){return a.y-b.y}); }
+
+  function age(y){ return Math.floor(y) - 1630; }
+  function ageLine(p){
+    if (p.na) return "";
+    if (p.y < 1630) return "This was before Shivaji was born.";
+    if (p.y >= 1720) return "This person told the story long after.";
+    if (p.y >= 1680.3) return "This was after Shivaji's death in 1680.";
+    if (p.t && p.t[0] === "l") return "";
+    if (/ or /.test(p.w)) return "";
+    var yr = Math.floor(p.y);
+    if (p.w.indexOf(String(yr)) > -1 && !new RegExp(yr + "s").test(p.w)) {
+      var a = yr - 1630;
+      return a <= 0 ? "Shivaji was a newborn baby." : "Shivaji was about " + a + " years old.";
+    }
+    var dec = p.w.match(/(1[67]\d)0s/);
+    if (dec) { var d0 = +dec[1]*10, lo = Math.max(0, d0-1630), hi = Math.min(50, d0+9-1630);
+      return "In the " + d0 + "s, when Shivaji was " + lo + "–" + hi + " years old."; }
+    return "";
+  }
+
+  /* ---------- the road of his life ---------- */
+  var ROWS = [
+    {a:0,    b:1630,   yr:"Before 1630", age:"Before he was born", ev:"His grandparents and parents serve the Deccan sultans.", d:1},
+    {a:1630, b:1645,   yr:"1630–1644", age:"Age 0–14", ev:"Born at Shivneri; grows up in Pune with Jijau.", d:2},
+    {a:1645, b:1656,   yr:"1645–1655", age:"Age 15–25", ev:"The oath at Raireshwar (legend), Torna (1646), his father's arrest (1648).", d:5},
+    {a:1656, b:1660,   yr:"1656–1659", age:"Age 26–29", ev:"Javali (1656) and Afzal Khan at Pratapgad (1659).", d:8},
+    {a:1660, b:1665,   yr:"1660–1664", age:"Age 30–34", ev:"Panhala and Pavan Khind, the Lal Mahal raid, Surat.", d:11},
+    {a:1665, b:1670,   yr:"1665–1669", age:"Age 35–39", ev:"The Treaty of Purandar and the escape from Agra.", d:15},
+    {a:1670, b:1674,   yr:"1670–1673", age:"Age 40–43", ev:"Sinhagad, Salher, Panhala won back.", d:17},
+    {a:1674, b:1675,   yr:"1674", age:"Age 44", ev:"Crowned Chhatrapati at Raigad, 6 June 1674.", d:22},
+    {a:1675, b:1680.3, yr:"1675–1680", age:"Age 45–50", ev:"The long southern journey, and his last days at Raigad.", d:25},
+    {a:1680.3, b:1720, yr:"1680–1720", age:"After him", ev:"His sons, daughters-in-law and generals keep swarajya alive.", d:29},
+    {a:1720, b:3000,   yr:"Later", age:"Telling the story", ev:"Historians, poets and reformers remember him.", d:30}
+  ];
+  function token(p){
+    return '<button type="button" class="tk'+(p.b?' is-beyond':'')+'" data-i="'+p.i+'" style="--gc:'+G[p.g].c+'" aria-label="'+esc(p.n+", "+p.r)+'">'+
+      '<span class="av" aria-hidden="true">'+(ICON[p.n]||"•")+'</span><span class="tn">'+esc(p.n)+'</span><span class="ty">'+esc(p.w)+'</span></button>';
+  }
+  function renderPath(){
+    var html = "";
+    ROWS.forEach(function(r){
+      var ps = P.filter(function(p){return p.y>=r.a && p.y<r.b}).sort(function(a,b){return a.y-b.y});
+      var w = ps.filter(function(p){return side(p)==="with"}), x = ps.filter(function(p){return side(p)==="against"}), m = ps.filter(function(p){return side(p)==="mid"});
+      html += '<div class="lp-row">'+
+        '<div class="lp-mid"><div class="yr">'+esc(r.yr)+'</div><div class="age">'+esc(r.age)+'</div><p class="ev">'+esc(r.ev)+'</p>'+
+          '<a class="go" href="day-'+pad(r.d)+'.html">Night '+r.d+' →</a>'+
+          (m.length ? '<div class="tokens">'+m.map(token).join("")+'</div>' : '')+'</div>'+
+        '<div class="lp-with">'+(w.length?'<div class="side-h">On his side</div><div class="tokens">'+w.map(token).join("")+'</div>':'')+'</div>'+
+        '<div class="lp-against">'+(x.length?'<div class="side-h">Against him</div><div class="tokens">'+x.map(token).join("")+'</div>':'')+'</div>'+
+      '</div>';
+    });
+    html += '<p class="lp-end">The road ends, but the story goes on.</p>';
+    document.getElementById("lp").innerHTML = html;
+  }
+
+  /* ---------- spotlight ---------- */
+  var lp = document.getElementById("lp"), spot = document.getElementById("spot"), spotBody = document.getElementById("spot-body");
+  function footChips(p){
     var foot = [];
     if (p.d) foot.push('<a class="daychip" href="day-'+pad(p.d[0])+'.html">Day '+p.d.join(" · ")+'</a>');
     if (p.s) foot.push('<a class="daychip soft" href="'+SAINT[p.s]+'">Saint story</a>');
     if (p.b) foot.push('<span class="beyond">Beyond the nights</span>');
     if (p.t) foot.push('<span class="tag '+p.t[0]+'">'+esc(p.t[1])+'</span>');
+    return foot.join("");
+  }
+  function select(i, scroll){
+    var p = P[i];
+    var ls = links(p);
+    lp.classList.add("focus");
+    Array.prototype.forEach.call(lp.querySelectorAll(".tk"), function(t){
+      var j = +t.getAttribute("data-i");
+      t.classList.toggle("on", j===i);
+      t.classList.toggle("link", ls.some(function(q){return q.i===j}));
+    });
+    spotBody.innerHTML =
+      '<div class="s-head" style="--gc:'+G[p.g].c+'"><div class="s-av" aria-hidden="true">'+(ICON[p.n]||"•")+'</div>'+
+      '<div><div class="s-nm">'+esc(p.n)+'<span class="mr">'+esc(p.mr)+'</span></div><div class="s-when">'+esc(p.w)+' · '+esc(G[p.g].n)+'</div></div></div>'+
+      '<div class="s-rel">'+esc(p.r)+'</div><p class="s-how">'+esc(p.h)+'</p>'+
+      (p.v ? '<p class="s-age">Came in through <b>'+esc(p.v)+'</b>.</p>' : '')+
+      (ageLine(p) ? '<p class="s-age">🕰️ '+esc(ageLine(p))+'</p>' : '')+
+      (ls.length ? '<div class="s-links"><h5>Linked to</h5>'+ls.map(function(q){return '<button type="button" data-go="'+q.i+'">'+(ICON[q.n]||"")+' '+esc(q.n)+'</button>'}).join("")+'</div>' : '')+
+      '<div class="foot">'+footChips(p)+'</div>';
+    var tok = lp.querySelector('.tk[data-i="'+i+'"]');
+    spot.classList.toggle("left", !!(tok && tok.closest(".lp-against")));
+    spot.hidden = false;
+    if (scroll) { var t = lp.querySelector('.tk[data-i="'+i+'"]'); if (t) { t.scrollIntoView({block:"center", behavior:"smooth"}); } }
+  }
+  function clearSel(){
+    lp.classList.remove("focus");
+    Array.prototype.forEach.call(lp.querySelectorAll(".tk.on,.tk.link"), function(t){t.classList.remove("on","link")});
+    spot.hidden = true;
+  }
+  lp.addEventListener("click", function(e){
+    var t = e.target.closest(".tk"); if (!t) return;
+    var i = +t.getAttribute("data-i");
+    if (t.classList.contains("on")) clearSel(); else select(i, false);
+  });
+  spotBody.addEventListener("click", function(e){
+    var b = e.target.closest("[data-go]"); if (!b) return;
+    showTab("path"); select(+b.getAttribute("data-go"), true);
+  });
+  document.getElementById("spot-x").addEventListener("click", clearSel);
+  document.addEventListener("keydown", function(e){ if (e.key==="Escape" && !spot.hidden) clearSel(); });
+
+  /* ---------- who am I? ---------- */
+  var STOP = {the:1, of:1, and:1, ii:1, his:1, sant:1, prince:1, raja:1, mirza:1, maharaja:1, kavi:1, samarth:1, lokmanya:1};
+  function redact(p){
+    var parts = p.n.replace(/\(.*?\)/g," ").split(/[^A-Za-zÀ-ÿ']+/).filter(function(w){return w.length>2 && !STOP[w.toLowerCase()]});
+    var txt = "<b>" + esc(p.r) + ".</b> " + esc(p.h);
+    parts.forEach(function(w){ txt = txt.replace(new RegExp("\\b"+w.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"\\b","g"), '<span class="rd">▢▢▢</span>'); });
+    return '<span class="q-clue">Clue</span> ' + txt;
+  }
+  var qScore = 0, qAsked = 0, qCur = null, qDone = false;
+  var qNights = document.getElementById("q-nights");
+  function shuffle(a){ for (var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i];a[i]=a[j];a[j]=t; } return a; }
+  function pool(){ return P.filter(function(p){ return !qNights.checked || p.d; }).filter(function(p){ return p.n!=="His six daughters" && p.n!=="The Ashtapradhan"; }); }
+  function nextQ(){
+    var ps = pool(); qCur = ps[Math.floor(Math.random()*ps.length)]; qDone = false;
+    var same = shuffle(ps.filter(function(p){return p!==qCur && side(p)===side(qCur)}));
+    var other = shuffle(ps.filter(function(p){return p!==qCur && side(p)!==side(qCur)}));
+    var opts = shuffle([qCur].concat(same.slice(0,2).length===2 ? same.slice(0,2) : same.concat(other).slice(0,2)));
+    document.getElementById("q-ic").textContent = ICON[qCur.n] || "❓";
+    document.getElementById("q-riddle").innerHTML = redact(qCur);
+    document.getElementById("q-opts").innerHTML = opts.map(function(o){return '<button type="button" data-i="'+o.i+'">'+esc(o.n)+'<span class="mr">'+esc(o.mr)+'</span></button>'}).join("");
+    document.getElementById("q-res").innerHTML = "";
+  }
+  document.getElementById("q-opts").addEventListener("click", function(e){
+    var b = e.target.closest("button"); if (!b || qDone) return;
+    qDone = true; qAsked++;
+    var ok = +b.getAttribute("data-i") === qCur.i; if (ok) qScore++;
+    Array.prototype.forEach.call(this.querySelectorAll("button"), function(x){
+      var j = +x.getAttribute("data-i"); x.disabled = true;
+      if (j===qCur.i) x.classList.add("right"); else if (x===b) x.classList.add("wrong");
+    });
+    var link = qCur.d ? ' <a href="day-'+pad(qCur.d[0])+'.html">Read Night '+qCur.d[0]+' →</a>' : (qCur.s ? ' <a href="'+SAINT[qCur.s]+'">Read the saint story →</a>' : '');
+    document.getElementById("q-res").innerHTML = (ok ? "🎉 Yes! " : "Not quite. ") + "It's <b>"+esc(qCur.n)+"</b>. "+esc(ageLine(qCur))+link;
+    document.getElementById("q-score").textContent = "Score "+qScore+" / "+qAsked;
+  });
+  document.getElementById("q-next").addEventListener("click", nextQ);
+  qNights.addEventListener("change", nextQ);
+
+  /* ---------- card index ---------- */
+  function card(p, showGroup){
     var grp = showGroup ? '<div><span class="gdot" style="background:'+G[p.g].c+'"></span><span class="gname">'+esc(G[p.g].n)+'</span></div>' : '';
     return '<article class="card'+(p.b?' is-beyond':'')+'">'+grp+
       '<div class="top"><span class="nm">'+esc(p.n)+'<span class="mr">'+esc(p.mr)+'</span></span><span class="when">'+esc(p.w)+'</span></div>'+
       '<div class="rel">'+esc(p.r)+'</div><div class="how">'+esc(p.h)+'</div>'+
       (p.v ? '<div class="via">Came in through <b>'+esc(p.v)+'</b></div>' : '')+
-      '<div class="foot">'+foot.join("")+'</div></article>';
+      '<div class="foot">'+footChips(p)+'</div></article>';
   }
-
   var mode = "tree";
   var view = document.getElementById("view");
   var q = document.getElementById("q");
   var onlyB = document.getElementById("only-beyond");
-
   function matches(p){
     if (onlyB.checked && !p.b) return false;
     var s = q.value.trim().toLowerCase();
     if (!s) return true;
     return (p.n+" "+p.mr+" "+p.r+" "+p.h+" "+(p.v||"")).toLowerCase().indexOf(s) > -1;
   }
-
   function render(){
     var list = P.filter(matches);
     var html = "";
@@ -581,33 +936,46 @@
       html += '</div>';
       view.className = "";
     } else {
-      var eras = [[0,1630,"Before he was born"],[1630,1645,"Childhood · 1630–1644"],[1645,1656,"The first forts · 1645–1655"],
-                  [1656,1665,"Rise and storms · 1656–1664"],[1665,1674,"Agra and recovery · 1665–1673"],
-                  [1674,1680.5,"The crowned king · 1674–1680"],[1680.5,1720,"After him · 1680–1720"],[1720,3000,"Telling the story · later"]];
-      eras.forEach(function(e){
-        var ps = list.filter(function(p){return p.y>=e[0] && p.y<e[1]}).sort(function(a,b){return a.y-b.y});
+      ROWS.forEach(function(e){
+        var ps = list.filter(function(p){return p.y>=e.a && p.y<e.b}).sort(function(a,b){return a.y-b.y});
         if (!ps.length) return;
-        html += '<h3 class="era">'+esc(e[2])+'</h3><div class="people">'+ps.map(function(p){return card(p,true)}).join("")+'</div>';
+        html += '<h3 class="era">'+esc(e.yr)+' · '+esc(e.age)+'</h3><div class="people">'+ps.map(function(p){return card(p,true)}).join("")+'</div>';
       });
       view.className = "timeline";
     }
     view.innerHTML = html;
   }
-
-  document.getElementById("key").innerHTML = ORDER.map(function(g){return '<span><i style="background:'+G[g].c+'"></i>'+esc(G[g].n)+'</span>'}).join("");
+  var keyHtml = ORDER.map(function(g){return '<span><i style="background:'+G[g].c+'"></i>'+esc(G[g].n)+'</span>'}).join("");
+  document.getElementById("key").innerHTML = keyHtml;
+  document.getElementById("key2").innerHTML = keyHtml + '<span><i style="background:transparent;border:2px dashed var(--ink-faint)"></i>Dashed ring: beyond the nights</span>';
   function setMode(m){
     mode = m;
     document.getElementById("v-tree").setAttribute("aria-pressed", m==="tree");
     document.getElementById("v-time").setAttribute("aria-pressed", m==="time");
-    try { localStorage.setItem("ft-mode", m); } catch(e){}
     render();
   }
   document.getElementById("v-tree").addEventListener("click", function(){setMode("tree")});
   document.getElementById("v-time").addEventListener("click", function(){setMode("time")});
   q.addEventListener("input", render);
   onlyB.addEventListener("change", render);
-  var saved = null; try { saved = localStorage.getItem("ft-mode"); } catch(e){}
-  setMode(saved === "time" ? "time" : "tree");
+
+  /* ---------- tabs ---------- */
+  var TABS = ["path","quiz","index"];
+  function showTab(k){
+    TABS.forEach(function(t){
+      document.getElementById("t-"+t).setAttribute("aria-selected", t===k);
+      document.getElementById("p-"+t).hidden = (t!==k);
+    });
+    if (k!=="path") clearSel();
+    if (k==="quiz" && !qCur) nextQ();
+    try { localStorage.setItem("ft-tab", k); } catch(e){}
+  }
+  TABS.forEach(function(t){ document.getElementById("t-"+t).addEventListener("click", function(){ showTab(t); }); });
+
+  renderPath();
+  setMode("tree");
+  var savedTab = null; try { savedTab = localStorage.getItem("ft-tab"); } catch(e){}
+  showTab(TABS.indexOf(savedTab) > -1 ? savedTab : "path");
 })();
 </script>
 </body>
